@@ -1,0 +1,12 @@
+<h1>Books</h1>
+<div class="container">
+<% @books.each do |book| %>
+	<div class="row">
+		<h2><%= book.title %></h2>
+			<div class="author"><%= book.author %></div>
+			<img src="<%= book.cover_image %>">
+			<%= book.description.html_safe %>
+		<h3><%= book.reviews %></h3>
+	</div>
+<% end %>
+</div>
