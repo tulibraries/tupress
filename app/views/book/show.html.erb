@@ -1,0 +1,38 @@
+<div class="container">
+<h1><%= @book.title %></h1>
+	<div class="row">
+		<div class="author">	
+			<%= @book.author.map { |author| author }.join(' and ') %>
+		</div>
+	</div>
+	<div class="row">
+		<img src="<%= @book.cover_image %>">
+	</div>
+	<div class="row">
+		<%= @book.description.html_safe %>
+	</div>
+	<div class="row">	
+		<h3>Reviews</h3>
+		<% @book.reviews.each do |review| %>
+		 <div class="review">
+		 	<%= review.html_safe %>
+		 </div>
+		<% end %>
+	</div>
+	<div class="row">
+		<h3>About the Author(s)</h3>	
+		<% @book.about_author.each do |about| %>
+		 <div class="about_author">
+		 	<%= about.html_safe %>
+		 </div>
+		<% end %>
+	</div>
+	<div class="row">
+		<h3>Subject Categories</h3>	
+		<% @book.categories.each do |category| %>
+		 <div class="category">
+		 	<%= link_to category, {controller: "categories"} %>
+		 </div>
+		<% end %>
+	</div>
+</div>

@@ -12,15 +12,8 @@
 
 ActiveRecord::Schema.define(version: 20170327183628) do
 
-  create_table "authors", force: :cascade do |t|
-    t.string   "author",     null: false
-    t.string   "about"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "books", force: :cascade do |t|
+    t.string   "book_id"
     t.string   "title"
     t.string   "subtitle"
     t.string   "author"
@@ -33,28 +26,16 @@ ActiveRecord::Schema.define(version: 20170327183628) do
     t.string   "isbn"
     t.string   "ean"
     t.string   "pub_date"
-    t.string   "binding"
+    t.text     "binding"
     t.text     "description"
-    t.text     "review"
+    t.text     "reviews"
     t.text     "contents"
     t.text     "about_author"
-    t.text     "category"
-    t.text     "in_series"
+    t.text     "categories"
+    t.string   "in_series"
     t.decimal  "price",        precision: 6, scale: 2
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string   "category",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "series", force: :cascade do |t|
-    t.string   "series",     null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

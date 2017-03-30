@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tupress</title>
+    <title>Temple University Press</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,137 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <div id="skip-link">
+    <%= link_to "Skip to main content", "#skiplink_ada", :class => "element-invisible", :tabindex => "1" %>
+    <%= link_to "Skip to site search", "#", :class => "element-invisible", :onclick => "document.getElementById('search-block').focus();", :tabindex => "2" %>
+  </div>
+
+  <div id="content" class="container">
+  	<div id="header" class="container">
+	  	<div class="row">
+		  	<div class="col-md-4">
+		  		<img src="<%= asset_path 'banner2_top2.gif' %>" />
+		  	</div>
+	  	</div>
+    </div>
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="margin-top: 21px;">
+		  <%= button_tag("", 
+		  								:class=>"navbar-toggler navbar-toggler-right", 
+		  								:type=>"button",
+		  								:'data-toggle'=>"collapse",
+		  								:'data-target'=>"#navbarSupportedContent",
+		  								:'aria-controls'=>"navbarSupportedContent",
+		  								:'aria-expanded'=>"false",
+		  								:'aria-label'=>"Toggle navigation") do
+		  								%>
+		    <span class="navbar-toggler-icon"></span>
+		  <% end %>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <%= link_to(root_path, :class=>"nav-link") do %>
+		        	Home <span class="sr-only">(current)</span>
+		        <% end %>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <%= link_to "Our Books", 
+								        "#", 
+								        :class=>"nav-link dropdown-toggle", 
+								        :id=>"navbarDropdownMenuLink", 
+								        :'data-toggle'=>"dropdown", 
+								        :'aria-haspopup'=>"true", 
+								        :'aria-expanded'=>"false" 
+								        %>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <%= link_to "Award Winning Books", "/book/index", :class=>"dropdown-item" %>
+		          <%= link_to "Titles Index", "/book/index", :class=>"dropdown-item" %>
+		          <%= link_to "Subject Index", "/book/index", :class=>"dropdown-item" %>
+		          <%= link_to "Subject Listing", "/book/index", :class=>"dropdown-item" %>
+		          <%= link_to "Study Guides", "/book/index", :class=>"dropdown-item" %>
+		        </div>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <%= link_to "Journals", 
+								        "#", 
+								        :class=>"nav-link dropdown-toggle", 
+								        :id=>"navbarDropdownMenuLink", 
+								        :'data-toggle'=>"dropdown", 
+								        :'aria-haspopup'=>"true", 
+								        :'aria-expanded'=>"false" 
+								        %>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <%= link_to "Commonwealth", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Kalfou", "#", :class=>"dropdown-item" %>
+		        </div>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Contact Us</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <%= link_to "Place an Order", 
+								        "#", 
+								        :class=>"nav-link dropdown-toggle", 
+								        :id=>"navbarDropdownMenuLink", 
+								        :'data-toggle'=>"dropdown", 
+								        :'aria-haspopup'=>"true", 
+								        :'aria-expanded'=>"false" 
+								        %>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <%= link_to "Online Ordering", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Payment Terms", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Exam &amp; Desk Copy Policy", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Sales Representatives", "#", :class=>"dropdown-item" %>
+		        </div>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <%= link_to "Media", 
+								        "#", 
+								        :class=>"nav-link dropdown-toggle", 
+								        :id=>"navbarDropdownMenuLink", 
+								        :'data-toggle'=>"dropdown", 
+								        :'aria-haspopup'=>"true", 
+								        :'aria-expanded'=>"false" 
+								        %>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <%= link_to "Conferences", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Event Calendar", "#", :class=>"dropdown-item" %>
+		          <%= link_to "equest a Review Copy", "#", :class=>"dropdown-item" %>
+		        </div>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <%= link_to "Press Info", 
+								        "#", 
+								        :class=>"nav-link dropdown-toggle", 
+								        :id=>"navbarDropdownMenuLink", 
+								        :'data-toggle'=>"dropdown", 
+								        :'aria-haspopup'=>"true", 
+								        :'aria-expanded'=>"false" 
+								        %>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <%= link_to "People at the Press", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Rights and Permissions", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Foreign Rights Agents", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Submissions", "#", :class=>"dropdown-item" %>
+		          <%= link_to "About University Presses", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Download Documents", "#", :class=>"dropdown-item" %>
+		          <%= link_to "FAQ", "#", :class=>"dropdown-item" %>
+		        </div>
+		      </li>
+		      <li class="nav-item">
+		          <%= link_to "Links", "#", :class=>"nav-link" %>
+		      </li>
+		    </ul>
+		    <%= form_tag("/search", method: "get", :class=>"form-inline my-2 my-lg-0", :id=>"search-block") do %>
+				  <%= label_tag(:q, "Search for:", :class=>"element-invisible") %>
+				  <%= text_field_tag(:q, nil, class: "form-control mr-sm-2", placeholder: "Search") %>
+				  <%= submit_tag("Search", class: "btn btn-outline-danger my-2 my-sm-0") %>
+				<% end %>
+		  </div>
+		</nav>
+		<a href="#" name="skiplink_ada" id="skiplink_ada"></a>
+    	<%= yield %>
+
+    </div>
   </body>
 </html>

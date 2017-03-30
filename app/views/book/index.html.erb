@@ -1,12 +1,24 @@
-<h1>Books</h1>
 <div class="container">
+<h1>Books</h1>
 <% @books.each do |book| %>
 	<div class="row">
-		<h2><%= book.title %></h2>
-			<div class="author"><%= book.author %></div>
-			<img src="<%= book.cover_image %>">
-			<%= book.description.html_safe %>
-		<h3><%= book.reviews %></h3>
+		<div class="col-md-2" style="text-align:center;">
+			<img style="width: 120px;" src="<%= book.cover_image %>">
+		</div>
+		<div class="col-md-10">
+			<h2><%= book.title %></h2>
+			<% if book.subtitle %>
+				<p><%= book.subtitle %></p>
+			<% end %>
+			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
+			<p style="font-size: 65%;">
+				<%= book.format.html_safe %>
+				<br />
+				<%  book.binding.each do |binding| %>
+					<%= binding[:type] %> <%= binding[:ean] %>
+					<% end %>
+				</p>
+		</div>
 	</div>
 <% end %>
 </div>
