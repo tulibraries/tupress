@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  conference: MyString
+  venue: MyString
+  location: MyString
+  dates: MyString
+  booth: MyString
+
+two:
+  month: MyString
+  conference: MyString
+  venue: MyString
+  location: MyString
+  dates: MyString
+  booth: MyString

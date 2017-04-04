@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Conferences</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col text-center">
+			[Month Jump Menu]
+		</div>
+	</div>
+</div>
+
+<div class="container" style="margin-top:21px;">
+	<div class="row">
+		<div class="col"><h2>January</h2></div>
+	</div>
+	<div class="row">
+		<div class="col" style="padding-left: 28px;">
+
+			<% @january_conferences.each do |conference| %>
+			<ul class="list-unstyled">
+
+				<li><%= link_to conference.conference, conference.link %></li>
+
+				<% if !conference.venue.blank? %>
+					<li><%= conference.venue %></li>
+				<% end %>
+
+				<li><%= conference.location %></li>
+
+				<li><%= conference.dates %></li>
+
+				<% if !conference.booth.blank? %>
+					<li><%= conference.booth %></li>
+				<% end %>
+
+			</ul>
+			<% end %>
+
+		</div>
+	</div>
+</div>

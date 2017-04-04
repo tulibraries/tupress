@@ -18,6 +18,7 @@ controller :page do
   get   'copy-policy'   => :copypolicy
   get   'sales-reps'    => :sales_reps
   get   'book-reviews'  => :reviews
+  get   'conferences'   => :conferences
   root 	'page#index'
 end 
 
