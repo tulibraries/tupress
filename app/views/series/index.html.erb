@@ -1,0 +1,9 @@
+
+<h1 style="margin: 21px 0">Series</h1>
+<div class="container" style="margin-left: 21px;">
+	<% @series.each do |series| %>
+		<div class="row">
+			<%= link_to series.series, :controller=>'book', :action=>'byseries', :id=>series.series_id %>
+		</div>
+	<% end %>
+</div>

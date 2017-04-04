@@ -28,10 +28,18 @@
 		<% end %>
 	</div>
 	<div class="row">
-		<h3>Subject Categories</h3>	
-		<% @book.categories.each do |category| %>
+		<h3>Subjects</h3>	
+		<% @book.subjects.each do |subject| %>
+		 <div class="subject">
+		 	<%= link_to subject, {controller: "subject"} %>
+		 </div>
+		<% end %>
+	</div>
+	<div class="row">
+		<h3>In Series</h3>	
+		<% @book.series.each do |series| %>
 		 <div class="category">
-		 	<%= link_to category, {controller: "categories"} %>
+		 	<%= link_to series, {controller: "series"} %>
 		 </div>
 		<% end %>
 	</div>

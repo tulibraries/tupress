@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.validate.additional-methods 
+//= require jquery.validate
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require form_validation.js

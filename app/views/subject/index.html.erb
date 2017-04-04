@@ -1,0 +1,9 @@
+
+<h1 style="margin: 21px 0">Subject Index</h1>
+<div class="container" style="margin-left: 21px;">
+	<% @subjects.each do |subject| %>
+		<div class="row">
+			<%= link_to subject.subject, :controller=>'book', :action=>'bysubject', :id=>subject.subject_id %>
+		</div>
+	<% end %>
+</div>

@@ -20,6 +20,21 @@
 		background-color: #990033;
 	}
 
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		font-size: 21px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	blockquote {
+		font-size: 100%!important;
+	}
+	.blockquote-footer.blockquote-reverse {
+		font-size: 100%;
+	}
 	#content {
 		background-color: #fff;
 		padding-bottom: 42px;
@@ -47,3 +62,31 @@
     overflow: hidden;
     height: 1px;
 	 }
+	 form {
+	 	#q-error, #email-error {
+		 	color: red;
+		 	font-size: 85%;
+		 }
+	}
+	#main-nav {
+		margin: 21px auto;
+	}
+	
+	 #NewsletterSubscription #email {
+	 	width: 142px;
+	 }
+	 #search-block {
+	 	float: right;
+	 	padding:21px;
+	 }
+	ul#alphamenu {
+ 		margin: auto;
+ 		color: #ccc;
+ 		li a {
+ 			padding: 0 10px;
+ 			color: #903;
+ 		}
+ 		li::after {
+			content: " | ";
+		}
+	}

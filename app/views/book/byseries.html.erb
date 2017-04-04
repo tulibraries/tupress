@@ -1,15 +1,12 @@
 <div class="container">
-<h1 style="padding: 14px 0;"><%= @pagetitle %></h1>
-<div class="row">
-<%= render "alphamenu.erb" %>
-</div>
+<h1 style="padding: 14px 0;"><%= @series.series %></h1>
 <% @books.each do |book| %>
 	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
 		<div class="media" style="text-align:center;">
-			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.id} %>
 		</div>
 		<div class="media-body">
-			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.id %></h2>
 			<% if book.subtitle %>
 				<p><%= book.subtitle %></p>
 			<% end %>
@@ -18,8 +15,9 @@
 				<%= book.format.html_safe %>
 				<br />
 				<%  book.binding.each do |binding| %>
-					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %>
-					<% end %>
+					<%= binding[:type] %> <%= binding[:ean] %> <%= number_to_currency(binding[:price]) %>
+					<br />
+				<% end %>
 				</p>
 		</div>
 	</div>

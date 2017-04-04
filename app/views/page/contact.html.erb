@@ -1,0 +1,133 @@
+<div class="container">
+
+<div style="margin-bottom: 42px;">
+<p>To order, please call 1-800-621-2736 or fax 1-800-621-8476.</p>
+<p>If you want to send us a message, fill out the following form. You can also call 215-926-2140 or write to:</p>
+  <blockquote class="col col-md-12 offset-md-2">
+    Temple University Press
+    TASB<br />
+    1852 North 10th Street<br />
+    Philadelphia, PA 1912<br />
+  </blockquote>
+</div>
+<div id="contactform">
+<%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:name, "Name:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:name, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:email, "Email:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:email) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:comments, "Comments:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_area_tag(:comments, "", size: "48x6") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:address1, "Address Line 1:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:address1, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:address2, "Address Line 2:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:address2) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:city, "City:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:city, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:state, "State:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= select_tag :state, options_for_select(us_states), :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:zipcode, "Zip/Post Code:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:zipcode, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:country, "Country (if not US):") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:country) %>
+    </div>
+  </div>
+
+  <div class="row new-section">
+    <div class="col col-md-10 offset-md-2">
+      <%= check_box_tag(:ecatalog) %>
+      <%= label_tag(:ecatalog, "Send me an e-catalog") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-10 offset-md-2">
+      <%= check_box_tag(:printcatalog) %>
+      <%= label_tag(:printcatalog, "Send me a printed catalog and add my name to the mailing list") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-10 offset-md-2">
+      <%= check_box_tag(:removemailer) %>
+      <%= label_tag(:removemailer, "Remove my name from the mailing list", :id => 'removemailer') %>
+      <%= text_field_tag(:removemailer, '', :id=>'removemailertype', :placeholder=>"Please describe the mailing piece you received") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-10 offset-md-2">
+      <%= check_box_tag(:addmailer) %>
+      <%= label_tag(:addmailer, " I would like to receive e-newsletters about new books and special offers. ") %>
+      <div id="mailersubjects" class="col">
+        <p>My preferred subjects of interest are:</p>
+        <%= select_tag :addmailer, options_for_select(mailers), :size=>7, :multiple => true %>
+        <div style="font-size:smaller;">(use the CTRL key to select multiple subjects)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-10 offset-md-2 new-section">
+      <%= submit_tag("Submit") %>
+      <%= button_tag "Reset", type: :button, :id=>"reset" %>
+    </div>
+  </div>
+
+<% end %>
+</div>
+<div id="formfooter" style="margin-top: 42px;">
+  <div class="col col-md-10 offset-md-1">
+    <strong>Privacy Policy</strong>: Temple University Press respects your privacy. We carefully control the distribution of our customer information, and although we occasionally buy, sell, and swap mailing lists, we do so only with like-minded organizations. If you wish to be removed from either the postal mailing list or the email distribution list, please send a note to the webmaster.
+  </div>
+</div>
+</div>

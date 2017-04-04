@@ -1,3 +1,27 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#contactform {
+	.col-md-2 {
+		text-align: right;
+	}
+	.new-section {
+		margin-top: 21px;
+	}
+	#mailersubjects {
+		display: none;
+	}
+	#removemailertype {
+		display: none;
+		padding-left:7px;
+		margin-bottom: 7px;
+		margin-left: 14px;
+		width:80%;
+		max-width:90%;
+	}
+	#addmailer {
+		padding: 7px;
+	}
+}

@@ -18,7 +18,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
 	  	t.text :binding
 	  	t.text :description
 	  	t.text :reviews
-	  	t.text :categories
+	  	t.text :subjects
 	  	t.text :contents
 	  	t.decimal :price, :precision => 5, :scale => 2
 
