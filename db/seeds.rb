@@ -167,14 +167,90 @@ Review.create(title: 'The Struggling State', title_id: '2371', author: 'Jennifer
 Review.create(title: 'American Heathens', title_id: '2296', author: 'Jennifer Snook', review: '"American Heathens provides both an overview of the various discourses, practices, and social networks that constitute the Heathen current in the United States, as well as analyses of that current in terms of social constructivist theory.... [The] topics are all treated with great care and nuance—yielding insightful analyses of facets of a new religious movement of increasing global importance that has not previously been explored by any within academia.... [T]he academic merits and complete novelty in terms of the subject of American Heathens makes it required reading for any scholars engaging with contemporary Neopaganism in general or with Heathenry in particular."', source: 'Nova Religio', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/f4fe42fd-3640-4d15-bde8-05b6d0b10adb/Snook_Novo_Religio.pdf', source_date: 'February 2017')
 Review.create(title: 'Exploring the Roots of Digital and Media Literacy through Personal Narrative', title_id: '2329', author: 'Renee Hobbs [editor]', review: '"This book certainly provides a fresh way of introducing new readers to key intellectual thinkers, some of whom were writing about media, education, technology and culture a good while before media and communication studies emerged as distinct fields. It is also an entertaining read, with an engaging mix of individual accounts, well-chosen quotation and scholarly discussion. Both old hands and novitiates will find many points of interest in this collection."', source: 'European Journal of Communication', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/e261ef81-2836-469a-809a-f3f3e564b8e2/HobbsEJOC.pdf', source_date: 'February 2017')
 
-Conference.create(month: 'January', conference: 'Modern Language Association', venue: '', link: 'https://www.mla.org/Convention', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
-Conference.create(month: 'January', conference: 'American Historical Association', venue: '', link: 'https://www.historians.org/', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
-Conference.create(month: 'January', conference: 'American Library Association Mid-Winter', venue: '', link: 'http://2017.alamidwinter.org/', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
-
-
-
-
-
+Conference.create(month: [{id: '1', name: 'January'}], conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
+Conference.create(month: [{id: '1', name: 'January'}], conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
+Conference.create(month: [{id: '1', name: 'January'}], conference: 'American Library Association Mid-Winter', link: 'http://2017.alamidwinter.org/', venue: '', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
+Conference.create(month: [{id: '2', name: 'February'}], conference: 'Eastern Sociological Society', link: 'http://www.essnet.org/annual-meeting/overview/', venue: 'Sheraton Philadelphia Downtown', location: 'Philadelphia, PA', dates: 'February 23 - 26, 2017', booth: 'Space #5 (Liberty A - Ballroom level)')
+Conference.create(
+	month: [{id: '4', name: 'April'}], 
+	conference: 'Organization of American Historians', 
+	link: 'http://www.oah.org/meetings-events/2017/', 
+	venue: '', 
+	location: 'New Orleans, LA', 
+	dates: 'April 6 - 9, 2017', 
+	booth: 'Booth #118')
+Conference.create(
+	month: [{id: '4', name: 'April'}], 
+	conference: 'Association for Asian American Studies', 
+	link: 'http://aaastudies.org/2017-aaas-conference/', 
+	venue: '', 
+	location: 'Portland, OR', 
+	dates: 'April 13 - 15, 2017', 
+	booth: 'Booth #TBD')
+Conference.create(
+	month: [{id: '5', name: 'May'}], 
+	conference: 'Book Expo America', 
+	link: 'http://www.bookexpoamerica.com/Show-Info/', 
+	venue: '', 
+	location: 'New York City, NY', 
+	dates: 'May 31 - June 2, 2017', 
+	booth: '')
+Conference.create(
+	month: [{id: '6', name: 'June'}], 
+	conference: 'Association of American University Presses', 
+	link: 'http://www.aaupnet.org/events-a-conferences/annual-meeting/aaup-2017', 
+	venue: 'JW Marriott Austin', 
+	location: 'Austin, TX ', 
+	dates: 'June 11 - 13, 2017', 
+	booth: '')
+Conference.create(
+	month: [{id: '6', name: 'June'}], 
+	conference: 'American Library Association', 
+	link: 'http://2017.alaannual.org/', 
+	venue: 'JW Marriott Austin', 
+	location: 'Chicago, IL', 
+	dates: 'June 22 - 27, 2017', 
+	booth: '')
+Conference.create(
+	month: [{id: '8', name: 'August'}], 
+	conference: 'American Sociological Association', 
+	link: 'http://www.asanet.org/annual-meeting-2017', 
+	venue: '', 
+	location: 'Montreal, Quebec, Canada', 
+	dates: 'August 12 - 15, 2017', 
+	booth: 'Booth #TBD')
+Conference.create(
+	month: [{id: '8', name: 'August'}], 
+	conference: 'American Poltical Science Association', 
+	link: 'http://www.asanet.org/annual-meeting-2017', 
+	venue: 'Hilton San Francisco Union Square', 
+	location: 'San Francisco, CA', 
+	dates: 'August 31 - September 3, 2017', 
+	booth: 'Booth #711')
+Conference.create(
+	month: [{id: '9', name: 'September'}], 
+	conference: 'American Poltical Science Association', 
+	link: 'http://www.asanet.org/annual-meeting-2017', 
+	venue: 'Hilton San Francisco Union Square', 
+	location: 'San Francisco, CA', 
+	dates: 'August 31 - September 3, 2017', 
+	booth: 'Booth #711')
+Conference.create(
+	month: [{id: '11', name: 'November'}], 
+	conference: 'American Studies Association', 
+	link: 'https://www.theasa.net/annual-meeting/years-meeting', 
+	venue: 'Hyatt Regency Chicago', 
+	location: 'Chicago, IL', 
+	dates: 'November 9 - 12, 2017', 
+	booth: 'Booth #TBD (Crystal Ballroom)')
+Conference.create(
+	month: [{id: '11', name: 'November'}], 
+	conference: 'The American Society of Criminology', 
+	link: 'https://www.theasa.net/annual-meeting/years-meeting', 
+	venue: 'Philadelphia Marriott Downtown', 
+	location: 'Philadelphia, PA', 
+	dates: 'November 15 - 17, 2017', 
+	booth: 'Booth #TBD')
 
 
 
