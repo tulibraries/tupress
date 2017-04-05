@@ -29,17 +29,17 @@
 	</div>
 	<div class="row">
 		<h3>Subjects</h3>	
-		<% @book.subjects.each do |subject| %>
+		<% @subjects.each do |subject| %>
 		 <div class="subject">
-		 	<%= link_to subject, {controller: "subject"} %>
+		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %> 
 		 </div>
 		<% end %>
 	</div>
 	<div class="row">
 		<h3>In Series</h3>	
-		<% @book.series.each do |series| %>
-		 <div class="category">
-		 	<%= link_to series, {controller: "series"} %>
+		<% @series.each do |series| %>
+		 <div class="subject">
+		 	<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %> 
 		 </div>
 		<% end %>
 	</div>

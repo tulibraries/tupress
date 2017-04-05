@@ -4,7 +4,7 @@ class Book < ApplicationRecord
 	serialize :about_author, Array
 	serialize :reviews, Array
 	serialize :binding, Array
-	has_many :subject
-	has_many :series
+	serialize :subjects, Array
+	serialize :in_series, Array
 
 end

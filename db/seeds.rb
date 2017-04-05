@@ -10,7 +10,7 @@
 
 # ruby encoding: utf-8
 
-Book.destroy_all
+
 
 Book.create(
 						book_id: '2015',
@@ -30,8 +30,8 @@ Book.create(
 							'<strong>Marla K. Shoemaker</strong> is Senior Curator of Education at the Philadelphia Museum of Art.'
 						], 
 						subjects: [
-							'1057', 
-							'1071', 
+							'1057',
+							'1071',
 							'1051'
 						], 
 						in_series: [
@@ -51,8 +51,7 @@ Book.create(
 						cover_image: 'http://www.temple.edu/tempress/titles/2015_reg.gif'
 						)
 
-# Subject.create(subject: '')
-# Subject.destroy_all
+
 
 Subject.create(subject_id: '1029', subject: 'African Studies')
 Subject.create(subject_id: '1030', subject: 'African American Studies')
@@ -105,6 +104,8 @@ Subject.create(subject_id: '1085', subject: 'Urban Studies')
 Subject.create(subject_id: '1086', subject: 'Women\'s Studies')
 Subject.create(subject_id: '1088', subject: 'Youth Studies')
 
+
+
 Series.create(series_id: 'S-143', series: 'Africans in the Diaspora', description: '')
 Series.create(series_id: 'S-144', series: 'African Soundscapes', description: 'African music has been a topic of considerable scholarly and general interest. The books in this new interdisciplinary series will highlight contemporary African music in its cultural contexts and the contributions of African expressive culture to global music traditions. The series will include works by scholars based in Africa.')
 Series.create(series_id: 'S-145', series: 'America in Transition: Radical Perspectives', description: 'America in Transition: Radical Perspectives, edited by Gary L. Francione, presents radical interdisciplinary critiques of U.S. social institutions. The books included will analyze and interpret issues of class, race, gender, sexual orientation, ability, and species and suggest solutions for the problems they raise as we enter the twenty-first century.')
@@ -155,6 +156,8 @@ Series.create(series_id: 'S-194', series: 'Insubordinate Spaces', description: '
 Series.create(series_id: 'S-195', series: 'Pennsylvania History', description: 'The Pennsylvania History series, designed to make high-quality scholarship accessible for students, advances the mission of the Pennsylvania Historical Association by engaging with key social, political, and cultural issues in the history of the state and region.')
 Series.create(series_id: 'S-196', series: 'Critical Race, Indigeneity, and Relationality', description: '')
 
+
+
 Review.create(title: 'Boathouse Row', title_id: '2375', author: 'Dotty Brown', review: '"Brown reveals numerous charismatic and talented personalities, tells a slew of frequently amusing and inspiring stories, and leaves the lucky reader understanding one of the prouder aspects of Philadelphia sports and recreational culture. Beautifully illustrated, this is the rare volume that both serves as a handsome coffee table book and as a first-rate read. It fills a gap in the literature and show remain the standard work on boat racing\'s own Philadelphia story for decades to come."', source: 'Pennsylvania Heritage', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/e7fc74f3-4857-448b-9524-61faf41e8f2f/PAHeritageBR.pdf', source_date: 'Spring 2017')
 Review.create(title: 'We Shall Not Be Moved/No nos moverán', title_id: '2380', author: 'David Spener', review: '"[A] concise, readable examination of the arts of resistance and the inspiration of left-wing internationalism. Rich in its multidisciplinary fluency, the book draws theory and method from musicology, sociology, anthropology, and history to trace how the English language \'We Shall Not Be Moved\' originated as an African American antebellum spiritual, then became a militant twentieth-century labor tune, and then a Civil Rights freedom song, and ultimately a \'transnational social movement anthem\' reconceived in Spanish-speaking communities on both sides of the Atlantic as \'No Nos Moverán.\' Spener navigates a lot of territory—linguistically, culturally, geographically, and historically—in the book, and he does it well. The text is lean and learned. The author is steeped in the traditions and orientations of social justice movement culture. He writes with authority and with clear admiration for his subject matter."', source: 'Peace & Change', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/1c28bafd-e4d0-47c0-84bf-ba20d7dca1bf/Garabedian_2017_Peace___Change.pdf', source_date: 'April 2017')
 Review.create(title: 'Illness or Deviance?', title_id: '2273', author: 'Jennifer Murphy', review: '"This book is a most worthwhile read.... Murphy\'s study provides the first realistic and critical look at how and why drug courts attempt to manipulate their clients, how clients adjust to these efforts, and what difficulties and confusions this leads to. In the process, she has created an analytical path for future studies of drug courts and laid the groundwork for more realistic evaluation of them."', source: 'Criminal Law and Criminal Justice Books', source_link: 'http://clcjbooks.rutgers.edu/books/illness-or-deviance-drug-courts-drug-treatment-and-the-ambiguity-of-addiction/', source_date: 'January 2017')
@@ -166,6 +169,8 @@ Review.create(title: 'The Enigmatic Academy', title_id: '2177', author: 'Christi
 Review.create(title: 'The Struggling State', title_id: '2371', author: 'Jennifer Riggan', review: '"Riggan critically analyses the Eritrean governments\' policy of societal militarisation and its impact on educational sector.... I am highly impressed by Riggan\'s in-depth analysis and her detailed insights concerning the authoritarian state and its violent and punitive character. Her study illustrates how the introduction of indefinite national service has negatively affected education, social capital formation and the nation-building and development processes. Riggan shows a high level of scholarship and thorough knowledge of her subject matter.... I highly recommend this book as a testimony of a critical juncture in Eritrea\'s troubled history."', source: 'Journal of Modern African Studies', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/c7eaa700-1416-426e-8dd5-723e4925196a/RigganJoMAS.pdf', source_date: 'March 2017')
 Review.create(title: 'American Heathens', title_id: '2296', author: 'Jennifer Snook', review: '"American Heathens provides both an overview of the various discourses, practices, and social networks that constitute the Heathen current in the United States, as well as analyses of that current in terms of social constructivist theory.... [The] topics are all treated with great care and nuance—yielding insightful analyses of facets of a new religious movement of increasing global importance that has not previously been explored by any within academia.... [T]he academic merits and complete novelty in terms of the subject of American Heathens makes it required reading for any scholars engaging with contemporary Neopaganism in general or with Heathenry in particular."', source: 'Nova Religio', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/f4fe42fd-3640-4d15-bde8-05b6d0b10adb/Snook_Novo_Religio.pdf', source_date: 'February 2017')
 Review.create(title: 'Exploring the Roots of Digital and Media Literacy through Personal Narrative', title_id: '2329', author: 'Renee Hobbs [editor]', review: '"This book certainly provides a fresh way of introducing new readers to key intellectual thinkers, some of whom were writing about media, education, technology and culture a good while before media and communication studies emerged as distinct fields. It is also an entertaining read, with an engaging mix of individual accounts, well-chosen quotation and scholarly discussion. Both old hands and novitiates will find many points of interest in this collection."', source: 'European Journal of Communication', source_link: 'https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/e261ef81-2836-469a-809a-f3f3e564b8e2/HobbsEJOC.pdf', source_date: 'February 2017')
+
+
 
 Conference.create(month: [{id: '1', name: 'January'}], conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
 Conference.create(month: [{id: '1', name: 'January'}], conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')

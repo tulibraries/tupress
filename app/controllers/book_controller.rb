@@ -10,6 +10,12 @@ class BookController < ApplicationController
 
   def show
   	@book = Book.find_by book_id: "#{params[:id]}"
+    @subjects = @book.subjects.map do |s|
+       Subject.find_by subject_id: s
+    end
+    @series = @book.in_series.map do |s|
+       Series.find_by series_id: s
+    end
   end
 
   def bysubject
