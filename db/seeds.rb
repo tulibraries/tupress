@@ -258,6 +258,88 @@ Conference.create(
 	booth: 'Booth #TBD')
 
 
+Person.create(
+	name: 'Mary Rose Muccie', 
+	email: 'maryrose.muccie@temple.edu', 
+	position: 'Director', 
+	department: '', 
+	position_description: 'Responsible for all aspects of Press operation and management.')
+Person.create(
+	name: 'Nikki Miller', 
+	email: 'm.d.miller@temple.edu', 
+	position: 'Rights and Contracts Coordinator', 
+	department: '', 
+	position_description: 'Coordinates rights and permissions.')
+Person.create(
+	name: 'Aaron Javsicas', 
+	email: 'aaron.javsicas@temple.edu', 
+	position: 'Editor-in-Chief', 
+	department: 'Editorial Department', 
+	position_description: 'Oversees the editorial program, acquires titles in Political Science, Urban Studies, and the Philadelphia region.')
+Person.create(
+	name: 'Sara Cohen', 
+	email: 'sara.cohen@temple.edu', 
+	position: 'Editor', 
+	department: 'Editorial Department', 
+	position_description: 'Acquires titles in Literature, Sexuality Studies, and Asian American Studies.')
+Person.create(
+	name: 'Ryan A. Mulligan', 
+	email: 'ryan.mulligan@temple.edu', 
+	position: 'Editor', 
+	department: 'Editorial Department', 
+	position_description: 'Acquires titles in Sociology, Criminology, and Sports.')
+Person.create(
+	name: 'Nikki Miller', 
+	email: 'm.d.miller@temple.edu', 
+	position: 'Editorial Assistant', 
+	department: 'Editorial Department', 
+	position_description: 'Contact for general questions about the editorial department and manuscript submission.')
+Person.create(
+	name: 'Kate Nichols', 
+	email: 'k.nichols@temple.edu', 
+	position: 'Art Manager', 
+	department: 'Production Department', 
+	position_description: 'Oversees the production and design of all books, including jackets/covers and interiors. Manages the in-house typesetting program. Maintains project archives.')
+Person.create(
+	name: 'Joan Vidal', 
+	email: 'joan.vidal@temple.edu', 
+	position: 'Senior Production Editor', 
+	department: 'Production Department', 
+	position_description: 'Oversees the department\'s manuscript editorial functions. Supervises a pool of freelance copyeditors, proofreaders, and indexers. Manages the in-house production of new book projects from raw manuscript to bound book.')
+Person.create(
+	name: 'Dave Wilson', 
+	email: 'dave.wilson@temple.edu', 
+	position: 'Senior Production Editor', 
+	department: 'Production Department', 
+	position_description: 'Manages the production of new book projects from raw manuscript to bound book. Creates book budgets. Oversees the reprint, new paperback, and POD programs. Acts as print-and-bind vendor liaison.')
+Person.create(
+	name: 'Ann-Marie Anderson', 
+	email: 'anderson@temple.edu', 
+	position: 'Marketing Director, Assistant Director', 
+	department: 'Marketing Department', 
+	position_description: 'As head of the marketing department, develops marketing objectives, policies, and strategies for the promotion of all Press titles.')
+Person.create(
+	name: 'Irene Imperio Kull', 
+	email: 'irene.imperio@temple.edu', 
+	position: 'Advertising and Promotion Manager', 
+	department: 'Marketing Department', 
+	position_description: 'Manages the advertising and exhibit programs for all books. She is also responsible for the creation of all promotional materials.')
+Person.create(
+	name: 'Gary Kramer', 
+	email: 'gkramer@temple.edu', 
+	position: 'Publicity Manager', 
+	department: 'Marketing Department', 
+	position_description: 'Responsible for the entire publicity program and for the creation of marketing copy for jackets, covers, and seasonal catalogs.')
+Person.create(
+	name: 'Karen Baker', 
+	email: 'karen.baker@temple.edu', 
+	position: 'Financial Manager', 
+	department: 'Business Department', 
+	position_description: 'Manages the day-to-day business and financial operations of the Press, as well as processing payments of royalties to authors.')
+
+
+
+
 
 
 

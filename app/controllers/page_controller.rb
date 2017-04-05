@@ -18,4 +18,12 @@ class PageController < ApplicationController
     @conferences = Conference.all
     @conferences_month = @conferences.group_by {|t| t.month[0]}
   end
+  def review_copy
+  end
+  def press_info
+  end
+  def people
+    @people = Person.all
+    @people_by_dept = @people.group_by {|t| t.department}
+  end
 end

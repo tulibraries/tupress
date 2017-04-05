@@ -113,7 +113,7 @@
 		        	<%= link_to "Book Reviews", "/book-reviews", :class=>"dropdown-item" %>
 		          <%= link_to "Conferences", "/conferences", :class=>"dropdown-item" %>
 		          <%= link_to "Event Calendar", "#", :class=>"dropdown-item" %>
-		          <%= link_to "Request a Review Copy", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Request a Review Copy", "/review-copy", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -126,7 +126,8 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		          <%= link_to "People at the Press", "#", :class=>"dropdown-item" %>
+		        	<%= link_to "About the Press", "/press-info", :class=>"dropdown-item" %>
+		          <%= link_to "People at the Press", "/people", :class=>"dropdown-item" %>
 		          <%= link_to "Rights and Permissions", "#", :class=>"dropdown-item" %>
 		          <%= link_to "Foreign Rights Agents", "#", :class=>"dropdown-item" %>
 		          <%= link_to "Submissions", "#", :class=>"dropdown-item" %>

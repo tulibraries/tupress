@@ -1,0 +1,19 @@
+<div class="container">
+<h1 style="padding: 14px 0;">People @ the Press</h1>
+
+<% @people_by_dept.sort.each do |dept, people| %>
+	<div class="row">
+		<div class="col"><h2 style="margin-top: 28px;"><%= dept %></h2></div>
+	</div>
+	<% for person in people %>
+		<div class="row">
+			<div class="col">
+						<strong><%= mail_to person.email, person.name %></strong><br />
+						<em><%= person.position %></em><br />
+						<%= person.position_description %>
+			</div>
+		</div>
+	<% end %>
+
+<% end %>
+</div>

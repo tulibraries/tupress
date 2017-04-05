@@ -19,6 +19,9 @@ controller :page do
   get   'sales-reps'    => :sales_reps
   get   'book-reviews'  => :reviews
   get   'conferences'   => :conferences
+  get   'review-copy'   => :review_copy
+  get   'press-info'    => :press_info
+  get   'people'        => :people
   root 	'page#index'
 end 
 

@@ -1,0 +1,132 @@
+<div class="container">
+
+<div style="margin-bottom: 42px;">
+<p>To request a copy of a Temple University Press book, please fax your request on company letterhead to: Gary Kramer at 215.926.2141. If you would like to email your request, please include your name and contact information.</p>
+<p><strong>If you are a professor</strong> wishing to request an examination copy or a desk copy of a book that you've ordered for your class, you must send or fax your request on letterhead. Please 
+<%= link_to "click here for more information", "/copy-policy" %>. Thanks.</p>
+</div>
+<div id="contactform">
+<%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:name, "Name:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:name, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:email, "Email:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:email) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:mediatype, "Media Type:") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Radio/TV"> Radio/TV</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Magazine"> Magazine</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Journal"> Journal</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Newspaper"> Newspaper</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Exam/Desk Copy"> Exam/Desk Copy</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="radio col offset-2">
+      <label><input type="radio" name="mediatype" value="Other"> Other</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:website, "Website:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:website, "") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:request, "request:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_area_tag(:request, "", size: "48x6") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:address1, "Address Line 1:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:address, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:city, "City:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:city, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:state, "State:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= select_tag :state, options_for_select(us_states), :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:zipcode, "Zip/Post Code:") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:zipcode, "", :required => true) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-md-2">
+      <%= label_tag(:country, "Country (if not US):") %>
+    </div>
+    <div class="col col-md-10">
+      <%= text_field_tag(:country) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-10 offset-md-2 new-section">
+      <%= submit_tag("Submit Request") %>
+      <%= button_tag "Reset", type: :reset %>
+    </div>
+  </div>
+
+<% end %>
+</div>
+<div id="formfooter" style="margin-top: 42px;">
+  <div class="col col-md-10 offset-md-1">
+    Please note: all requests are indeed that—requests. Unfortunately, we can not always honor all of them. If you think we are unfamiliar with your publication, please send a sample/tearsheets with your request. Thank you.
+  </div>
+</div>
+</div>
