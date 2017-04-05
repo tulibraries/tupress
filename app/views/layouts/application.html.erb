@@ -113,7 +113,7 @@
 		        	<%= link_to "Book Reviews", "/book-reviews", :class=>"dropdown-item" %>
 		          <%= link_to "Conferences", "/conferences", :class=>"dropdown-item" %>
 		          <%= link_to "Event Calendar", "#", :class=>"dropdown-item" %>
-		          <%= link_to "equest a Review Copy", "#", :class=>"dropdown-item" %>
+		          <%= link_to "Request a Review Copy", "#", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -142,7 +142,12 @@
 		    </div>
 		</nav>
 		<a href="#" name="skiplink_ada" id="skiplink_ada"></a>
+
+		<div class="container">
+
     	<%= yield %>
+
+    </div>
 
     </div>
   </body>
