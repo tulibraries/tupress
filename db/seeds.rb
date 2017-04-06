@@ -337,9 +337,226 @@ Person.create(
 	department: 'Business Department', 
 	position_description: 'Manages the day-to-day business and financial operations of the Press, as well as processing payments of royalties to authors.')
 
+Region.create(
+	region: '',
+	rights: '')
+Region.create(
+	region: 'China & Taiwan',
+	rights: 'Non-exclusive Rights')
+Region.create(
+	region: 'Japan',
+	rights: 'Non-exclusive Rights')
+Region.create(
+	region: 'Korea',
+	rights: 'Non-exclusive Rights')
+Region.create(
+	region: 'Spanish & Portuguese languages, World',
+	rights: 'Exclusive Rights')
+Region.create(
+	region: 'Thailand & Vietnam / Indonesia',
+	rights: 'Non-exclusive Rights')
+Region.create(
+	region: 'Turkey',
+	rights: 'Exclusive Rights')
+Region.create(
+	region: 'All Other Territories',
+	rights: '')
 
-
-
+Agency.create(
+	title: 'Nikki Miller',
+	contact: 'Contracts and Subsidiary Rights Manager',
+	address1: '1852 North 10th Street',
+	address2: 'TASB',
+	address3: '',
+	city: 'Philadelphia, PA 19122',
+	country: 'USA',
+	phone: '215 926-3181',
+	fax: '215 926-2141',
+	email: 'm.d.miller@temple.edu',
+	website: '',
+	region: 'All Other Territories')
+Agency.create(
+	title: 'ONK Agency',
+	contact: 'Merve Erol',
+	address1: 'Cumhuriyet Cd. No:30/9 Elmadağ',
+	address2: 'Şişli 34367',
+	address3: '',
+	city: 'Istanbul',
+	country: 'Turkey',
+	phone: '90 212 241 77 00',
+	fax: '90 212 241 77 31',
+	email: 'merve@onkajans.com',
+	website: 'www.onkajans.com',
+	region: 'Turkey')
+Agency.create(
+	title: 'Tuttle-Mori Agency',
+	contact: 'Pimolporn Yutisri',
+	address1: '6th Fl., Siam Inter Comics Bldg.',
+	address2: '459 Soi Piboonoppathum Ladprao 48',
+	address3: 'Samsen Nok, Huay Kwank',
+	city: 'Bangkok 10320',
+	country: 'Thailand',
+	phone: '662 694 3026',
+	fax: '662 694 3027',
+	email: 'pimolporn@tuttlemori.co.th',
+	website: '',
+	region: 'Thailand & Vietnam / Indonesia')
+Agency.create(
+	title: 'RDC Agencia Literaria',
+	contact: 'Raquel de la Concha',
+	address1: 'Fernando VI, 13-15 - 3 izq.',
+	address2: '',
+	address3: '',
+	city: 'Madrid 28004',
+	country: 'Spain',
+	phone: '91 308 55 85',
+	fax: '91 308 56 00',
+	email: 'rdc@idecnet.com',
+	website: '',
+	region: 'Spanish & Portuguese languages, World')
+Agency.create(
+	title: 'Best Literary & Rights Agency',
+	contact: 'Jeffrey Kim',
+	address1: '#138-1, Dongsomun-dong 4ga',
+	address2: 'Seongbuk-gu',
+	address3: '',
+	city: '136-034 Seoul',
+	country: 'Korea',
+	phone: '',
+	fax: '',
+	email: 'best007@bestagency.co.kr',
+	website: '',
+	region: 'Korea')
+Agency.create(
+	title: 'Eric Yang Agency',
+	contact: 'Jackie Yang',
+	address1: '4F, e B/D, #54-7',
+	address2: 'Banpo-dong, Seocho-gu',
+	address3: '',
+	city: 'Seoul 137-803',
+	country: 'Korea',
+	phone: '82-2-592-3356',
+	fax: '82-2-3481-1948',
+	email: 'jackieyang@eyagency.com',
+	website: 'www.eyagency.com',
+	region: 'Korea')
+Agency.create(
+	title: 'Korea Copyright Center',
+	contact: 'MiSook Hong',
+	address1: 'Gyonghigung-achim Officetel Rm. 520, Compound 3',
+	address2: 'Naesu-dong 72, Chongno',
+	address3: '',
+	city: 'Seoul 110-070',
+	country: 'Korea',
+	phone: '(82)-2-725-3350',
+	fax: '(82)-2-725-3612',
+	email: 'kcc@kccseoul.com',
+	website: '',
+	region: 'Korea')
+Agency.create(
+	title: 'Imprima Korea Agency',
+	contact: 'Suzy Choi',
+	address1: '4F. GNC Media B/D',
+	address2: '352-11 Seokyo-dong, Mapo-gu',
+	address3: '',
+	city: 'Seoul 121-837',
+	country: 'Korea',
+	phone: '(88 2) 325 9155 (214)',
+	fax: '(88 2) 334-9160',
+	email: 'suzychoi@imprima.co.kr',
+	website: 'http://www.imprima.co.kr/',
+	region: 'Korea')
+Agency.create(
+	title: 'Tuttle-Mori Japan',
+	contact: 'Naomi Mizuno',
+	address1: '2-15 Kanda Jimbocho',
+	address2: 'Chiyoda-ku',
+	address3: '',
+	city: 'Tokyo 101-0051',
+	country: 'Japan',
+	phone: '81 03(3230)4084',
+	fax: '81 03(3234)5249',
+	email: 'naomi@tuttlemori.com',
+	website: 'http://www.tuttlemori.com/',
+	region: 'Japan')
+Agency.create(
+	title: 'The English Agency',
+	contact: 'Tsutomu Yawata',
+	address1: 'Sakuragi Bldg. 4F',
+	address2: '6-7-3 Minami Aoyama',
+	address3: 'Minatoku-ku',
+	city: 'Tokyo 107-0062',
+	country: 'Japan',
+	phone: '81 3 3406 5387',
+	fax: '',
+	email: 'tsutomu_yawata@eaj.co.jp',
+	website: '',
+	region: 'Japan')
+Agency.create(
+	title: 'Japan UNI Agency',
+	contact: 'Eriko Takeuchi',
+	address1: 'Tokyodo Jinbocho No. 2 Bldg.',
+	address2: '1-27 Kanda Jinbocho',
+	address3: 'Chiyoda-ku',
+	city: 'Tokyo 101-0051',
+	country: 'Japan',
+	phone: '81-3-3295-0301',
+	fax: '81-3-3294-5173',
+	email: 'eriko.takeuchi@japanuni.co.jp',
+	website: '',
+	region: 'Japan')
+Agency.create(
+	title: 'Asano Agency',
+	contact: 'Kiyoshi Asano',
+	address1: '44-8-302, Sengoku, 4-Chome',
+	address2: 'Bunkyo-ku',
+	address3: '',
+	city: 'Tokyo 112-0011',
+	country: 'Japan',
+	phone: '',
+	fax: '',
+	email: 'kiyoshi@asano-agency.com',
+	website: '',
+	region: 'Japan')
+Agency.create(
+	title: 'Chinese Connection Agency',
+	contact: 'Mei Yao',
+	address1: '67 Banksville Road',
+	address2: '',
+	address3: '',
+	city: 'Armonk, NY 10504',
+	country: '',
+	phone: '914-765-0296',
+	fax: '914-765-0297',
+	email: 'YaoLLC@Optonline.net',
+	website: '',
+	region: 'China & Taiwan')
+Agency.create(
+	title: 'Big Apple Tuttle-Mori Agency',
+	contact: 'Vinelle Pan',
+	address1: '7F, No. 38, Wugong 5th Rd.',
+	address2: 'Wugu Township',
+	address3: 'Taipei County 248',
+	city: 'Taiwan',
+	country: '',
+	phone: '886-2-89901238 ext. 116',
+	fax: '886-2-89901129',
+	email: 'vinelle-pan@bigapple1-taipei.com',
+	website: '',
+	region: 'China & Taiwan')
+Agency.create(
+	title: 'Bardon-Chinese Media Agency',
+	contact: 'Annie Chen',
+	address1: '3F, No. 150, Roosevelt Road, Section 2',
+	address2: '',
+	address3: '',
+	city: 'Taipei 100',
+	country: 'Taiwan',
+	phone: '886-2-23644995 ext. 17',
+	fax: '886-2-23641967',
+	email: 'annie@bardon.com.tw',
+	website: '',
+	region: 'China & Taiwan')
 
 
 

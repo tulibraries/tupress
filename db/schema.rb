@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405210750) do
+ActiveRecord::Schema.define(version: 20170406143930) do
+
+  create_table "agencies", force: :cascade do |t|
+    t.string   "title"
+    t.string   "contact"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "city"
+    t.string   "country"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "website"
+    t.string   "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "books", force: :cascade do |t|
     t.string   "book_id"
@@ -59,6 +76,13 @@ ActiveRecord::Schema.define(version: 20170405210750) do
     t.string   "position_description"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "region"
+    t.string   "rights"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -1,9 +1,46 @@
-<div class="container">
-<h1 style="padding: 14px 0;">People @ the Press</h1>
+
+	<div class="row">
+		<div class="col">
+			<h1>People @ the Press</h1>
+		</div>
+	</div>
+
+<div class="row" style="margin-top:14px;">
+<div class="col alert alert-warning">
+Temple University Press has moved! Our offices are now located at the address below. Our phone and fax numbers have also changed but our email remains the same. Please update your records.
+</div>
+</div>
+
+	<div class="row" style="margin-top:14px;">
+		<div class="col col-md-3 offset-md-1">
+			<address>
+				Temple University Press<br />
+				TASB<br />
+				1852 N. 10th Street<br />
+				Philadelphia, PA 19122<br />
+			</address>
+		</div>
+		<div class="col col-md-3">
+			<address>
+				<strong>Phone</strong>: 215-926-2140<br />
+				<strong>Fax</strong>: 215-926-2141<br />
+				tempress@temple.edu
+			</address>
+		</div>
+		<div class="col col-md-3">
+			<address>
+				<p><em>For UPS and FedEx deliveries:</em></p>
+				Temple University Press<br />
+				2450 West Hunting Park Avenue<br />
+				Philadelphia, PA 19129
+			</address>		
+		</div>
+	</div>
+
 
 <% @people_by_dept.sort.each do |dept, people| %>
 	<div class="row">
-		<div class="col"><h2 style="margin-top: 28px;"><%= dept %></h2></div>
+		<div class="col"><h2 style="margin-top: 21px;"><%= dept %></h2></div>
 	</div>
 	<% for person in people %>
 		<div class="row">

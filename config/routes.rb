@@ -11,17 +11,21 @@ controller :book do
 end
 
 controller :page do
-	get		'page/index'	  => :index
-	get		'contact'			  => :contact
-  get   'order'         => :order
-  get   'payment'       => :payment
-  get   'copy-policy'   => :copypolicy
-  get   'sales-reps'    => :sales_reps
-  get   'book-reviews'  => :reviews
-  get   'conferences'   => :conferences
-  get   'review-copy'   => :review_copy
-  get   'press-info'    => :press_info
-  get   'people'        => :people
+	get		'page/index'	          => :index
+	get		'contact'			          => :contact
+  get   'order'                 => :order
+  get   'payment'               => :payment
+  get   'copy-policy'           => :copypolicy
+  get   'sales-reps'            => :sales_reps
+  get   'book-reviews'          => :reviews
+  get   'conferences'           => :conferences
+  get   'review-copy'           => :review_copy
+  get   'press-info'            => :press_info
+  get   'people'                => :people
+  get   'rights'                => :rights
+  get   'foreign-rights'        => :foreign_rights
+  get   'submissions'           => :submissions
+  get   'university-presses'    => :university_presses
   root 	'page#index'
 end 
 

@@ -1,0 +1,91 @@
+
+	<div class="row">
+		<div class="col">
+			<h1>Foreign Rights Agents</h1>
+		</div>
+	</div>
+
+
+<% @agencies_final.sort.each do |agencies, region| %>
+ <% if !region.rights.empty? %>
+	<div class="row">
+		<div class="col">
+			<h2 class="grey-back"><%= region.region %></h2> 
+				<p style="padding-left: 15px;">
+					<em><%= region.rights %></em>
+				</p>
+			</div>
+	</div>
+	<div class="container">
+	<% for agency in agencies %>
+		<div class="row">
+			<div class="col">
+				<address>
+					<strong><%= agency.title %></strong><br />
+					<%= agency.contact %><br />
+					<%= agency.address1 %><br />
+					<% if !agency.address2.empty? %>
+						<%= agency.address2 %><br />
+					<% end %>
+					<% if !agency.address3.empty? %>
+						<%= agency.address3 %><br />
+					<% end %>
+					<%= agency.city %><br />
+					<% if !agency.country.empty? %>
+						<%= agency.country %><br />
+					<% end %>
+					<% if !agency.phone.empty? %>
+						<%= agency.phone %><br />
+					<% end %>
+					<% if !agency.fax.empty? %>
+						<%= agency.fax %><br />
+					<% end %>
+					<%= mail_to agency.email, agency.email %><br />
+					<% if !agency.website.empty? %>
+						<%= link_to agency.website, agency.website %><br />
+					<% end %>
+				</address>
+			</div>
+		</div>
+	<% end %>
+	</div>
+	<% end %>
+<% end %>
+
+
+<div class="row">
+	<div class="col">
+		<h2 class="grey-back"><%= @agencies_catchall.region %></h2>
+		</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<address>
+				<strong><%= @agencies_catchall.title %></strong><br />
+				<%= @agencies_catchall.contact %><br />
+				<%= @agencies_catchall.address1 %><br />
+				<% if !@agencies_catchall.address2.empty? %>
+					<%= @agencies_catchall.address2 %><br />
+				<% end %>
+				<% if !@agencies_catchall.address3.empty? %>
+					<%= @agencies_catchall.address3 %><br />
+				<% end %>
+				<%= @agencies_catchall.city %><br />
+				<% if !@agencies_catchall.country.empty? %>
+					<%= @agencies_catchall.country %><br />
+				<% end %>
+				<% if !@agencies_catchall.phone.empty? %>
+					<%= @agencies_catchall.phone %><br />
+				<% end %>
+				<% if !@agencies_catchall.fax.empty? %>
+					<%= @agencies_catchall.fax %><br />
+				<% end %>
+				<%= mail_to @agencies_catchall.email, @agencies_catchall.email %><br />
+				<% if !@agencies_catchall.website.empty? %>
+					<%= link_to @agencies_catchall.website, @agencies_catchall.website %><br />
+				<% end %>
+			</address>
+		</div>
+	</div>
+</div>

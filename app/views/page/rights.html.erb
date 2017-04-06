@@ -1,0 +1,218 @@
+  <div class="row">
+    <div class="col">
+      <h1>Rights &amp; Permissions</h1>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col">
+    <p>For permission to use material from one of our publications, please fill out the following form. The following information/material is required before requests for permission to use material from Temple University Press books will be considered.</p>
+    <p>This form should only be used for requests to reproduce material copyrighted by Temple University Press in forthcoming books for publication. Please submit all requests for photocopies for academic use and for electronic course reserve via Copyright Clearance Center at <%= link_to "www.copyright.com", "http://www.copyright.com" %>.</p>
+  </div>
+</div>
+
+<div class="row">
+<div class="col" id="contactform">
+<%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:name, "Name:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:name, "", :class=>"form-control", :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:email, "Email:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:email, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:address1, "Address Line 1:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:address1, "", :class=>"form-control", :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:address2, "Address Line 2:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:address2, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:city, "City:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:city, "", :class=>"form-control", :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:state, "State:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= select_tag :state, options_for_select(us_states), :class=>"form-control", :required => true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:zipcode, "Zip/Post Code:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:zipcode, "", :class=>"form-control", :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:country, "Country (if not US):") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:country, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:book_title, "Book Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:book_title, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:author, "Author/Editor:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:author, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:chapter, "Chapter Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:chapter, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:chapter_author, "Chapter Author:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:chapter_author, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:page_numbers, "Pahe Numbers:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:page_numbers, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:price_est, "Estimated Reprint Price:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:price_est, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:publisher, "Your Publisher:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:publisher, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:reprint_title, "Reprint Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:reprint_title, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:pub_author, "Editor/Author of Your Publication:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:pub_author, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:reprint_pages, "Number of Pages in Reprint:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:reprint_pages, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:copies, "Number of Copies:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:copies, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:pub_date, "Publication Date:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:pub_date, '', :class=>"form-control") %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:requested_rights, "Rights Requested:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:requested_rights, '', :class=>"form-control") %>
+    </div>
+  </div>
+
+    <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:comments, "Comments:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_area_tag(:comments, "", size: "48x6", :class=>"form-control") %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col col-md-9 offset-md-2 new-section">
+      <%= submit_tag("Submit Request") %>
+      <%= button_tag "Reset", type: :button, :id=>"reset" %>
+    </div>
+  </div>
+
+<% end %>
+</div>
+<div id="formfooter" style="margin-top: 42px;">
+  <div class="col col-md-10 offset-md-1">
+    <p>If selection is an excerpt, adaptation, or is altered in any way from its copyrighted form, a photocopy of the pages of material to be reprinted, indicating any edits, should be sent to:</p>
+      <address>
+        Nikki Miller <br />
+        Temple University Press <br />
+        TASB<br />
+        1852 North 10th Street<br />
+        Philadelphia, PA 19122<br />
+        <p><strong>Fax</strong>: 215.926.2141</p>
+      </address>
+    <p>If this request is for a reuse of material for which permission was previously granted, please supply a copy of the previous permission agreement and any additional information regarding the previous use.</p>
+  </div>
+</div>
