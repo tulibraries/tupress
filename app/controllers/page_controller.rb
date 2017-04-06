@@ -40,4 +40,8 @@ require 'pry'
   end
   def university_presses
   end
+  def faq
+  end
+  def links
+  end
 end

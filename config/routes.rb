@@ -26,6 +26,8 @@ controller :page do
   get   'foreign-rights'        => :foreign_rights
   get   'submissions'           => :submissions
   get   'university-presses'    => :university_presses
+  get   'faq'                   => :faq
+  get   'links'                 => :links
   root 	'page#index'
 end 
 
