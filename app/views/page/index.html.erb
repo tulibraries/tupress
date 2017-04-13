@@ -12,22 +12,22 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <img class="d-block img-fluid" src="<%= asset_path 'OAH17.gif' %>" alt="First slide">
+        <%= link_to image_tag("OAH17.gif", class: 'd-block img-fluid', alt: 'Explore our history titles'), controller: 'book', action: 'bysubject', id: '1060' %>
       </div>
       <div class="carousel-item">
-        <img class="d-block img-fluid" src="<%= asset_path 'marchmadness.gif' %>" alt="Second slide">
+        <%= link_to image_tag("Library_April17.gif", class: 'd-block img-fluid', alt: 'Celebrate national library week -- links to Temple University Libraries'), 'http://library.temple.edu' %>
       </div>
       <div class="carousel-item">
-        <img class="d-block img-fluid" src="<%= asset_path 'SP17Cat.gif' %>" alt="Third slide">
+        <%= link_to image_tag("Tai.gif", class: 'd-block img-fluid', alt: 'The Magic of Children\'s Gardens'), controller: 'book', action: 'show', id: '2437'  %>
       </div>
       <div class="carousel-item">
-        <img class="d-block img-fluid" src="<%= asset_path 'klezmer.gif' %>" alt="Fourth slide">
+        <%= link_to image_tag("klezmer.gif", class: 'd-block img-fluid', alt: 'Klezmer: Music and Community in Twentieth-Century Jewish Philadelphia'), controller: 'book', action: 'show', id: '1937'  %>
       </div>
       <div class="carousel-item">
-        <img class="d-block img-fluid" src="<%= asset_path 'Kashatus_slider.gif' %>" alt="Fifth slide">
+        <%= link_to image_tag("klezmer.gif", class: 'd-block img-fluid', alt: 'Suicide Squeeze: Taylor Hooton, Rob Garibaldi, and the Fight against Teenage Steroid Abuse'), controller: 'book', action: 'show', id: '2434'  %>
       </div>
       <div class="carousel-item">
-        <img class="d-block img-fluid" src="<%= asset_path 'boathouserow.gif' %>" alt="Sixth slide">
+        <%= link_to image_tag("boathouserow.gif", class: 'd-block img-fluid', alt: 'Boathouse Row: Waves of Change in the Birthplace of American Rowinge'), controller: 'book', action: 'show', id: '2375'  %>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -42,9 +42,7 @@
 </div>
 <div class="col-md-3">
 <div id="scNews">
-        Subscribe to our monthly newsletter for info about new
-        books and website content.
-
+      <p class="small">Subscribe to our monthly newsletter for info about new books and website content.</p>
         <%= form_tag "http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", :method=>"post", :name=>"NewsletterSubscription", :id=>"NewsletterSubscription", :style=>"margin-top:7px;" do |f| %>
           <%= email_field_tag "email", nil, placeholder: "Enter your email..." %> 
           <%= text_field_tag "subject", "Newsletter Subscription", type: "hidden" %>
@@ -52,13 +50,84 @@
           <%= submit_tag "Subscribe!" %>
         <% end %>
 </div>
-<div id="scBlurbs" style="margin:25px 0 0 0;">
-        <a href="http://templepress.wordpress.com/"><img src="<%= asset_path 'visit.gif' %>" style="border-bottom:1px solid #a6a6a6; padding:0 15px 0 15px; margin-left:7px;" alt="North Philly Notes"></a>
+<div id="scBlogContent">
+  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
+  <p><small>This week in <a href="https://templepress.wordpress.com/2017/03/22/aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative/" target="new">North Philly Notes</a>, Temple University Press is excited to participate in the <a href="http://www.aaupnet.org/news-a-publications/news/1561-aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative" target="new">AAU/ARL/AAUP Open Access Monograph Publishing Initiative</a>.</small></p>
+</div>
+</div>
+</div>
 
-        <div class="scBlogContent"><br>
-      This week in <a href="https://templepress.wordpress.com/2017/03/22/aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative/" target="new">North Philly Notes</a>, Temple University Press is excited to participate in the <a href="http://www.aaupnet.org/news-a-publications/news/1561-aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative" target="new">AAU/ARL/AAUP Open Access Monograph Publishing Initiative</a>.<p></p>
-      </div>
-    </div>
+<div class="row" style="margin-top: 28px;">
+<div class="col">
+<h2><%= image_tag "news.gif", alt: 'News' %></h2>
+</div>
+</div>
+
+<div class="row">
+
+<% @news_books.each do |book| %>
+  <div class="col col-md-3 text-center" style="line-height:1.1;margin-top: 10px;">
+    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:160px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+    <p style="text-align:justify;padding: 0 7px;margin-top: 10px;"><small><%= book.news_text.truncate(420).html_safe %></small></p>
+  </div>
+<% end %>
+
+<div class="col col-md-3 text-center">
+  <h2>Follow Us on:</h2>
+  <ul class="list-unstyled social-icons">
+    <li><br />
+      <%= link_to image_tag('twitter-icon.png', style: 'width:77px;border:0;', alt: 'Twitter Icon'), 'http://twitter.com/TempleUnivPress' %>
+    </li>
+    <li><%= link_to image_tag('fb-icon.jpg', style: 'width:77px;border:0;', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
+  </ul>
+</div>
+
+</div>
+
+
+
+
+<div class="row" style="margin-top: 28px;">
+<div class="col">
+<h2><%= image_tag "hotoffthepress.gif", alt: 'Hot off the press' %></h2>
+</div>
+</div>
+
+<div class="row" style="padding: 14px;">
+<div class="col col-md-9">
+<% @news_books.each do |book| %>
+<div class="row" style="margin-top: 28px;">
+  <div class="media text-center" style="width: 160px;text-align:center">
+    <%= link_to image_tag(book.cover_image, alt: 'Book Cover', border: 0, class: 'd-flex mr-3', style: 'height:160px;margin:auto;'), {controller: 'book', action: 'show', :id=>book.book_id}, :style=>'width:100%;' %>
+  </div>
+  <div class="media-body" style="padding-left: 28px;">
+  <h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %>
+      <% if book.subtitle %>
+        <br /><small><%= book.subtitle %></small>
+      <% end %>
+      </h2>
+      <p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
+      <p style="line-height:1.2"><small><%= book.hot_text.truncate(500).html_safe %></small></p>
+  </div>
+</div>
+<% end %>
+</div>
+<div class="col col-md-3 text-center" style="padding-left: 56px;margin-top: -28px;">
+<h2 style="color:#903;">Spring 2017 Catalog</h2>
+<%= link_to image_tag('spring17.gif', alt: 'catalog cover'), 'http://www.temple.edu/tempress/catalogs/spring2017.html' %>
+<p style="color:#903;"><%= link_to '[PDF Version]', 'http://www.temple.edu/tempress/catalogs/spring2017.html' %></p>
+<h2 style="color:#903;margin-top:64px;font-size: 90%">Books for Course Adoptions</h2>
+<%= link_to image_tag('spring17.gif', alt: 'catalog cover'), 'http://www.temple.edu/tempress/catalogs/archive/spring2017.pdf' %>
 </div>
 </div>
 </div>
+</div>
+
+
+
+
+
+
+
+
+

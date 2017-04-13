@@ -1,0 +1,8 @@
+<div class="container">
+<h1 style="padding: 14px 0;">Catalogs</h1>
+<% @catalogs.each do |catalog| %>
+	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
+		<%= link_to catalog.title, {controller: :book, action: :catalogs_by_season, :id => catalog.id} %>
+	</div>
+<% end %>
+</div>

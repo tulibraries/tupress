@@ -1,34 +1,45 @@
 <div class="container">
 <h1><%= @book.title %></h1>
 	<div class="row">
-		<div class="author">	
+		<div class="col author">	
 			<%= @book.author.map { |author| author }.join(' and ') %>
 		</div>
 	</div>
 	<div class="row">
-		<img src="<%= @book.cover_image %>">
+		<div class="col col-md-3">
+			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:200;height:300;" %>
+		</div>
+		<div class="col col-md-8">
+			<%= @book.reviews.first.html_safe %>
+		</div>
 	</div>
-	<div class="row">
-		<%= @book.description.html_safe %>
+	<div class="row" style="padding-top: 28px;">
+		<div class="col">
+			<%= @book.description.html_safe %>
+		</div>
 	</div>
 	<div class="row">	
-		<h3>Reviews</h3>
+		<div class="col">
+			<h2>Reviews</h2>
+		</div>
+	</div>
+	<div class="row">
 		<% @book.reviews.each do |review| %>
-		 <div class="review">
+		 <div class="col review">
 		 	<%= review.html_safe %>
 		 </div>
 		<% end %>
 	</div>
 	<div class="row">
-		<h3>About the Author(s)</h3>	
+		<h2>About the Author(s)</h2>
+		 <div class="about_author">	
 		<% @book.about_author.each do |about| %>
-		 <div class="about_author">
-		 	<%= about.html_safe %>
-		 </div>
+		 	<%= about.html_safe %><br />
 		<% end %>
+		 </div>
 	</div>
 	<div class="row">
-		<h3>Subjects</h3>	
+		<h2>Subjects</h2>	
 		<% @subjects.each do |subject| %>
 		 <div class="subject">
 		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %> 
@@ -36,7 +47,7 @@
 		<% end %>
 	</div>
 	<div class="row">
-		<h3>In Series</h3>	
+		<h2>In Series</h2>	
 		<% @series.each do |series| %>
 		 <div class="subject">
 		 	<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %> 

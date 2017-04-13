@@ -15,15 +15,19 @@
 Book.create(
 						book_id: '2015',
 						title: 'A is for Art Museum', 
+						subtitle: '',
+						excerpt: '',
+						intro: '',
+						blurb: '',
 						author: [
 							'Katy Friedland', 
 							'Marla K. Shoemaker'
 						], 
 						description: '<p class="award">Honorable mention in the AAM (American Association of Museums) design competition., 2008</p><P>An art museum is a magical place. What will you find inside? This playful primer features 37 full-color illustrations of paintings, sculpture, tapestries, prints, photographs, and installations from the collections of the Philadelphia Museum of Art. Children can learn their ABCs while discovering the beauty of a bridge by Monet, a dancer by Degas, a medieval knight\’s helmet, a Japanese teahouse, and other wonders from around the world.</P><P>In <i>A is for Art Museum</i>, children are encouraged to see art in new ways. Each image is accompanied by questions designed to engage their imaginations and spark lively conversations. Activities at the back of the book suggest ways for children and adults to create stories out of each picture, or to turn a trip to an art museum into a “treasure hunt.” Like a visit to a museum, <i>A is for Art Museum</i> provides endless opportunities for interaction, fun, and learning.</P><p>Recommended for ages 2-5.</P>', 
 						reviews: [
-							'"Coffee-table books aren’t just for grown-ups, as proven by A Is for Art Museum, a kid-sized catalog that brings children into the Philadelphia Museum of Art through pictures and the alphabet. Every letter is tied to a piece in the museum, and asks readers a question about the photo…. It’s the perfect museum companion, too, for a first trip." <br><strong> —The Philadelphia Inquirer</strong> ', 
-							'"Ages 2 to 5 will learn about art, shapes, colors and more through paintings and other objects found at the Philadelphia Art Museum. Famous artists have their works included in an educational format, showing children that different visions of the world are still accessible. Each page asks questions and helps develop the child’s thinking process as they search for letters, images and more. Truly a wonderful addition to any child’s library."<br><strong>—Parents Express</strong>', 
-							'"A highly engaging introduction to art, this thoughtfully designed volume will inspire young children to see not only the alphabet in an entirely new way but also the world around them as they discover and learn to view paintings, sculptures, photographs, and other works and installations housed at the Philadelphia Museum of Art.... This would be a wonderful gift for any young child." <br><strong>—The Bloomsbury Review</strong> '
+							'"Coffee-table books aren’t just for grown-ups, as proven by A Is for Art Museum, a kid-sized catalog that brings children into the Philadelphia Museum of Art through pictures and the alphabet. Every letter is tied to a piece in the museum, and asks readers a question about the photo…. It’s the perfect museum companion, too, for a first trip." <br /><span class="byline">-- <strong>The Philadelphia Inquirer</strong></span>', 
+							'"Ages 2 to 5 will learn about art, shapes, colors and more through paintings and other objects found at the Philadelphia Art Museum. Famous artists have their works included in an educational format, showing children that different visions of the world are still accessible. Each page asks questions and helps develop the child’s thinking process as they search for letters, images and more. Truly a wonderful addition to any child’s library."<br /><span class="byline">-- <strong>Parents Express</strong></span>', 
+							'"A highly engaging introduction to art, this thoughtfully designed volume will inspire young children to see not only the alphabet in an entirely new way but also the world around them as they discover and learn to view paintings, sculptures, photographs, and other works and installations housed at the Philadelphia Museum of Art.... This would be a wonderful gift for any young child." <br /><span class="byline">-- <strong>The Bloomsbury Review</strong></span>'
 						], 
 						about_author: [
 							'<strong>Katy Friedland</strong> is Manager of Family and Children\'s Programs at the Philadelphia Museum of Art.', 
@@ -48,9 +52,97 @@ Book.create(
 						pub_date: 'Sep 08', 
 						isbn: '9781592139637', 
 						ean: '978-1-59213-963-7', 
-						cover_image: 'http://www.temple.edu/tempress/titles/2015_reg.gif'
+						cover_image: 'http://www.temple.edu/tempress/titles/2015_reg.gif',
+						hot: '1',
+						hot_text: '"Coffee-table books aren’t just for grown-ups, as proven by A Is for Art Museum, a kid-sized catalog that brings children into the Philadelphia Museum of Art through pictures and the alphabet. Every letter is tied to a piece in the museum, and asks readers a question about the photo…. It’s the perfect museum companion, too, for a first trip."<br /><span class="byline">-- <strong>The Philadelphia Inquirer</strong></span>',
+						news: '1',
+						news_text: '<span class="award">Honorable mention in the AAM (American Association of Museums) design competition., 2008</span>',
+						catalog: '1'
 						)
-
+Book.create(
+						book_id: '2440',
+						title: 'Risking Life and Lens', 
+						subtitle: 'A Photographic Memoir',
+						excerpt: '<a href="http://www.temple.edu/tempress/chapters_2400/2440_ch1.pdf">Read the Introduction (pdf).</a>',
+						intro: '',
+						blurb: '',
+						author: [
+							'Helen M. Stummer'
+						], 
+						description: 'For more than forty years, Helen M. Stummer has captured images depicting the dignity, humanity, and suffering of people living in conditions of poverty. Her efforts taught her to understand firsthand the resilience of people living in insufferable conditions. In her inspiring memoir, <em>Risking Life and Lens</em>, Stummer recounts her experiences as a socially-concerned documentary photographer whose passion for her work overcame her fears. Stummer\'s images, from the mean streets of Manhattan and Newark, New Jersey, to the back woods of Maine and the mountains of Guatemala, expose the myths of poverty and serve as a metaphor for her challenges in her own life. The 159 photographs reproduced here recount Stummer\'s journey as an artist and her personal quest for truth. Risking Life and Lens shares Stummer\'s work and educational efforts and it provides valuable insights about race, class, and social justice-issues that continue to divide the country and the world. Her work has created change in both her own life and the lives of those who view it.', 
+						contents: 'Foreword • Truth Be Told: Restating the Obvious, by William Weiner<br><br>1. It Began with a Walk<br>2. Storms in Newark<br>3. To Maine and Beyond<br>4. Doing and Teaching<br>5. Bringing It All Home<br>6. Coming Full Circle<br><br>Acknowledgments',
+						reviews: [
+							'"Helen M. Stummer\'s Risking Life and Lens is an extraordinarily personal glimpse into the life and work of a photographer who has spent her career consumed with documenting social injustice and those it has affected most. Stummer turns her lens on the Lower East Side and Newark with a levity reminiscent of Helen Levitt\'s photographs of children and a direness evocative of Jacob Riis\'s images of the tenements of New York. These seemingly disparate qualities combine to make Stummer\'s photographs both captivating and relevant. This book is a must-read for anyone interested in the humanity of our urban cities."<br /><span class="byline">-- <strong>John Cyr</strong>, photographer and author of Developer Trays</span>'
+						], 
+						about_author: [
+							'<b>Helen M. Stummer</b> is a New Jersey-based social documentary photographer and Visual Sociologist whose work is included in the collections of the Library of Congress, the International Center of Photography in Manhattan, the Museum of the City of New York, the Brooklyn Museum, and Rutgers University Libraries Special Collections in New Brunswick. She is Associate Professor Emerita of Photography and Photojournalism at the County College of Morris and the author of <a href="/book/1209"><em>No Easy Walk: Newark, 1980-1993</em></a> (Temple). She received grants from the George and Helen Segal Foundation in 2011-2012 and the New Jersey State Council on the Arts in 1995 and 2003 and a Distinguished Alumni Award from Kean University in 2012. Visit her online at <a href="http://www.hmstummer.com">hmstummer.com</a>.'
+						], 
+						subjects: [
+							'1035',
+							'1038',
+							'1032'
+						], 
+						in_series: [
+							],
+						is_guide: "0",
+						award: "",
+						format: '246 pp<br />6.125 x 9.25<br />1 figs., 159 halftones', 
+						binding: [
+							{type: 'Cloth', ean: '978-1-4399-1457-1', price: '125.50'},
+							{type: 'Paper', ean: '978-2-59213-963-9', price: '34.95'}
+						], 
+						pub_date: 'Feb 17', 
+						isbn: '9781439914564', 
+						ean: '', 
+						cover_image: 'http://www.temple.edu/tempress/titles/2440_reg.gif',
+						hot: '1',
+						hot_text: '"[A]n extraordinarily personal glimpse into the life and work of a photographer who has spent her career consumed with documenting social injustice and those it has affected most.... This book is a must-read for anyone interested in the humanity of our urban cities."<br /><span class="byline">-- <strong>John Cyr</strong>, photographer and author of Developer Trays</span>',
+						news: '1',
+						news_text: 'A photography exhibit by Helen M. Stummer, author of <a href="/book/2440"><em>Risking Life and Lens</em></a>, will open April 8 at the <a href="http://www.jerseyhistory.org/news_detail.php?recid=220">New Jersey Historical Society</a>, 53 Park Place, in Newark, NJ. Stummer will participate in a Meet the Artist/Gallery Talk on April 8 at 11:30 am. The exhibit continues through June 24.',
+						catalog: '1'
+						)
+Book.create(
+						book_id: '2445',
+						title: 'Pennsylvania Stories—Well Told', 
+						subtitle: '',
+						excerpt: 'a href="http://www.temple.edu/tempress/chapters_2400/2445_ch1.pdf">Read the Introduction (pdf).</a>',
+						intro: '',
+						blurb: 'An engrossing compendium of stories on the people, places, and events that make Pennsylvania unique. Well told.',
+						author: [
+							'William Ecenbarger'
+						], 
+						description: 'With a biting mix of wonder and pride, William Ecenbarger observes that in the quirky state of Pennsylvania, the town of Mauch Chunk changed its name to Jim Thorpe—even though the famous Indian athlete never set foot in it.</p><p>A former journalist for the Philadelphia Inquirer Magazine, and author of the bestseller Kids for Cash, Ecenbarger has collected a dozen of his fascinating articles showcasing the Keystone State in Pennsylvania Stories—Well Told. He provides a history of the pencil, and considers why the first day of Pennsylvania\'s deer hunting season—the world\'s largest participatory sporting event—is an unofficial state holiday, closing schools and state offices. Ecenbarger also profiles George "Boom Boom" Zambelli, the internationally renowned pyrotechnic king, and goes driving with Pennsylvania native John Updike in rural Berks County, PA. </p><p>Other fascinating tales unfold in Pennsylvania Stories, from an inspiring tale of Governor Bob Casey\'s double organ transplant, to darker essays on the electric chair and the Ku Klux Klan, to a mile-by-mile appreciation of the Pennsylvania Turnpike. </p><p>In these weird and wonderful stories, Ecenbarger highlights just what makes Pennsylvania both eccentric and great. His book is a delightfully intriguing read for natives and curious outsiders alike.', 
+						contents: 'Introduction<p><strong>Intimate Strangers</strong><br />Mike Lucas Was Struggling to Build a Life. Bob Casey Was Fighting to Keep His. This Is Their Story.</p><p><strong>Passing the Torch</strong><br />Former Klansman Roy Frankhouser Still Dreams of the Day When Men Will Be Judged by the Color of Their Skin rather than the Content of Their Character.</p><p><strong>The Shame that Was Byberry</strong><br />To Behold the Horrors of This Philadelphia Mental Hospital Is to Wonder: Just Who Are the Lunatics?</p><p><strong>The Pencil</strong><br />What\'s Portable, Chewable, Doesn\'t Leak, and Is Recommended by Ann Landers?</p><p><strong>The Great Zambelli\'s Theory of the Big Bang</strong><br />A Profile of Mr. Fireworks, George "Boom Boom" Zambelli</p><p><strong>John O\'Hara Could Go Home Again</strong><br />But No Cheering Crowd Would Await the Once-Despised Novelist in Pottsville.</p><p><strong>Drawing the Line</strong><br />The Surveyors Charles Mason and Jeremiah Dixon Were Hired in 1763 to Settle a Simple Border Dispute. They Never Knew Their Work Would Become One of the Most Famous Boundaries in the World.</p><p><strong>The Chair of Death</strong><br />Some Have Been Dragged to It; Others Have Run to It. They Have Died Crying and Laughing. Many Have Died as Converts; Others Have Shouted Their Rejections. No Two Stories Are Alike.</p><p><strong>Why Would a Nice Town like Jim Thorpe Want to Be Mauch Chunk—Again?</strong><br />How a Pennsylvania Town Came to Be Called Jim Thorpe—even though the Famous Native American Athlete Never Set Foot in It</p><p><strong>Pennsylvania\'s Deer-Hunting Season</strong><br />The Largest Participatory Recreation Event in the World?</p><p><strong>Tales of the Pennsylvania Turnpike</strong><br />The Pennsylvania Turnpike Is, in a Very Real Sense, America\'s Highway—a Fenced City, 470 Miles Long and 200 Yards Wide, with a Heterogeneous and Resurgent Stream of Mobile Citizens. And Every Mile Has a Story.</p><p><strong>Updike Is Home</strong><br />The Author Vowed to Leave His Pennsylvania Home Behind, but He Never Quite Escaped—in His Work or His Life.</p><p><strong>Acknowledgments</strong></p>',
+						reviews: [
+							'"If Pennsylvania had a poet laureate, it would be Bill Ecenbarger. Throughout a long career as one of the most distinguished journalists in the state, he has captured the Commonwealth\'s unique spirit—in all its glory and all its eccentricity. Pennsylvania Stories—Well Told pulls together the best of his best stories, each impeccably researched and beautifully written. Learn about the literary great John Updike, the role of the Ku Klux Klan, a popular governor\'s very public fight for life, the notorious state mental hospital known as Byberry. These tales and others create a rich mosaic of Pennsylvania culture and history. I heartily recommend this book."<br /><span class="byline">-- <strong>Former Governor Richard L. Thornburgh</strong></span>',
+							'"Bill Ecenbarger—to regular Inquirer readers, one need say no more. Put that name on a story, and they know that what awaits them is a small masterpiece of writing, wisdom, and wit. To editors at the Philadelphia Inquirer, Bill Ecenbarger is a godsend—a writer who covers an inordinately wide range of topics and turns in colorful, provocative stories that you want to read out loud to anyone who will listen."<br /><span class="byline">-- <strong>Fred Mann</strong>, editor, Philadelphia Inquirer</span>'
+						], 
+						about_author: [
+							'<strong>William Ecenbarger</strong>, a freelance writer, is the author of <em>Walkin\' the Line, Glory by the Wayside: The Old Churches of Hawaii</em>, and <em>Kids for Cash: Two Judges, Thousands of Children</em>, and a <em>$2.6 Million Kickback Scheme</em>, and the co-author of <em>Catching Lightning in a Bottle: How Merrill Lynch Revolutionized the Financial World</em> (with Winthrop H. Smith) and <em>Making Ideas Matter: My Life as a Policy Entrepeneur (with Dwight Evans).</em>'
+						], 
+						subjects: [
+							'1057',
+							'1071'
+						], 
+						in_series: [
+							],
+						is_guide: "0",
+						award: "",
+						format: '244 pp<br />5.5 x 8.25', 
+						binding: [
+							{type: 'Cloth', ean: '978-1-4399-1465-6', price: '25.00'},
+							{type: 'e-book', ean: '978-1-4399-1467-0', price: '25.00'}
+						], 
+						pub_date: 'May 17', 
+						isbn: '9781439914656', 
+						ean: '', 
+						cover_image: 'http://www.temple.edu/tempress/titles/2445_reg.gif',
+						hot: '1',
+						hot_text: '"If Pennsylvania had a poet laureate, it would be Bill Ecenbarger. Throughout a long career as one of the most distinguished journalists in the state, he has captured the Commonwealth\'s unique spirit in all its glory and all its eccentricity. Pennsylvania Stories—Well Told pulls together the best of his best stories, each impeccably researched and beautifully written.... I heartily recommend this book."<br /><span class="byline">-- <strong>Former Governor Richard L. Thornburgh</strong></span>',
+						news: '1',
+						news_text: 'An engrossing compendium of stories on the people, places, and events that make Pennsylvania unique. Well told.',
+						catalog: '1'
+						)
 
 
 Subject.create(subject_id: '1029', subject: 'African Studies')
@@ -559,5 +651,7 @@ Agency.create(
 	region: 'China & Taiwan')
 
 
-
+Catalog.create(
+	title: 'Spring 2017 Catalog'
+	)
 

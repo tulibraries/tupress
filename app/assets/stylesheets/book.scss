@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+h2 {
+	margin-top: 28px;
+}
 .award {
 	color: #963;
 }
@@ -20,9 +24,8 @@ span.author {
 
 }
 .review, .about_author {
-	margin: 14px 21px;
-	font-style: italic;
+	margin: 28px 21px;
 }
 .subject, .series {
-	margin: 7px 21px;
+	margin: 28px 21px;
 }

@@ -37,4 +37,13 @@ class BookController < ApplicationController
     @pagetitle = "Award-Winning Books"
   end
 
+  def catalogs
+    @catalogs = Catalog.all.order(:created_at)
+  end
+
+  def catalogs_by_season
+    @catalog = Catalog.find_by id: "#{params[:id]}"
+    @books = Book.where('catalog LIKE ?', "#{params[:id]}").order(:title)
+  end
+
 end

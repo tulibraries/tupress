@@ -33,8 +33,12 @@
 	blockquote {
 		font-size: 100%!important;
 	}
+
 	.blockquote-footer.blockquote-reverse {
 		font-size: 100%;
+	}
+	a, a:active, a:hover, a:visited {
+		color: #903;
 	}
 	#content {
 		background-color: #fff;
@@ -73,9 +77,13 @@
 		margin: 21px auto;
 	}
 	
-	 #NewsletterSubscription #email {
-	 	width: 142px;
-	 }
+	 #NewsletterSubscription {
+	 		text-align: center;
+		 	#email {
+			 	width: 90%;
+			 	margin-bottom: 10px;
+		 }
+		}
 	 #search-block {
 	 	float: right;
 	 	padding:21px;
@@ -91,5 +99,34 @@
 			content: " | ";
 		}
 	}
-
-	
+.byline{
+	padding-left: 28px;
+	font-style: italic;
+	}
+#scNews, #scBlogContent {
+	padding: 10px;
+	background-color: #f7f7f7;
+	border-radius: 7px;
+	margin-bottom: 21px;
+	.blog-icon {
+		display:inline-block;
+		width: 100%;
+		text-align:center;
+		margin-bottom: 10px;
+	}
+	.small {
+		line-height: 1.25em;
+		margin-bottom: 7px;
+		width: 90%;
+		margin:auto;
+	}
+}
+#scBlogContent {
+	margin-bottom: 0;
+	line-height:1.1;
+}
+.social-icons {
+	li {
+		margin-bottom: 14px;
+	}
+}

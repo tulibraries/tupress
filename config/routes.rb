@@ -8,6 +8,8 @@ controller :book do
   get 'series/:id' 		=> :byseries
   get 'studyguides' 	=> :studyguides
   get 'awards'				=> :awards
+  get 'catalogs'      => :catalogs
+  get 'catalogs/:id'  => :catalogs_by_season
 end
 
 controller :page do

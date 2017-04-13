@@ -1,8 +1,5 @@
 <div class="container">
-<h1 style="padding: 14px 0;"><%= @pagetitle %></h1>
-<div class="row">
-<%= render "alphamenu.erb" %>
-</div>
+<h1 style="padding: 14px 0;"><%= @catalog.title %></h1>
 <% @books.each do |book| %>
 	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
 		<div class="media" style="text-align:center;">
@@ -18,8 +15,8 @@
 				<%= book.format.html_safe %>
 				<br />
 				<%  book.binding.each do |binding| %>
-					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %> | 
-					<% end %>
+					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %>
+				<% end %>
 				</p>
 		</div>
 	</div>
