@@ -53,34 +53,33 @@
 <div id="scBlogContent">
   <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
   <p><small>This week in <a href="https://templepress.wordpress.com/2017/03/22/aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative/" target="new">North Philly Notes</a>, Temple University Press is excited to participate in the <a href="http://www.aaupnet.org/news-a-publications/news/1561-aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative" target="new">AAU/ARL/AAUP Open Access Monograph Publishing Initiative</a>.</small></p>
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <h2><small>Follow Us on:</small></h2>
+    </li>
+    <li class="list-inline-item">
+      <%= link_to image_tag('twitter-icon.png', style: 'width:28px;border:0;', alt: 'Twitter Icon'), 'http://twitter.com/TempleUnivPress' %>
+    </li>
+    <li class="list-inline-item"><%= link_to image_tag('fb-icon.jpg', style: 'width:28px;border:0;', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
+  </ul>
 </div>
 </div>
 </div>
 
-<div class="row" style="margin-top: 28px;">
+<div class="row">
 <div class="col">
-<h2><%= image_tag "news.gif", alt: 'News' %></h2>
+<h2 style="margin-top: 0;"><%= image_tag "news.gif", alt: 'News' %></h2>
 </div>
 </div>
 
 <div class="row">
 
 <% @news_books.each do |book| %>
-  <div class="col col-md-3 text-center" style="line-height:1.1;margin-top: 10px;">
-    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:160px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+  <div class="col col-md-4 text-center" style="line-height:1.1;margin-top: 10px;">
+    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:210px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
     <p style="text-align:justify;padding: 0 7px;margin-top: 10px;"><small><%= book.news_text.truncate(420).html_safe %></small></p>
   </div>
 <% end %>
-
-<div class="col col-md-3 text-center">
-  <h2>Follow Us on:</h2>
-  <ul class="list-unstyled social-icons">
-    <li><br />
-      <%= link_to image_tag('twitter-icon.png', style: 'width:77px;border:0;', alt: 'Twitter Icon'), 'http://twitter.com/TempleUnivPress' %>
-    </li>
-    <li><%= link_to image_tag('fb-icon.jpg', style: 'width:77px;border:0;', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
-  </ul>
-</div>
 
 </div>
 
@@ -94,7 +93,7 @@
 </div>
 
 <div class="row" style="padding: 14px;">
-<div class="col col-md-9">
+<div class="col col-md-11">
 <% @news_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
@@ -112,16 +111,69 @@
 </div>
 <% end %>
 </div>
-<div class="col col-md-3 text-center" style="padding-left: 56px;margin-top: -28px;">
-<h2 style="color:#903;">Spring 2017 Catalog</h2>
-<%= link_to image_tag('spring17.gif', alt: 'catalog cover'), 'http://www.temple.edu/tempress/catalogs/spring2017.html' %>
-<p style="color:#903;"><%= link_to '[PDF Version]', 'http://www.temple.edu/tempress/catalogs/spring2017.html' %></p>
-<h2 style="color:#903;margin-top:64px;font-size: 90%">Books for Course Adoptions</h2>
-<%= link_to image_tag('spring17.gif', alt: 'catalog cover'), 'http://www.temple.edu/tempress/catalogs/archive/spring2017.pdf' %>
+
+
+</div>
+
+
+
+
+<div class="row" id="bottom-row">
+  <div class="col col-md-4">
+    <h2 style="color:#903;" class="text-center">Spring 2017 Catalog</h2>
+    <p class="text-center">
+    <%= link_to image_tag('spring17.gif', alt: 'catalog cover'), {controller: :book, action: :catalogs_by_season, :id=>'1'} %>
+    </p>
+    <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', 'http://www.temple.edu/tempress/catalogs/archive/spring2017.pdf' %></p>
+  </div>
+
+  <div class="col col-md-4">
+    <h2 class="text-center" style="color:#903;">Books for Course Adoptions</h2>
+  
+  <div id="carousel2" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @adoptions.each_with_index do |adoption,index| %>
+        <% if index == 0 %>
+          <li data-target="#carousel2" data-slide-to="<%= index %>" class="active" style="display:none;"></li>
+          <% else %>
+          <li data-target="#carousel2" data-slide-to="<%= index %>" style="display:none;"></li>
+        <% end %>    
+      <% end %>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <% @adoptions.each_with_index do |adoption,index| %>
+        <% if index == 0 %>
+          <div class="carousel-item active text-center">
+        <% else %>
+          <div class="carousel-item text-center">
+        <% end %>
+          <%= link_to image_tag(adoption.cover_image, 
+                            class: 'd-block img-fluid', 
+                            alt: adoption.title), 
+                            controller: 'book', 
+                            action: 'show', 
+                            id: adoption.book_id %>
+        </div>
+      <% end %>
+    </div> <!-- carousel-inner -->
+  </div><!-- carousel2 -->
+  </div>
+
+  <div class="col col-md-4">
+    <div class="text-center" style="height:100%;">
+    <h2>
+    <%= link_to 'Books on the Philadelphia Region',{controller: :book, action: :bysubject, :id=>'1071'} %>
+    </h2>
+    <div style="margin-top: 28px;">
+    <%= link_to image_tag('phila.jpg', alt: 'love sculpture in philadelphia'), {controller: :book, action: :bysubject, :id=>'1071'}, :style=>"vertical-align:middle" %>
+    </div>
+    </div>
+  </div>
 </div>
 </div>
-</div>
-</div>
+
+
 
 
 

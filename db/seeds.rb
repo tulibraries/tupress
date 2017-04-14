@@ -57,7 +57,51 @@ Book.create(
 						hot_text: '"Coffee-table books aren’t just for grown-ups, as proven by A Is for Art Museum, a kid-sized catalog that brings children into the Philadelphia Museum of Art through pictures and the alphabet. Every letter is tied to a piece in the museum, and asks readers a question about the photo…. It’s the perfect museum companion, too, for a first trip."<br /><span class="byline">-- <strong>The Philadelphia Inquirer</strong></span>',
 						news: '1',
 						news_text: '<span class="award">Honorable mention in the AAM (American Association of Museums) design competition., 2008</span>',
-						catalog: '1'
+						catalog: '1',
+						course_adoption: ''
+						)
+Book.create(
+						book_id: '2255',
+						title: 'Deregulating Desire', 
+						subtitle: 'Flight Attendant Activism, Family Politics, and Workplace Justice',
+						excerpt: 'http://www.temple.edu/tempress/chapters_1800/2255_ch1.pdf',
+						intro: '',
+						blurb: 'How flight attendants have drawn on feminist and LGBTQ activist legacies to challenge big business\'s rise to power after 1970',
+						author: [
+							'Ryan Patrick Murphy'
+						], 
+						description: '<p>In 1975, National Airlines was shut down for 127 days when flight attendants went on strike to protest long hours and low pay. Activists at National and many other U.S. airlines sought to win political power and material resources for people who live beyond the boundary of the traditional family. In<i> Deregulating Desire</i>, Ryan Patrick Murphy, a former flight attendant himself, chronicles the efforts of single women, unmarried parents, lesbians and gay men, as well as same-sex couples to make the airline industry a crucible for social change in the decades after 1970.</p><p>Murphy situates the flight attendant union movement in the history of debates about family and work. Each chapter offers an economic and a cultural analysis to show how the workplace has been the primary venue to enact feminist and LGBTQ politics.</p><p>From the political economic consequences of activism to the dynamics that facilitated the rise of what Murphy calls the "family values economy" to the Airline Deregulation Act of 1978, <i>Deregulating Desire</i> emphasizes the enduring importance of social justice for flight attendants in the twenty-first century.</p>', 
+						reviews: [
+							'"Bravo! Murphy\'s pioneering study captures the exuberance and courage of post-1960s flight attendants as they struggle for sexual equity and economic justice. By embracing the diverse desires and intimate relations of all workers, Deregulating Desire models a new affective labor history, as attentive to feelings as to economic self-interest." — <strong>Dorothy Sue Cobble</strong>, Distinguished Professor of History and Labor Studies, Rutgers University, and co-author of Feminism Unfinished: A Short, Surprising History of American Women\'s Movements', 
+							'"Ryan Patrick Murphy crafts a wholly innovative, interdisciplinary approach to the study of post-1970s trade unionism, placing the history of flight attendant activism alongside that of the women\'s movement and LGBT politics. Murphy\'s queer analytic lens smartly demonstrates both how big business interests capitalized on ideals of the normative family and domesticity and how activists challenged these ideas to fight for the rights of not only women and LGBT people but also single people. Deregulating Desire is an important and original contribution." — <strong>Christina B. Hanhardt</strong>, Associate Professor in the Department of American Studies, University of Maryland-College Park, and author of Safe Space: Gay Neighborhood History and the Politics of Violence'
+						], 
+						about_author: [
+							'<p><strong>Ryan Patrick Murphy</strong> — a former San Francisco-based flight attendant for United Airlines and Council Representative for Association of Flight Attendants-CWA Council 11—is Assistant Professor of History and Women\'s, Gender, and Sexuality Studies at Earlham College in Richmond, Indiana.</p>'
+						], 
+						subjects: [
+							'1060',
+							'1063',
+							'1080'
+						], 
+						in_series: [
+							'S-179'
+							],
+						is_guide: "0",
+						award: "",
+						format: '252 pp<br />6 x 9', 
+						binding: [
+							{type: 'Cloth', ean: '978-1-4399-0988-1', price: '94.50', date: 'Sep 16'},
+							{type: 'Paper', ean: '978-1-4399-0989-8', price: '34.95', date: 'Sep 16'},
+							{type: 'e-book', ean: '978-1-4399-0990-4', price: '34.95', date: 'Oct 16'}
+						], 
+						isbn: '9781439909881', 
+						cover_image: 'http://www.temple.edu/tempress/titles/2255_reg.gif',
+						hot: '1',
+						hot_text: '<a href="/book/2255"><em>Deregulating Desire</em></a>, by Ryan Patrick Murphy, won the <a href="https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/c558c310-bcdd-4cca-b694-3328512df96b/Montgomery_Award_Ryan_Patrick_Murphy.pdf" target="new">Organization of American Historians\' David Montgomery Award</a> for the best book on a topic in American labor and working-class history.',
+						news: '1',
+						news_text: '<a href="/book/2255"><em>Deregulating Desire</em></a>, by Ryan Patrick Murphy, won the <a href="https://gallery.mailchimp.com/e49e3b3e54d82f4290d30fc59/files/c558c310-bcdd-4cca-b694-3328512df96b/Montgomery_Award_Ryan_Patrick_Murphy.pdf" target="new">Organization of American Historians\' David Montgomery Award</a> for the best book on a topic in American labor and working-class history.',
+						catalog: '',
+						course_adoption: ''
 						)
 Book.create(
 						book_id: '2440',
@@ -65,7 +109,7 @@ Book.create(
 						subtitle: 'A Photographic Memoir',
 						excerpt: '<a href="http://www.temple.edu/tempress/chapters_2400/2440_ch1.pdf">Read the Introduction (pdf).</a>',
 						intro: '',
-						blurb: '',
+						blurb: 'A poignant memoir of a woman who documented social injustice with her camera.',
 						author: [
 							'Helen M. Stummer'
 						], 
@@ -99,7 +143,8 @@ Book.create(
 						hot_text: '"[A]n extraordinarily personal glimpse into the life and work of a photographer who has spent her career consumed with documenting social injustice and those it has affected most.... This book is a must-read for anyone interested in the humanity of our urban cities."<br /><span class="byline">-- <strong>John Cyr</strong>, photographer and author of Developer Trays</span>',
 						news: '1',
 						news_text: 'A photography exhibit by Helen M. Stummer, author of <a href="/book/2440"><em>Risking Life and Lens</em></a>, will open April 8 at the <a href="http://www.jerseyhistory.org/news_detail.php?recid=220">New Jersey Historical Society</a>, 53 Park Place, in Newark, NJ. Stummer will participate in a Meet the Artist/Gallery Talk on April 8 at 11:30 am. The exhibit continues through June 24.',
-						catalog: '1'
+						catalog: '1',
+						course_adoption: 'Y'
 						)
 Book.create(
 						book_id: '2445',
@@ -141,7 +186,8 @@ Book.create(
 						hot_text: '"If Pennsylvania had a poet laureate, it would be Bill Ecenbarger. Throughout a long career as one of the most distinguished journalists in the state, he has captured the Commonwealth\'s unique spirit in all its glory and all its eccentricity. Pennsylvania Stories—Well Told pulls together the best of his best stories, each impeccably researched and beautifully written.... I heartily recommend this book."<br /><span class="byline">-- <strong>Former Governor Richard L. Thornburgh</strong></span>',
 						news: '1',
 						news_text: 'An engrossing compendium of stories on the people, places, and events that make Pennsylvania unique. Well told.',
-						catalog: '1'
+						catalog: '1',
+						course_adoption: 'Y'
 						)
 
 

@@ -15,7 +15,7 @@
     <%= link_to "Skip to site search", "#", :class => "element-invisible", :onclick => "document.getElementById('search-block').focus();", :tabindex => "2" %>
   </div>
 
-  <div id="content" class="container">
+  <div id="content" class="container" style="margin-bottom: 28px;">
   	<div id="header" class="container">
 	  	<div class="row">
 		  	<div class="col-md-4">
@@ -43,9 +43,9 @@
 		  								%>
 		    <span class="navbar-toggler-icon"></span>
 		  <% end %>
-		  <div class="collapse navbar-collapse col-md-9" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item active">
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent" role="navigation">
+		    <ul class="navbar-nav justify-content-center nav-fill">
+		      <li class="nav-item">
 		        <%= link_to(root_path, :class=>"nav-link") do %>
 		        	Home <span class="sr-only">(current)</span>
 		        <% end %>
@@ -63,6 +63,7 @@
 		          <%= link_to "Award Winning Books", "/awards", :class=>"dropdown-item" %>
 		          <%= link_to "Titles Index", "/books", :class=>"dropdown-item" %>
 		          <%= link_to "Subject Index", "/subjects", :class=>"dropdown-item" %>
+		          <%= link_to "Catalog Index", "/catalogs", :class=>"dropdown-item" %>
 		          <%= link_to "Series Listing", "/series", :class=>"dropdown-item" %>
 		          <%= link_to "Study Guides", "/studyguides", :class=>"dropdown-item" %>
 		        </div>

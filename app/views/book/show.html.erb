@@ -1,7 +1,11 @@
-<div class="container">
-<h1><%= @book.title %></h1>
+<div class="container" id="book_show">
+<div class="row">
+	<div class="col">
+		<h1 class="book_title"><%= @book.title %><br /><small><em><%= @book.subtitle %></em></small></h1>	
+	</div>
+</div>
 	<div class="row">
-		<div class="col author">	
+		<div class="col author">
 			<%= @book.author.map { |author| author }.join(' and ') %>
 		</div>
 	</div>
@@ -9,12 +13,39 @@
 		<div class="col col-md-3">
 			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:200;height:300;" %>
 		</div>
-		<div class="col col-md-8">
+		<div class="col col-md-6">
 			<%= @book.reviews.first.html_safe %>
 		</div>
+		<div class="col col-md-3">
+			<div style="padding: 14px 7px;border-radius:5px;border: solid #ccc 1px;">
+			<p class="text-center" style="float:left;background-color: #e5dccb;padding:4px;width: 100%;"><%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
+				&nbsp;&nbsp;
+				<%= link_to "Buy this Book!", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %> 
+				<br />
+				<small>
+					<%= link_to "View Cart", "https://cdcshoppingcart.uchicago.edu/Cart/Cart.aspx?PRESS=temple", :style=>"float: left;padding-left: 21px;" %> 
+					<%= link_to "Check Out", "https://cdcshoppingcart.uchicago.edu/Cart/Cart.aspx?PRESS=temple", :style=>"float: right;padding-right: 21px;" %> 
+				</small>
+				</p>
+			<div style="font-size: 75%;clear: left;" >
+				<p class="text-center">
+				<%= @book.format.html_safe %>
+				</p>
+				<p>
+				<%  @book.binding.each do |binding| %>
+					<%= binding[:type] %>: <%= binding[:ean] %> <strong><%= number_to_currency(binding[:price]) %></strong> <br /> 
+				<% end %>
+				</p>
+			</div>
+		</div>
 	</div>
-	<div class="row" style="padding-top: 28px;">
+	<div class="row">	
 		<div class="col">
+			<h2>Description</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col description">
 			<%= @book.description.html_safe %>
 		</div>
 	</div>
@@ -31,27 +62,37 @@
 		<% end %>
 	</div>
 	<div class="row">
-		<h2>About the Author(s)</h2>
+		<div class="col">
+			<h2>About the Author(s)</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
 		 <div class="about_author">	
 		<% @book.about_author.each do |about| %>
 		 	<%= about.html_safe %><br />
 		<% end %>
 		 </div>
 	</div>
+	</div>
 	<div class="row">
+	<div class="col">
 		<h2>Subjects</h2>	
 		<% @subjects.each do |subject| %>
 		 <div class="subject">
 		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %> 
 		 </div>
 		<% end %>
+		</div>
 	</div>
 	<div class="row">
+	<div class="col">
 		<h2>In Series</h2>	
 		<% @series.each do |series| %>
 		 <div class="subject">
 		 	<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %> 
 		 </div>
 		<% end %>
+		</div>
 	</div>
 </div>

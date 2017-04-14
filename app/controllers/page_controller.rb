@@ -3,8 +3,9 @@ class PageController < ApplicationController
 require 'pry'
 
   def index
-    @hot_books = Book.where(hot: 1).take(4)
+    @hot_books = Book.where(hot: 1).take(5)
     @news_books = Book.where(news: 1).take(3)
+    @adoptions = Book.where('course_adoption = ?', 'Y')
   end
   def contact
   end

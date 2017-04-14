@@ -32,3 +32,19 @@
 	padding: 7px;
 	border-radius:7px;
 }
+
+#carousel2 {
+	.carousel-item {
+		a {
+			width: 100%;
+		}
+	}
+	img {
+		width: 150px;
+		margin: auto;
+		display: block;
+	}
+}
+.navbar-nav {
+	width: 95%;
+}

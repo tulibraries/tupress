@@ -3,10 +3,10 @@
 <% @books.each do |book| %>
 	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
 		<div class="media" style="text-align:center;">
-			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.id} %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
-			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.id %></h2>
+			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
 				<p><%= book.subtitle %></p>
 			<% end %>

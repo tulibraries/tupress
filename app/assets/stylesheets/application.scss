@@ -24,6 +24,9 @@
 		font-size: 28px;
 		margin-bottom: 21px;
 	}
+	h1.book_title {
+		margin-bottom: auto;
+	}
 	h2 {
 		font-size: 21px;
 	}
@@ -37,8 +40,11 @@
 	.blockquote-footer.blockquote-reverse {
 		font-size: 100%;
 	}
-	a, a:active, a:hover, a:visited {
-		color: #903;
+	a:not(.dropdown-item) {
+			color: #903;
+		a:active, a:hover, a:visited {
+			color: #903;
+		}
 	}
 	#content {
 		background-color: #fff;
@@ -125,8 +131,8 @@
 	margin-bottom: 0;
 	line-height:1.1;
 }
-.social-icons {
-	li {
-		margin-bottom: 14px;
-	}
+#bottom-row {
+	margin-top:28px;
+	padding: 21px;
+	background-color: #f7f7f7;
 }
