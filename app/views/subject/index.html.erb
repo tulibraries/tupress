@@ -11,7 +11,7 @@
 			<ul class="list-unstyled list-group" id="series-list">
 			<% @subjects.each do |subject| %>
 				<li class="series">
-				
+
 					<div class="row">
 						<div class="col col-md-11">
 						<%= link_to subject.subject, 
@@ -21,7 +21,7 @@
 						<div class="col col-md-1">
 							<span class="badge badge-default badge-pill">
 							<% unless subject.book.nil? %>
-								<%= book_count(subject.subject_id) %>
+								<%= subject_book_count(subject.subject_id) %>
 							<% end %>
 							</span>
 					</div>
