@@ -48,3 +48,18 @@
 .navbar-nav {
 	width: 95%;
 }
+#series-list {
+	li {
+		padding: 10px;
+		min-height: 35px;	
+	}
+	li:nth-child(odd) {
+		background-color: #f7f7f7;
+	}
+	.badge-pill {
+		padding: 4px 14px;
+	}
+}
+.series-editors {
+	font-size: 95%;
+}

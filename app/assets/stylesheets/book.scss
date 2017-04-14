@@ -24,12 +24,13 @@ span.author {
 	font-weight: 600;
 	color: #aaa;
 }
-.description, .review, .about_author {
+.description, .review, .about_author, .subjects, .series {
 	margin: 7px 21px;
 }
-.subject, .series {
-	margin: 28px 21px;
-}
+
 .blurb {
 	color: #903;
+}
+.editors {
+	padding-left: 10px;
 }

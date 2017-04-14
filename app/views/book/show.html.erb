@@ -39,6 +39,7 @@
 			</div>
 		</div>
 	</div>
+	</div>
 	<div class="row">	
 		<div class="col">
 			<h2>Description</h2>
@@ -78,20 +79,29 @@
 	<div class="row">
 	<div class="col">
 		<h2>Subjects</h2>	
+		<ul class="list-unstyled list-inline subjects">
 		<% @subjects.each do |subject| %>
-		 <div class="subject">
-		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %> 
-		 </div>
+		 <li class="list-inline-item">
+		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id}, :style=>'font-size:115%;' %><% unless subject == @subjects.last %>, <% end %>
+		 </li>
 		<% end %>
+		</ul>
 		</div>
 	</div>
 	<div class="row">
 	<div class="col">
 		<h2>In Series</h2>	
+		<ul class="list-unstyled list-inline series">
 		<% @series.each do |series| %>
-		 <div class="subject">
-		 	<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %> 
-		 </div>
+		 <li class="list-inline-item">
+		 	<p>
+		 		<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id}, :style=>'font-size:115%;' %>
+		 		<% if !series.editors.empty? %>
+			 		<span class="editors">edited by <%= series.editors %></span>
+			 	<% end %>
+		 	</p>
+		 	<p><%= series.description %></p>
+		 </li>
 		<% end %>
 		</div>
 	</div>
