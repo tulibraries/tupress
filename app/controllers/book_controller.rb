@@ -20,6 +20,7 @@ class BookController < ApplicationController
 
   def bysubject
     @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").order(:title)
+    @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
   end
 
   def byseries

@@ -1,3 +1,3 @@
 class Subject < ApplicationRecord
-  belongs_to :book
+  has_many :book, :counter_cache => true
 end

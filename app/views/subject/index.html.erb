@@ -1,9 +1,36 @@
+<div class="row">
+	<div class="col">
+		<h1>Subject Index</h1>
+	</div>
+</div>
 
-<h1 style="margin: 21px 0">Subject Index</h1>
-<div class="container" style="margin-left: 21px;">
-	<% @subjects.each do |subject| %>
-		<div class="row">
-			<%= link_to subject.subject, :controller=>'book', :action=>'bysubject', :id=>subject.subject_id %>
+<div class="container">
+
+	<div class="row">
+		<div class="col">
+			<ul class="list-unstyled list-group" id="series-list">
+			<% @subjects.each do |subject| %>
+				<li class="series">
+				
+					<div class="row">
+						<div class="col col-md-11">
+						<%= link_to subject.subject, 
+											{:controller=>'book', :action=>'bysubject', :id=>subject.subject_id}, 
+											:style=>'font-size: 115%;' %>
+						</div>
+						<div class="col col-md-1">
+							<span class="badge badge-default badge-pill">
+							<% unless subject.book.nil? %>
+								<%= book_count(subject.subject_id) %>
+							<% end %>
+							</span>
+					</div>
+				</div>
+
+				</li>
+			<% end %>
+			</ul>
 		</div>
-	<% end %>
+	</div>
+
 </div>
