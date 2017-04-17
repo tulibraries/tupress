@@ -93,7 +93,7 @@
 
 <div class="row" style="padding: 14px;border-bottom:solid #eee 1px;padding-bottom: 28px;">
 <div class="col col-md-11">
-<% @news_books.each do |book| %>
+<% @hot_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
     <%= link_to image_tag(book.cover_image, alt: 'Book Cover', border: 0, class: 'd-flex mr-3', style: 'height:160px;margin:auto;'), {controller: 'book', action: 'show', :id=>book.book_id}, :style=>'width:100%;' %>
@@ -101,7 +101,7 @@
   <div class="media-body" style="padding-left: 28px;">
   <h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %>
       <% if book.subtitle %>
-        <br /><small><%= book.subtitle %></small>
+        <br /><small><em><%= book.subtitle %></em></small>
       <% end %>
       </h2>
       <p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
