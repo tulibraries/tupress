@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'nokogiri'
 gem 'paperclip'
 gem 'pry'
+gem 'feedjira'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
