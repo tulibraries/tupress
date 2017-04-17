@@ -6,6 +6,8 @@ require 'pry'
     @hot_books = Book.where(hot: 1).take(5)
     @news_books = Book.where(news: 1).take(3)
     @adoptions = Book.where('course_adoption = ?', 'Y')
+    @feed = Feed.find(1)
+    @entries = @feed.entries.order('published desc')
   end
   def contact
   end
@@ -47,5 +49,7 @@ require 'pry'
   def faq
   end
   def links
+  end
+  def copyright
   end
 end

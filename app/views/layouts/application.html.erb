@@ -16,6 +16,8 @@
   </div>
 
   <div id="content" class="container" style="margin-bottom: 28px;">
+  <div class="row">
+  <div class="col">
   	<div id="header" class="container">
 	  	<div class="row">
 		  	<div class="col-md-4">
@@ -31,6 +33,11 @@
 		  </div>
 	  	</div>
     </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="main-nav">
 		  <%= button_tag("", 
 		  								:class=>"navbar-toggler navbar-toggler-right", 
@@ -143,6 +150,8 @@
 		    </ul>
 		    </div>
 		</nav>
+		</div>
+		</div>
 		<a href="#" name="skiplink_ada" id="skiplink_ada"></a>
 
 		<div class="container">
@@ -152,5 +161,6 @@
     </div>
 
     </div>
+    <%= render "footer.html.erb" %>
   </body>
 </html>

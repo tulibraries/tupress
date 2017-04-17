@@ -105,12 +105,15 @@
 			content: " | ";
 		}
 	}
+.no-padding {
+	padding: 0;
+}
 .byline{
 	padding-left: 28px;
 	font-style: italic;
 	}
-#scNews, #scBlogContent {
-	padding: 10px;
+#scNewsletter, #scBlogContent {
+	padding: 14px;
 	background-color: #f7f7f7;
 	border-radius: 7px;
 	margin-bottom: 21px;
@@ -126,6 +129,10 @@
 		width: 90%;
 		margin:auto;
 	}
+}
+#scNewsletter {
+		border: solid #bbb 1px;
+		border-radius: 7px;
 }
 #scBlogContent {
 	margin-bottom: 0;
@@ -150,5 +157,12 @@
 		h2 {
 			font-size: 115%;
 		}
+	}
+}
+#footer {
+	padding-bottom: 28px;
+	color: #bbb;
+	a {
+		color: $white
 	}
 }

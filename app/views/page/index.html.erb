@@ -40,20 +40,7 @@
     </a>
   </div>
 </div>
-<div class="col-md-3">
-<div id="scNews">
-      <p class="small">Subscribe to our monthly newsletter for info about new books and website content.</p>
-        <%= form_tag "http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", :method=>"post", :name=>"NewsletterSubscription", :id=>"NewsletterSubscription", :style=>"margin-top:7px;" do |f| %>
-          <%= email_field_tag "email", nil, placeholder: "Enter your email..." %> 
-          <%= text_field_tag "subject", "Newsletter Subscription", type: "hidden" %>
-          <%= text_field_tag "next-url", "http://www.temple.edu/tempress/received_subscription.html", type: "hidden" %>
-          <%= submit_tag "Subscribe!" %>
-        <% end %>
-</div>
-<div id="scBlogContent">
-  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
-  <p><small>This week in <a href="https://templepress.wordpress.com/2017/03/22/aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative/" target="new">North Philly Notes</a>, Temple University Press is excited to participate in the <a href="http://www.aaupnet.org/news-a-publications/news/1561-aau-arl-aaup-to-launch-open-access-monograph-publishing-initiative" target="new">AAU/ARL/AAUP Open Access Monograph Publishing Initiative</a>.</small></p>
-</div>
+<div class="col-md-3 no-padding">
 <div id="follow-us">
  <ul class="list-inline">
     <li class="list-inline-item">
@@ -65,10 +52,20 @@
     <li class="list-inline-item"><%= link_to image_tag('fb-icon.png', style: 'width:29px;border:0;', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
   </ul>
   </div>
+<div id="scBlogContent">
+  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
+  <p><% @entries.take(1).each do |entry| %>
+      <small><%= entry.description.html_safe %><br /><br />
+      <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
+      <% end %>
+  </p>
+</div>
+
 </div>
 </div>
 
-<div class="row">
+
+<div class="row" style="margin-top:28px">
 <div class="col">
 <h2 style="margin-top: 0;"><%= image_tag "news.gif", alt: 'News' %></h2>
 </div>
@@ -177,6 +174,19 @@
 </div>
 </div>
 </div>
+<div class="row" style="margin-top: 56px;">
+<div class="col col-md-6 offset-md-3">
+<div id="scNewsletter">
+      <p class="small">Subscribe to our monthly newsletter for info about new books and website content.</p>
+        <%= form_tag "http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", :method=>"post", :name=>"NewsletterSubscription", :id=>"NewsletterSubscription", :style=>"margin-top:7px;" do |f| %>
+          <%= email_field_tag "email", nil, placeholder: "Enter your email..." %> 
+          <%= text_field_tag "subject", "Newsletter Subscription", type: "hidden" %>
+          <%= text_field_tag "next-url", "http://www.temple.edu/tempress/received_subscription.html", type: "hidden" %>
+          <%= submit_tag "Subscribe!" %>
+        <% end %>
+</div>
+</div>
+</div>  
 </div>
 
 
