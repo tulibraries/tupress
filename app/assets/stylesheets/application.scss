@@ -130,9 +130,25 @@
 #scBlogContent {
 	margin-bottom: 0;
 	line-height:1.1;
+	p {
+		margin-bottom: 0;
+	}
+}
+#follow-us {
+	margin-top: 14px;
+	text-align: right;
+	padding-right: 14px;
 }
 #bottom-row {
 	margin-top:28px;
-	padding: 21px;
-	background-color: #f7f7f7;
+	.col-md-3 {
+		margin: 0 2.5%;
+		padding: 28px;
+		background-color: #f7f7f7;
+		border: solid #bbb 1px;
+		border-radius: 7px;
+		h2 {
+			font-size: 115%;
+		}
+	}
 }
