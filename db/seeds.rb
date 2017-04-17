@@ -11,7 +11,10 @@
 # ruby encoding: utf-8
 
 
-
+Feed.create(
+	name: 'North Philly Notes',
+	url: 'http://templepress.wordpress.com/feed'
+	)
 Book.create(
 						book_id: '2015',
 						title: 'A is for Art Museum', 
