@@ -117,6 +117,7 @@
 	background-color: #f7f7f7;
 	border-radius: 7px;
 	margin-bottom: 21px;
+		border: solid #bbb 1px;
 	.blog-icon {
 		display:inline-block;
 		width: 100%;
@@ -129,10 +130,6 @@
 		width: 90%;
 		margin:auto;
 	}
-}
-#scNewsletter {
-		border: solid #bbb 1px;
-		border-radius: 7px;
 }
 #scBlogContent {
 	margin-bottom: 0;
