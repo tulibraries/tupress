@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require form_validation.js
+//= require SocialShare.js
 //= require_tree .

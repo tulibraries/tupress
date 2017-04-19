@@ -1,3 +1,4 @@
+<%= social %>
 <div class="container" id="book_show">
 <div class="row">
 	<div class="col col-md-8">
@@ -12,8 +13,15 @@
 			<div style="width: 100%;float:right;">
 			<p class="text-center" style="float:left;background-color: #e5dccb;border: solid #bbb 1px;border-radius:7px;padding:10px;width: 100%;margin-bottom: 0;"><%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
-				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %> 
+				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :style=>"font-weight:600;font-size:105%;" %> 
 				</p>
+				<p class="text-right" style="float:right;display:inline-block;margin-top:21px;padding-right:7px;margin-bottom:0;">
+					<span class='share s_twitter'></span> 
+					<span class='share s_facebook'></span> 
+					<span class='share s_tumblr'></span>
+					<span class='share s_linkedin'></span>
+					<span class='share s_pinterest'></span>
+					</p>
 		</div>
 		</div>
 </div>

@@ -4,6 +4,9 @@
 
 
 #book_show {
+	h1 {
+		padding-top: 10px;
+	}
 	h2 {
 		margin-top: 28px!important;
 	}
@@ -20,6 +23,10 @@ div.author {
 	margin-bottom: 21px;
 	margin-top: 10px;
 }
+div.author {
+	margin-top: -10px;
+	padding-top: 0;
+}
 span.author {
 	font-weight: 600;
 	color: #aaa;
@@ -34,3 +41,9 @@ span.author {
 .editors {
 	padding-left: 10px;
 }
+
+.s_twitter {display:inline-block;height:42px;width:42px;background-image:url(twitter-icon-sm.png);cursor:hand;cursor:pointer;}
+.s_facebook {display:inline-block;height:42px;width:42px;background-image:url(fb-icon-sm.png);cursor:hand;cursor:pointer;}
+.s_tumblr {display:inline-block;height:42px;width:42px;background-image:url(tumblr-icon-sm.png);cursor:hand;cursor:pointer;}
+.s_linkedin {display:inline-block;height:42px;width:42px;background-image:url(linkedin-icon-sm.png);cursor:hand;cursor:pointer;}
+.s_pinterest {display:inline-block;height:42px;width:42px;background-image:url(pinterest-icon-sm.png);cursor:hand;cursor:pointer;}
