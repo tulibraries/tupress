@@ -5,13 +5,14 @@
 		</div>
 	</div>
 
+<div class="container" id="people">
 <div class="row" style="margin-top:14px;">
 <div class="col alert alert-warning">
 Temple University Press has moved! Our offices are now located at the address below. Our phone and fax numbers have also changed but our email remains the same. Please update your records.
 </div>
 </div>
 
-	<div class="row" style="margin-top:14px;">
+	<div class="row" style="margin:28px 0;">
 		<div class="col col-md-3 offset-md-1">
 			<address>
 				Temple University Press<br />
@@ -39,9 +40,11 @@ Temple University Press has moved! Our offices are now located at the address be
 
 
 <% @people_by_dept.sort.each do |dept, people| %>
+<% unless dept.empty? %>
 	<div class="row">
 		<div class="col"><h2 style="margin-top: 21px;"><%= dept %></h2></div>
 	</div>
+<% end %>
 	<% for person in people %>
 		<div class="row">
 			<div class="col">
@@ -54,3 +57,4 @@ Temple University Press has moved! Our offices are now located at the address be
 
 <% end %>
 </div>
+

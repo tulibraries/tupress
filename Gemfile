@@ -26,6 +26,7 @@ gem 'nokogiri'
 gem 'paperclip'
 gem 'pry'
 gem 'feedjira'
+gem 'social-share-button', '~> 0.1.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

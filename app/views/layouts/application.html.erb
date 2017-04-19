@@ -30,7 +30,7 @@
 				  <%= text_field_tag(:q, nil, class: "form-control mr-sm-2", placeholder: "Search", size: "15") %>
 				  <%= submit_tag("Search", id: "search-submit", class: "btn btn-outline-danger my-2 my-sm-0") %>
 				<% end %>
-		  </div>
+  		</div>
 	  	</div>
     </div>
     </div>
@@ -147,6 +147,9 @@
 		      <li class="nav-item">
 		          <%= link_to "Links", "/links", :class=>"nav-link" %>
 		      </li>
+		      <li class="nav-item">
+						<%= link_to image_tag("cart.png", :alt=>"shopping cart"), "https://cdcshoppingcart.uchicago.edu/Cart/Cart.aspx?PRESS=temple", :class=>"nav-link", :style=>"float:right;" %>
+					</li>
 		    </ul>
 		    </div>
 		</nav>

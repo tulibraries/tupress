@@ -18,7 +18,7 @@
 				<%= book.format.html_safe %>
 				<br />
 				<%  book.binding.each do |binding| %>
-					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %> | 
+					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %> <%= binding[:pub_date] %> | 
 					<% end %>
 				</p>
 		</div>

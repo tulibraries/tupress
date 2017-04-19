@@ -1,43 +1,54 @@
 <div class="container" id="book_show">
 <div class="row">
-	<div class="col">
-		<h1 class="book_title"><%= @book.title %><br /><small><em><%= @book.subtitle %></em></small></h1>	
+	<div class="col col-md-8">
+		<h1 class="book_title"><%= @book.title %>
+			<% unless @book.subtitle.empty? %>
+				<br /><small><em><%= @book.subtitle %></em></small>
+			<% end %>
+		</h1>	
 	</div>
+	<div class="col-md-4">
+
+			<div style="width: 100%;float:right;">
+			<p class="text-center" style="float:left;background-color: #e5dccb;border: solid #bbb 1px;border-radius:7px;padding:10px;width: 100%;margin-bottom: 0;"><%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
+				&nbsp;&nbsp;
+				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %> 
+				</p>
+		</div>
+		</div>
 </div>
 	<div class="row">
 		<div class="col author">
 			<%= @book.author.map { |author| author }.join(' and ') %>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row no-gutters">
 		<div class="col col-md-3">
-			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:200;height:300;" %>
-		</div>
-		<div class="col col-md-6">
-			<%= @book.reviews.first.html_safe %>
+			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:240px;" %>
 		</div>
 		<div class="col col-md-3">
-			<div style="padding: 14px 7px;border-radius:5px;border: solid #ccc 1px;">
-			<p class="text-center" style="float:left;background-color: #e5dccb;padding:4px;width: 100%;"><%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
-				&nbsp;&nbsp;
-				<%= link_to "Buy this Book!", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %> 
-				<br />
-				<small>
-					<%= link_to "View Cart", "https://cdcshoppingcart.uchicago.edu/Cart/Cart.aspx?PRESS=temple", :style=>"float: left;padding-left: 21px;" %> 
-					<%= link_to "Check Out", "https://cdcshoppingcart.uchicago.edu/Cart/Cart.aspx?PRESS=temple", :style=>"float: right;padding-right: 21px;" %> 
-				</small>
+
+			<div style="font-size: 85%;" >
+			
+				<% @book.binding.each do |binding| %>
+				<p>
+					<%= binding[:type] %>: <strong><%= number_to_currency(binding[:price]) %></strong>
+						<br />
+						EAN: <%= binding[:ean] %><br />
+						Publication: <%= binding[:pub_date] %> <br /> 
 				</p>
-			<div style="font-size: 75%;clear: left;" >
-				<p class="text-center">
+				<% end %>
+			
+				<p>
 				<%= @book.format.html_safe %>
 				</p>
-				<p>
-				<%  @book.binding.each do |binding| %>
-					<%= binding[:type] %>: <%= binding[:ean] %> <strong><%= number_to_currency(binding[:price]) %></strong> <br /> 
-				<% end %>
-				</p>
 			</div>
+			
 		</div>
+		<div class="col col-md-6">
+		<p >
+				<%= @book.reviews.first.html_safe %>
+				</p>
 	</div>
 	</div>
 	<div class="row">	
@@ -76,31 +87,33 @@
 		 </div>
 	</div>
 	</div>
+	<!-- if subjects -->
 	<div class="row">
-	<div class="col">
-		<h2>Subjects</h2>	
-		<ul class="list-unstyled list-inline subjects">
-		<% @subjects.each do |subject| %>
-		 <li class="list-inline-item">
-		 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id}, :style=>'font-size:115%;' %><% unless subject == @subjects.last %>, <% end %>
-		 </li>
-		<% end %>
-		</ul>
+		<div class="col">
+			<h2>Subjects</h2>	
 		</div>
 	</div>
+	<div class="row" style="margin-left: 21px;">
+			<% @subjects.each do |subject| %>
+		<div class="col-md-4 list-group-item">
+			 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id}, :style=>'font-size:110%;' %>
+		</div>
+			<% end %>
+	</div>
+	<!-- if series -->
 	<div class="row">
 	<div class="col">
 		<h2>In Series</h2>	
 		<ul class="list-unstyled list-inline series">
 		<% @series.each do |series| %>
 		 <li class="list-inline-item">
-		 	<p>
+		 	<p style="background-color: #f7f7f7;padding:10px;border-radius:7px;">
 		 		<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id}, :style=>'font-size:115%;' %>
 		 		<% if !series.editors.empty? %>
 			 		<span class="editors">edited by <%= series.editors %></span>
 			 	<% end %>
 		 	</p>
-		 	<p><%= series.description %></p>
+		 	<p style="margin-left: 14px;"><%= series.description %></p>
 		 </li>
 		<% end %>
 		</div>

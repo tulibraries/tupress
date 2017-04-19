@@ -1,13 +1,13 @@
-<div class="container">
+
 	<div class="row">
 		<div class="col">
 			<h1>Conferences</h1>
 		</div>
 	</div>
-</div>
+
+<div class="container" id="conferences" style="margin-top:21px;">
 
 <% @conferences_month.sort_by{|c| c[0][:id]}.each do |month, conferences| %>
-<div class="container" style="margin-top:21px;">
 	<div class="row">
 		<div class="col"><h2><%= month[:name] %></h2></div>
 	</div>
@@ -36,5 +36,6 @@
 
 		</div>
 	</div>
-</div>
 <% end %>
+
+</div>

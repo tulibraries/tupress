@@ -8,154 +8,154 @@
 	<div class="row">
 		<div class="col">
 			<div class="container">
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    If you have a question not answered here, feel free to email the <%= mail_to 'tempress@temple.edu', 'webmaster', :class=>'alert-link' %> with your query.
+                </div>
+            </div>
 
-    <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        If you have a question not answered here, feel free to email the <%= mail_to 'tempress@temple.edu', 'webmaster', :class=>'alert-link' %> with your query.
-    </div>
-
-    <div class="panel-group" id="accordion">
-        <div class="faqHeader"></div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                    	How can I purchase a book and can I order online?
-                    </a>
-                </h2>
+        <div class="panel-group" id="accordion">
+            <div class="faqHeader"></div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        	How can I purchase a book and can I order online?
+                        </a>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>The easiest way to order is through the "Buy this book!" link on each book page (<%= link_to 'View sample', :controller=>'page', :action=>'order' %>). Click on the link and you'll be taken to a secure server. Add the book to your shopping cart and check out or continue to browse. You can view your cart and check out from any individual book page. You may also print out an <%= link_to "order form", "pdf/order_form.pdf" %> and fax it to 1.800.621.8476 in the United States or 773.702.7212 for international orders. Mail the order form to: 
+                				</p>
+                				<address>
+                				Temple University Press<br>
+    			              c/o Chicago Distribution Center<br>
+    			              11030 South Langley Avenue <br>
+    			              Chicago, IL 60628
+    			              </address>
+                				<p>Or call our toll-free number 1.800.621.2736 in the US or 773.702.7000 internationally. We accept VISA, MasterCard, AmEx, and Discover for purchases. </p>
+                    </div>
+                </div>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <p>The easiest way to order is through the "Buy this book!" link on each book page (<%= link_to 'View sample', :controller=>'page', :action=>'order' %>). Click on the link and you'll be taken to a secure server. Add the book to your shopping cart and check out or continue to browse. You can view your cart and check out from any individual book page. You may also print out an <%= link_to "order form", "pdf/order_form.pdf" %> and fax it to 1.800.621.8476 in the United States or 773.702.7212 for international orders. Mail the order form to: 
-            				</p>
-            				<address>
-            				Temple University Press<br>
-			              c/o Chicago Distribution Center<br>
-			              11030 South Langley Avenue <br>
-			              Chicago, IL 60628
-			              </address>
-            				<p>Or call our toll-free number 1.800.621.2736 in the US or 773.702.7000 internationally. We accept VISA, MasterCard, AmEx, and Discover for purchases. </p>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        How can I find out more about a book?</a>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                       <p>Start with a book search on the <%= link_to "Our Books", :controller=>'book', :action=>'index' %></a> page. You can search for a book using the title or author's name or scroll through multiple indexes, such as Award-Winners, Subjects, Series, or alphabetically by book title or author's last name.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How can I be added to or removed from the mailing list?</a>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Email the <%= mail_to "tempress@temple.edu", "Webmaster" %> with your request. Please note that we do rent mailing lists, so you might receive a mailing even though your name is not in our database. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                        How do I submit my manuscript for consideration?</a>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Visit our <%= mail_to "submissions.html", "Submission Guidelines" %> page for information about what information to send, editors' specializations and email addresses, and where to send your manuscript. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                        How do I request a copy of a book to review?</a>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>All of our books are available for media review. Please fill out the <%= link_to "Review Copy Request Form", :controller=>'page', :action=>'review_copy' %>. You may also fax a request on company letterhead to 215.926.2141, attention to the Publicity Manager. If we're unfamiliar with your publication, we will ask for a sample copy. Questions about publicity should be directed to <%= mail_to "gkramer@temple.edu", "Gary Kramer" %>. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                        I'm interested in one of your books for a class I teach. May I have an examination copy?</a>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>We invite you to write on departmental letterhead for an examination copy of any paperback title you wish to consider for course adoption. Please state course title, semester, and projected enrollment. Paperback examination copies are available for a $10.00 per title non-refundable service charge. <br><br> For a trial period, digital examination copies are available at no charge.  To request a digital examination copy, please email the course title, semester and projected enrollment to: <a href="mailto:examcopy@temple.edu">examcopy@temple.edu</a><br><br> For desk copies, please provide course ID, projected enrollment, semester class will be taught, and the name of the bookstore that will be placing the order. Please email the <%= mail_to 'anderson@temple.edu', 'Marketing Director' %> for details on hardcover books for course use.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                        I'm using one of your books for a class I teach, but haven't received my desk copy. What should I do?</a>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Please email <%= mail_to 'karen.baker@temple.edu', 'Karen Baker' %> in the business department. 
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                        I'm having problems with my order. Who should I contact?</a>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Contact <%= mail_to 'karen.baker@temple.edu', 'Karen Baker' %> in customer service at 215.926.2140 or call 1.800.621.8476 to speak with a Chicago Distribution Center representative.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+                        Is it possible to contact the author of one of your books?</a>
+                    </h2>
+                </div>
+                <div id="collapseNine" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>We don't give out personal information about our authors, but if you send your request to the Marketing Department, <%= mail_to 'gkramer@temple.edu', 'Gary Kramer' %> will forward your message to the author.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default list-group-item">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+                        May I have permission to use copyrighted material?</a>
+                    </h2>
+                </div>
+                <div id="collapseTen" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>You may fill out the <%= link_to 'Permissions Form', :controller=>'page', :action=>'rights' %> with details about your request. Please note that if the selection is an excerpt, adaptation, or is altered in any way from its copyrighted form, a photocopy of the pages of material to be reprinted, indicating any edits, must be included in your request. If the request is for the reuse of material for which permission was previously granted, you are asked to supply a copy of the previous permission agreement and any additional information regarding the previous use of the material.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                    How can I find out more about a book?</a>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                   <p>Start with a book search on the <%= link_to "Our Books", :controller=>'book', :action=>'index' %></a> page. You can search for a book using the title or author's name or scroll through multiple indexes, such as Award-Winners, Subjects, Series, or alphabetically by book title or author's last name.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How can I be added to or removed from the mailing list?</a>
-                </h2>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Email the <%= mail_to "tempress@temple.edu", "Webmaster" %> with your request. Please note that we do rent mailing lists, so you might receive a mailing even though your name is not in our database. </p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                    How do I submit my manuscript for consideration?</a>
-                </h2>
-            </div>
-            <div id="collapseFour" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Visit our <%= mail_to "submissions.html", "Submission Guidelines" %> page for information about what information to send, editors' specializations and email addresses, and where to send your manuscript. </p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-                    How do I request a copy of a book to review?</a>
-                </h2>
-            </div>
-            <div id="collapseFive" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>All of our books are available for media review. Please fill out the <%= link_to "Review Copy Request Form", :controller=>'page', :action=>'review_copy' %>. You may also fax a request on company letterhead to 215.926.2141, attention to the Publicity Manager. If we're unfamiliar with your publication, we will ask for a sample copy. Questions about publicity should be directed to <%= mail_to "gkramer@temple.edu", "Gary Kramer" %>. </p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
-                    I'm interested in one of your books for a class I teach. May I have an examination copy?</a>
-                </h2>
-            </div>
-            <div id="collapseSix" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>We invite you to write on departmental letterhead for an examination copy of any paperback title you wish to consider for course adoption. Please state course title, semester, and projected enrollment. Paperback examination copies are available for a $10.00 per title non-refundable service charge. <br><br> For a trial period, digital examination copies are available at no charge.  To request a digital examination copy, please email the course title, semester and projected enrollment to: <a href="mailto:examcopy@temple.edu">examcopy@temple.edu</a><br><br> For desk copies, please provide course ID, projected enrollment, semester class will be taught, and the name of the bookstore that will be placing the order. Please email the <%= mail_to 'anderson@temple.edu', 'Marketing Director' %> for details on hardcover books for course use.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-                    I'm using one of your books for a class I teach, but haven't received my desk copy. What should I do?</a>
-                </h2>
-            </div>
-            <div id="collapseSeven" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Please email <%= mail_to 'karen.baker@temple.edu', 'Karen Baker' %> in the business department. 
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
-                    I'm having problems with my order. Who should I contact?</a>
-                </h2>
-            </div>
-            <div id="collapseEight" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Contact <%= mail_to 'karen.baker@temple.edu', 'Karen Baker' %> in customer service at 215.926.2140 or call 1.800.621.8476 to speak with a Chicago Distribution Center representative.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
-                    Is it possible to contact the author of one of your books?</a>
-                </h2>
-            </div>
-            <div id="collapseNine" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>We don't give out personal information about our authors, but if you send your request to the Marketing Department, <%= mail_to 'gkramer@temple.edu', 'Gary Kramer' %> will forward your message to the author.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
-                    May I have permission to use copyrighted material?</a>
-                </h2>
-            </div>
-            <div id="collapseTen" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>You may fill out the <%= link_to 'Permissions Form', :controller=>'page', :action=>'rights' %> with details about your request. Please note that if the selection is an excerpt, adaptation, or is altered in any way from its copyrighted form, a photocopy of the pages of material to be reprinted, indicating any edits, must be included in your request. If the request is for the reuse of material for which permission was previously granted, you are asked to supply a copy of the previous permission agreement and any additional information regarding the previous use of the material.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 	</div>
 </div>
 

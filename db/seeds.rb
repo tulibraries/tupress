@@ -49,10 +49,9 @@ Book.create(
 						award: "Athenæum of Philadelphia’s Literary Award, 2004",
 						format: '64 pp • 8.25x8.25 • 145 tables • 37 color illustrations', 
 						binding: [
-							{type: 'Cloth', ean: '978-1-59213-963-7', price: '18.95'},
-							{type: 'Paper', ean: '978-2-59213-963-9', price: '12.95'}
-						], 
-						pub_date: 'Sep 08', 
+							{type: 'Cloth', ean: '978-1-59213-963-7', price: '18.95', pub_date: 'Sep 08'},
+							{type: 'Paper', ean: '978-2-59213-963-9', price: '12.95', pub_date: 'Sep 08'}
+						],  
 						isbn: '9781592139637', 
 						ean: '978-1-59213-963-7', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2015_reg.gif',
@@ -93,9 +92,9 @@ Book.create(
 						award: "",
 						format: '252 pp<br />6 x 9', 
 						binding: [
-							{type: 'Cloth', ean: '978-1-4399-0988-1', price: '94.50', date: 'Sep 16'},
-							{type: 'Paper', ean: '978-1-4399-0989-8', price: '34.95', date: 'Sep 16'},
-							{type: 'e-book', ean: '978-1-4399-0990-4', price: '34.95', date: 'Oct 16'}
+							{type: 'Cloth', ean: '978-1-4399-0988-1', price: '94.50', pub_date: 'Sep 16'},
+							{type: 'Paper', ean: '978-1-4399-0989-8', price: '34.95', pub_date: 'Sep 16'},
+							{type: 'e-book', ean: '978-1-4399-0990-4', price: '34.95', pub_date: 'Oct 16'}
 						], 
 						isbn: '9781439909881', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2255_reg.gif',
@@ -135,10 +134,9 @@ Book.create(
 						award: "",
 						format: '246 pp<br />6.125 x 9.25<br />1 figs., 159 halftones', 
 						binding: [
-							{type: 'Cloth', ean: '978-1-4399-1457-1', price: '125.50'},
-							{type: 'Paper', ean: '978-2-59213-963-9', price: '34.95'}
-						], 
-						pub_date: 'Feb 17', 
+							{type: 'Cloth', ean: '978-1-4399-1457-1', price: '125.50', pub_date: 'Feb 17'},
+							{type: 'Paper', ean: '978-2-59213-963-9', price: '34.95', pub_date: 'Feb 17'}
+						],
 						isbn: '9781439914564', 
 						ean: '', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2440_reg.gif',
@@ -178,10 +176,9 @@ Book.create(
 						award: "",
 						format: '244 pp<br />5.5 x 8.25', 
 						binding: [
-							{type: 'Cloth', ean: '978-1-4399-1465-6', price: '25.00'},
-							{type: 'e-book', ean: '978-1-4399-1467-0', price: '25.00'}
+							{type: 'Cloth', ean: '978-1-4399-1465-6', price: '25.00', pub_date: 'May 17'},
+							{type: 'e-book', ean: '978-1-4399-1467-0', price: '25.00', pub_date: ''}
 						], 
-						pub_date: 'May 17', 
 						isbn: '9781439914656', 
 						ean: '', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2445_reg.gif',
@@ -191,6 +188,95 @@ Book.create(
 						news_text: 'An engrossing compendium of stories on the people, places, and events that make Pennsylvania unique. Well told.',
 						catalog: '1',
 						course_adoption: 'Y'
+						)
+Book.create(
+						book_id: '2375',
+						title: 'Boathouse Row', 
+						subtitle: 'Waves of Change in the Birthplace of American Rowing',
+						excerpt: '<a href="http://www.temple.edu/tempress/chapters_2400/2445_ch1.pdf">Read the Introduction (pdf).</a>',
+						intro: '<a href="https://www.youtube.com/watch?v=Jmyt4hc8Z7o">Watch a video interview</a> with Dotty Brown, author of <em>Boathouse Row</em>.',
+						blurb: 'A magisterial history of Philadelphia\'s iconic Boathouse Row.',
+						author: [
+							'Dotty Brown'
+						], 
+						description: '<p>The history of Philadelphia\'s Boathouse Row is both wide and deep. Dotty Brown, an avid rower and former editor at the Philadelphia Inquirer, immersed herself in boathouse archives to provide a comprehensive history of rowing in Philadelphia. She takes readers behind the scenes to recount the era when rowing was the spectator sport of its time-and the subject of Thomas Eakins\' early artwork-through the heyday of the famed Kelly dynasty, and the fight for women to get the right to row. (Yes, it really was a fight, and it took generations to win.)</p><p>With more than 160 photographs, a third of them in full color, Boathouse Row chronicles the "waves of change" as various groups of different races, classes, and genders fought for access to water and the sport. Chapters also discuss the architectural one-upmanship that defined Boathouse Row after Frank Furness designed the stunning and eclectic Undine Barge Club, and the regattas that continue to take place today on the Schuylkill River, including the forgotten forces that propelled high school rowing.</p><p>Beautifully written and illustrated, Boathouse Row will be a keepsake for rowers and spectators alike.</p><p><em>This publication was supported by a generous donation from H.F. (Gerry) Lenfest.</em></p>', 
+						contents: '<p>Preface<br><br>1. Before Boathouse Row: First There Was a Dam<br>2. Thomas Eakins: In the Heyday of Rowing, a Young Artist Paints His Friends<br>3. Frank Furness: Architectural One-upmanship Remakes the Row<br>4. John B. Kelly: An Irish Bricklayer Builds a Legend and Legacy<br>5. Tom Curran and Joe Burk: The Collegiate Calling of Two American Champions<br>6. Ernestine Bayer: Women and Their Fight for the Right to Row<br>7. The “Vesper Eight”: A Motley Crew Vies for an Olympic Berth<br>8. Edward T. Stotesbury: The Forgotten Forces of High School Rowing<br>Epilogue<br>The Schuylkill Navy and the Clubs of Boathouse Row<br><br>Acknowledgments<br>Notes<br>Bibliography <br>Index</p>',
+						reviews: [
+							'"Boathouse Row is a must-read for anyone interested in the sport of rowing and the enormous contributions of those who once plied the Schuylkill River. Dotty Brown chronicles not only the famous athletes of yore, like John B. Kelly, but those noteworthy artists, architects, businessmen, and politicians who helped to build this historic piece of riverbank into the living dynasty that it remains today. With the deft hand of a skilled writer, she unravels a Philadelphia story filled with fascinating characters, revealing new insights on old stories that have remained shrouded in mystery, and supplements her narrative with beautiful artwork and photography." <span class="byline"> —- <strong>Daniel J. Boyne</strong>, author of <em>Kelly: A Father, a Son, an American Quest</em></span>'
+						], 
+						about_author: [
+							'<strong>Dotty Brown</strong> is a former reporter and editor at the <em>Philadelphia Inquirer</em>. During her newspaper career, she edited numerous prize-winning projects, including one that won a Pulitzer Prize. She is also a member of the Vesper Boat Club. Visit her online at <a href="http://www.boathouserowthebook.com">www.boathouserowthebook.com</a>.'
+						], 
+						subjects: [
+							'1057',
+							'1060',
+							'1071'
+						], 
+						in_series: [
+							],
+						is_guide: "0",
+						award: "",
+						format: '288 pp<br />10 x 8<br />63 color photos, 3 line drawings, 110 halftones',
+						binding: [
+							{type: 'Cloth', ean: '978-1-4399-1282-9', price: '35.00', pub_date: 'Nov 16'}
+						], 
+						isbn: '9781439912829', 
+						ean: '', 
+						cover_image: 'http://www.temple.edu/tempress/titles/2375_reg.gif',
+						hot: '0',
+						hot_text: '',
+						news: '0',
+						news_text: 'An engrossing compendium of stories on the people, places, and events that make Pennsylvania unique. Well told.',
+						catalog: '0',
+						course_adoption: '0',
+						highlight: '1',
+						highlight_image: 'boathouserow.gif'
+						)
+Book.create(
+						book_id: '1937',
+						title: 'Klezmer', 
+						subtitle: 'Music and Community in Twentieth-Century Jewish Philadelphia',
+						excerpt: '<a href="http://www.temple.edu/tempress/chapters_1800/1937_ch1.pdf">Read the inroduction (pdf)</a>',
+						intro: '',
+						blurb: 'The story of Philadelphia Jewish life through the music of klezmer',
+						author: [
+							'Hankus Netsky'
+						], 
+						description: '<p><i>Klezmer</i> presents a lively and detailed overview of the folk musical tradition as practiced in Philadelphia\'s twentieth-century Jewish community. Through interviews, archival research, and recordings, Hankus Netsky constructs an ethnographic portrait of Philadelphia’s Jewish musicians, the environment they worked in, and the repertoire they performed at local Jewish lifestyle and communal celebrations.</p><p>Netsky defines what klezmer music is, how it helped define Jewish immigrant culture in Philadelphia, and how its current revival has changed klezmer’s meaning historically. <i>Klezmer</i> also addresses the place of musicians and celebratory music in Jewish society, the nature of klezmer culture, the tensions between sacred and secular in Jewish music, and the development of Philadelphia\'s distinctive “Russian Sher” medley, a unique and masterfully crafted composition.</p><p>Including a significant amount of musical transcriptions, <i>Klezmer</i> chronicles this special musical genre from its heyday in the immigrant era, through the mid-century period of its decline through its revitalization from the 1980s to today.</p>', 
+						contents: '<p>Acknowledgments<br>Introduction</p><p><b>Part I: The Klezmer Musician</b><br>1. The Klezmer Mystique <br>2. Klezmer Musicians in Jewish Philadelphia, 1900–1945 <br>3. Philadelphia’s Klezmer Tradition: The Later Years</p><p><b>Part II: Musical Traditions</b><br>4. Klezmer at Philadelphia’s Jewish Weddings<br>5. The Evolution of Philadelphia’s Russian Sher Medley<p>Epilogue<br>Notes<br>References<br>Index</p>',
+						reviews: [
+							'<p>"Klezmer breaks new ground by providing a localized musical portrait of a klezmer community outside the New York area. Netsky makes significant efforts by combining detailed and wide-ranging interviews, personal narrative, and scholarly analysis. His experience with and access to the Philadelphia klezmer scene is unparalleled; his substantial long-term research, including interviews with many klezmorim who have since passed away, is clearly a treasure. </i>Klezmer<i> provides a fascinating, satisfying, and deeply textured picture of a community and its musicians through years of transition."</i> <br>—<b>Judah M. Cohen</b>, Lou &amp; Sybil Mervis Professor in the Study of Jewish Culture at Indiana University, and author of <i>The Making of a Reform Jewish Cantor: Musical Authority, Cultural Investment</i></p>',
+							'<p>"Hankus Netsky masterminded the mainstreaming of klezmer music into late twentieth-century American culture. Now, he trains a historical eye on this much-discussed, little-studied Jewish musical tradition. The result is a landmark examination of how music and dance interact in the context of Jewish communal celebrations from the immigrant era onwards. This rich, multi-generational narrative will enthrall aficionados and scholars alike." <br> —- <strong>James Loeffler</strong>, Associate Professor of History at the University of Virginia and author of <em>The Most Musical Nation: Jews and Culture in the Late Russian Empire</em></p>',
+							'<p>"\'Jewish music\' is, for many, Irving Berlin or Debbie Friedman, George Gershwin or Leonard Bernstein. Musician, scholar and historian Hankus Netsky broadens this perspective by sharing the rich and fascinating story of a unique genre of Jewish folk music, klezmer, in a particular Jewish community, Philadelphia. He makes the case that this music is more than entertainment or contemporary popular culture; it is the door to understanding a community’s history, ethnic identity and sociology.... But Netsky does so much more: he writes an historical and musical love letter to his family as viewed through the lens of his and their personal stories, overlaid with socioeconomic studies of Jewish culture and musicology. With personal reminiscences, interviews, and just a bit of family gossip, Netsky creates a compelling and fascinating web of \'meises\' mixed with scholarship, seen through the colorful recollections and memories of his uncles, their friends and cronies, his bandmates and, ultimately, his musical colleagues and historians.... a fascinating and vibrant welcome into the world of klezmer."<br>—<strong>American Jewish History</strong></p>'
+						], 
+						about_author: [
+							'<p><strong>Hankus Netsky</strong> is Chair of Contemporary Improvisation and Director of the Jewish music ensemble at the New England Conservatory in Boston. He is also the Founder and Director of the Klezmer Conservatory Band, an internationally renowned Yiddish music ensemble. He has collaborated, performed, and recorded with many well-known artists, including Itzhak Perlman and Theodore Bikel.</p>'
+						], 
+						subjects: [
+							'1062',
+							'1069',
+							'1071'
+						], 
+						in_series: [
+							],
+						is_guide: "0",
+						award: "",
+						format: '186 pp<br />6 x 9<br />1 table, 50 figures',
+						binding: [
+							{type: 'Cloth', ean: '978-1-43990-903-4', price: '64.50', pub_date: 'Jun 15'},
+							{type: 'Paper', ean: '978-1-4399-0904-1', price: '27.95', pub_date: 'Jan 17'},
+							{type: 'e-book', ean: '978-1-43990-905-8', price: '27.95', pub_date: ''}
+						], 
+						isbn: '9781439909034',  
+						cover_image: 'http://www.temple.edu/tempress/titles/1937_reg.gif',
+						hot: '0',
+						hot_text: '',
+						news: '0',
+						news_text: '',
+						catalog: '0',
+						course_adoption: '0',
+						highlight: '1',
+						highlight_image: 'klezmer.gif'
 						)
 
 
@@ -209,7 +295,6 @@ Subject.create(subject_id: '1040', subject: 'Children\'s Books')
 Subject.create(subject_id: '1041', subject: 'Cinema Studies')
 Subject.create(subject_id: '1043', subject: 'Community Organizing and Social Movements')
 Subject.create(subject_id: '1045', subject: 'Cultural Studies')
-Subject.create(subject_id: '1046', subject: 'Music and Dance')
 Subject.create(subject_id: '1047', subject: 'Death and Dying')
 Subject.create(subject_id: '1048', subject: 'Disability Studies')
 Subject.create(subject_id: '1049', subject: 'Drama')

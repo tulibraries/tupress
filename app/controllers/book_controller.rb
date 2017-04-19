@@ -1,4 +1,9 @@
 class BookController < ApplicationController
+
+
+
+
+
   def index
   	#@books = Book.all
   	if params[:id].nil?
@@ -45,6 +50,35 @@ class BookController < ApplicationController
   def catalogs_by_season
     @catalog = Catalog.find_by id: "#{params[:id]}"
     @books = Book.where('catalog LIKE ?', "#{params[:id]}").order(:title)
+  end
+
+
+  
+before_action :set_book, only: [:edit, :update]
+
+  def edit
+    @book
+  end
+
+  def update
+    if @book.update_attributes(book_params)
+      flash[:notice] = "Book was successfully updated."
+    else 
+      flash[:notice] = "Book was NOT successfully updated."
+    end
+
+    redirect_to controller: :book, action: :show, id: @book.book_id
+  end
+
+  private
+
+  def set_book
+    @book = Book.find_by book_id: "#{params[:book_id]}"
+
+  end
+
+  def book_params
+    params[:book].permit(:title, :author)
   end
 
 end
