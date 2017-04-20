@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 resources :feeds
+resources :book
 
 controller :book do 
 	get 'books'					=> :index
@@ -12,8 +13,6 @@ controller :book do
   get 'awards'				=> :awards
   get 'catalogs'      => :catalogs
   get 'catalogs/:id'  => :catalogs_by_season
-  get 'book/:book_id/edit'  => :edit 
-  patch 'book/:book_id/update' => :update
 end
 
 controller :page do
