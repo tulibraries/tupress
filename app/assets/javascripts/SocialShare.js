@@ -210,8 +210,8 @@
 
                         var screen_width = screen.width;
                         var screen_height = screen.height;
-                        var popup_width = '640px' ? '640px' : (screen_width - (screen_width*0.2));
-                        var popup_height = '500px' ? '500px' : (screen_height - (screen_height*0.2));
+                        var popup_width = '950px' ? '950px' : (screen_width - (screen_width*0.2));
+                        var popup_height = '700px' ? '700px' : (screen_height - (screen_height*0.2));
                         var left = (screen_width/2)-(popup_width/2);
                         var top = (screen_height/2)-(popup_height/2);
                         var parameters = 'toolbar=0,status=0,width=' + popup_width + ',height=' + popup_height + ',top=' + top + ',left=' + left;
