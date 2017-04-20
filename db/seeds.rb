@@ -47,11 +47,13 @@ Book.create(
 							],
 						is_guide: "1",
 						award: "Athenæum of Philadelphia’s Literary Award, 2004",
+						award_year: "2004",
 						format: '64 pp • 8.25x8.25 • 145 tables • 37 color illustrations', 
 						binding: [
 							{type: 'Cloth', ean: '978-1-59213-963-7', price: '18.95', pub_date: 'Sep 08'},
 							{type: 'Paper', ean: '978-2-59213-963-9', price: '12.95', pub_date: 'Sep 08'}
 						],  
+						pub_date: '2008',
 						isbn: '9781592139637', 
 						ean: '978-1-59213-963-7', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2015_reg.gif',
@@ -90,12 +92,14 @@ Book.create(
 							],
 						is_guide: "0",
 						award: "",
+						award_year: '',
 						format: '252 pp<br />6 x 9', 
 						binding: [
 							{type: 'Cloth', ean: '978-1-4399-0988-1', price: '94.50', pub_date: 'Sep 16'},
 							{type: 'Paper', ean: '978-1-4399-0989-8', price: '34.95', pub_date: 'Sep 16'},
 							{type: 'e-book', ean: '978-1-4399-0990-4', price: '34.95', pub_date: 'Oct 16'}
 						], 
+						pub_date: '2016',
 						isbn: '9781439909881', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2255_reg.gif',
 						hot: '1',
@@ -132,11 +136,13 @@ Book.create(
 							],
 						is_guide: "0",
 						award: "",
+						award_year: '',
 						format: '246 pp<br />6.125 x 9.25<br />1 figs., 159 halftones', 
 						binding: [
 							{type: 'Cloth', ean: '978-1-4399-1457-1', price: '125.50', pub_date: 'Feb 17'},
 							{type: 'Paper', ean: '978-2-59213-963-9', price: '34.95', pub_date: 'Feb 17'}
 						],
+						pub_date: '2017',
 						isbn: '9781439914564', 
 						ean: '', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2440_reg.gif',
@@ -174,11 +180,13 @@ Book.create(
 							],
 						is_guide: "0",
 						award: "",
+						award_year: '',
 						format: '244 pp<br />5.5 x 8.25', 
 						binding: [
 							{type: 'Cloth', ean: '978-1-4399-1465-6', price: '25.00', pub_date: 'May 17'},
 							{type: 'e-book', ean: '978-1-4399-1467-0', price: '25.00', pub_date: ''}
 						], 
+						pub_date: '2017',
 						isbn: '9781439914656', 
 						ean: '', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2445_reg.gif',
@@ -216,10 +224,12 @@ Book.create(
 							],
 						is_guide: "0",
 						award: "",
+						award_year: '',
 						format: '288 pp<br />10 x 8<br />63 color photos, 3 line drawings, 110 halftones',
 						binding: [
 							{type: 'Cloth', ean: '978-1-4399-1282-9', price: '35.00', pub_date: 'Nov 16'}
 						], 
+						pub_date: '2016',
 						isbn: '9781439912829', 
 						ean: '', 
 						cover_image: 'http://www.temple.edu/tempress/titles/2375_reg.gif',
@@ -261,12 +271,14 @@ Book.create(
 							],
 						is_guide: "0",
 						award: "",
+						award_year: '',
 						format: '186 pp<br />6 x 9<br />1 table, 50 figures',
 						binding: [
 							{type: 'Cloth', ean: '978-1-43990-903-4', price: '64.50', pub_date: 'Jun 15'},
 							{type: 'Paper', ean: '978-1-4399-0904-1', price: '27.95', pub_date: 'Jan 17'},
 							{type: 'e-book', ean: '978-1-43990-905-8', price: '27.95', pub_date: ''}
 						], 
+						pub_date: '2015',
 						isbn: '9781439909034',  
 						cover_image: 'http://www.temple.edu/tempress/titles/1937_reg.gif',
 						hot: '0',
@@ -400,12 +412,12 @@ Review.create(title: 'Exploring the Roots of Digital and Media Literacy through 
 
 
 
-Conference.create(month: [{id: '1', name: 'January'}], conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
-Conference.create(month: [{id: '1', name: 'January'}], conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
-Conference.create(month: [{id: '1', name: 'January'}], conference: 'American Library Association Mid-Winter', link: 'http://2017.alamidwinter.org/', venue: '', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
-Conference.create(month: [{id: '2', name: 'February'}], conference: 'Eastern Sociological Society', link: 'http://www.essnet.org/annual-meeting/overview/', venue: 'Sheraton Philadelphia Downtown', location: 'Philadelphia, PA', dates: 'February 23 - 26, 2017', booth: 'Space #5 (Liberty A - Ballroom level)')
+Conference.create(month: [{id: '01', name: 'January'}], conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
+Conference.create(month: [{id: '01', name: 'January'}], conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
+Conference.create(month: [{id: '01', name: 'January'}], conference: 'American Library Association Mid-Winter', link: 'http://2017.alamidwinter.org/', venue: '', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
+Conference.create(month: [{id: '02', name: 'February'}], conference: 'Eastern Sociological Society', link: 'http://www.essnet.org/annual-meeting/overview/', venue: 'Sheraton Philadelphia Downtown', location: 'Philadelphia, PA', dates: 'February 23 - 26, 2017', booth: 'Space #5 (Liberty A - Ballroom level)')
 Conference.create(
-	month: [{id: '4', name: 'April'}], 
+	month: [{id: '04', name: 'April'}], 
 	conference: 'Organization of American Historians', 
 	link: 'http://www.oah.org/meetings-events/2017/', 
 	venue: '', 
@@ -413,7 +425,7 @@ Conference.create(
 	dates: 'April 6 - 9, 2017', 
 	booth: 'Booth #118')
 Conference.create(
-	month: [{id: '4', name: 'April'}], 
+	month: [{id: '04', name: 'April'}], 
 	conference: 'Association for Asian American Studies', 
 	link: 'http://aaastudies.org/2017-aaas-conference/', 
 	venue: '', 
@@ -421,7 +433,7 @@ Conference.create(
 	dates: 'April 13 - 15, 2017', 
 	booth: 'Booth #TBD')
 Conference.create(
-	month: [{id: '5', name: 'May'}], 
+	month: [{id: '05', name: 'May'}], 
 	conference: 'Book Expo America', 
 	link: 'http://www.bookexpoamerica.com/Show-Info/', 
 	venue: '', 
@@ -429,7 +441,7 @@ Conference.create(
 	dates: 'May 31 - June 2, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '6', name: 'June'}], 
+	month: [{id: '06', name: 'June'}], 
 	conference: 'Association of American University Presses', 
 	link: 'http://www.aaupnet.org/events-a-conferences/annual-meeting/aaup-2017', 
 	venue: 'JW Marriott Austin', 
@@ -437,7 +449,7 @@ Conference.create(
 	dates: 'June 11 - 13, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '6', name: 'June'}], 
+	month: [{id: '06', name: 'June'}], 
 	conference: 'American Library Association', 
 	link: 'http://2017.alaannual.org/', 
 	venue: 'JW Marriott Austin', 
@@ -445,7 +457,7 @@ Conference.create(
 	dates: 'June 22 - 27, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '8', name: 'August'}], 
+	month: [{id: '08', name: 'August'}], 
 	conference: 'American Sociological Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: '', 
@@ -453,7 +465,7 @@ Conference.create(
 	dates: 'August 12 - 15, 2017', 
 	booth: 'Booth #TBD')
 Conference.create(
-	month: [{id: '8', name: 'August'}], 
+	month: [{id: '08', name: 'August'}], 
 	conference: 'American Poltical Science Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: 'Hilton San Francisco Union Square', 
@@ -461,7 +473,7 @@ Conference.create(
 	dates: 'August 31 - September 3, 2017', 
 	booth: 'Booth #711')
 Conference.create(
-	month: [{id: '9', name: 'September'}], 
+	month: [{id: '09', name: 'September'}], 
 	conference: 'American Poltical Science Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: 'Hilton San Francisco Union Square', 

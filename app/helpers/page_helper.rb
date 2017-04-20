@@ -107,4 +107,20 @@ module PageHelper
 			['Youth Studies', 'Youth Studies']
 		]
 	end
+	def get_month (month)
+		month = case
+			when "01" then "January"
+			when "02" then "February"
+			when "03" then "March"
+			when "04" then "April"
+			when "05" then "May"
+			when "06" then "June"
+			when "07" then "July"
+			when "08" then "August"
+			when "09" then "September"
+			when "10" then "October"
+			when "11" then "November"
+			when "12" then "December"
+		end
+	end
 end
