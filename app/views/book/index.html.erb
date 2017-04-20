@@ -6,19 +6,19 @@
 <% @books.each do |book| %>
 	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
 		<div class="media" style="text-align:center;">
-			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:140px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
 			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
-				<p><%= book.subtitle %></p>
+				<p><em><%= book.subtitle %></em></p>
 			<% end %>
 			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
 			<p style="font-size: 65%;">
 				<%= book.format.html_safe %>
-				<br />
+				<br /><br />
 				<%  book.binding.each do |binding| %>
-					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %> <%= binding[:pub_date] %> | 
+					<%= binding[:type] %>: <%= binding[:ean] %> <strong><%= number_to_currency(binding[:price]) %></strong> <%= binding[:pub_date] %> <br />  
 					<% end %>
 				</p>
 		</div>

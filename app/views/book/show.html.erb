@@ -7,6 +7,12 @@
 				<br /><small><em><%= @book.subtitle %></em></small>
 			<% end %>
 		</h1>	
+
+	<div class="row">
+		<div class="col author">
+			<%= @book.author.map { |author| author }.join(' and ') %>
+		</div>
+	</div>
 	</div>
 	<div class="col-md-4">
 
@@ -25,12 +31,7 @@
 		</div>
 		</div>
 </div>
-	<div class="row">
-		<div class="col author">
-			<%= @book.author.map { |author| author }.join(' and ') %>
-		</div>
-	</div>
-	<div class="row no-gutters">
+	<div class="row no-gutters book-info">
 		<div class="col col-md-3">
 			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:240px;" %>
 		</div>
@@ -54,10 +55,8 @@
 			
 		</div>
 		<div class="col col-md-6">
-		<p >
-				<%= @book.reviews.first.html_safe %>
-				</p>
-	</div>
+			<p ><%= @book.reviews.first.html_safe %></p>
+		</div>
 	</div>
 	<div class="row">	
 		<div class="col">
@@ -95,7 +94,7 @@
 		 </div>
 	</div>
 	</div>
-	<!-- if subjects -->
+	<% if @subjects.first %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>	
@@ -108,7 +107,9 @@
 		</div>
 			<% end %>
 	</div>
-	<!-- if series -->
+	<% end %>
+
+	<% if @series.first %><!-- if series -->
 	<div class="row">
 	<div class="col">
 		<h2>In Series</h2>	
@@ -126,4 +127,5 @@
 		<% end %>
 		</div>
 	</div>
+	<% end %>
 </div>

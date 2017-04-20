@@ -1,21 +1,28 @@
+<div class="row">
+	<div class="col">
+		<h1>
+			<%= @catalog.title %>
+		</h1>
+	</div>
+</div>
+
 <div class="container">
-<h1 style="padding: 14px 0;"><%= @catalog.title %></h1>
 <% @books.each do |book| %>
 	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
 		<div class="media" style="text-align:center;">
-			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:120px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:140px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
 			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
-				<p><%= book.subtitle %></p>
+				<p><em><%= book.subtitle %></em></p>
 			<% end %>
 			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
 			<p style="font-size: 65%;">
 				<%= book.format.html_safe %>
-				<br />
+				<br /><br />
 				<%  book.binding.each do |binding| %>
-					<%= binding[:type] %> <%= binding[:ean] %> <%= binding[:price] %>
+					<%= binding[:type] %>: <%= binding[:ean] %> <strong><%= number_to_currency(binding[:price]) %></strong><br />
 				<% end %>
 				</p>
 		</div>
