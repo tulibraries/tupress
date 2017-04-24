@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-resources :feeds
-resources :book
-resources :page
-
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -33,7 +29,6 @@ controller :page do
   get   'submissions'           => :submissions
   get   'university-presses'    => :university_presses
   get   'faq'                   => :faq
-  get   'links'                 => :links
   get   'copyright'             => :copyright
   root 	'page#index'
 end 
@@ -43,7 +38,18 @@ controller :subject do
 end
 
 controller :series do 
-	get 'series'			=> :index
+	get 'series'			  => :index
 end
+
+controller :links do 
+  get 'links/show'    => :show
+  get 'links'   => :index    
+end
+
+
+resources :links
+resources :feeds
+resources :book
+resources :page
 
 end

@@ -49,8 +49,6 @@ require 'pry'
   end
   def faq
   end
-  def links
-  end
   def copyright
   end
 end

@@ -20,21 +20,21 @@
             <div class="panel panel-default list-group-item">
                 <div class="panel-heading">
                     <h2 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
                         	How can I purchase a book and can I order online?
                         </a>
                     </h2>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapse1" class="panel-collapse collapse in">
                     <div class="panel-body">
                         <p>The easiest way to order is through the "Buy this book!" link on each book page (<%= link_to 'View sample', :controller=>'page', :action=>'order' %>). Click on the link and you'll be taken to a secure server. Add the book to your shopping cart and check out or continue to browse. You can view your cart and check out from any individual book page. You may also print out an <%= link_to "order form", "pdf/order_form.pdf" %> and fax it to 1.800.621.8476 in the United States or 773.702.7212 for international orders. Mail the order form to: 
                 				</p>
                 				<address>
-                				Temple University Press<br>
-    			              c/o Chicago Distribution Center<br>
-    			              11030 South Langley Avenue <br>
-    			              Chicago, IL 60628
-    			              </address>
+                				  Temple University Press<br>
+      			              c/o Chicago Distribution Center<br>
+      			              11030 South Langley Avenue <br>
+      			              Chicago, IL 60628
+      			             </address>
                 				<p>Or call our toll-free number 1.800.621.2736 in the US or 773.702.7000 internationally. We accept VISA, MasterCard, AmEx, and Discover for purchases. </p>
                     </div>
                 </div>
@@ -42,11 +42,11 @@
             <div class="panel panel-default list-group-item">
                 <div class="panel-heading">
                     <h2 class="panel-title">
-                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
                         How can I find out more about a book?</a>
                     </h2>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
+                <div id="collapse2" class="panel-collapse collapse">
                     <div class="panel-body">
                        <p>Start with a book search on the <%= link_to "Our Books", :controller=>'book', :action=>'index' %></a> page. You can search for a book using the title or author's name or scroll through multiple indexes, such as Award-Winners, Subjects, Series, or alphabetically by book title or author's last name.</p>
                     </div>
