@@ -17,5 +17,10 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore all file uploads
+/app/assets/pdf
+/app/assets/chapters*
+/app/assets/audio
+
 # Ignore Byebug command history file.
 .byebug_history

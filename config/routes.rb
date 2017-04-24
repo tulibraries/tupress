@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 resources :feeds
 resources :book
+resources :page
 
 controller :book do 
 	get   'books'					=> :index
