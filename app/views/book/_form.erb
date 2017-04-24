@@ -1,14 +1,16 @@
 
-<%= form_for(@book, :url => {:action => 'update', :id => @book.book_id}) do |book| %>
+<%= form_tag :action => 'update' do  %>
   <p>
-  		<%= book.label :title %>
-      <%= book.text_field :title, class: 'form-control' %>
+  		<label for="title" />
+      <%= text_field 'book', 'title', class: 'form-control' %>
       </p>
 <p>
-      <%= book.label :author %>
-      <%= book.text_field :author, multiple: true, class: 'form-control' %>
+      <label for="author" %>
+      <%= text_field 'book', 'author', multiple: true, class: 'form-control' %>
+      <%= text_field 'book', 'in_series', multiple: true, class: 'form-control' %>
+      <%= text_field 'book', 'subjects', multiple: true, class: 'form-control' %>
       </p>
 <p>
-      <%= book.submit "Save changes", class: "btn btn-primary" %>
+      <%= submit_tag "Save changes", class: "btn btn-primary" %>
 </p>
 <% end %>

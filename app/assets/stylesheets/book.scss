@@ -24,8 +24,8 @@ div.author {
 	margin-top: 10px;
 }
 div.author {
-	margin-top: -10px;
-	padding-top: 0;
+	/*margin-top: -10px;
+	padding-top: 0;*/
 }
 span.author {
 	font-weight: 600;
@@ -34,7 +34,9 @@ span.author {
 .description, .review, .about_author, .subjects, .series {
 	margin: 7px 21px;
 }
-
+.book-info {
+	margin-top: 21px;
+}
 .blurb {
 	color: #903;
 }

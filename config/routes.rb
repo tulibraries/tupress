@@ -4,15 +4,15 @@ resources :feeds
 resources :book
 
 controller :book do 
-	get 'books'					=> :index
-  get 'books/:id'			=> :index
-  get 'book/:id' 			=> :show
-  get 'subjects/:id' 	=> :bysubject
-  get 'series/:id' 		=> :byseries
-  get 'studyguides' 	=> :studyguides
-  get 'awards'				=> :awards
-  get 'catalogs'      => :catalogs
-  get 'catalogs/:id'  => :catalogs_by_season
+	get   'books'					=> :index
+  get   'book/:id' 			=> :show
+  get   'subjects/:id' 	=> :bysubject
+  get   'series/:id' 		=> :byseries
+  get   'studyguides' 	=> :studyguides
+  get   'awards'				=> :awards
+  get   'catalogs'      => :catalogs
+  get   'catalogs/:id'  => :catalogs_by_season
+  post  'book/:id'      => :update
 end
 
 controller :page do

@@ -53,32 +53,25 @@ class BookController < ApplicationController
   end
 
 
-  
-before_action :set_book, only: [:edit, :update]
-
-  def edit
-    @book
+  def edit   
+    @book = Book.find_by id: "#{params[:id]}"
   end
 
   def update
-    if @book.update_attributes(book_params)
-      flash[:notice] = "Book was successfully updated."
-    else 
-      flash[:notice] = "Book was NOT successfully updated."
+    @book = Book.find_by id: "#{params[:id]}"
+    if @book.update!(book_params) 
+      flash[:success] = "Book was successfully updated."
+      redirect_to :controller=>'book', :action=>'show', :id=>@book.book_id
+    else
+      flash[:error] = "Book was successfully updated."
+      render action: :edit
     end
-
-    redirect_to controller: :book, action: :show, id: @book.book_id
   end
 
-  private
-
-  def set_book
-    @book = Book.find_by book_id: "#{params[:book_id]}"
-
-  end
+ private
 
   def book_params
-    params[:book].permit(:title, :author)
+    params[:book].permit({:author=>[]}, :title, {:in_series=>[]}, {:subjects=>[]})
   end
 
 end

@@ -7,7 +7,7 @@ class Book < ApplicationRecord
 	serialize :subjects, Array
 	serialize :in_series, Array
 
-	belongs_to :series, :counter_cache => true
-	belongs_to :subject, :counter_cache => true
+	belongs_to :series, :counter_cache => true, optional: true
+	belongs_to :subject, :counter_cache => true, optional: true
 
 end
