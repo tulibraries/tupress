@@ -27,6 +27,7 @@ gem 'paperclip'
 gem 'pry'
 gem 'feedjira'
 gem 'social-share-button'
+gem 'tinymce-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

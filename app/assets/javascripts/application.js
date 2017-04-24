@@ -18,4 +18,5 @@
 //= require bootstrap-sprockets
 //= require form_validation.js
 //= require SocialShare.js
+//= require tinymce-jquery
 //= require_tree .
