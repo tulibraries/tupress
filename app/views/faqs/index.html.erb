@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Faqs</h1>
+
+<table width="100%" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faqs.each do |faq| %>
+      <tr>
+        <td width="30%" valign="top"><%= faq.q %></td>
+        <td width="50%"><%= faq.a.html_safe %></td>
+        <td><%= link_to 'Show', faq %></td>
+        <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+        <td><%= link_to 'Destroy', faq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faq', new_faq_path %>

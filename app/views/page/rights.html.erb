@@ -1,13 +1,12 @@
   <div class="row">
     <div class="col">
-      <h1>Rights &amp; Permissions</h1>
+      <h1><%= @page.name %></h1>
     </div>
   </div>
 
 <div class="row">
   <div class="col">
-    <p>For permission to use material from one of our publications, please fill out the following form. The following information/material is required before requests for permission to use material from Temple University Press books will be considered.</p>
-    <p>This form should only be used for requests to reproduce material copyrighted by Temple University Press in forthcoming books for publication. Please submit all requests for photocopies for academic use and for electronic course reserve via Copyright Clearance Center at <%= link_to "www.copyright.com", "http://www.copyright.com" %>.</p>
+    <%= @page.content.html_safe %>
   </div>
 </div>
 
@@ -207,16 +206,7 @@
 <div class="col">
 <div id="formfooter" style="margin-top: 42px;">
   <div class="col col-md-10 offset-md-1">
-    <p>If selection is an excerpt, adaptation, or is altered in any way from its copyrighted form, a photocopy of the pages of material to be reprinted, indicating any edits, should be sent to:</p>
-      <address>
-        Nikki Miller <br />
-        Temple University Press <br />
-        TASB<br />
-        1852 North 10th Street<br />
-        Philadelphia, PA 19122<br />
-        <p><strong>Fax</strong>: 215.926.2141</p>
-      </address>
-    <p>If this request is for a reuse of material for which permission was previously granted, please supply a copy of the previous permission agreement and any additional information regarding the previous use.</p>
+    <%= @page.content2.html_safe %>
   </div>
 </div>
 </div>

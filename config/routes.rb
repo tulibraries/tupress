@@ -15,21 +15,25 @@ end
 controller :page do
 	get		'page/index'	          => :index
 	get		'contact'			          => :contact
-  get   'order'                 => :order
+  get   'order'                 => :order, :id => 3
   get   'payment'               => :payment
   get   'copy-policy'           => :copypolicy
   get   'sales-reps'            => :sales_reps
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
   get   'review-copy'           => :review_copy
-  get   'press-info'            => :press_info
+  get   'press-info'            => :press_info, :id => 2
   get   'people'                => :people
-  get   'rights'                => :rights
+  get   'rights'                => :rights, :id => 4
   get   'foreign-rights'        => :foreign_rights
-  get   'submissions'           => :submissions
-  get   'university-presses'    => :university_presses
+  get   'submissions'           => :submissions, :id => 5
+  get   'university-presses'    => :university_presses, :id => 1
   get   'faq'                   => :faq
   get   'copyright'             => :copyright
+  get   'page/new'              => :new, :action => 'new'
+  post  'pages'                 => :create
+  post  'pages/:id'             => :update
+  get   'page/:id/edit'         => :edit, :action => 'edit'
   root 	'page#index'
 end 
 
@@ -41,9 +45,8 @@ controller :series do
 	get 'series'			  => :index
 end
 
-controller :links do 
-  get 'links/show'    => :show
-  get 'links'   => :index    
+controller :agencies do 
+  get   'agencies/:id'        => :index    
 end
 
 
@@ -51,5 +54,8 @@ resources :links
 resources :feeds
 resources :book
 resources :page
+resources :faqs
+resources :agencies
+
 
 end

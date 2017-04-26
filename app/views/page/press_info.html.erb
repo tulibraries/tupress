@@ -1,16 +1,14 @@
 
 	<div class="row">
 		<div class="col">
-			<h1>About the Press</h1>
+			<h1><%= @page.name %></h1>
 		</div>
 	</div>
 
-
-<div style="margin-top:21px;">
+<div class="container" id="press-info">
 	<div class="row">
 		<div class="col">
-		<p>Founded in 1969, Temple University Press chose as its inspiration Russell Conwell's vision of the university as a place of educational opportunity for the urban working class.</p>
-		<p>The Press is perhaps best known as a publisher of books in the social sciences and the humanities, as well as books about Philadelphia and the Delaware Valley region. Temple was an early publisher of books in urban studies, housing and labor studies, organizational reform, social service reform, public religion, health care, and cultural studies. It became one of the first university presses to publish in what later became the fields of women's studies, ethnic studies—including Asian American and Latino studies, as well as African American Studies. Today, it continues in those fields and in newer ones such as disability studies, animal rights, criminology, gender and sexual identity, and sport and society. Temple's regional list encompasses scholarly books, coffee table books, and books about art, culture, birding, fishing, hiking, sports teams, and the urban and suburban environments.</p>		
+		<%= @page.content.html_safe %>
 		</div>
 	</div>
 </div>
