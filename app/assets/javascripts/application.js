@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require jquery.validate.additional-methods 
 //= require jquery.validate
+//= require jquery-ui/datepicker
+//= require tinymce-jquery
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require form_validation.js
 //= require SocialShare.js
-//= require tinymce-jquery
 //= require_tree .
