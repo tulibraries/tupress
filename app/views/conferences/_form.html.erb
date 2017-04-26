@@ -1,0 +1,91 @@
+<div class="container" id="edit-form">
+
+<%= form_for(conference) do |f| %>
+
+  <% if conference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conference.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+      <ul>
+      <% conference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :conference %>
+  </div>
+  <div class="col">
+    <%= f.text_field :conference, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :month %>
+  </div>
+  <div class="col">
+    <%= #f.month_field(:month)
+        select("conference", "month", set_month {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :link %>
+  </div>
+  <div class="col">
+    <%= f.text_field :link, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :venue %>
+  </div>
+  <div class="col">
+    <%= f.text_field :venue, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :location %>
+  </div>
+  <div class="col">
+    <%= f.text_field :location, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :dates %>
+  </div>
+  <div class="col">
+    <%= f.text_field :dates, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <%= f.label :booth %>
+  </div>
+  <div class="col">
+    <%= f.text_field :booth, size: 100  %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col offset-md-1">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
+</div>

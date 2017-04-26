@@ -1,0 +1,31 @@
+<h1>Conferences</h1>
+<div class="row">
+<div class="col" >
+<%= link_to 'New Conference', new_conference_path, :style => "float: right;" %>
+</div>
+</div>
+<div calls="row">
+<div class="col">
+<table border="0">
+  <thead>
+    <tr>
+      <th width="50%">Conference</th>
+      <th width="25%">Dates</th>
+      <th colpsan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conferences.each do |conference| %>
+      <tr>
+        <td valign="top"><%= conference.conference %></td>
+        <td><%= conference.dates %></td>
+        <td class="text-right"><%= link_to 'Edit', edit_conference_path(conference) %></td>
+        <td class="text-right"><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+</div>

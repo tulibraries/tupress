@@ -28,8 +28,10 @@ require 'pry'
   	@reviews = Review.all
   end
   def conferences
-    @conferences = Conference.all
-    @conferences_month = @conferences.group_by {|t| t.month[0]}
+    @conferences = Conference.all.sort_by {|conference| conference.month}
+    @conferences_month = @conferences.group_by {|t| t.month}
+    
+    # binding.pry
   end
   def review_copy
   end

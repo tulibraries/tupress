@@ -7,9 +7,9 @@
 
 <div class="container" id="conferences" style="margin-top:21px;">
 
-<% @conferences_month.sort_by{|c| c[0][:id]}.each do |month, conferences| %>
+<% @conferences_month.each do |month, conferences| %>
 	<div class="row">
-		<div class="col"><h2><%= month[:name] %></h2></div>
+		<div class="col"><h2><%= get_month(month) %></h2></div>
 	</div>
 	<div class="row">
 		<div class="col" style="padding-left: 28px;">

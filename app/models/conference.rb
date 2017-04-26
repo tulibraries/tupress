@@ -1,3 +1,3 @@
 class Conference < ApplicationRecord
-	serialize :month, Array
+	# serialize :month, Array
 end

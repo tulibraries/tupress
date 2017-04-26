@@ -56,6 +56,7 @@ resources :book
 resources :page
 resources :faqs
 resources :agencies
+resources :conferences
 
 
 end
