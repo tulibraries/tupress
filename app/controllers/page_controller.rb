@@ -19,8 +19,10 @@ require 'pry'
     @page = Page.find_by(id: params[:id])
   end
   def payment
+    @page = Page.find_by(id: params[:id])
   end
   def copypolicy
+    @page = Page.find_by(id: params[:id])
   end
   def sales_reps
   end
@@ -30,21 +32,20 @@ require 'pry'
   def conferences
     @conferences = Conference.all.sort_by {|conference| conference.month}
     @conferences_month = @conferences.group_by {|t| t.month}
-    
+
     # binding.pry
   end
   def review_copy
+    @page = Page.find_by(id: params[:id])
   end
   def press_info
     @page = Page.find_by(id: params[:id])
-    @action = params[:action]
   end
   def people
     @people_by_dept = Person.all.group_by {|t| t.department}
   end
   def rights
     @page = Page.find_by(id: params[:id])
-    @action = params[:action]
   end
   def foreign_rights
     @agencies_catchall = Agency.find_by(region: 'All Other Territories')

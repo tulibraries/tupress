@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -16,12 +17,12 @@ controller :page do
 	get		'page/index'	          => :index
 	get		'contact'			          => :contact
   get   'order'                 => :order, :id => 3
-  get   'payment'               => :payment
-  get   'copy-policy'           => :copypolicy
+  get   'payment'               => :payment, :id => 7
+  get   'copy-policy'           => :copypolicy, :id => 8
   get   'sales-reps'            => :sales_reps
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
-  get   'review-copy'           => :review_copy
+  get   'review-copy'           => :review_copy, :id => 6
   get   'press-info'            => :press_info, :id => 2
   get   'people'                => :people
   get   'rights'                => :rights, :id => 4
@@ -30,23 +31,23 @@ controller :page do
   get   'university-presses'    => :university_presses, :id => 1
   get   'faq'                   => :faq
   get   'copyright'             => :copyright
-  get   'page/new'              => :new, :action => 'new'
+  get   'page/new'              => :new
   post  'pages'                 => :create
   post  'pages/:id'             => :update
-  get   'page/:id/edit'         => :edit, :action => 'edit'
+  get   'page/:id/edit'         => :edit
   root 	'page#index'
 end 
 
 controller :subject do 
-	get 'subjects'			=> :index
+	get 'subjects'			    => :index
 end
 
 controller :series do 
-	get 'series'			  => :index
+	get 'series'			      => :index
 end
 
 controller :agencies do 
-  get   'agencies/:id'        => :index    
+  get   'agencies/:id'    => :index    
 end
 
 
@@ -57,6 +58,9 @@ resources :page
 resources :faqs
 resources :agencies
 resources :conferences
+resources :reps
+resources :regions
+
 
 
 end

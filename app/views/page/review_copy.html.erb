@@ -1,17 +1,13 @@
 <div class="row">
   <div class="col">
-    <h1>Request a Review Copy</h1>
+    <h1><%= @page.name %></h1>
   </div>
 </div>
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
 <div class="col col-md-9 offset-md-1">
-<div>
-<p>To request a copy of a Temple University Press book, please fax your request on company letterhead to: Gary Kramer at 215.926.2141. If you would like to email your request, please include your name and contact information.</p>
-<p><strong>If you are a professor</strong> wishing to request an examination copy or a desk copy of a book that you've ordered for your class, you must send or fax your request on letterhead. Please 
-<%= link_to "click here for more information", "/copy-policy" %>. Thanks.</p>
-</div>
+<%= @page.content.html_safe %>
 <div id="contactform">
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
   <div class="form-group row">
