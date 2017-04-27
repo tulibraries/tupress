@@ -24,8 +24,6 @@ require 'pry'
   def copypolicy
     @page = Page.find_by(id: params[:id])
   end
-  def sales_reps
-  end
   def reviews
   	@reviews = Review.all
   end

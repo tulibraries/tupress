@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Sales Representatives</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col text-center">
+			<%= image_tag("regions.png", alt: "Map of US States") %>
+		</div>
+	</div>
+</div>
+
+<% @reps.each do |rep| %>
+<div class="container" style="margin-top:21px;">
+	<div class="row">
+		<div class="col"><h2><%= region_names(rep.region) %></h2></div>
+	</div>
+	<div class="row">
+	<div class="col">
+			<blockquote class="blockquote">
+				<address>
+					<%= rep.company %><br />
+					<strong><%= rep.name %></strong><br />
+					<%= rep.address %><br />
+					<%= rep.address2 %><br />
+					<% unless rep.address3.empty? %>
+						<%= rep.address3 %><br />
+					<% end %>
+					Telephone: <%= rep.phone %><br />
+					Fax: <%= rep.fax %><br />
+					Email: <%= mail_to rep.email, rep.email %><br />
+					<% unless rep.coverage.empty? %>
+						Covers accounts in <%= rep.coverage %>.
+					<% end %>
+				</address>
+			</blockquote>
+		</div>
+	</div>
+</div>
+<% end %>

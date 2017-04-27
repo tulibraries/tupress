@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  
+
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -19,7 +19,6 @@ controller :page do
   get   'order'                 => :order, :id => 3
   get   'payment'               => :payment, :id => 7
   get   'copy-policy'           => :copypolicy, :id => 8
-  get   'sales-reps'            => :sales_reps
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
   get   'review-copy'           => :review_copy, :id => 6
@@ -48,6 +47,10 @@ end
 
 controller :agencies do 
   get   'agencies/:id'    => :index    
+end
+
+controller :reps do 
+  get   'sales-reps'      => :sales_reps
 end
 
 

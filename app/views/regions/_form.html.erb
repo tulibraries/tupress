@@ -1,0 +1,27 @@
+<%= form_for(region) do |f| %>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :region %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :region, size: 100 %>
+  </div>
+</div>
+<div class="row" style="margin-top: 14px;">
+  <div class="col col-md-1">
+    <strong><%= f.label :rights %></strong>
+    </div>
+    <div class="col">
+    <%= f.text_field :rights, size: 100 %>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 14px;">
+  <div class="col offset-md-1">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+</div>
+<% end %>

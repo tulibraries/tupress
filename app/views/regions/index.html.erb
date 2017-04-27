@@ -1,0 +1,27 @@
+
+<h1>Regions</h1>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="45%">Region</th>
+      <th width="35%">Rights</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regions.each do |region| %>
+      <tr>
+        <td><%= region.region %></td>
+        <td><%= region.rights %></td>
+        <td><%= link_to 'Edit', edit_region_path(region) %></td>
+        <td><%= link_to 'Destroy', region, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Region', new_region_path %>

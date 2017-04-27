@@ -1,6 +1,10 @@
 class RepsController < ApplicationController
   before_action :set_rep, only: [:show, :edit, :update, :destroy]
 
+  def sales_reps
+    @reps = Rep.all 
+  end
+
   # GET /reps
   # GET /reps.json
   def index
@@ -69,6 +73,6 @@ class RepsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rep_params
-      params.require(:rep).permit(:company, :name, :address, :address2, :address3, :phone, :fax, :email, :website, :region)
+      params.require(:rep).permit(:company, :name, :address, :address2, :address3, :phone, :fax, :email, :website, :region, :coverage)
     end
 end
