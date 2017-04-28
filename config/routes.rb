@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :documents
   resources :faqs
 controller :book do 
 	get   'books'					=> :index
