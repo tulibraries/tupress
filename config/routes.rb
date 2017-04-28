@@ -18,19 +18,19 @@ controller :page do
 	get		'page/index'	          => :index
 	get		'contact'			          => :contact
   get   'order'                 => :order, :id => 3
-  get   'payment'               => :payment, :id => 7
-  get   'copy-policy'           => :copypolicy, :id => 8
+  get   'payment'               => :payment, :id => 5
+  get   'copy-policy'           => :copypolicy, :id => 6
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
-  get   'review-copy'           => :review_copy, :id => 6
+  get   'review-copy'           => :review_copy, :id => 4
   get   'press-info'            => :press_info, :id => 1
   get   'people'                => :people
   get   'rights'                => :rights, :id => 2
   get   'foreign-rights'        => :foreign_rights
   get   'submissions'           => :submissions, :id => 3
-  get   'university-presses'    => :university_presses, :id => 2
+  get   'university-presses'    => :university_presses, :id => 8
   get   'faq'                   => :faq
-  get   'copyright'             => :copyright
+  get   'copyright'             => :copyright, :id => 7
   get   'page/new'              => :new
   post  'pages'                 => :create
   post  'pages/:id'             => :update

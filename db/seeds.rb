@@ -412,12 +412,12 @@ Review.create(title: 'Exploring the Roots of Digital and Media Literacy through 
 
 
 
-Conference.create(month: [{id: '01', name: 'January'}], conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
-Conference.create(month: [{id: '01', name: 'January'}], conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
-Conference.create(month: [{id: '01', name: 'January'}], conference: 'American Library Association Mid-Winter', link: 'http://2017.alamidwinter.org/', venue: '', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
-Conference.create(month: [{id: '02', name: 'February'}], conference: 'Eastern Sociological Society', link: 'http://www.essnet.org/annual-meeting/overview/', venue: 'Sheraton Philadelphia Downtown', location: 'Philadelphia, PA', dates: 'February 23 - 26, 2017', booth: 'Space #5 (Liberty A - Ballroom level)')
+Conference.create(month: "01", conference: 'Modern Language Association', link: 'https://www.mla.org/Convention', venue: '', location: 'Philadelphia, PA', dates: 'January 5 - 8, 2017', booth: '')
+Conference.create(month: "01" conference: 'American Historical Association', link: 'https://www.historians.org/', venue: '', location: 'Denver, CO', dates: 'January 5 - 8, 2017', booth: 'Booth #517')
+Conference.create(month: "01", conference: 'American Library Association Mid-Winter', link: 'http://2017.alamidwinter.org/', venue: '', location: 'Atlanta, GA', dates: 'January 20 - 24, 2017', booth: '')
+Conference.create(month: "01", conference: 'Eastern Sociological Society', link: 'http://www.essnet.org/annual-meeting/overview/', venue: 'Sheraton Philadelphia Downtown', location: 'Philadelphia, PA', dates: 'February 23 - 26, 2017', booth: 'Space #5 (Liberty A - Ballroom level)')
 Conference.create(
-	month: [{id: '04', name: 'April'}], 
+	month: "04", 
 	conference: 'Organization of American Historians', 
 	link: 'http://www.oah.org/meetings-events/2017/', 
 	venue: '', 
@@ -425,7 +425,7 @@ Conference.create(
 	dates: 'April 6 - 9, 2017', 
 	booth: 'Booth #118')
 Conference.create(
-	month: [{id: '04', name: 'April'}], 
+	month: "04", 
 	conference: 'Association for Asian American Studies', 
 	link: 'http://aaastudies.org/2017-aaas-conference/', 
 	venue: '', 
@@ -433,7 +433,7 @@ Conference.create(
 	dates: 'April 13 - 15, 2017', 
 	booth: 'Booth #TBD')
 Conference.create(
-	month: [{id: '05', name: 'May'}], 
+	month: "05", 
 	conference: 'Book Expo America', 
 	link: 'http://www.bookexpoamerica.com/Show-Info/', 
 	venue: '', 
@@ -441,7 +441,7 @@ Conference.create(
 	dates: 'May 31 - June 2, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '06', name: 'June'}], 
+	month: "06", 
 	conference: 'Association of American University Presses', 
 	link: 'http://www.aaupnet.org/events-a-conferences/annual-meeting/aaup-2017', 
 	venue: 'JW Marriott Austin', 
@@ -449,7 +449,7 @@ Conference.create(
 	dates: 'June 11 - 13, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '06', name: 'June'}], 
+	month: "06", 
 	conference: 'American Library Association', 
 	link: 'http://2017.alaannual.org/', 
 	venue: 'JW Marriott Austin', 
@@ -457,7 +457,7 @@ Conference.create(
 	dates: 'June 22 - 27, 2017', 
 	booth: '')
 Conference.create(
-	month: [{id: '08', name: 'August'}], 
+	month: "08", 
 	conference: 'American Sociological Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: '', 
@@ -465,7 +465,7 @@ Conference.create(
 	dates: 'August 12 - 15, 2017', 
 	booth: 'Booth #TBD')
 Conference.create(
-	month: [{id: '08', name: 'August'}], 
+	month: "08", 
 	conference: 'American Poltical Science Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: 'Hilton San Francisco Union Square', 
@@ -473,7 +473,7 @@ Conference.create(
 	dates: 'August 31 - September 3, 2017', 
 	booth: 'Booth #711')
 Conference.create(
-	month: [{id: '09', name: 'September'}], 
+	month: "09", 
 	conference: 'American Poltical Science Association', 
 	link: 'http://www.asanet.org/annual-meeting-2017', 
 	venue: 'Hilton San Francisco Union Square', 
@@ -481,7 +481,7 @@ Conference.create(
 	dates: 'August 31 - September 3, 2017', 
 	booth: 'Booth #711')
 Conference.create(
-	month: [{id: '11', name: 'November'}], 
+	month: "11", 
 	conference: 'American Studies Association', 
 	link: 'https://www.theasa.net/annual-meeting/years-meeting', 
 	venue: 'Hyatt Regency Chicago', 
@@ -489,7 +489,7 @@ Conference.create(
 	dates: 'November 9 - 12, 2017', 
 	booth: 'Booth #TBD (Crystal Ballroom)')
 Conference.create(
-	month: [{id: '11', name: 'November'}], 
+	month: "11", 
 	conference: 'The American Society of Criminology', 
 	link: 'https://www.theasa.net/annual-meeting/years-meeting', 
 	venue: 'Philadelphia Marriott Downtown', 

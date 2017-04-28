@@ -14,6 +14,7 @@ require 'pry'
     @entries = @feed.entries.order('published desc')
   end
   def contact
+    @page = Page.find_by(id: params[:id])
   end
   def order
     @page = Page.find_by(id: params[:id])
@@ -60,6 +61,7 @@ require 'pry'
     @faqs = Faq.all
   end
   def copyright
+    @page = Page.find_by(id: params[:id])
   end
 
   def show
