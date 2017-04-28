@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :faqs
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -22,12 +23,12 @@ controller :page do
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
   get   'review-copy'           => :review_copy, :id => 6
-  get   'press-info'            => :press_info, :id => 2
+  get   'press-info'            => :press_info, :id => 1
   get   'people'                => :people
-  get   'rights'                => :rights, :id => 4
+  get   'rights'                => :rights, :id => 2
   get   'foreign-rights'        => :foreign_rights
-  get   'submissions'           => :submissions, :id => 5
-  get   'university-presses'    => :university_presses, :id => 1
+  get   'submissions'           => :submissions, :id => 3
+  get   'university-presses'    => :university_presses, :id => 2
   get   'faq'                   => :faq
   get   'copyright'             => :copyright
   get   'page/new'              => :new
@@ -46,11 +47,11 @@ controller :series do
 end
 
 controller :agencies do 
-  get   'agencies/:id'    => :index    
+  get 'agencies/:id'      => :index    
 end
 
 controller :reps do 
-  get   'sales-reps'      => :sales_reps
+  get 'sales-reps'        => :sales_reps
 end
 
 
