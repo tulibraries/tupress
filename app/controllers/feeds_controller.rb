@@ -33,7 +33,6 @@ class FeedsController < ApplicationController
   end
 
   # PATCH/PUT /feeds/1
-  # PATCH/PUT /feeds/1.json
   def update
     respond_to do |format|
       if @feed.update(feed_params)
@@ -45,7 +44,6 @@ class FeedsController < ApplicationController
   end
 
   # DELETE /feeds/1
-  # DELETE /feeds/1.json
   def destroy
     @feed.destroy
     respond_to do |format|

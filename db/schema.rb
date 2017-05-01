@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170428181417) do
+ActiveRecord::Schema.define(version: 20170501164953) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "title"
@@ -88,8 +88,14 @@ ActiveRecord::Schema.define(version: 20170428181417) do
     t.string   "filename"
     t.string   "department"
     t.string   "format"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.string   "department_contact"
+    t.string   "contact_email"
   end
 
   create_table "entries", force: :cascade do |t|
@@ -140,6 +146,7 @@ ActiveRecord::Schema.define(version: 20170428181417) do
     t.string   "position"
     t.string   "department"
     t.string   "position_description"
+    t.string   "document_contact"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end

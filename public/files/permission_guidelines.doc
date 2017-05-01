@@ -1,0 +1,1164 @@
+{\rtf1\adeflang1025\ansi\ansicpg1252\uc1\adeff0\deff0\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f36\fswiss\fcharset0\fprq2{\*\panose 020b0604030504040204}Tahoma;}
+{\f40\froman\fcharset0\fprq0{\*\panose 00000000000000000000}TimesNewRoman,Italic{\*\falt Cambria};}{\f41\froman\fcharset0\fprq0{\*\panose 00000000000000000000}TimesNewRoman,Bold{\*\falt Cambria};}
+{\f42\froman\fcharset0\fprq0{\*\panose 00000000000000000000}TimesNewRoman{\*\falt Cambria};}{\f195\froman\fcharset238\fprq2 Times New Roman CE;}{\f196\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f198\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f199\froman\fcharset162\fprq2 Times New Roman Tur;}{\f200\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f201\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f202\froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\f203\froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f215\fmodern\fcharset238\fprq1 Courier New CE;}{\f216\fmodern\fcharset204\fprq1 Courier New Cyr;}{\f218\fmodern\fcharset161\fprq1 Courier New Greek;}
+{\f219\fmodern\fcharset162\fprq1 Courier New Tur;}{\f220\fbidi \fmodern\fcharset177\fprq1 Courier New (Hebrew);}{\f221\fbidi \fmodern\fcharset178\fprq1 Courier New (Arabic);}{\f222\fmodern\fcharset186\fprq1 Courier New Baltic;}
+{\f223\fmodern\fcharset163\fprq1 Courier New (Vietnamese);}{\f555\fswiss\fcharset238\fprq2 Tahoma CE;}{\f556\fswiss\fcharset204\fprq2 Tahoma Cyr;}{\f558\fswiss\fcharset161\fprq2 Tahoma Greek;}{\f559\fswiss\fcharset162\fprq2 Tahoma Tur;}
+{\f560\fbidi \fswiss\fcharset177\fprq2 Tahoma (Hebrew);}{\f561\fbidi \fswiss\fcharset178\fprq2 Tahoma (Arabic);}{\f562\fswiss\fcharset186\fprq2 Tahoma Baltic;}{\f563\fswiss\fcharset163\fprq2 Tahoma (Vietnamese);}
+{\f564\fswiss\fcharset222\fprq2 Tahoma (Thai);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red51\green51\blue153;\red0\green0\blue129;}{\stylesheet{
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 \styrsid14575691 Normal;}{\*\cs10 \additive \ssemihidden 
+Default Paragraph Font;}{\*\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tscellwidthfts0\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\lang1024\langfe1024\cgrid\langnp1024\langfenp1024 \snext11 \ssemihidden Normal Table;}{\*\cs15 \additive \rtlch\fcs1 \af0 
+\ltrch\fcs0 \ul\cf2 \sbasedon10 \styrsid11300488 Hyperlink;}{\s16\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext16 \styrsid14575691 header;}{\s17\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs24\alang1025 
+\ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext17 \styrsid14575691 footer;}{\*\cs18 \additive \rtlch\fcs1 \af0 \ltrch\fcs0 \sbasedon10 \styrsid14575691 page number;}}
+{\*\latentstyles\lsdstimax156\lsdlockeddef0{\lsdlockedexcept Normal;heading 1;heading 2;heading 3;heading 4;heading 5;heading 6;heading 7;heading 8;heading 9;toc 1;toc 2;toc 3;toc 4;toc 5;toc 6;toc 7;toc 8;toc 9;caption;Title;Default Paragraph Font;Subtitle;Strong;Emphasis;Table Grid;}}
+{\*\listtable{\list\listtemplateid163608908\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid2065228056\'01\u-3977 ?;}{\levelnumbers;}\f10\fs20\fbias0 
+\fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1440
+\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li2160
+\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li2880
+\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3600\jclisttab\tx3600\lin3600 }
+{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li4320\jclisttab\tx4320\lin4320 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc23\levelnfcn23\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid54357876}{\list\listtemplateid1085729098
+\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'00.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li720\jclisttab\tx720\lin720 }
+{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li1440\jclisttab\tx1440\lin1440 }
+{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li2160\jclisttab\tx2160\lin2160 }
+{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li2880\jclisttab\tx2880\lin2880 }
+{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li3600\jclisttab\tx3600\lin3600 }
+{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li4320\jclisttab\tx4320\lin4320 }
+{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5040\jclisttab\tx5040\lin5040 }
+{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5760\jclisttab\tx5760\lin5760 }
+{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li6480\jclisttab\tx6480\lin6480 }
+{\listname ;}\listid76097670}{\list\listtemplateid1922845354\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'00.;}{\levelnumbers\'01;}\rtlch\fcs1 
+\af0 \ltrch\fcs0 \fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-360\li1440\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-180\li2160\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-180\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 
+\ltrch\fcs0 \fi-180\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid159007095}{\list\listtemplateid1223729084\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid2065228056\'01\u-3977 ?;}{\levelnumbers;}\f10\fs20\fbias0 \fi-360\li1083\jclisttab\tx1083\lin1083 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1803\jclisttab\tx1803\lin1803 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li2523\jclisttab\tx2523\lin2523 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li3243\jclisttab\tx3243\lin3243 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691
+\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3963\jclisttab\tx3963\lin3963 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li4683\jclisttab\tx4683\lin4683 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li5403\jclisttab\tx5403\lin5403 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691
+\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li6123\jclisttab\tx6123\lin6123 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li6843\jclisttab\tx6843\lin6843 }{\listname ;}\listid463501687}{\list\listtemplateid-31654100\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'00.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li1440\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li2160\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid518860205}{\list\listtemplateid67698703\listsimple{\listlevel\levelnfc0\levelnfcn0
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fbias0 \fi-360\li360\jclisttab\tx360\lin360 }{\listname ;}\listid546529182}{\list\listtemplateid-747486786
+\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid2065228056\'01\u-3977 ?;}{\levelnumbers;}\f10\fs20\fbias0 \fi-360\li1083\jclisttab\tx1083\lin1083 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1803\jclisttab\tx1803\lin1803 }{\listlevel\levelnfc23\levelnfcn23
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li2523\jclisttab\tx2523\lin2523 }{\listlevel\levelnfc23\levelnfcn23\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li3243\jclisttab\tx3243\lin3243 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3963\jclisttab\tx3963\lin3963 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li4683\jclisttab\tx4683\lin4683 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative
+\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li5403\jclisttab\tx5403\lin5403 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li6123\jclisttab\tx6123\lin6123 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li6843\jclisttab\tx6843\lin6843 }{\listname ;}\listid767193218}{\list\listtemplateid1452600836\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid2065228056\'01\u-3977 ?;}{\levelnumbers;}\f10\fs20\fbias0 \fi-360\li1083\jclisttab\tx1083\lin1083 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1803\jclisttab\tx1803\lin1803 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li2523\jclisttab\tx2523\lin2523 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li3243\jclisttab\tx3243\lin3243 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3963\jclisttab\tx3963\lin3963 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li4683\jclisttab\tx4683\lin4683 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li5403\jclisttab\tx5403\lin5403 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691
+\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li6123\jclisttab\tx6123\lin6123 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li6843\jclisttab\tx6843\lin6843 }{\listname ;}\listid975837810}{\list\listtemplateid1373135562\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid2065228056\'01\u-3977 ?;}{\levelnumbers;}\f10\fs20\fbias0 \fi-360\li1083\jclisttab\tx1083\lin1083 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1803\jclisttab\tx1803\lin1803 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698693\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li2523\jclisttab\tx2523\lin2523 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698689\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li3243\jclisttab\tx3243\lin3243 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3963\jclisttab\tx3963\lin3963 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li4683\jclisttab\tx4683\lin4683 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698689
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li5403\jclisttab\tx5403\lin5403 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698691
+\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li6123\jclisttab\tx6123\lin6123 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01\u-3929 ?;}{\levelnumbers;}\f10\fbias0 \fi-360\li6843\jclisttab\tx6843\lin6843 }{\listname ;}\listid1110512111}{\list\listtemplateid1486143166\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'00.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li720\jclisttab\tx720\lin720 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li1440\jclisttab\tx1440\lin1440 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li2160\jclisttab\tx2160\lin2160 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li2880\jclisttab\tx2880\lin2880 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li3600\jclisttab\tx3600\lin3600 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li4320\jclisttab\tx4320\lin4320 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5040\jclisttab\tx5040\lin5040 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-360\li5760\jclisttab\tx5760\lin5760 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\lvltentative\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\rtlch\fcs1 \af0 \ltrch\fcs0 \fi-180\li6480\jclisttab\tx6480\lin6480 }{\listname ;}\listid1950429344}}{\*\listoverridetable{\listoverride\listid76097670\listoverridecount0\ls1}
+{\listoverride\listid546529182\listoverridecount0\ls2}{\listoverride\listid518860205\listoverridecount0\ls3}{\listoverride\listid159007095\listoverridecount0\ls4}{\listoverride\listid1950429344\listoverridecount0\ls5}{\listoverride\listid54357876
+\listoverridecount0\ls6}{\listoverride\listid463501687\listoverridecount0\ls7}{\listoverride\listid1110512111\listoverridecount0\ls8}{\listoverride\listid767193218\listoverridecount0\ls9}{\listoverride\listid975837810\listoverridecount0\ls10}}
+{\*\rsidtbl \rsid944938\rsid1074618\rsid2431232\rsid2574313\rsid2902780\rsid4458164\rsid5120260\rsid5519743\rsid6496025\rsid6780368\rsid7541317\rsid8475792\rsid8661301\rsid9064424\rsid9575700\rsid10049308\rsid10317609\rsid11300488\rsid11628932
+\rsid12275793\rsid13114562\rsid14575691\rsid14777500\rsid14886466\rsid15366244\rsid15733163\rsid16202695}{\*\generator Microsoft Word 11.0.0000;}{\info{\title 1601 North Broad Street, 305 USB}{\author User}{\operator Karen Baker}
+{\creatim\yr2010\mo3\dy3\hr11\min16}{\revtim\yr2010\mo3\dy3\hr11\min16}{\version2}{\edmins1}{\nofpages3}{\nofwords1187}{\nofchars6769}{\nofcharsws7941}{\vern24615}{\*\password 00000000}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/w
+ordml}}\paperw12240\paperh15840\margl1440\margr1440\margt1080\margb1440\gutter0\ltrsect 
+\widowctrl\ftnbj\aenddoc\donotembedsysfont1\donotembedlingdata0\grfdocevents0\validatexml0\showplaceholdtext0\ignoremixedcontent0\saveinvalidxml0\showxmlerrors0\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\formshade\horzdoc\dgmargin\dghspace57
+\dgvspace180\dghorigin1440\dgvorigin1080\dghshow1\dgvshow2
+\jexpand\viewkind1\viewscale144\viewzk2\pgbrdrhead\pgbrdrfoot\splytwnine\ftnlytwnine\htmautsp\nolnhtadjtbl\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule\nobrkwrptbl\snaptogridincell\allowfieldendsel
+\wrppunct\asianbrkrule\nojkernpunct\rsidroot7541317\newtblstyruls\nogrowautofit \fet0{\*\wgrffmtfilter 2450}\ilfomacatclnup0{\*\ftnsep \ltrpar \pard\plain \ltrpar
+\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid2902780 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 
+\chftnsep 
+\par }}{\*\ftnsepc \ltrpar \pard\plain \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid2902780 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 \chftnsepc 
+\par }}{\*\aftnsep \ltrpar \pard\plain \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid2902780 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 \chftnsep 
+\par }}{\*\aftnsepc \ltrpar \pard\plain \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid2902780 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {
+\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 \chftnsepc 
+\par }}\ltrpar \sectd \ltrsect\psz1\linex0\endnhere\sectlinegrid360\sectdefaultcl\sftnbj {\footerr \ltrpar \pard\plain \ltrpar\qr \li0\ri0\widctlpar\tx1080\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \ab\af41\afs20 \ltrch\fcs0 \f41\fs20\cf1\insrsid15733163\charrsid4458164 Guidelines }{\rtlch\fcs1 \ab\af41\afs20 \ltrch\fcs0 \f41\fs20\cf1\insrsid15733163 f}{\rtlch\fcs1 \ab\af41\afs20 
+\ltrch\fcs0 \f41\fs20\cf1\insrsid15733163\charrsid4458164 or Requesting Permission }{\rtlch\fcs1 \ab\af41\afs20 \ltrch\fcs0 \f41\fs20\cf1\insrsid15733163 t}{\rtlch\fcs1 \ab\af41\afs20 \ltrch\fcs0 \f41\fs20\cf1\insrsid15733163\charrsid4458164 
+o Use Material}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid4458164 , page }{\field{\*\fldinst {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \cs18\fs20\insrsid15733163\charrsid4458164  PAGE }}{\fldrslt {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\cs18\fs20\lang1024\langfe1024\noproof\insrsid14777500 1}}}\sectd \linex0\endnhere\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af41\afs20 \ltrch\fcs0 \f41\fs20\cf1\insrsid15733163\charrsid4458164 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain \ltrpar\qr \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid15366244 \rtlch\fcs1 
+\af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \af0 \ltrch\fcs0 \lang1024\langfe1024\noproof\insrsid15733163 
+{\shp{\*\shpinst\shpleft-741\shptop-430\shpright1824\shpbottom292\shpfhdr0\shpbxmargin\shpbxignore\shpbymargin\shpbyignore\shpwr2\shpwrk0\shpfblwtxt0\shpz0\shplid1026{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fRotateText}{\sv 1}}{\sp{\sn pib}{\sv {\pict\picscalex46\picscaley46\piccropl0\piccropr0\piccropt0\piccropb0\picw9774\pich2752\picwgoal5541\pichgoal1560\pngblip\bliptag542818557{\*\blipuid 205ac0fdf734c5bf02eb334b4ed72eb0}
+89504e470d0a1a0a0000000d49484452000001150000004e080200000081b21535000000017352474200aece1ce9000000097048597300000b1200000b1201d2
+dd7efc0000118849444154785eed9d4f92143b0ec6e9b900dc80e10440bcd90327004e006c660b9c003801b07cb3014e00ac58026b26023841c30980056be637
+ef9ba7d0c87fd39555d5afda191d1d5559b22c7d922cdb693b8f7efdfa75665e138189c010027f1b2a350b4d042602ff4560c6cff48389c03802337ec6b19b25
+2702337ea60f4c04c61138fafdcc6fe3a5f751f29fbffebd8f6a679d13810c0233ff4cb798088c2330e3671cbb59722230e367fac044601c81c319ff7cfaf4e9
+fbf7efe348e44afefd8f0bce4f9e3ce1773ef3ffdcb973972e5d6a5684301414199faf5ebd7ae3c60d5f0a9ea9c0b76fdf562d9b5f5fbe7c79f8f0a1894d5ddc
+79f5ea957136bd50c73482864b348214c9f92c9a8a6c947afefc79091fb1ba77ef1ee875aaf6eedd3b20a24615912d9a65bdfcd488cc40da2c354ec0fc81ff63
+39c249bb7a24fcf8f1e33804e592180c34e488d8bec77e25665831000bcf340ea9e2dbb76fab98c0fb0d2ec85782c773c6bd902144751d46047ef6ec59563c71
+53b0a5177a210034fdaa09764af5875c5a2f1cfa6b1ca08cf9e704ce6efdebe81f1e97ac84efdfbf2f596ec3b8f2eb9b7efcf8810359f30ce77abaa005b5ac88
+211f3c78900a83e444a6652a084a948b1441c80b172ea808fe8724172f5e2c7108e8e1ebd09f3f7f1e7a7e4236028f3b565c51544ac29f3f7fc6163eb58212f4
+8be4f7c481a1da82525029ed9bb47cb872e5ca70d5ed823dadfb405cae58a44742754bc0948c0f64d90b1a0f7a85523d07110745d491d3850335d5c49c6ae02b
+0da1ba19c656496fc3cb279f34f5a5cc3d3df19c1280894fbf80534a449455bfd1a277435d28de142f5441f32169117bf3da2b1ccef478e756256832ef911083
+61511a9e3a379fa39af5aa371fc87c330cb726130894afe05621f66c9bc4cd4a8f8f8f7dc359af5adc7cbb500a75e23cf409e93667851940a9ae548f788183cc
+b7edf8a9f5df42c7a99dcbd6a3f09db49efedbcd9b37d522d645b876ed9a9916b89bf21e1d1de1223e39d085b32446fcbc7dfbb6c90402f8343b1274b7ac6748
+db1962a0a716a379f4e891cf00cdaa29e8bb70f50ee4e5cb97adb75942c0a3b44a77b45f3c0341457aacbc08db407c20f3d778dea271702764d81e57f0c467cf
+9eed2cebc908b9e6dc83cf8da8f3faf5eb818a284296f0adf518934a293f83a7015e4a3c86d2baa2dac4ddba6c0f337e48111aefae7b31e25f65f4c9945a53bc
+1060c331f0f4e9d3d5e7f13daa28e27b7134f3eb62be1637e404f6b5b895f81c48fea94c076d1bc1b5f887f8d114c80073f5fbb77af954bfd558ddaa16ab303f
+90f859058bfd32493b780c63968af4e2c50b0da2367966d2acb4d9176d7238188205f1c398bee72f40d353e4043e74da9781e9889aeb937ffcb3a61e91346d40
+7ed8c668d00468f6457b443d0c9a05f173180a9f702df470d0845c94822cf968d9cbf634e581a631dfd263ebed09bf2ee7193febe219b99110b23354955a797c
+69bf3298e94f411af9107e213fac3e44319188f655e65756b7c156d3af9776c6cfeab6fb3f86cc868519f0527de69461820b0e3d226abe412b3002fdd2006e56
+6753143ed49ba5764680bec3b3ff4b851c8c1f9e69fabfce5ac74a75323f816474a8fadb7e9f67fcd34f9cb587897a7a38f4b69fbdd8c42043b5ec8abebd1b62
+67c183a683f1b3778c4e8200787c69a19dd6356b24b3682a4c6b1d4841d60321789a29482b26a968db09818a58ea8184c83936bdbeb9e1f2ab1bdfbda3a10176
+9647f8d667f3eaea1c66fc8c234cfcb02028bdf030b281b5829585cf69dd166c3e129acf521560849c259f9e1d4a8b34d76e02bc53abe070e26d27ba9278549d
+85fdce9d3bc0be7a6775c6cf223f594c8ca73207e5af4509a7541fe3729bdac265e90a96286de35a58f5bc581357009ed40e432552c286e57978279f715f9e56
+ef2b784cc680395f3decab371f253067fe197733ed5f608129ab48fda50d70f8d98656f429a8d227d1c8279d761b57ec8fcd9e442c61c3ca57fe13362c7b238c
+5fbe7cb9f709376daf0898f355b0d38bd34afc4dd4ef2f3be3a71fab4859cf33f899fa5d9db64ce7a9af5fbf6e8f71f8359b82f069cd865502ac67fa21458131
+18023043a08bcf7bcf3912b20efbad5bb7b63d08f458cdf8198f9f66494208632f9abf0ece1126e2d21a35f2a9279fce006eaaf35721f00fa0b72d738c9fcaac
+f4c084755dfa5dd6b56d1c4bfc179d980193d0e5a335b51494ae28b5ad0abb9c71da1792fdf5fad9cbfe52639433ff8ce1d65b8a9ecfa2f9b794afef8d84e53c
+daaac0d0395d90b6e1d0ab57bd934ac7386d37a2cdf8d90dcee3b5f8b332c27eb5cac8e7848c55c6d5fe8b949cf173520c551ae513093e05d9b354ad1625f9ec
+7d42eca420b80f3966fcec03f55c9d95517e7645a9c63c73e4b35ffbcdf8d92ffe5db59382c2a6061637e888a69ee433367fdd25d9a9279af1b35317608d4965
+254145943091ad8cd4997c763f7fddbfe722ab72a75e9d96a3f9e011f0d7af5f3be91791cdf85904d746c4cc9e31e2cf6e386ba688b0a90107e54911b3db1b09
+e40a6fe8f1418c4d9c1594d63d9384360bedb6b46776c6cf5a1e58e3437860459ad5ec5c33256d4767c58fc363f5759fb2fb7ad7cd57fddc4009a54069ad07a0
+5ae0cbcaa3b518a6363e5df1e36d39d6e22ee5a065cb2cbed45c736925b51daa56d914c07324cb5dcdad0a21a135950def65d8b051f1d535aba62e4389d9459e
+5ca579756978632662866e9bb675acdb21f4e0acf3fe92cee3425739d074f8b011ad7b37e5591339f0942d1ced0913bf4a4dcc75843926a71fe20d4f08657b5c
+d01360e6f1e1c4536f2d3b861387a8ef5d6394e51bdd3a7d4046717ef7eedde128f2e7bcc2045115f9fa6f6d840e48f128e1ebdc4c9f380786c816165c2b08b9
+401e86066689e1b06aa1e0a9881f60c52af7efdf0fad3236c0129d7be5310c5e3536fa07f46cf0200f0d3f31e9c34c031bbc3fbb86004f5270969e90f21375a5
+a728c2134de1e98f16811502648f5ca45d801e627f2450d3ed6008ce635beba808c943f0201e98fbf4d894c108b61d3c5474f8f18339b14a693d8b22aaf9fa20
+bd42434c4afe84eb889b1a42591113e28534ffd9f12bc100657a568e32188381c78f1f077761352abf5646c31a2e5b29c96cdd4e3e8006b1c14df86833a9e414
+a5aaf69512c99d1315383a9a4a9dec3489474631263029a24c1e9485212074c26ef8c3440c1166dbeb300e3f7e8249e6d789c08a089caef98315819bac260220
+30e367bac144601c81193fe3d8cd921381193fd3072602e308ccf819c76e969c08ccf8993e3011184760c6cf3876b3e44460c6cff48189c03802337ec6b19b25
+2702337ea60f4c04c61198f1338edd2c391158bcfeadb97d206c52584adf3449936193c3249808ac85c0c1c60f4b7d75721aab77b5a698cf7e193c9fd98fc032
+61fdaae5d5b6bfcd7f16d6a2b775ca2c1f662133ab83296e2bb2b56d0b6271362389580b93f90c2b7f4eefcf9f3f3f7cf850b128dca802ceaa0b4a5bc80c1f2a
+f267c4793ed0b30659eba9a95d7b2254b5df90c35749aef3e54cc754241872e94d3bda9a06430903145af2acfb5407ab14465fd06f7380523aaad27e65c5b082
+9e216f34e06f6f25d36b9a50caaf82978ef216c38dcfde6affe3f6fb99df16fd71c47dfd0adc5ae4bf16d50e7193a1080481393130614e5f1693cb2f01c29cc0
+eec8849e5e7b75b459081ca154e029a884a6ac22ce660f64d07d71e3575be44f41dceecd9b37709624aa17022e7eb290d39b056cab12053d015fd9821190e18e
+a28b82c863ae89b741e925870c1a6e4a0095f2f18f6c7ebf9a69e11537d8ad75405a940d5205701472261bb5d86b143a9585a1474f3bc053f44c0cb5351050ca
+10a65e2340000533a0018bc94691d4f7ceaceebe27247ea4aadfea980d3cb5cd4069bffacd3320184a69878f871b026bcb3db1eda2916b868b9b8a37bbaf3b5c
+811243cae375a92e8eadd257199b3b449a2fc87d8581bfa92313526e46c6af5e65d5057f63223c8d83c91c7494ff6501d74d2b68ac94f7d47c2c55167a9c3b8b
+1eb0787d45e6efc84c1e2824a794b5773057af241b3f8be70fc23b4cd3af52c3aea5f4a1f8b6bf6ab7a3cfcb7e6b1a0e67969624ecc7524fcf0b16beea2738eb
+7e76ef2426c4487e5f5aba8b4e7c7c1e48d14072de66c57dc2de1f5ba33dcc41303c20d303f993a98aa7dbb67d11ff562f88b5a7950feac78a933a81a5931e44
+63cadaf975c0255695ada625655358ec8e4f9bdc9435fda179d4eb4f6241722ec4f31befc0a4649dc5f15391f5907e6263a6fc86edab613f26378317a6048242
+86c1217c4ee38efa96d631a8e0060dc6ab1f92988d5e7933b578d914fc4118ab1d17098d453674a1f1f2a8fb4a7576b0301b6051bce760c7a0b87cd4e2300b4b
+56d91280a017ceef177324f44534fed11dbd6c8626208ca94a9bfc67fce4c1a759d2381864b5cb7aa075a07956a4853742b32d59239f3a4f0480b2d4f2595993
+cd53caf5119e3368f00fa3210595121a89b7679f76d83ace573bcc915af48608eb4d2d024d4e5cd737ab2ca552a5b2e8290c6802ec4424befa14a457367153af
+58b52842a36c08cdf8c99b18101542f242d251bd5d2c398a400f9d19be72bfb4351f8fd7f0dd0e2748996b96820b0995c77062efd97c36272608711745114aa5
+6727d4bb88cd18a06af91c02a31ad7c0a903e44965bfb459692aeb25147425f4ac070b1464218b22df7098b1c0d6a2088db2efa199f153730f209351b16e48fa
+4daf1281bc418eae3b3ababad242637bbd78b43256e13c136ccf858119b7c03c3d6984ae0b5d476bcef53ed3d043ebd4a24e866f491d4d58a7c780548ad33d96
+be5c6a68d201585016a55265ad7513ab127ab41d806f3d6745913fd50c198825f0b436455154c46df5f9b7caac4bf6a7ad0a605eeba75c821832bcbfc91d3fd9
+62beae9b201ba66284b59fc3f1dcd465b76925c8c2ccb8884d542b2b9fd07c6e9892920036d4264aeb935d1645c4a46728c9b3334b36a955d22b8511567e26b3
+2292298b8e7c266cf8efa7bc54d68b5757369d7f137a25197c149510d01c8f05fff1f171caedc0f34fa509172e9a74aabf228e865c2d16461a68bf9582288845
+0954acd2393cd06b172aaf4fa5a5172bfc2fcc61909aec4c601a546caf6e093284c15825390cfcd4043cf04447861c9a23a9f7fabcb261709f95136e61c48209
+ac6f462262de922852eb6666a50b6af82012b8f19394ca1efd77e0f16381519a00e81cd580b580a6bfb1742e012b9a0198a42224b2a7b76525a15e883161a952
+1b7ba4ddcb1051f8a87526070263dd223d0190d668ca62851e7974beaca1474b1462006c2589c1ab7ce899d3fa28eab22638f0f841edd0c004dc3594f7374b9e
+0aacb0d258b6c77846636fef51fa2a4d5b9726c1a99149adf046032386b9accb1d9b4196d669aa1414e914f0528d16a9bf397153d94a15a047b0093d1457fef7
+f44a7a86093d463a8aa12d532f2e3b75be387e9acf4397126c8e6f9d833d720efe0446b4d9696f4add9ed4a5001ae26cff44705752991a7e08304ff3c1881f1b
+101b8c862968c6532d5e3c1a481b2798ab410f9ff0be6110c015fcf85ef4a5d0552da55fb38d4e0f714f6b259a4e653d431300e1418f7e2cbf0a73fd0fe7b3ca
+2b7c8f9a82e1a8673de3ca367c8bd78f6edbdd9bfc07d65feb18588c81f7685900bea538013eef4fb43dd643e33e7e19a65375823b70ebf876784260bd027ea2
+54f6c18e1e2660ddec588b7ab16b2902119220e1570c6921415d767837edab72a3c29b8a343e96ca9a9ca55bcf572a920041f2a0ac5658da4840b36a304c1fce
+682e51cc618b005aa35079ba252d442ff1ac6366d65fa42ca394267ae26c8f7480ce1efb52bb4de81992861b1657d6ca1aee54c40fc0d1f7c52134c923b361e3
+f4218c5eca0bb28a313ea4d3a97afaa9a8036e35ea5c1454d9ec9b0bf0309c526b6dd24bf552a90240ac4466290b15f03cd5851618d56c2c05d588e2e5b23477
+a851b1045bcdfbd9185d92abc654f2208f522270a53e24a98498c2b2398bad7ea6e8c5391d132e5256e7dfd7d133cc6937058b6440a9d023106e68a154a605da
+a5b98dd3123f59af9d3727021b22b078fcb3617db3f844e0901038e291d021e933759908ec1281997f7689f6acebd01098f17368169dfaec1281193fbb447bd6756808ccf839348b4e7d7689c07f0060e8729b09e6ab310000000049454e44ae426082}
+}}{\sp{\sn pictureGray}{\sv 0}}{\sp{\sn pictureBiLevel}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn wzName}{\sv Picture 2}}{\sp{\sn posrelh}{\sv 0}}{\sp{\sn posrelv}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fAllowOverlap}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 0}}{\sp{\sn fHidden}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}}{\shprslt\par\pard
+\ql \li0\ri0\widctlpar\phmrg\posnegx-742\posnegy-431\dxfrtext180\dfrmtxtx180\dfrmtxty0\wraparound\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\pict\picscalex46\picscaley46\piccropl0\piccropr0\piccropt0\piccropb0
+\picw9774\pich2752\picwgoal5541\pichgoal1560\wmetafile8\bliptag542818557\blipupi71{\*\blipuid 205ac0fdf734c5bf02eb334b4ed72eb0}010009000003d460000000000d2b000000001610000026060f002220574d46430100000000000100fb2d000000000400000000200000744a0000746a00000100
+00006c00000000000000000000007001000067000000000000000000000008240000270a000020454d4600000100746a00000c00000001000000000000000000
+0000000000000005000000040000400100000001000000000000000000000000000000e2040000e80300460000002c00000020000000454d462b014001001c00
+0000100000000210c0db01000000600000006000000046000000c0120000b4120000454d462b224004000c000000000000001e4009000c000000000000002440
+01000c000000000000003040020010000000040000000000803f214007000c00000000000000084000050c120000001200000210c0db01000000000000000000
+000000000000000000000100000089504e470d0a1a0a0000000d49484452000001150000004e080200000081b21535000000017352474200aece1ce900000009
+7048597300000b1200000b1201d2dd7efc0000118849444154785eed9d4f92143b0ec6e9b900dc80e10440bcd90327004e006c660b9c003801b07cb3014e00ac
+58026b26023841c30980056be637ef9ba7d0c87fd39555d5afda191d1d5559b22c7d922cdb693b8f7efdfa75665e138189c010027f1b2a350b4d042602ff4560
+c6cff48389c03802337ec6b19b252702337ea60f4c04c61138fafdcc6fe3a5f751f29fbffebd8f6a679d13810c0233ff4cb798088c2330e3671cbb59722230e3
+67fac044601c81c319ff7cfaf4e9fbf7efe348e44afefd8f0bce4f9e3ce1773ef3ffdcb973972e5d6a5684301414199faf5ebd7ae3c60d5f0a9ea9c0b76fdf56
+2d9b5f5fbe7c79f8f0a1894d5ddc79f5ea957136bd50c73482864b348214c9f92c9a8a6c947afefc79091fb1ba77ef1ee875aaf6eedd3b20a24615912d9a65bd
+fcd488cc40da2c354ec0fc81ff6339c249bb7a24fcf8f1e33804e592180c34e488d8bec77e25665831000bcf340ea9e2dbb76fab98c0fb0d2ec85782c773c6bd
+902144751d46047ef6ec59563c7153b0a5177a210034fdaa09764af5875c5a2f1cfa6b1ca08cf9e704ce6efdebe81f1e97ac84efdfbf2f596ec3b8f2eb9b7efc
+f8810359f30ce77abaa005b5ac88211f3c78900a83e444a6652a084a948b1441c80b172ea808fe8724172f5e2c7108e8e1ebd09f3f7f1e7a7e4236028f3b565c
+51544ac29f3f7fc6163eb58212f48be4f7c481a1da82525029ed9bb47cb872e5ca70d5ed823dadfb405cae58a44742754bc0948c0f64d90b1a0f7a85523d0711
+0745d491d3850335d5c49c6ae02b0da1ba19c656496fc3cb279f34f5a5cc3d3df19c1280894fbf80534a449455bfd1a277435d28de142f5441f32169117bf3da
+2b1ccef478e756256832ef91108361511a9e3a379fa39af5aa371fc87c330cb726130894afe05621f66c9bc4cd4a8f8f8f7dc359af5adc7cbb500a75e23cf409
+e93667851940a9ae548f788183ccb7edf8a9f5df42c7a99dcbd6a3f09db49efedbcd9b37d522d645b876ed9a9916b89bf21e1d1de1223e39d085b32446fcbc7d
+fbb6c90402f8343b1274b7ac6748db1962a0a716a379f4e891cf00cdaa29e8bb70f50ee4e5cb97adb75942c0a3b44a77b45f3c0341457aacbc08db407c20f3d7
+78dea271702764d81e57f0c467cf9eed2cebc908b9e6dc83cf8da8f3faf5eb818a284296f0adf518934a293f83a7015e4a3c86d2baa2dac4ddba6c0f337e4811
+1aefae7b31e25f65f4c9945a53bc1060c331f0f4e9d3d5e7f13daa28e27b7134f3eb62be1637e404f6b5b895f81c48fea94c076d1bc1b5f887f8d114c80073f5
+fbb77af954bfd558ddaa16ab303f90f859058bfd32493b780c63968af4e2c50b0da2367966d2acb4d9176d7238188205f1c398bee72f40d353e4043e74da9781
+e9889aeb937ffcb3a61e91346d407ed8c668d00468f6457b443d0c9a05f173180a9f702df470d0845c94822cf968d9cbf634e581a631dfd263ebed09bf2ee719
+3febe219b99110b23354955a797c69bf3298e94f411af9107e213fac3e44319188f655e65756b7c156d3af9776c6cfeab6fb3f86cc868519f0527de69461820b
+0e3d226abe412b3002fdd2006e566753143ed49ba5764680bec3b3ff4b851c8c1f9e69fabfce5ac74a75323f816474a8fadb7e9f67fcd34f9cb587897a7a38f4
+b69fbdd8c42043b5ec8abebd1b6267c183a683f1b3778c4e8200787c69a19dd6356b24b3682a4c6b1d4841d60321789a29482b26a968db09818a58ea8184c839
+36bdbeb9e1f2ab1bdfbda3a101769647f8d667f3eaea1c66fc8c234cfcb02028bdf030b281b5829585cf69dd166c3e129acf521560849c259f9e1d4a8b34d76e
+02bc53abe070e26d27ba9278549d85fdce9d3bc0be7a6775c6cf223f594c8ca73207e5af4509a7541fe3729bdac265e90a96286de35a58f5bc581357009ed40e
+432552c286e57978279f715f9e56ef2b784cc680395f3decab371f253067fe197733ed5f608129ab48fda50d70f8d98656f429a8d227d1c8279d761b57ec8fcd
+9e442c61c3ca57fe13362c7b238c5fbe7cb9f709376daf0898f355b0d38bd34afc4dd4ef2f3be3a71fab4859cf33f899fa5d9db64ce7a9af5fbf6e8f71f8359b
+82f069cd865502ac67fa2145813118023043a08bcf7bcf3912b20efbad5bb7b63d08f458cdf8198f9f66494208632f9abf0ece1126e2d21a35f2a9279fce006e
+aaf35721f00fa0b72d738c9fcaacf4c084755dfa5dd6b56d1c4bfc179d980193d0e5a335b51494ae28b5ad0abb9c71da1792fdf5fad9cbfe52639433ff8ce1d6
+5b8a9ecfa2f9b794afef8d84e53cdaaac0d0395d90b6e1d0ab57bd934ac7386d37a2cdf8d90dcee3b5f8b332c27eb5cac8e7848c55c6d5fe8b949cf173520c55
+1ae513093e05d9b354ad1625f9ec7d42eca420b80f3966fcec03f55c9d95517e7645a9c63c73e4b35ffbcdf8d92ffe5db59382c2a6061637e888a69ee433367f
+dd25d9a9279af1b35317608d4965254145943091ad8cd4997c763f7fddbfe722ab72a75e9d96a3f9e011f0d7af5f3be91791cdf85904d746c4cc9e31e2cf6e38
+6ba688b0a90107e54911b3db1b09e40a6fe8f1418c4d9c1594d63d9384360bedb6b46776c6cf5a1e58e3437860459ad5ec5c33256d4767c58fc363f5759fb2fb
+7ad7cd57fddc4009a54069ad07a05ae0cbcaa3b518a6363e5df1e36d39d6e22ee5a065cb2cbed45c736925b51daa56d914c07324cb5dcdad0a21a135950def65
+d8b051f1d535aba62e4389d9459e5ca579756978632662866e9bb675acdb21f4e0acf3fe92cee3425739d074f8b011ad7b37e5591339f0942d1ced0913bf4a4d
+cc75843926a71fe20d4f08657b5cd01360e6f1e1c4536f2d3b861387a8ef5d6394e51bdd3a7d4046717ef7eedde128f2e7bcc2045115f9fa6f6d840e48f128e1
+ebdc4c9f380786c816165c2b08b9401e86066689e1b06aa1e0a9881f60c52af7efdf0fad3236c0129d7be5310c5e3536fa07f46cf0200f0d3f31e9c34c031bbc
+3fbb86004f5270969e90f21375a5a728c2134de1e98f16811502648f5ca45d801e627f2450d3ed6008ce635beba808c943f0201e98fbf4d894c108b61d3c5474
+f8f18339b14a693d8b22aaf9fa20bd42434c4afe84eb889b1a42591113e28534ffd9f12bc100657a568e32188381c78f1f077761352abf5646c31a2e5b29c96c
+dd4e3e8006b1c14df86833a9e414a5aaf69512c99d1315383a9a4a9dec3489474631263029a24c1e9485212074c26ef8c3440c1166dbeb300e3f7e8249e6d789
+c08a089caef98315819bac26022030e367bac144601c81193fe3d8cd921381193fd3072602e308ccf819c76e969c08ccf8993e3011184760c6cf3876b3e44460
+c6cff48189c03802337ec6b19b252702337ea60f4c04c61198f1338edd2c391158bcfeadb97d206c52584adf3449936193c3249808ac85c0c1c60f4b7d75721a
+ab77b5a698cf7e193c9fd98fc03261fdaae5d5b6bfcd7f16d6a2b775ca2c1f662133ab83296e2bb2b56d0b6271362389580b93f90c2b7f4eefcf9f3f3f7cf850
+b128dca802ceaa0b4a5bc80c1f2af267c4793ed0b30659eba9a95d7b2254b5df90c35749aef3e54cc754241872e94d3bda9a06430903145af2acfb5407ab1446
+5fd06f7380523aaad27e65c5b0829e216f34e06f6f25d36b9a50caaf82978ef216c38dcfde6affe3f6fb99df16fd71c47dfd0adc5ae4bf16d50e7193a1080481
+393130614e5f1693cb2f01c29cc0eec8849e5e7b75b459081ca154e029a884a6ac22ce660f64d07d71e3575be44f41dceecd9b37709624aa17022e7eb290d39b
+056cab12053d015fd9821190e18ea28b82c863ae89b741e925870c1a6e4a0095f2f18f6c7ebf9a69e11537d8ad75405a940d5205701472261bb5d86b143a9585
+a1474f3bc053f44c0cb5351050ca10a65e2340000533a0018bc94691d4f7ceaceebe27247ea4aadfea980d3cb5cd4069bffacd3320184a69878f871b026bcb3d
+b1eda2916b868b9b8a37bbaf3b5c811243cae375a92e8eadd257199b3b449a2fc87d8581bfa92313526e46c6af5e65d5057f63223c8d83c91c7494ff6501d74d
+2b68ac94f7d47c2c55167a9c3b8b1eb0787d45e6efc84c1e2824a794b5773057af241b3f8be70fc23b4cd3af52c3aea5f4a1f8b6bf6ab7a3cfcb7e6b1a0e6796
+9624ecc7524fcf0b16beea2738eb7e76ef2426c4487e5f5aba8b4e7c7c1e48d14072de66c57dc2de1f5ba33dcc41303c20d303f993a98aa7dbb67d11ff562f88
+b5a7950feac78a933a81a5931e4463cadaf975c0255695ada625655358ec8e4f9bdc9435fda179d4eb4f6241722ec4f31befc0a4649dc5f15391f5907e6263a6
+fc86edab613f26378317a604824286c1217c4ee38efa96d631a8e0060dc6ab1f92988d5e7933b578d914fc4118ab1d17098d453674a1f1f2a8fb4a7576b0301b
+6051bce760c7a0b87cd4e2300b4b56d91280a017ceef177324f44534fed11dbd6c8626208ca94a9bfc67fce4c1a759d2381864b5cb7aa075a07956a4853742b3
+2d59239f3a4f0480b2d4f2595993cd53caf5119e3368f00fa3210595121a89b7679f76d83ace573bcc915af48608eb4d2d024d4e5cd737ab2ca552a5b2e8290c
+6802ec4424befa14a457367153af58b52842a36c08cdf8c99b18101542f242d251bd5d2c398a400f9d19be72bfb4351f8fd7f0dd0e2748996b96820b0995c770
+62efd97c36272608711745114aa56727d4bb88cd18a06af91c02a31ad7c0a903e44965bfb459692aeb25147425f4ac070b1464218b22df7098b1c0d6a2088db2
+efa199f153730f209351b16e48fa4daf1281bc418eae3b3ababad242637bbd78b43256e13c136ccf858119b7c03c3d6984ae0b5d476bcef53ed3d043ebd4a24e
+866f491d4d58a7c780548ad33d96be5c6a68d201585016a55265ad7513ab127ab41d806f3d6745913fd50c198825f0b436455154c46df5f9b7caac4bf6a7ad0a
+605eeba75c821832bcbfc91d3fd962beae9b201ba66284b59fc3f1dcd465b76925c8c2ccb8884d542b2b9fd07c6e9892920036d4264aeb935d1645c4a46728c9
+b3334b36a955d22b8511567e26b32292298b8e7c266cf8efa7bc54d68b5757369d7f137a25197c149510d01c8f05fff1f171caedc0f34fa509172e9a74aabf22
+8e865c2d16461a68bf95822888450954acd2393cd06b172aaf4fa5a5172bfc2fcc61909aec4c601a546caf6e093284c15825390cfcd4043cf04447861c9a23a9
+f7fabcb261709f95136e61c48209ac6f462262de922852eb6666a50b6af82012b8f19394ca1efd77e0f16381519a00e81cd580b580a6bfb1742e012b9a0198a4
+2224b2a7b76525a15e883161a9521b7ba4ddcb1051f8a87526070263dd223d0190d668ca62851e7974beaca1474b1462006c2589c1ab7ce899d3fa28eab22638
+f0f841edd0c004dc3594f7374b9e0aacb0d258b6c77846636fef51fa2a4d5b9726c1a99149adf046032386b9accb1d9b4196d669aa1414e914f0528d16a9bf39
+7153d94a15a047b0093d1457fef7f44a7a86093d463a8aa12d532f2e3b75be387e9acf4397126c8e6f9d833d720efe0446b4d9696f4add9ed4a5001ae26cff44
+705752991a7e08304ff3c1881f1b101b8c862968c6532d5e3c1a481b2798ab410f9ff0be6110c015fcf85ef4a5d0552da55fb38d4e0f714f6b259a4e653d4313
+00e1418f7e2cbf0a73fd0fe7b3ca2b7c8f9a82e1a8673de3ca367c8bd78f6edbdd9bfc07d65feb18588c81f7685900bea538013eef4fb43dd643e33e7e19a653
+75823b70ebf876784260bd027ea254f6c18e1e2660ddec588b7ab16b2902119220e1570c6921415d767837edab72a3c29b8a343e96ca9a9ca55bcf572a920041
+f2a0ac5658da4840b36a304c1fce682e51cc618b005aa35079ba252d442ff1ac6366d65fa42ca394267ae26c8f7480ce1efb52bb4de81992861b1657d6ca1aee
+54c40fc0d1f7c52134c923b361e3f4218c5eca0bb28a313ea4d3a97afaa9a8036e35ea5c1454d9ec9b0bf0309c526b6dd24bf552a90240ac4466290b15f03cd5
+851618d56c2c05d588e2e5b23477a851b1045bcdfbd9185d92abc654f2208f522270a53e24a98498c2b2398bad7ea6e8c5391d132e5256e7dfd7d133cc693705
+8b6440a9d023106e68a154a605daa5b98dd3123f59af9d3727021b22b078fcb3617db3f844e0901038e291d021e933759908ec1281997f7689f6acebd01098f1
+7368169dfaec1281193fbb447bd6756808ccf839348b4e7d7689c07f0060e8729b09e6ab310000000049454e44ae426082000840010824000000180000000210
+c0db01000000030000000000000000000000000000001b40000040000000340000000100000002000000000000bf000000bf00808a4300009c42030000000000
+008000000080ff7fb8430000008000000080ffffcf422100000008000000620000000c00000001000000150000000c00000004000000150000000c0000000400
+000051000000505600000000000000000000700100006700000000000000000000000000000000000000150100004e00000050000000b0000000000100005055
+0000000000002000cc00710100006800000028000000150100004e0000000100080000000000000000000000000000000000220000000000000000000000ffff
+ff0033009900cfcfcf00bfbfbf00dfdfdf005f5f5f007f7f7f008f8f8f00afafaf006f6f6f004f4f4f009f9f9f003f3f3f00efefef0020202000e0e0e0008080
+800070707000606060003030300010101000b0b0b000f0f0f0005050500040404000c0c0c000d0d0d00090909000a0a0a00074747400b7b7b700515151002f2f
+2f000101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202010101010101010101010101010101010101171c181919131d1701
+010101011d111c1a111c0101010101011d16010110111d1a1d111c01010101010101161301010101010101011d11161a1a1d1111111a010117111d1a16111d01
+01011712121b0101171d1319181c170101011011161a1d111c0101011d11161a1a11111b01010101010117111c1a1a1611160101010101010101011c1c1a1a11
+1110010101010117111d1a16111d0101011712121b011c11161a1a1d1111111a01010101011b111919121a0101010101171d1219191c17010101010101010100
+00000202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202010101
+01010101010101010101010101011d15000f0b070d15151601010101090f00000b0801010101011a001101010e0600000019080101010101010119001b010101
+01010101091500000000000000001d010e070000001909010110150015151b1615000f0707140f1b01010e060000000b08010101090b00000014070501010101
+01010506150000150b08010101010101010101081500000f070e01010101010e070000001909010110150015151b091500000000000000001d0101011900000a
+070a00120101011015000f070719151b010101010101010000000202020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202010101010101010101010101010101011600000c010101010e13001b010101011600130101010101011715
+00110101010114001401010101010101011000001901010101010101011100000401010e080f151701011400140101010119001503010111001101010101190f
+010101011500140101010101010113001501010101010101010101010500001c0101010101010101010101011100000501010101010101010114001401010101
+1900150301010111000003010105081515010101000f050101010c001601011100130e0101011815170101010101010000000202020202020202020202020202
+02020101010101010101010101010101010101010101010101010101010202020202020202020202020202020201010101010101010101010101010101140019
+0101010101010119180101010105001101010101011714000011010101011900190101010101010101120015001a0101010101010111000001010101010e1610
+000026060f002220574d464301000000000001000000000000000400000000200000742a0000746a00000f1a01011900180101011d00001c0101011819010101
+01011d00160101011900130101010101010111001901010101010101010101010100001a01010101010101010101010111000001010101010101010101190018
+0101011d00001c0101010111000001010101010e151a011a0004010101010100140101110f0e010101011a001c01010101010100000002020202020202020202
+02020202020201010101010101010101010101010101010101010101010101010102020202020202020202020202020202010101010101010101010101010101
+0100001d0101010101010116000101010101001101010101011400150f1101010101190019010101010101011715001c13130101010101010116000001010101
+01010c050101190011010117150014010101010f1d01010101011200110101011900110101010101010111001901010101010101010101010100001a01010101
+01010101010101011100000101010101010101010119001101011715001401010101011100000101010101010c05011c14010101010117000001011912010101
+01011d00130101010101010000000202020202020202020202020202020201010101010101010101010101010101010101010101010101010102020202020202
+0202020202020202020101010101010101010101010101011b00001a010101010101011a0001010101010011010101011300000c191101010101190019010101
+010101011d00000e0300100101010101011a000001010101131001010101190011010111000003010101010f1b010101011c00001d0101011900110101010101
+010111001901010101010101010101010100001a0101010101010101010101011a00000101010101010101010119001101011100000401010101011100000101
+010118010101010c08010101011014000f01011816010101011d1500110101010101010000000202020202020202020202020202020201010101010101010101
+0101010101010101010101010101010101020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101001b0101
+01010011010101110000110119110101010119001901010101010101140013010119130101010101011a000001010117000e0101010119001101160000120101
+010101010101011d0f0000150e010101190011010101010101011100190101010101010101010101010000160101010101010101010101011a0000171a1c1a17
+01010101011900110116000012010101010101110000010101170001010101010101011013000000110101010101011a0f000000050101010101010000000202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020201010101010101
+01010101010101011a00001a0101010101010101001a01010101001c01011d00001801011911010101011900190101010101011b000004010116001001010101
+011a00001212190f000101010101190000000000001a01010101010101160f000000150c01010101190011010101010101011100190101010101010101010101
+1c0000190101010101010101010101011a0000120d1400151c0101010119000000000000160101010101011600001212190f0001010101010117130000000019
+01010101011a19000000000c01010101010101000000020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101001a01010101001c011b0000140e010119110101
+010119001901010101010113000f010101010f1301010101011a0000140d0d150001010101011900210505040d00120101010101110000000006050101010101
+190011010101010101011100190101010101010101010117150014151601010101010101010101011a00000101010315001c0101011900210505040d00120101
+0101011a00000d0d0d1500010101010110150000000f0c01010101011d0000000019040101010101010101000000020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020101010101010101010101010101011a00001a01010101
+01010101001a0101010100111b1500150501010119110101010119001901010101010115001c010101011c1517010101011a0000010101040001010101011900
+0d0101010500001001010110000000060501011b10010101190019010101010101011100190101010101010101010111000005110f1701010101010101010101
+1a00000101010112000f01010119000d01010105000010010101011a0000010101040001010101011300000f0c0101011d01010115000019040101171b010101
+01010100000002020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+020101010101010101010101010101011a00001a0101010101010101001a010101010020150015030101010119110101010119001901010101011d0000050101
+01010e0011010101011a00000101010106050101010119000d0101010100001a0101011d00150301010101181d01010119001901101d01010101110019010101
+0110010101011015001101010f12010101010101010101011a00000101010111000001010119000d0101010100001a0101010111000001010101060501010101
+150013010101011b1401011a00000401010101121101010101010100000002020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101001a01010101000000000c01
+010101011912010101011200190101010101140018010101010101130f010101011a00000101010101121a01010119000d0101010300001a0101011600120101
+010117151a010101190019011a000101010119001901010101191a0101011800150e010104001a0101010101010101011a00000101010113001501010119000d
+0101010300001a010101011100000101010101131b0101010f0001010101011219010103001901010101010f1101010101010100000002020202020202020202
+02020202020201010101010101010101010202020202010101010101010101010102020202020202020202020202020202010101010101010101010101010101
+1a00001a010101010101011b0016010101100000001c010101010117001901010101190019010101011b00001d0101010101011d001d0101011d000001010101
+01141a01010119000d01010e14000f010101010e15190101010112001a0101011900190101001c0101011900140101011a001a01011d00001d01010101141401
+01010101010101011d00001a01011b15001301010119000d01010e14000f010101010111000001010101010f1a01010111001a0101011b0019010101140f1701
+01011c00110101010101010000000202020202020202020202020202020201010101010101010101010202020202010101010101010101010102020202020202
+02020202020202020201010101010101010101010101171d190000181b01010101101c14001410101c140000130101010117161800151c171b1c1500001d1710
+1c0f0000191d17010110110f0015121f16140000131111120f001a011d1800001511120f00150301010101010315191d1c1300001a011b1c1500151d01000015
+191900000014191500000110111500001d01011716150018100101010101101c0f00001811130000190e011d1800001511120f00150301010110161400001211
+11120f001a0101010113151116120f00190101010e14141c1d130000110101010101010000000202020202020202020202020202020201010101010101010101
+01020202020201010101010101010101010202020202020202020202020202020201010101010101010101010101050d0b070a0d0b01010101090d070a0d0709
+0d0d0d0a0101010101090d0b07070d050b0d0a07070b09090d070707070d050101040a070707071e0d0d0d0d0d0d0d0d0d0d0301060b0707060d0d0b080e0101
+01010101010e0a0d0d06040e01010d0d0707070b090a0d0b07070707070707070a0601070d0b07060d0901070d0b0a0d0a0101010101070d0b070d0d0d0d0a0c
+010101060b0707060d0d0b080e01010101070d0d0d0d0d0d0d0d0d0d050101010101090b0d0d080e05010101010e080d0d06040e0e0101010101010000000202
+02020202020202020202020202020101010101010101010101020202020201010101010101010101010202020202020202020202020202020201010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202
+02020202020202020202020202020202020101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202
+02020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202
+02010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101
+01010202020202020202020202020202020202020202020202010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202
+02020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202
+02020202020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101
+01020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000202
+02020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202
+02020202020202020202020202020202020101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202
+02020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202
+02010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101
+01010202020202020202020202020202020202020202020202010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202
+02020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101
+0112151919191919191919141401010101010101010101011b15191912111111111111111819190f00000015131001010101010101190f191919191919140012
+010101010101171001010101010101010113191919191212191919151601010e1919191811111219191919191d010101010101010101010101011d0f19191111
+1111111111131919190000141913160101010101011d1519191211111111111111181919150000000f1217010101010101010101010101010101010101010101
+01010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202
+0202020202020202020101010101010101010101010101010101050c150000000000190901010101010101010101010101030600000000000000000000000000
+0000000000001d0101010101010e0c0f00000000150a030101010101010119151701010101010101010507150000000000060905010101010307150000000000
+000b0c040e01010101010101010101010101010319000000000000000000000000000000000000141b0101010101091800000000000000000000000000000000
+0000151b010101010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101
+01020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101040000000018010101010101
+01010101010101010101011100000000180c04040404040907060f000000001d010101010101010e150000000301010101010101011a00001101010101010101
+0101011d00000000110101010101010101010400000000001c01010101010101010101010101010101010101011900000000070404010104040407060f000000
+151b01010101010119000000000a0904040404040c070b15000000151b0101010101010101010101010101010101010101010101010101010101010000000202
+02020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101
+0101010101010101010101010115000000050101010101010101010101010101010101030000000f010101010101010101010105071500001b01010101010101
+1200001301010101010101010119000015170101010101010101010e000000000501010101010101010101140000000f01010101010101010101010101010101
+01010101011d00000014010101010101010101010105071500140101010101011d00000018010101010101010101010103061500151701010101010101010101
+01010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202
+02020202020202020202020202020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019
+010101010101010101010101010e130019010101010101011a00001d01010101010101011b000000001101010101010101010101000000000101010101010101
+01010111000000180101010101010101010101010101010101010101011a0000001801010101010101011610000026060f002220574d46430100000000000100
+0000000000000400000000200000740a0000746a000001010101010e0a001d01010101011a000000110101010101010101010101010105190012010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+000000190101010101010101010101010101011100100101010101010e00001a0101010101010101130000000015010101010101010101010000000001010101
+010101010101011d000000110101010101010101010101010101010101010101011a00000011010101010101010101010101010101111901010101011a000000
+11010101010101010101010101010101181501010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202
+02020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101
+0119000000010101010101010101010101010101010101010000001901010101010101010101010101010101131d0101010101010100001a0101010101010110
+000000000f001d0101010101010101010000000001010101010101010101011a0000001101010101010101010101010101010101010101010105000000110101
+01010101010101010101010101010701010101011a000000110101010101010101010101010101010e1410010101010101010101010101010101010101010101
+01010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202
+02020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101
+0101010101010101010101010100001a01010101010101130000001316000f0101010101010101010000001401010101010101010101011a0000001101010101
+01010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a00000011010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202
+02020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101190000000101010101010101010101
+0101010101010101000000190101010101010101010101010101010101010101010101010100001a010101010101170000000005010f001a0101010101010101
+0000001901010101010101010101011a000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101
+010101011a0000001101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101
+0101010101010101011900000001010101010101010101010101010101010101000000190101010101010101010101010101010101010101010101010114001a
+010101010101110000001301011d001901010101010101010000001901010101010101010101011a000000110101010101010101010101010101010101010101
+010100000011010101010101010101010101010101010101010101011a0000001101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202
+02020202020202020202020202010101010101010101010101010101010101010119000000010101010101010101010101010101010101010000001901010101
+01010101010101010101010101010101010101010119001a01010101011715000000030101010f001a010101010101010000001901010101010101010101011a
+000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a0000001101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101010101010119000000010101
+01010101010101010101010101010101000000190101010101010101010101010101010101010101010101010119001a01010101011c00000019010101011100
+19010101010101170000001901010101010101010101011a00000011010101010101010101010101010101010101010101010000001101010101010101010101
+0101010101010101010101011a000000110101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101
+01010101010101010101010101010101011900000001010101010101010101010101010101010101000000190101010101010101010101111b01010101010101
+010101010119001a01010101010f00000004010101010e15001001010101011a0000001901010101010101010101011a00000011010101010101010101010101
+0101010101010101010100000011010101010101010101010101010101010101010101011a000000110101010101010101010101180101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202010101010202020202010101010202020202010101010202020202010101010202
+02020201010101020202020201010101020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+000000190101010101010101010101151a01010101010101010101010119001c010101011d0000001901010101010111001301010101011a0000001901010101
+010101010101011a000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a000000
+11010101010101010101011000010101010101010101010101010101010101010101010101010101010101010101010000000202020202010101010202020202
+01010101020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101010101010101010101010101010101
+01190000000101010101010101010101010101010101010100000019010101010101010101011a0003010101010101010101010101130011010101010f000000
+1d0101010101010e000010010101011a0000001201010101010101010101011a0000001101010101010101010101010101010101010101010101000000110101
+01010101010101010101010101010101010101011a00000011010101010101010101011100010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101
+020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101000000140101010101010101011a1400
+01010101010101010101010101110011010101160000000f0101010101010101130013010101011a0000001101010101010101010101011a0000001101101611
+11111617010101010101010101010101010100000011010101010101010101010101010101010101010101011a000000120101010101010101011d1500010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101020202020201010101020202020201010101020202
+02020101010102020202020101010102020202020101010102020202020101010101010101010101010101010101010101190000000101010101010101010101
+01010101010101010000000000141919191919150000000001010101010101010101010101110011010101190000001d0101010101010101050000100101011a
+0000001101010101010101010101011a00000011050d07070b140000181a01010101010101010101010100000011010101010101010101010101010101010101
+010101011a0000000000191919191919150000001401010101010101010101010101010101010101010101010101010101010101010101000000020202020201
+01010102020202020101010102020202020101010102020202020101010102020202020101010102020202020101010102020202020101010101010101010101
+01010101010101010119000000010101010101010101010101010101010101010000000000000000000000000000000001010101010101010101010101110011
+01011a0000001501010101010101010101130013010101160000001101010101010101010101011a000000110101010101010507000013170101010101010101
+010100000011010101010101010101010101010101010101010101011a0000000000000000000000000000000001010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020101010102020202020101010102020202020101010102020202020101010102020202020101010102
+02020202010101010202020202010101010101010101010101010101010101010119000000010101010101010101010101010101010101010000000f04040404
+04040409070b00001b0101010101010101010101011100120101180000001101010101010101010101030015170101110000001101010101010101010101011a
+000000110101010101010101031500141701010101010101010100000011010101010101010101010101010101010101010101011a0000001904040404040404
+0c071400000101010101010101010101010101010101010101010101010101010101010101010100000002020202020101010102020202020101010102020202
+02010101010202020202010101010202020202010101010202020202010101010202020202010101010101010101010101010101010101010119000000010101
+0101010101010101010101010101010100000019010101010101010101011d001a0101010101010101010101011100190110000000150e010101010101010101
+01011900110101110000001101010101010101010101011a00000011010101010101010101040000140101010101010101010000001101010101010101010101
+0101010101010101010101011a000000110101010101010101010111000101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202010101010202020202010101010101010101010101010202020202010101010101010101010101010202020202010101010202020202010101
+01010101010101010101010101010101011900000001010101010101010101010101010101010101000000190101010101010101010101151a01010101010101
+01010101011d00190113000000120101010101010101010101010400151701110000001101010101010101010101011a00000011010101010101010101011900
+0011010101010101010100000011010101010101010101010101010101010101010101011a000000110101010101010101010103000101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202010101010202020202010101010101010101010101010202020202010101010101
+01010101010101020202020201010101020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+00000019010101010101010101010107030101010101010101010101011a00191000000000050101010101010101010101010119001301110000001601010101
+010101010101011a00000011010101010101010101011d000015010101010101010100000011010101010101010101010101010101010101010101011a000000
+1101010101010101010101010b010101010101010101010101010101010101010101010101010101010101010101010000000202020202010101010202020202
+01010101010101010101010101020202020201010101010101010101010101020202020201010101020202020201010101010101010101010101010101010101
+01190000000101010101010101010101010101010101010100000019010101010101010101010101010101010101010101010101011a00191200000013010101
+01010101010101010101011d000010110000001a01010101010101010101011a00000011010101010101010101011a0000001a01010101010101000000110101
+01010101010101010101010101010101010101011a00000011010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101020202020201010101010101010101010101020202020201010101010101010101010101020202020201010101
+02020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101
+010101010101010101010101011a001415000000050101010101010101010101010101010f0018130000001a01010101010101010101011a0000001101010101
+0101010101010e000000110101010101010100000011010101010101010101010101010101010101010101011a00000011010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020101010102020202020101010101010101010101010101010101010101190000000101010101010101010101
+010101010101010100000019010101010101010101010101010101010101010101010101011a000000000019010101010101010101010101010101011d000015
+0000001a01010101010101010101011a00000011010101010101010101011b000000110101010101010100000011010101010101010101010101010101010101
+010101011a0000001101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020201
+01010102020202020202020202020202020202020202020202020202020202020202020202020202020202020101010102020202020101010101010101010101
+010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101010101010101010101010101011d0000
+0000000401010101010101010101010101010101010f00000000001a01010101010101010101011a000000110101010101010101010116000000110101010101
+010100000011010101010101010101010101010101010101010101011a0000001101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020101010102020202020202020202020202020202020202020202020202020202020202020202020202
+02020202010101010202020202010101010101011303010101010101010101010119000000010101010101010101010101010101010101010000001901010101
+0101010101010101010101010101010101010101011100000000190101010101010101010101010101010101011100000000001a01010101010101010101011a
+0000001101010101010101010101130000001c0101010101010100000011010101010101010101010101010101010101010101011a0000001101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020101010102020202020202020202020202
+02020202020202020202020202020202020202020202020202020202010101010202020202010101010101011416010101010101010101010119000000010101
+010101010101010101111a0101010101000000190101010101010101010101010115100101010101010101010113000000001601010101010101010101010101
+01010101010e15000000001a01010101010101010101011a00000011010101010101010101100000000003010101010101010000001101010101010101010101
+0101010101010101010101011a000000110101010101010101010101011015010101010101010101010101010101010101010101010101010101010101010100
+00000202020202010101010202020202020202020202020202020202020202020202020202020202020202020202020202020202010101010202020202010101
+010101011813010101010101010101010119000000010101010101010101010101000301010101170000001901010101010101010101010101001a0101010101
+01010101010f0000000f010101010101010101010101010101010101010111000000001a01010101010101010101011a00000011010101010101010101140000
+0019010101010101011700000011010101010101010101010101010101010101010101011a000000110101010101010101010101011a00010101010101010101
+01010101010101010101010101010101010101010101010000000202020202010101010101010101010101010101010101010101010101010101010101010101
+0101010101010101010101010101010102020202020101010101010111151b010101010101010101011900000001010101010101010101011d0001010101011a
+0000001901010101010101010101010110001d0101010101010101011a000000001d010101010101010101010101010101010101010105000000001d01010101
+010101010101011c000000110101010101010117130000001503010101010101011a00000019010101010101010101010101010101010101010101011c000000
+110101010101010101010101011d001a010101010101010101010101010101010101010101010101010101010101010000000202020202010101010101010101
+010101010101010101010101010101010101010101010101010101010101010101010101010101010202020202010101010101011600151c1a1a1a1a1a1a1a1a
+16150000001c1a1a1a1a1a1a1a1a1a1c150001010101011c00000014010101010101010101010117180011010101010101010117140000000f01010101010101
+0101010101010101010101010101011300000013010101010101010101010113000000120101010101011a0f000000150c010101010101010111000000150101
+010101010101010101010101010101010101010113000000120101010101010101010101100f001a010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+0202020202010101010101011a000000000000000000000000000000000000000000000000000000000001010101170f00000000131111111111111111111915
+000011010101010101011a1400000000110101010101010101010101010101010101010101010105000000151b0101010101010101011a000000000f1001011a
+1c1900000000140301010101010101011b15000000001301010101010101010101010101010101010101011b150000001512111111111111111112190000001a
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010102020202020101010101010103000000000000000000000000000000000000000000000000000000
+000f011011120f00000000000000000000000000000000000000130101010101111400000000000f0e0101010101010101010101010101010101010101010101
+13000000151316010101011711180000000000000000000000000000140c01010101010101171119000000000000000f13170101010101010101010101010101
+10111315000000000000000000000000000000000000001101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020101010101010101030404
+040404040404040404040404040404040404040404040404040501030606070708040404040404040404040404090707070a0901010101010807070707070705
+01010101010101010101010101010101010101010101010105060607070a0b01010101030606080404040c0707070b0d07070905010101010101010101050707
+0804040404040408070e0101010101010101010101010101040b0a07070c0404040404040404040404040c0707070a0c01010101010101010101010101010101
+010101010101010101010101010101000000020202025005000026060f00960a574d4643010000000000010000000000000004000000740a000000000000746a
+00000202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020201010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101000000020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202020202020101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010100000002020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010100000001010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100000001010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010000000101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010000000101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+010101010101010101010101010101010101010000004c0000006400000000000000000000007001000067000000000000000000000071010000680000002900
+aa0000000000000000000000803f00000000000000000000803f0000000000000000000000000000000000000000000000000000000000000000220000000c00
+0000ffffffff460000001c00000010000000454d462b024000000c000000000000000e0000001400000000000000100000001400000004000000030108000500
+00000b0200000000050000000c0268007101030000001e00040000000701040004000000070104000d2b0000410b2000cc004e00150100000000680071010000
+000028000000150100004e0000000100080000000000000000000000000000000000220000000000000000000000ffffff0033009900cfcfcf00bfbfbf00dfdf
+df005f5f5f007f7f7f008f8f8f00afafaf006f6f6f004f4f4f009f9f9f003f3f3f00efefef0020202000e0e0e000808080007070700060606000303030001010
+1000b0b0b000f0f0f0005050500040404000c0c0c000d0d0d00090909000a0a0a00074747400b7b7b700515151002f2f2f000101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202010101010101010101010101010101010101171c181919131d1701010101011d111c1a111c010101010101
+1d16010110111d1a1d111c01010101010101161301010101010101011d11161a1a1d1111111a010117111d1a16111d0101011712121b0101171d1319181c1701
+01011011161a1d111c0101011d11161a1a11111b01010101010117111c1a1a1611160101010101010101011c1c1a1a111110010101010117111d1a16111d0101
+011712121b011c11161a1a1d1111111a01010101011b111919121a0101010101171d1219191c1701010101010101010000000202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020201010101010101010101010101010101011d15
+000f0b070d15151601010101090f00000b0801010101011a001101010e0600000019080101010101010119001b01010101010101091500000000000000001d01
+0e070000001909010110150015151b1615000f0707140f1b01010e060000000b08010101090b0000001407050101010101010506150000150b08010101010101
+010101081500000f070e01010101010e070000001909010110150015151b091500000000000000001d0101011900000a070a00120101011015000f070719151b
+01010101010101000000020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+0202020202010101010101010101010101010101011600000c010101010e13001b01010101160013010101010101171500110101010114001401010101010101
+011000001901010101010101011100000401010e080f151701011400140101010119001503010111001101010101190f01010101150014010101010101011300
+1501010101010101010101010500001c010101010101010101010101110000050101010101010101011400140101010119001503010101110000030101050815
+15010101000f050101010c001601011100130e010101181517010101010101000000020202020202020202020202020202020101010101010101010101010101
+01010101010101010101010101020202020202020202020202020202020101010101010101010101010101010114001901010101010101191801010101050011
+01010101011714000011010101011900190101010101010101120015001a0101010101010111000001010101010e0f1a01011900180101011d00001c01010118
+1901010101011d00160101011900130101010101010111001901010101010101010101010100001a010101010101010101010101110000010101010101010101
+011900180101011d00001c0101010111000001010101010e151a011a0004010101010100140101110f0e010101011a001c010101010101000000020202020202
+02020202020202020202010101010101010101010101010101010101010101010101010101020202020202020202020202020202020101010101010101010101
+010101010100001d0101010101010116000101010101001101010101011400150f1101010101190019010101010101011715001c131301010101010101160000
+0101010101010c050101190011010117150014010101010f1d01010101011200110101011900110101010101010111001901010101010101010101010100001a
+0101010101010101010101011100000101010101010101010119001101011715001401010101011100000101010101010c05011c140101010101170000010119
+1201010101011d001301010101010100000002020202020202020202020202020202010101010101010101010101010101010101010101010101010101020202
+020202020202020202020202020101010101010101010101010101011b00001a010101010101011a0001010101010011010101011300000c1911010101011900
+19010101010101011d00000e0300100101010101011a000001010101131001010101190011010111000003010101010f1b010101011c00001d01010119001101
+01010101010111001901010101010101010101010100001a0101010101010101010101011a000001010101010101010101190011010111000004010101010111
+00000101010118010101010c08010101011014000f01011816010101011d15001101010101010100000002020202020202020202020202020202010101010101
+010101010101010101010101010101010101010101020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101
+001b010101010011010101110000110119110101010119001901010101010101140013010119130101010101011a000001010117000e01010101190011011600
+00120101010101010101011d0f0000150e010101190011010101010101011100190101010101010101010101010000160101010101010101010101011a000017
+1a1c1a1701010101011900110116000012010101010101110000010101170001010101010101011013000000110101010101011a0f0000000501010101010100
+00000202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202010101
+0101010101010101010101011a00001a0101010101010101001a01010101001c01011d00001801011911010101011900190101010101011b0000040101160010
+01010101011a00001212190f000101010101190000000000001a01010101010101160f000000150c010101011900110101010101010111001901010101010101
+010101011c0000190101010101010101010101011a0000120d1400151c0101010119000000000000160101010101011600001212190f00010101010101171300
+0000001901010101011a19000000000c010101010101010000000202020202020202020202020202020202020202020202020202020202020202020202020202
+0202020202020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101001a01010101001c011b0000140e0101
+19110101010119001901010101010113000f010101010f1301010101011a0000140d0d150001010101011900210505040d001201010101011100000000060501
+01010101190011010101010101011100190101010101010101010117150014151601010101010101010101011a00000101010315001c0101011900210505040d
+001201010101011a00000d0d0d1500010101010110150000000f0c01010101011d00000000190401010101010101010000000202020202020202020202020202
+0202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020101010101010101010101010101011a00001a
+0101010101010101001a0101010100111b1500150501010119110101010119001901010101010115001c010101011c1517010101011a00000101010400010101
+010119000d0101010500001001010110000000060501011b10010101190019010101010101011100190101010101010101010111000005110f17010101010101
+010101011a00000101010112000f01010119000d01010105000010010101011a0000010101040001010101011300000f0c0101011d0101011500001904010117
+1b010101010101000000020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020101010101010101010101010101011a00001a0101010101010101001a010101010020150015030101010119110101010119001901010101011d00
+0005010101010e0011010101011a00000101010106050101010119000d0101010100001a0101011d00150301010101181d01010119001901101d010101011100
+190101010110010101011015001101010f12010101010101010101011a00000101010111000001010119000d0101010100001a01010101110000010101010605
+01010101150013010101011b1401011a000004010101011211010101010101000000020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020101010101010101010101010101011a00001a0101010101010101001a010101010000
+00000c01010101011912010101011200190101010101140018010101010101130f010101011a00000101010101121a01010119000d0101010300001a01010116
+00120101010117151a010101190019011a000101010119001901010101191a0101011800150e010104001a0101010101010101011a0000010101011300150101
+0119000d0101010300001a010101011100000101010101131b0101010f0001010101011219010103001901010101010f11010101010101000000020202020202
+02020202020202020202010101010101010101010102020202020101010101010101010101020202020202020202020202020202020101010101010101010101
+010101011a00001a010101010101011b0016010101100000001c010101010117001901010101190019010101011b00001d0101010101011d001d0101011d0000
+0101010101141a01010119000d01010e14000f010101010e15190101010112001a0101011900190101001c0101011900140101011a001a01011d00001d010101
+0114140101010101010101011d00001a01011b15001301010119000d01010e14000f010101010111000001010101010f1a01010111001a0101011b0019010101
+140f170101011c001101010101010100000002020202020202020202020202020202010101010101010101010102020202020101010101010101010101020202
+0202020202020202020202020201010101010101010101010101171d190000181b01010101101c14001410101c140000130101010117161800151c171b1c1500
+001d17101c0f0000191d17010110110f0015121f16140000131111120f001a011d1800001511120f00150301010101010315191d1c1300001a011b1c1500151d
+01000015191900000014191500000110111500001d01011716150018100101010101101c0f00001811130000190e011d1800001511120f001503010101101614
+0000121111120f001a0101010113151116120f00190101010e14141c1d1300001101010101010100000002020202020202020202020202020202010101010101
+0101010101020202020201010101010101010101010202020202020202020202020202020201010101010101010101010101050d0b070a0d0b01010101090d07
+0a0d07090d0d0d0a0101010101090d0b07070d050b0d0a07070b09090d070707070d050101040a070707071e0d0d0d0d0d0d0d0d0d0d0301060b0707060d0d0b
+080e010101010101010e0a0d0d06040e01010d0d0707070b090a0d0b07070707070707070a0601070d0b07060d0901070d0b0a0d0a0101010101070d0b070d0d
+0d0d0a0c010101060b0707060d0d0b080e01010101070d0d0d0d0d0d0d0d0d0d050101010101090b0d0d080e05010101010e080d0d06040e0e01010101010100
+00000202020202020202020202020202020201010101010101010101010202020202010101010101010101010102020202020202020202020202020202010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202
+02020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202
+02020202020101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202
+02020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202
+02020202020202020202020202010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202
+02020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202
+02020202020101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202
+02020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101
+010101010112151919191919191919141401010101010101010101011b15191912111111111111111819190f00000015131001010101010101190f1919191919
+19140012010101010101171001010101010101010113191919191212191919151601010e1919191811111219191919191d010101010101010101010101011d0f
+191911111111111111131919190000141913160101010101011d1519191211111111111111181919150000000f12170101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202
+020202020202020202020202020101010101010101010101010101010101050c1500000000001909010101010101010101010101010306000000000000000000
+000000000000000000001d0101010101010e0c0f00000000150a0301010101010101191517010101010101010105071500000000000609050101010103071500
+00000000000b0c040e01010101010101010101010101010319000000000000000000000000000000000000141b01010101010918000000000000000000000000
+000000000000151b0101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101010101010400000000180101
+0101010101010101010101010101011100000000180c04040404040907060f000000001d010101010101010e150000000301010101010101011a000011010101
+010101010101011d00000000110101010101010101010400000000001c0101010101010101010101010101010101010101190000000007040401010404040706
+0f000000151b01010101010119000000000a0904040404040c070b15000000151b01010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101
+010101010101010101010101010101010115000000050101010101010101010101010101010101030000000f010101010101010101010105071500001b010101
+010101011200001301010101010101010119000015170101010101010101010e000000000501010101010101010101140000000f010101010101010101010101
+0101010101010101011d00000014010101010101010101010105071500140101010101011d000000180101010101010101010101030615001517010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+00000019010101010101010101010101010e130019010101010101011a00001d01010101010101011b0000000011010101010101010101010000000001010101
+0101010101010111000000180101010101010101010101010101010101010101011a00000018010101010101010101010101010e0a001d01010101011a000000
+11010101010101010101010101010519001201010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202
+02020202020202020201010101020202020201010101020202020202020202020202020202020202020202020201010101010101010101010101010101010101
+011900000001010101010101010101010101010101010101000000190101010101010101010101010101011100100101010101010e00001a0101010101010101
+130000000015010101010101010101010000000001010101010101010101011d000000110101010101010101010101010101010101010101011a000000110101
+01010101010101010101010101111901010101011a00000011010101010101010101010101010101181501010101010101010101010101010101010101010101
+01010101010101000000020202020202020202020202020202020202020202020201010101020202020201010101020202020202020202020202020202020202
+02020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101
+01010101131d0101010101010100001a0101010101010110000000000f001d0101010101010101010000000001010101010101010101011a0000001101010101
+01010101010101010101010101010101010500000011010101010101010101010101010101010701010101011a00000011010101010101010101010101010101
+0e141001010101010101010101010101010101010101010101010101010101000000020202020202020202020202020202020202020202020201010101020202
+02020101010102020202020202020202020202020202020202020202020101010101010101010101010101010101010101190000000101010101010101010101
+0101010101010101000000190101010101010101010101010101010101010101010101010100001a01010101010101130000001316000f010101010101010101
+0000001401010101010101010101011a000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101
+010101011a0000001101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020202
+02020202020202020202020202020202020101010102020202020101010102020202020202020202020202020202020202020202020101010101010101010101
+0101010101010101011900000001010101010101010101010101010101010101000000190101010101010101010101010101010101010101010101010100001a
+010101010101170000000005010f001a01010101010101010000001901010101010101010101011a000000110101010101010101010101010101010101010101
+010100000011010101010101010101010101010101010101010101011a0000001101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020101010102020202020101010102020202020202020202
+02020202020202020202020202010101010101010101010101010101010101010119000000010101010101010101010101010101010101010000001901010101
+01010101010101010101010101010101010101010114001a010101010101110000001301011d001901010101010101010000001901010101010101010101011a
+000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a0000001101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02010101010202020202010101010202020202020202020202020202020202020202020202010101010101010101010101010101010101010119000000010101
+01010101010101010101010101010101000000190101010101010101010101010101010101010101010101010119001a01010101011715000000030101010f00
+1a010101010101010000001901010101010101010101011a00000011010101010101010101010101010101010101010101010000001101010101010101010101
+0101010101010101010101011a000000110101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202010101010202020202010101010202020202020202020202020202020202020202020202010101
+01010101010101010101010101010101011900000001010101010101010101010101010101010101000000190101010101010101010101010101010101010101
+010101010119001a01010101011c0000001901010101110019010101010101170000001901010101010101010101011a00000011010101010101010101010101
+0101010101010101010100000011010101010101010101010101010101010101010101011a000000110101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202010101010202020202010101010202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+000000190101010101010101010101111b01010101010101010101010119001a01010101010f00000004010101010e15001001010101011a0000001901010101
+010101010101011a000000110101010101010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a000000
+11010101010101010101010118010101010101010101010101010101010101010101010101010101010101010101010000000202020202010101010202020202
+01010101020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101010101010101010101010101010101
+011900000001010101010101010101010101010101010101000000190101010101010101010101151a01010101010101010101010119001c010101011d000000
+1901010101010111001301010101011a0000001901010101010101010101011a0000001101010101010101010101010101010101010101010101000000110101
+01010101010101010101010101010101010101011a00000011010101010101010101011000010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101020202020201010101
+02020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101011a00
+03010101010101010101010101130011010101010f0000001d0101010101010e000010010101011a0000001201010101010101010101011a0000001101010101
+01010101010101010101010101010101010100000011010101010101010101010101010101010101010101011a00000011010101010101010101011100010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101020202020201010101020202020201010101020202
+02020101010102020202020101010102020202020101010102020202020101010101010101010101010101010101010101190000000101010101010101010101
+0101010101010101000000140101010101010101011a140001010101010101010101010101110011010101160000000f0101010101010101130013010101011a
+0000001101010101010101010101011a000000110110161111111617010101010101010101010101010100000011010101010101010101010101010101010101
+010101011a000000120101010101010101011d150001010101010101010101010101010101010101010101010101010101010101010101000000020202020201
+01010102020202020101010102020202020101010102020202020101010102020202020101010102020202020101010102020202020101010101010101010101
+01010101010101010119000000010101010101010101010101010101010101010000000000141919191919150000000001010101010101010101010101110011
+010101190000001d0101010101010101050000100101011a0000001101010101010101010101011a00000011050d07070b140000181a01010101010101010101
+010100000011010101010101010101010101010101010101010101011a0000000000191919191919150000001401010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020101010102020202020101010102020202020101010102020202020101010102020202020101010102
+02020202010101010202020202010101010101010101010101010101010101010119000000010101010101010101010101010101010101010000000000000000
+00000000000000000101010101010101010101010111001101011a0000001501010101010101010101130013010101160000001101010101010101010101011a
+000000110101010101010507000013170101010101010101010100000011010101010101010101010101010101010101010101011a0000000000000000000000
+00000000000101010101010101010101010101010101010101010101010101010101010101010100000002020202020101010102020202020101010102020202
+02010101010202020202010101010202020202010101010202020202010101010202020202010101010101010101010101010101010101010119000000010101
+010101010101010101010101010101010000000f0404040404040409070b00001b01010101010101010101010111001201011800000011010101010101010101
+01030015170101110000001101010101010101010101011a00000011010101010101010103150014170101010101010101010000001101010101010101010101
+0101010101010101010101011a00000019040404040404040c071400000101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202010101010202020202010101010202020202010101010202020202010101010202020202010101010202020202010101010202020202010101
+0101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101011d001a01010101010101
+01010101011100190110000000150e01010101010101010101011900110101110000001101010101010101010101011a00000011010101010101010101040000
+1401010101010101010100000011010101010101010101010101010101010101010101011a000000110101010101010101010111000101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202010101010202020202010101010101010101010101010202020202010101010101
+01010101010101020202020201010101020202020201010101010101010101010101010101010101011900000001010101010101010101010101010101010101
+000000190101010101010101010101151a0101010101010101010101011d00190113000000120101010101010101010101010400151701110000001101010101
+010101010101011a000000110101010101010101010119000011010101010101010100000011010101010101010101010101010101010101010101011a000000
+11010101010101010101010300010101010101010101010101010101010101010101010101010101010101010101010000000202020202010101010202020202
+01010101010101010101010101020202020201010101010101010101010101020202020201010101020202020201010101010101010101010101010101010101
+01190000000101010101010101010101010101010101010100000019010101010101010101010107030101010101010101010101011a00191000000000050101
+010101010101010101010119001301110000001601010101010101010101011a00000011010101010101010101011d0000150101010101010101000000110101
+01010101010101010101010101010101010101011a0000001101010101010101010101010b010101010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101020202020201010101010101010101010101020202020201010101010101010101010101020202020201010101
+02020202020101010101010101010101010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101
+010101010101010101010101011a0019120000001301010101010101010101010101011d000010110000001a01010101010101010101011a0000001101010101
+0101010101011a0000001a0101010101010100000011010101010101010101010101010101010101010101011a00000011010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101020202020201010101010101010101010101020202
+02020101010101010101010101010102020202020101010102020202020101010101010101010101010101010101010101190000000101010101010101010101
+010101010101010100000019010101010101010101010101010101010101010101010101011a001415000000050101010101010101010101010101010f001813
+0000001a01010101010101010101011a00000011010101010101010101010e000000110101010101010100000011010101010101010101010101010101010101
+010101011a0000001101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000020202020201
+01010102020202020202020202020202020202020202020202020202020202020202020202020202020202020101010102020202020101010101010101010101
+010101010101010101190000000101010101010101010101010101010101010100000019010101010101010101010101010101010101010101010101011a0000
+00000019010101010101010101010101010101011d0000150000001a01010101010101010101011a00000011010101010101010101011b000000110101010101
+010100000011010101010101010101010101010101010101010101011a0000001101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000002020202020101010102020202020202020202020202020202020202020202020202020202020202020202020202
+02020202010101010202020202010101010101010101010101010101010101010119000000010101010101010101010101010101010101010000001901010101
+0101010101010101010101010101010101010101011d00000000000401010101010101010101010101010101010f00000000001a01010101010101010101011a
+000000110101010101010101010116000000110101010101010100000011010101010101010101010101010101010101010101011a0000001101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000002020202020101010102020202020202020202020202
+02020202020202020202020202020202020202020202020202020202010101010202020202010101010101011303010101010101010101010119000000010101
+01010101010101010101010101010101000000190101010101010101010101010101010101010101010101010111000000001901010101010101010101010101
+01010101011100000000001a01010101010101010101011a0000001101010101010101010101130000001c010101010101010000001101010101010101010101
+0101010101010101010101011a000000110101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202010101010202020202020202020202020202020202020202020202020202020202020202020202020202020202010101010202020202010101
+010101011416010101010101010101010119000000010101010101010101010101111a0101010101000000190101010101010101010101010115100101010101
+01010101011300000000160101010101010101010101010101010101010e15000000001a01010101010101010101011a00000011010101010101010101100000
+0000030101010101010100000011010101010101010101010101010101010101010101011a000000110101010101010101010101011015010101010101010101
+01010101010101010101010101010101010101010101010000000202020202010101010202020202020202020202020202020202020202020202020202020202
+02020202020202020202020201010101020202020201010101010101181301010101010101010101011900000001010101010101010101010100030101010117
+0000001901010101010101010101010101001a010101010101010101010f0000000f010101010101010101010101010101010101010111000000001a01010101
+010101010101011a000000110101010101010101011400000019010101010101011700000011010101010101010101010101010101010101010101011a000000
+110101010101010101010101011a0001010101010101010101010101010101010101010101010101010101010101010000000202020202010101010101010101
+0101010101010101010101010101010101010101010101010101010101010101010101010101010102020202020101010101010111151b010101010101010101
+011900000001010101010101010101011d0001010101011a0000001901010101010101010101010110001d0101010101010101011a000000001d010101010101
+010101010101010101010101010105000000001d01010101010101010101011c000000110101010101010117130000001503010101010101011a000000190101
+01010101010101010101010101010101010101011c000000110101010101010101010101011d001a010101010101010101010101010101010101010101010101
+01010101010101000000020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+0202020202010101010101011600151c1a1a1a1a1a1a1a1a16150000001c1a1a1a1a1a1a1a1a1a1c150001010101011c00000014010101010101010101010117
+180011010101010101010117140000000f0101010101010101010101010101010101010101010113000000130101010101010101010101130000001201010101
+01011a0f000000150c010101010101010111000000150101010101010101010101010101010101010101010113000000120101010101010101010101100f001a
+01010101010101010101010101010101010101010101010101010101010101000000020202020201010101010101010101010101010101010101010101010101
+0101010101010101010101010101010101010101010101010202020202010101010101011a000000000000000000000000000000000000000000000000000000
+000001010101170f00000000131111111111111111111915000011010101010101011a1400000000110101010101010101010101010101010101010101010105
+000000151b0101010101010101011a000000000f1001011a1c1900000000140301010101010101011b1500000000130101010101010101010101010101010101
+0101011b150000001512111111111111111112190000001a01010101010101010101010101010101010101010101010101010101010101000000020202020201
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010102020202020101010101010103000000
+000000000000000000000000000000000000000000000000000f011011120f00000000000000000000000000000000000000130101010101111400000000000f
+0e010101010101010101010101010101010101010101010113000000151316010101011711180000000000000000000000000000140c01010101010101171119
+000000000000000f1317010101010101010101010101010110111315000000000000000000000000000000000000001101010101010101010101010101010101
+01010101010101010101010101010100000002020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202010101010101010103040404040404040404040404040404040404040404040404040404050103060607070804040404040404
+0404040404090707070a090101010101080707070707070501010101010101010101010101010101010101010101010105060607070a0b010101010306060804
+04040c0707070b0d070709050101010101010101010507070804040404040408070e0101010101010101010101010101040b0a07070c04040404040404040404
+04040c0707070a0c0101010101010101010101010101010101010101010101010101010101010100000002020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100
+00000202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010000000202020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020202020202020202020202020201010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000202020202020202020202020202
+02020202020202020202020202020202020202020202020202020202020202020202020202020202020202020201010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101000000010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101000000010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000000010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010100000001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010100000001010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010000000c00000040092900aa000000000000006800710100000000040000002701ffff030000000000}\par}}}{\rtlch\fcs1 \ai\af40\afs18 
+\ltrch\fcs0 \i\f40\fs18\cf1\insrsid15733163 
+\par 
+\par 
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \b\f36\fs16\cf1\insrsid15733163 \sect }\sectd \ltrsect\marglsxn6099\margrsxn726\psz1\sbknone\linex0\cols2\endnhere\colno1\colw2736\colsr285\colno2\colw2394\sectlinegrid360\sectdefaultcl\sftnbj \pard\plain \ltrpar
+\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid944938 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 
+\b\f36\fs16\cf1\insrsid15733163\charrsid944938 Temple University Press
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163 TASB, 3}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\super\insrsid15733163\charrsid2431232 rd}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163  Floor
+
+\par 1852 N. 10}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\super\insrsid15733163\charrsid2431232 th}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163  Street}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 
+\f36\fs16\cf1\insrsid15733163\charrsid944938 
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163 Philadelphia, PA 19122
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163\charrsid944938 
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \i\f36\fs16\cf1\insrsid15733163\charrsid944938 phone}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163  }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163\charrsid944938 215-
+}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163 926-2140}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163\charrsid944938 
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \i\f36\fs16\cf1\insrsid15733163\charrsid944938 fax}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163\charrsid944938  215-}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163 
+926-2141
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \i\f36\fs16\cf1\insrsid15733163 email}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163  tempress@temple.edu}{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf1\insrsid15733163\charrsid944938 
+
+\par }{\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \i\f36\fs16\insrsid15733163\charrsid4458164 web }{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 HYPERLINK "www.temple.edu/tempress"}{\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid14777500 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000001000000e0c9ea79f9bace118c8200aa004ba90b480000007700770077002e00740065006d0070006c0065002e006500640075002f00740065006d00700072006500730073000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {
+\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \cs15\f36\fs16\insrsid15733163\charrsid4458164 www.temple.edu/tempress}}}\sectd \marglsxn6099\margrsxn726\psz1\sbknone\linex0\cols2\endnhere\colno1\colw2736\colsr285
+\colno2\colw2394\sectlinegrid360\sectdefaultcl\sftnbj {\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\insrsid15733163\charrsid4458164 
+\par \sect }\sectd \ltrsect\psz1\sbknone\linex0\endnhere\sectlinegrid360\sectdefaultcl\sectrsid944938\sftnbj \pard\plain \ltrpar\ql \li0\ri0\widctlpar\tx5349\wrapdefault\faauto\rin0\lin0\itap0\pararsid8661301 \rtlch\fcs1 \af0\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\rtlch\fcs1 \ai\af36\afs16 \ltrch\fcs0 \f36\fs16\cf17\insrsid15733163 \tab 
+\par }\pard \ltrpar\qc \li0\ri0\widctlpar\tx1080\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \ab\af41 \ltrch\fcs0 \b\f41\cf1\insrsid15733163 GUIDELINES FOR REQUESTING PERMISSION TO USE MATERIAL
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\tx1080\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af42 \ltrch\fcs0 \f42\cf1\insrsid15733163 \tab 
+\par }\pard \ltrpar\ql \fi2790\li0\ri0\widctlpar\tx912\wrapdefault\faauto\rin0\lin0\itap0\pararsid2431232 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 \tab Contact: \tab Matthew Kull
+\par \tab \tab \tab }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163 Rights & Contracts Manager}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf18\insrsid15733163\charrsid13114562 \tab \tab \tab }{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 HYPERLINK "mailto:Kull@mail.temple.edu"}{\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid14777500 
+{\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b500000006d00610069006c0074006f003a004b0075006c006c0040006d00610069006c002e00740065006d0070006c0065002e006500640075000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}
+}{\fldrslt {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \cs15\fs20\cf17\insrsid15733163 matthew.kull@temple.edu}}}\sectd \psz1\sbknone\linex0\endnhere\sectlinegrid360\sectdefaultcl\sectrsid944938\sftnbj {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf17\insrsid15733163\charrsid13114562 
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 \tab \tab \tab (215) }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163 926-2146}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par As stated in your contract with Temple University Press, obtaining all required permissions is}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+your responsibility as an author. }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 The Press must have in hand all permissions, required}{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 
+\ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 acknowledgements, and photo/illustration captions for all copyrighted and/or previously}{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \ai\af0\afs20 
+\ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 published material before your book can enter the production phase of publication}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 . The}{\rtlch\fcs1 \af0\afs20 
+\ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 following guidelines are designed to aid you in this necessary and important task of securing}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 permission.
+\par }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 
+\par Permission is required for use of the following types of material (exclusive of material}{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 
+created by you and never before published, and/or for which you hold publishing or}{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 
+reproduction rights):
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}}\pard \ltrpar\ql \fi-360\li1083\ri0\widctlpar\wrapdefault\faauto\ls6\rin0\lin1083\itap0\pararsid4458164 {
+\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 Verbatim quotes that do not meet fair use guidelines
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}All photographs, film stills, frame enlargements, "video grabs," illustrations, figures, maps, ch
+arts, diagrams, and tables
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Any amount of poetry or song lyrics
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par I suggest creating a chart that lists material for which permission is required. Use the chart as a}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+status log for keeping track of permission requests and any permission payments to be made. A}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+chart or log is especially helpful if your book requires that you obtain quite a few permissions.}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\tx1097\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163 \tab }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 
+
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 ORIGINAL MATERIAL:
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par If material you plan to use is }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 original}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 , having }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 
+\i\fs20\cf1\insrsid15733163\charrsid13114562 never been published}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 , the contributor should sign}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 
+\af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 an agreement that grants Temple University Press permission to publish the material as well as}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 
+\ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 all publishing rights to the material.
+\par 
+\par Your editor at the Press should be notified in advance of all original materials you plan to use so}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+that contributor agreement forms can be provided to you for distribution to contributors. These}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+agreement forms are }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 only }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 for contributors of original work and should }{\rtlch\fcs1 
+\ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 not }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 be signed by an author}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 
+\af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 whose essay has been published elsewhere, }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 even if that author holds all rights to the essay.
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid9575700 If your work involves ethnographic research and/or requires you to interview participants in order to obtain material for your publication, }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 
+\i\fs20\insrsid15733163\charrsid9575700 signed releases should be obtained from all }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 interviewees, even if participant names are changed in the work}{\rtlch\fcs1 \af0\afs20 
+\ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 . The Press does not need copies}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+of these releases. However, signed releases are recommended for your own personal reference}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 and liability.
+\par }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\insrsid15733163\charrsid13114562 
+\par PREVIOUSLY PUBLISHED AND/OR COPYRIGHTED MATERIAL:
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+\par Temple University Press download forms should be used to request the required permissions.}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+However, many publishers prefer to grant permission by using their own standard forms. In}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+these instances, please be sure that permission has been granted for }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 English-language rights }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163 
+in all forms and media }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 for}{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163  }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 
+distribution throughout the world.
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+\par When using Temple Press forms, bear in mind that the people supplying the material you need}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+must have complete, accurate, and legible descriptions of the material requested in order to}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+process your request. Being careful to supply all the necessary information in your request will}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+help to insure that you get exactly what you want }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 without delay}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 . If you are unsure about any of}{
+\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 the information required, feel free to ask your editor or me for assistance. Requests for}{\rtlch\fcs1 \af0\afs20 
+\ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 permission to use copyrighted and/or previously published material should be sent to the owner}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 of the publishing rights. Contact the publisher of a recent edition of the book in which the work}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163 
+ }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 appears, and they will refer you to the publisher, person, or organization, that controls these}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 
+\af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 rights if they do not.
+\par 
+\par You should not assume that the party in whose name the copyright is listed controls the}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+publishing rights. Although a work is registered in the name of the copyright owner, it is the}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+publishing rights holder that has jurisdiction to grant reprint permission.
+\par 
+\par In the case of quoted material, the description on the "Request for Permission to }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163 Use }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+Copyrighted Material" form should include:
+\par 
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}}\pard \ltrpar\ql \fi-360\li1083\ri0\widctlpar
+\jclisttab\tx1083\wrapdefault\faauto\ls7\rin0\lin1083\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 Essay/chapter author
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Essay/chapter title
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Title of source book, volume, or journal
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Author/editor of source book or volume
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Publisher
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Date of copyright/publication
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Page number(s) for quoted material
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Beginning and ending lines of quoted passage(s)
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+\par Many publishers will want a photocopy of the material to be used, indicating any alterations or}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+editing changes, before granting reprint permission. You may, therefore, wish to send a copy of}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+the requested material along with your request to }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\insrsid15733163\charrsid13114562 avoid any delay}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 .
+\par }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\insrsid15733163\charrsid13114562 
+\par }\pard \ltrpar\qc \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\insrsid15733163\charrsid13114562 Art, Photographs, Film Stills, Frame Enlargements, or "Video Grabs"
+\par 
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+Art or photographs appearing in a published book or catalog, as well as film stills, "video grabs,"}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+and frame enlargements should be treated as previously published and/or copyrighted material.}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+In the case of art and photographs, contact the publisher of the book in which the illustration or}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+photograph appears; they will refer you to the owner of reproduction rights to the work if they do}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+not hold these rights. The credit line for art and photos can be misleading since the accredited}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+artist, photographer, archive, or copyright owner does not necessarily hold these rights and are}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+thus not necessarily in a position to grant permission to reproduce the work.
+\par 
+\par For permission to reproduce film stills or include frame enlargements, contact the production}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+company for the film or TV show in question. Be sure to include with your request a photocopy}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+of the still, "video grab," and/or frame enlargement you wish to use. Film stills can be obtained}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+from MOMA, the Museum of Modern Art (visit their web page at }{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 HYPERLINK}}{\fldrslt {\rtlch\fcs1 \ab\af0 \ltrch\fcs0 \b\insrsid14777500 Error! Hyperlink reference not valid.}}}\sectd 
+\psz1\sbknone\linex0\endnhere\sectlinegrid360\sectdefaultcl\sectrsid944938\sftnbj {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf18\insrsid15733163\charrsid13114562  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 for}{
+\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 contact and other information). Note: Although MOMA can provide film stills on request,}{\rtlch\fcs1 \af0\afs20 
+\ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 permission still need be obtained from the appropriate production company (the Internet Movie}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 Database, located on the Web at }{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163 HYPERLINK "http://www.imdb.com"}{\rtlch\fcs1 
+\af0 \ltrch\fcs0 \insrsid14777500 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b4200000068007400740070003a002f002f007700770077002e0069006d00640062002e0063006f006d002f000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 
+\af0\afs20 \ltrch\fcs0 \cs15\fs20\cf17\insrsid15733163\charrsid9575700 http://www.imdb.com}}}\sectd \psz1\sbknone\linex0\endnhere\sectlinegrid360\sectdefaultcl\sectrsid944938\sftnbj {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 , is a good resource for identifying the}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+production company for a particular film).
+\par 
+\par Request to reproduce published artwork or photographs should }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163 also }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 be sent on the "Request }{\rtlch\fcs1 
+\af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163 for Permission to Use Copyrighted Material}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 " form and include:
+\par 
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}}\pard \ltrpar\ql \fi-360\li1083\ri0\widctlpar
+\jclisttab\tx1083\wrapdefault\faauto\ls8\rin0\lin1083\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 Artist or photographer
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Title of work
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Date of the work
+\par }\pard \ltrpar\ql \li720\ri0\widctlpar\wrapdefault\faauto\rin0\lin720\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 A photocopy of the illustration as it appears in the publication may }{\rtlch\fcs1 
+\ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 expedite the processing of}{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 
+your permission request}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 .
+\par 
+\par Requests to reproduce published artwork or photographs should be sent on the "}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163 Request for Permission to Use Copyrighted Material}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 " form including:
+\par 
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}}\pard \ltrpar\ql \fi-360\li1083\ri0\widctlpar
+\jclisttab\tx1083\wrapdefault\faauto\ls9\rin0\lin1083\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 Title of film or television show
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Date of the film or air date for the television show episode featured in the still or frame enlargement
+
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Brief description of the action taking place in the still or frame enlargement
+\par }\pard \ltrpar\ql \li720\ri0\widctlpar\wrapdefault\faauto\rin0\lin720\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 Note}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 : In addition to reprint/reproduction permission, prints or transparencies of photographs,}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 illustrations, film stills, or frame enlargements must be obtained for production purposes (see the}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 guidelines for submitting illustrations for reproduction). Thus, your request for permission}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 should also indicate the medium in which prints are requested from the owner of the}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 
+\fs20\cf1\insrsid15733163\charrsid13114562 reproduction rights. The description of the medium should include:
+\par 
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}}\pard \ltrpar\ql \fi-360\li1083\ri0\widctlpar
+\jclisttab\tx1083\wrapdefault\faauto\ls10\rin0\lin1083\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 Black-and-white or color
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Prints or transparencies
+\par {\listtext\pard\plain\ltrpar \rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \f10\fs20\cf1\insrsid15733163\charrsid13114562 \loch\af10\dbch\af0\hich\f10 \'77\tab}Size of image
+\par }\pard \ltrpar\ql \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 The Press normally requires 5x7 glossy prints for black and white reproduction and 4x5}{\rtlch\fcs1 \ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163  }{\rtlch\fcs1 
+\ab\af0\afs20 \ltrch\fcs0 \b\fs20\cf1\insrsid15733163\charrsid13114562 transparencies for color reproduction.
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par For additional information, see the "Fair Use of Copyrighted Material" download and "When}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+Works Pass into the Public Domain" Internet link. You may also want to review }{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 The Chicago}{\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163  }{
+\rtlch\fcs1 \ai\af0\afs20 \ltrch\fcs0 \i\fs20\cf1\insrsid15733163\charrsid13114562 Manual of Style }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 published by the University of Chicago Press for a more detailed discussion.
+
+\par 
+\par Best of luck in obtaining the appropriate permissions. Remember that your editor and I are here}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163  }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+to assist you should you have any questions or concerns regarding this important process.}{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\cf1\insrsid15733163\charrsid13114562 
+\par }{\rtlch\fcs1 \af0\afs20 \ltrch\fcs0 \fs20\insrsid15733163\charrsid13114562 
+\par }\pard \ltrpar\qc \li0\ri0\widctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid4458164 {\rtlch\fcs1 \af0 \ltrch\fcs0 \insrsid15733163\charrsid944938 
+\par }}

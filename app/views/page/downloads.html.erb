@@ -1,0 +1,33 @@
+
+	<div class="row">
+		<div class="col">
+			<h1>Document Downloads</h1>
+		</div>
+	</div>
+
+<div class="container" id="people">
+
+
+	<% @documents_by_contact.each do |docs, contact| %>
+		<div class="row">
+			<div class="col">
+				<h2 style="margin-top: 21px;">
+					<%= contact.document_contact %>
+					<span class="small" style="float:right">
+						Contact: <%= mail_to contact.email, contact.name, subject: contact.document_contact %>
+					</span>
+				</h2>
+			</div>
+		</div>
+	
+		<% for doc in docs %>
+			<div class="row">
+				<div class="col">
+							<%= link_to doc.title, doc.filename %>
+				</div>
+			</div>
+		<% end %>
+
+	<% end %>
+</div>
+

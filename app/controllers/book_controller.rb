@@ -1,11 +1,6 @@
 class BookController < ApplicationController
 
-
-
-
-
-  def index
-  	#@books = Book.all
+def index
   	if params[:id].nil?
   		params[:id] = 'a'
   	end

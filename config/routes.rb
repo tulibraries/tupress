@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
 
-  resources :documents
-  resources :faqs
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -17,21 +15,22 @@ end
 
 controller :page do
 	get		'page/index'	          => :index
+  get   'press-info'            => :press_info,         :id => 1
+  get   'rights'                => :rights,             :id => 2
+  get   'submissions'           => :submissions,        :id => 3
+  get   'review-copy'           => :review_copy,        :id => 4
+  get   'payment'               => :payment,            :id => 5
+  get   'copy-policy'           => :copypolicy,         :id => 6
+  get   'copyright'             => :copyright,          :id => 7
+  get   'university-presses'    => :university_presses, :id => 8
+  get   'order'                 => :order,              :id => 9
 	get		'contact'			          => :contact
-  get   'order'                 => :order, :id => 3
-  get   'payment'               => :payment, :id => 5
-  get   'copy-policy'           => :copypolicy, :id => 6
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
-  get   'review-copy'           => :review_copy, :id => 4
-  get   'press-info'            => :press_info, :id => 1
   get   'people'                => :people
-  get   'rights'                => :rights, :id => 2
   get   'foreign-rights'        => :foreign_rights
-  get   'submissions'           => :submissions, :id => 3
-  get   'university-presses'    => :university_presses, :id => 8
   get   'faq'                   => :faq
-  get   'copyright'             => :copyright, :id => 7
+  get   'downloads'             => :downloads
   get   'page/new'              => :new
   post  'pages'                 => :create
   post  'pages/:id'             => :update
@@ -55,6 +54,10 @@ controller :reps do
   get 'sales-reps'        => :sales_reps
 end
 
+controller :people do 
+  get 'people/list'        => :list
+end
+
 
 resources :links
 resources :feeds
@@ -65,7 +68,7 @@ resources :agencies
 resources :conferences
 resources :reps
 resources :regions
-
-
+resources :documents
+resources :people
 
 end

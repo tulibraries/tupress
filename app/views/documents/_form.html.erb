@@ -11,24 +11,23 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= f.label :file_upload %>
+    <%= f.file_field :file %>
+  </div>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-
   <div class="field">
-    <%= f.label :filename %>
-    <%= f.text_field :filename %>
+    <%= f.label :format %>
+    <%= f.text_field :format %>
   </div>
 
   <div class="field">
     <%= f.label :department %>
     <%= f.text_field :department %>
-  </div>
-
-  <div class="field">
-    <%= f.label :format %>
-    <%= f.text_field :format %>
   </div>
 
   <div class="actions">

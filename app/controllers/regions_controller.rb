@@ -33,7 +33,6 @@ class RegionsController < ApplicationController
   end
 
   # PATCH/PUT /feeds/1
-  # PATCH/PUT /feeds/1.json
   def update
     respond_to do |format|
       if @region.update(region_params)
@@ -45,7 +44,6 @@ class RegionsController < ApplicationController
   end
 
   # DELETE /feeds/1
-  # DELETE /feeds/1.json
   def destroy
     @region.destroy
     respond_to do |format|

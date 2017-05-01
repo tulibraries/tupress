@@ -1,0 +1,72 @@
+<%= form_for(person) do |f| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :name %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :name, size: 100 %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :email %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :email, size: 100 %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :position %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :position, size: 100 %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :department %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :department, size: 100 %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :position_description %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :position_description, size: 100 %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-1">
+    <strong><%= f.label :contact_for %></strong>
+  </div>
+  <div class="col">
+    <%= f.text_field :document_contact, size: 100 %>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

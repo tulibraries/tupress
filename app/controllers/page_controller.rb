@@ -31,8 +31,10 @@ require 'pry'
   def conferences
     @conferences = Conference.all.sort_by {|conference| conference.month}
     @conferences_month = @conferences.group_by {|t| t.month}
-
-    # binding.pry
+  end
+  def downloads
+    @documents_by_dept = Document.all.group_by {|t| t.department}
+    @documents_by_contact = @documents_by_dept.map {|dept_name, documents| [documents, Person.find_by(document_contact: dept_name)]}
   end
   def review_copy
     @page = Page.find_by(id: params[:id])

@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
-
+require 'pry'
   # GET /documents
   # GET /documents.json
   def index
@@ -25,6 +25,8 @@ class DocumentsController < ApplicationController
   # POST /documents.json
   def create
     @document = Document.new(document_params)
+
+    @document.file = params[:document][:file]
 
     respond_to do |format|
       if @document.save
@@ -69,6 +71,6 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:title, :filename, :department, :format)
+      params.require(:document).permit(:title, :file, :department, :format)
     end
 end
