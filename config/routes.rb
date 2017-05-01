@@ -58,6 +58,10 @@ controller :people do
   get 'people/list'        => :list
 end
 
+controller :events do
+  get 'calendar'           => :calendar
+end
+
 
 resources :links
 resources :feeds
@@ -70,5 +74,6 @@ resources :reps
 resources :regions
 resources :documents
 resources :people
+resources :events
 
 end

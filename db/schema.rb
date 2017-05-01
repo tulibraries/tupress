@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501164953) do
+ActiveRecord::Schema.define(version: 20170501201804) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "title"
@@ -110,6 +110,16 @@ ActiveRecord::Schema.define(version: 20170501164953) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.string   "description"
+    t.string   "where"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "time"
+  end
+
   create_table "faqs", force: :cascade do |t|
     t.string   "q"
     t.text     "a"
@@ -146,9 +156,9 @@ ActiveRecord::Schema.define(version: 20170501164953) do
     t.string   "position"
     t.string   "department"
     t.string   "position_description"
-    t.string   "document_contact"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.string   "document_contact"
   end
 
   create_table "regions", force: :cascade do |t|
