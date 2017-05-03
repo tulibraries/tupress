@@ -21,6 +21,14 @@
 .empty-warning {
 	margin-top: 28px;
 }
+#catalogs {
+	li {
+		padding: 28px;
+		border-bottom:solid #ccc 1px;
+		font-size: 1.35rem;
+		background-color: #f7f7f7;
+	}
+}
 #book_show {
 	h1 {
 		padding-top: 10px;
