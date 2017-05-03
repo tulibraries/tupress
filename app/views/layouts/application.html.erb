@@ -85,8 +85,9 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		          <%= link_to "Commonwealth", "https://tupjournals.temple.edu/index.php/commonwealth/index", :class=>"dropdown-item" %>
-		          <%= link_to "Kalfou", "https://tupjournals.temple.edu/index.php/kalfou/index", :class=>"dropdown-item" %>
+		        <% get_journals.each do |j| %>
+		          <%= link_to j.title, j.url, :class=>"dropdown-item" %>
+		         <% end %>
 		        </div>
 		      </li>
 		      <li class="nav-item">

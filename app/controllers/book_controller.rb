@@ -1,6 +1,6 @@
 class BookController < ApplicationController
 
-def index
+  def index
   	if params[:id].nil?
   		params[:id] = 'a'
   	end

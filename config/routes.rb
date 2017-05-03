@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -76,5 +75,6 @@ resources :regions
 resources :documents
 resources :people
 resources :events
+resources :journals
 
 end
