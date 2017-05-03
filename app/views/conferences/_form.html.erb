@@ -28,8 +28,7 @@
     <%= f.label :month %>
   </div>
   <div class="col">
-    <%= #f.month_field(:month)
-        select("conference", "month", set_month {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+    <%= select("conference", "month", set_month {|p| [ p.name, p.id ] }, { include_blank: true }) %>
   </div>
 </div>
 

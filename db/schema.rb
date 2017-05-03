@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501201804) do
+ActiveRecord::Schema.define(version: 20170502151505) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "title"
@@ -111,13 +111,15 @@ ActiveRecord::Schema.define(version: 20170501201804) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "startdate"
-    t.datetime "enddate"
     t.string   "description"
     t.string   "where"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "time"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.time     "time"
+    t.string   "timezone"
+    t.time     "endtime"
   end
 
   create_table "faqs", force: :cascade do |t|

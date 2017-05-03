@@ -1,23 +1,32 @@
-<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Startdate:</strong>
-  <%= @event.startdate %>
+  <strong>Date:</strong>
+  <%= @event.startdate.strftime('%b %d')  %>
+	<% unless @event.enddate == @event.startdate %>
+		to <%= @event.enddate.strftime('%b %d')  %>
+	<% end %>
 </p>
 
-<p>
-  <strong>Enddate:</strong>
-  <%= @event.enddate %>
-</p>
+
+<% unless @event.time.strftime('%l:%M %p') == '12:00 AM' %>
+	<p>
+	  <strong>Time:</strong>
+	  <%= @event.time.strftime('%l:%M %p') %> 
+	  <% unless @event.endtime.strftime('%l:%M %p') == '12:00 AM' %>
+	  	to <%= @event.endtime.strftime('%l:%M %p') %>
+	  <% end %>
+	  <small>[<%= @event.timezone %>]</small>
+	</p>
+<% end %>
 
 <p>
   <strong>Description:</strong>
-  <%= @event.description %>
+  <%= @event.description.html_safe %>
 </p>
 
 <p>
   <strong>Where:</strong>
-  <%= @event.where %>
+  <%= @event.where.html_safe %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

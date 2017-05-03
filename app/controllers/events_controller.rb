@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
+
+  # scope :group_by_month,   -> { group("date_trunc('month', startdate) ") }
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  require 'pry'
 
   # GET /events
   # GET /events.json
@@ -13,9 +16,37 @@ class EventsController < ApplicationController
   end
 
   def calendar
-    @events = Event.all
+    date = Time.now
+    request_year = params[:year]
+    request_year ? year = request_year : year = date.year
+    @january_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '01').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @february_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '02').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC') 
+    @march_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '03').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @april_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '04').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @may_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '05').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @june_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '06').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @july_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '07').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @august_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '08').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @september_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '09').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @october_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '10').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @november_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '11').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    @december_events = Event.where("CAST(strftime('%m', startdate) as INT) = ?", '12').where("CAST(strftime('%Y', startdate) as INT) = ?", year).order('startdate ASC')
+    case params[:month]
+      when 'january' then @events = @january_events
+      when 'february' then @events = @february_events
+      when 'march' then @events = @march_events
+      when 'april' then @events = @april_events
+      when 'may' then @events = @may_events
+      when 'june' then @events = @june_events
+      when 'july' then @events = @july_events
+      when 'august' then @events = @august_events
+      when 'september' then @events = @september_events
+      when 'october' then @events = @october_events
+      when 'november' then @events = @november_events
+      when 'december' then @events = @december_events
+    end
   end
-  
+
   # GET /events/new
   def new
     @event = Event.new
@@ -73,6 +104,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:startdate, :enddate, :description, :where)
+      params.require(:event).permit(:startdate, :enddate, :description, :where, :time, :endtime, :timezone)
     end
 end

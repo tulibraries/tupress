@@ -20,5 +20,6 @@ $(document).ready(function () {
 	$("button[type='reset']").on('click', function(){
 		location.reload();
 	});
+	
 
 });

@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :description, :style => 'vertical-align:top;' %>
+    <%= f.text_area :description, :cols => 95, :rows => 3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :where %>
+    <%= f.text_field :where, :size => 100 %>
+  </div>
+
+  <div class="field">
     <%= f.label :startdate %>
     <%= f.date_select :startdate %>
   </div>
@@ -23,19 +33,17 @@
 
 
   <div class="field">
-    <%= f.label :time %>
+    <%= f.label :start_time %>
     <%= f.time_select :time,  {ampm: true, :default => {:hour => '00', :minute => '00'}} %>
   </div>
-
-
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.label :end_time %>
+    <%= f.time_select :endtime,  {ampm: true, :default => {:hour => '00', :minute => '00'}} %>
   </div>
 
   <div class="field">
-    <%= f.label :where %>
-    <%= f.text_field :where %>
+    <%= f.label :timezone %>
+    <%= f.select :timezone, options_for_select(time_zones, 'EST'), html: {selected: true} %>
   </div>
 
   <div class="actions">

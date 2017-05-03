@@ -60,6 +60,7 @@ end
 
 controller :events do
   get 'calendar'           => :calendar
+  get 'calendar/:id'       => :calendar
 end
 
 

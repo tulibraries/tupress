@@ -19,4 +19,5 @@
 //= require bootstrap-sprockets
 //= require form_validation.js
 //= require SocialShare.js
+//= require events.js
 //= require_tree .
