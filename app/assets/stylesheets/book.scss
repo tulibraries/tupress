@@ -8,7 +8,7 @@
 	.media {
 		text-align:center;
 		img {
-			width:120px;
+			width:140px;
 		}
 	}
 	p.format {
@@ -17,6 +17,9 @@
 	p.subtitle {
 		font-style: italic;
 	}
+}
+.empty-warning {
+	margin-top: 28px;
 }
 #book_show {
 	h1 {
