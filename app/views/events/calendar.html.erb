@@ -27,15 +27,17 @@
       <p style="line-height:1;">
       <strong><%= e.startdate.strftime('%b %d') %></strong>
       <% unless e.enddate.strftime('%d') == e.startdate.strftime('%d') %>
-      - <strong><%= e.enddate.strftime('%b %d') %></strong>
+      - <strong><%= e.enddate.strftime('%d') %></strong>
       <% end %>
-
+      <% unless e.time.strftime('%l:%M %p') == '12:00 AM' %>
       <p><small><%= e.time.strftime('%l:%M %p') %>
+
       <% unless e.endtime.blank? || e.endtime.strftime('%l:%M %p') == '12:00 AM' %>
       to <%= e.endtime.strftime('%l:%M %p') %>
       <% end %>
       <% unless e.timezone == 'EST' %>
         <br />[<%= e.timezone %>]
+        <% end %>
       <% end %>
       </small></p>
       </p>
