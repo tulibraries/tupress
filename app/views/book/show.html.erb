@@ -15,49 +15,47 @@
 	</div>
 	</div>
 	<div class="col-md-4">
-
-			<div style="width: 100%;float:right;">
-			<p class="text-center" style="float:left;background-color: #e5dccb;border: solid #bbb 1px;border-radius:7px;padding:10px;width: 100%;margin-bottom: 0;"><%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
+		<div class="social-shopping">
+			<p class="text-center buy-it">
+				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
-				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :style=>"font-weight:600;font-size:105%;" %> 
-				</p>
-				<p class="text-right" style="float:right;display:inline-block;margin-top:21px;padding-right:7px;margin-bottom:0;">
-					<span class='share s_twitter'></span> 
-					<span class='share s_facebook'></span> 
-					<span class='share s_tumblr'></span>
-					<span class='share s_linkedin'></span>
-					<span class='share s_pinterest'></span>
-					</p>
-		</div>
-		</div>
-</div>
-	<div class="row no-gutters book-info">
-		<div class="col col-md-3">
-			<%= image_tag @book.cover_image, alt: "Book Cover", style: "width:240px;" %>
-		</div>
-		<div class="col col-md-3">
-
-			<div style="font-size: 85%;" >
-			
-				<% @book.binding.each do |binding| %>
-				<p>
-					<%= binding[:type] %>: <strong><%= number_to_currency(binding[:price]) %></strong>
-						<br />
-						EAN: <%= binding[:ean] %><br />
-						Publication: <%= binding[:pub_date] %> <br /> 
-				</p>
-				<% end %>
-			
-				<p>
-				<%= @book.format.html_safe %>
-				</p>
-			</div>
-			
-		</div>
-		<div class="col col-md-6">
-			<p ><%= @book.reviews.first.html_safe %></p>
+				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %> 
+			</p>
+			<p class="text-right social-icons">
+				<span class='share s_twitter'></span> 
+				<span class='share s_facebook'></span> 
+				<span class='share s_tumblr'></span>
+				<span class='share s_linkedin'></span>
+				<span class='share s_pinterest'></span>
+			</p>
 		</div>
 	</div>
+</div>
+
+<div class="row no-gutters book-info">
+	<div class="col col-md-3">
+		<%= image_tag @book.cover_image, alt: "Book Cover" %>
+	</div>
+	<div class="col col-md-3">
+		<div class="format">
+			<% @book.binding.each do |binding| %>
+			<p>
+				<%= binding[:type] %>: <strong><%= number_to_currency(binding[:price]) %></strong>
+				<br />
+				EAN: <%= binding[:ean] %><br />
+				Publication: <%= binding[:pub_date] %> <br /> 
+			</p>
+			<% end %>
+			<p>
+			<%= @book.format.html_safe %>
+			</p>
+		</div>
+	</div>
+	<div class="col col-md-6">
+		<p><%= @book.reviews.first.html_safe %></p>
+	</div>
+</div>
+
 	<div class="row">	
 		<div class="col">
 			<h2>Description</h2>
@@ -100,12 +98,12 @@
 			<h2>Subjects</h2>	
 		</div>
 	</div>
-	<div class="row" style="margin-left: 21px;">
-			<% @subjects.each do |subject| %>
-		<div class="col-md-4 list-group-item">
-			 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id}, :style=>'font-size:110%;' %>
-		</div>
-			<% end %>
+	<div class="row subjects-group">
+		<% @subjects.each do |subject| %>
+			<div class="col-md-4 list-group-item">
+				 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %>
+			</div>
+		<% end %>
 	</div>
 	<% end %>
 
@@ -116,13 +114,13 @@
 		<ul class="list-unstyled list-inline series">
 		<% @series.each do |series| %>
 		 <li class="list-inline-item">
-		 	<p style="background-color: #f7f7f7;padding:10px;border-radius:7px;">
-		 		<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id}, :style=>'font-size:115%;' %>
+		 	<p class="series-title">
+		 		<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %>
 		 		<% if !series.editors.empty? %>
 			 		<span class="editors">edited by <%= series.editors %></span>
 			 	<% end %>
 		 	</p>
-		 	<p style="margin-left: 14px;"><%= series.description %></p>
+		 	<p class="series-description"><%= series.description %></p>
 		 </li>
 		<% end %>
 		</div>

@@ -20,7 +20,7 @@
 		<div class="media-body">
 			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
-				<p><em><%= book.subtitle %></em></p>
+				<p class="subtitle"><%= book.subtitle %></p>
 			<% end %>
 			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
 			<p class="format">

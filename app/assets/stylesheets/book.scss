@@ -36,6 +36,52 @@
 	h2 {
 		margin-top: 28px!important;
 	}
+	.social-shopping {
+		width: 100%;
+		float:right;
+		.buy-it {
+			float:left;
+			background-color: #e5dccb;
+			border: solid #bbb 1px;
+			border-radius:7px;
+			padding:10px;
+			width: 100%;
+			margin-bottom: 0;
+		}
+		.buy-it-text {
+			font-weight:600;
+			font-size:105%;
+		}
+	}
+	.social-icons {
+		float:right;
+		display:inline-block;
+		margin-top:21px;
+		padding-right:7px;
+		margin-bottom:0;
+	}
+	p.format {
+		font-size: 65%;
+	}
+	.subjects-group {
+		margin-left: 21px;
+		.list-group-item {
+			font-size:110%;
+		}
+	}
+	ul.series li p {
+		padding:10px;
+		border-radius:7px;
+		a, a:visited, a:active, a:hover {
+			font-size:115%;
+		}
+	}
+	p.series-title {
+		background-color: #f7f7f7;
+	}
+	p.series-description {
+		margin-left: 14px;
+	}
 }
 .award {
 	color: #963;
@@ -58,6 +104,9 @@ span.author {
 }
 .book-info {
 	margin-top: 21px;
+	img {
+		width:240px;
+	}
 }
 .blurb {
 	color: #903;
