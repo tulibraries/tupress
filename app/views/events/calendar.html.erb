@@ -5,7 +5,7 @@
       <span style="float:right;">
         <small>
         <form action="/calendar" method="get">
-          <%= select_tag 'month', options_for_select(month_list {|p| [ p.name, p.id ] }, params[:month]) %>
+          <%= select_tag 'month', options_for_select(set_month {|p| [ p.name, p.id ] }, params[:month]) %>
           <%= select_tag 'year', options_for_select(year_list {|p| [ p.name, p.id ] }, params[:year]) %>
           <%= submit_tag 'go' %>
         </form>
