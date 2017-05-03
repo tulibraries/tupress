@@ -2,7 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.book-row {
+	padding: 28px;
+	border-bottom:solid #ccc 1px;
+	.media {
+		text-align:center;
+		img {
+			width:120px;
+		}
+	}
+	p.format {
+		font-size: 65%;
+	}
+	p.subtitle {
+		font-style: italic;
+	}
+}
 #book_show {
 	h1 {
 		padding-top: 10px;
@@ -22,10 +37,6 @@ div.author {
 	clear: both;
 	margin-bottom: 21px;
 	margin-top: 10px;
-}
-div.author {
-	/*margin-top: -10px;
-	padding-top: 0;*/
 }
 span.author {
 	font-weight: 600;
