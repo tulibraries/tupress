@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <h1>Calendar of Events 
-      <span style="float:right;">
+      <span class="dates">
         <small>
         <form action="/calendar" method="get">
           <%= select_tag 'month', options_for_select(set_month {|p| [ p.name, p.id ] }, params[:month]) %>
@@ -23,26 +23,26 @@
   </div>
   <% @events.each do |e| %>
   <div class="row">
-    <div class="col col-md-2 text-center" style="border-bottom:solid #aaa 1px;background-color:#f7f7f7;padding-top:10px;">
-      <p style="line-height:1;">
-      <strong><%= e.startdate.strftime('%b %d') %></strong>
-      <% unless e.enddate.strftime('%d') == e.startdate.strftime('%d') %>
-      - <strong><%= e.enddate.strftime('%d') %></strong>
-      <% end %>
-      <% unless e.time.strftime('%l:%M %p') == '12:00 AM' %>
-      <p><small><%= e.time.strftime('%l:%M %p') %>
+    <div class="time col col-md-2 text-center">
 
-      <% unless e.endtime.blank? || e.endtime.strftime('%l:%M %p') == '12:00 AM' %>
-      to <%= e.endtime.strftime('%l:%M %p') %>
-      <% end %>
-      <% unless e.timezone == 'EST' %>
-        <br />[<%= e.timezone %>]
+        <strong><%= e.startdate.strftime('%b %d') %></strong>
+        <% unless e.enddate.strftime('%d') == e.startdate.strftime('%d') %>
+          - <strong><%= e.enddate.strftime('%d') %></strong>
         <% end %>
-      <% end %>
-      </small></p>
-      </p>
+        <% unless e.time.strftime('%l:%M %p') == '12:00 AM' %>
+          <p>
+            <%= e.time.strftime('%l:%M %p') %>
+            <% unless e.endtime.blank? || e.endtime.strftime('%l:%M %p') == '12:00 AM' %>
+              to <%= e.endtime.strftime('%l:%M %p') %>
+            <% end %>
+            <% unless e.timezone == 'EST' %>
+             <br />[<%= e.timezone %>]
+           <% end %>
+          </p>
+        <% end %>
+ 
     </div>
-    <div class="col col-md-10" style="border-bottom: solid #ccc 1px;padding-top: 7px">
+    <div class="event-description col col-md-10">
       <p><%= e.description.html_safe %></p>
       <p><em>Where</em>: <%= e.where.html_safe %></p>
     </div>
@@ -52,7 +52,7 @@
   <% else %>
   <div class="row">
     <div class="col text-center">
-      <span style="display:inline-block;margin-top: 28px;padding:14px;background-color: #f7f7f7;">No events match the selected month.</span>
+      <span class="error">No events match the selected month.</span>
     </div>
   </div>
 <% end %>

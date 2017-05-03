@@ -1,3 +1,29 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#calendar {
+	.dates {
+		float:right;
+	}
+	.time {
+		border-bottom:solid #aaa 1px;
+		background-color:#f7f7f7;
+		padding-top:10px;
+		p {
+			line-height: 1.35;
+			font-size: 80%;
+			margin-top: 14px;
+		}
+	}
+	.event-description {
+		border-bottom: solid #ccc 1px;
+		padding-top: 7px
+	}
+	.error {
+		display:inline-block;
+		margin-top: 28px;
+		padding:14px;
+		background-color: #f7f7f7;
+	}
+}
