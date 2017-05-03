@@ -6,22 +6,6 @@ module EventsHelper
 			['PST', 'PST']
 		]
 	end
-	def month_list
-		[
-			["January", "january"],
-			["February", "february"],
-			["March", "march"],
-			["April", "april"],
-			["May", "may"],
-			["June", "june"],
-			["July", "july"],
-			["August", "august"],
-			["September", "september"],
-			["October", "october"],
-			["November", "november"],
-			["December", "december"]
-		]
-	end
 	def year_list
 		date = Time.now
 		[
