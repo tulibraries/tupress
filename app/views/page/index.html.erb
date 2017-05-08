@@ -61,12 +61,12 @@
 
 <div class="row" style="margin-top:28px">
 <div class="col">
-<h2 style="text-transform:uppercase;letter-spacing:.45rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">In the News</h2>
+<h2 style="text-transform:uppercase;letter-spacing:.45rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">Hot Off the Press!</h2>
 </div>
 </div>
 
 <div class="row">
-<% @news_books.each do |book| %>
+<% @hot_books.each do |book| %>
   <div class="col col-md-3 text-center new-book">
     <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;box-shadow: 6px 6px 7px #666;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
     <p class="text-center" style="font-weight:600;"><%= book.title.html_safe %></p>
@@ -78,12 +78,12 @@
 <div class="col col-md-8">
 <div class="row" style="margin-top: 28px;">
   <div class="col">
-    <h2 style="text-transform:uppercase;letter-spacing:.64rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">Hot off the Press!</h2>
+    <h2 style="text-transform:uppercase;letter-spacing:.64rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">In the News</h2>
   </div>
 </div>
 <div class="row" style="padding: 14px;padding-bottom: 28px;">
 <div class="col">
-<% @hot_books.each do |book| %>
+<% @news_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
     <%= link_to image_tag(book.cover_image, alt: 'Book Cover', border: 0, class: 'd-flex', style: 'height:180px;margin:auto;'), {controller: 'book', action: 'show', :id=>book.book_id}, :style=>'width:100%;' %>
@@ -95,12 +95,13 @@
       <% end %>
       </h2>
       <p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
-      <p style="line-height:1.2"><small><%= book.hot_text.truncate(500).html_safe %></small></p>
+      <p style="line-height:1.2"><small><%= book.news_text.truncate(500).html_safe %></small></p>
   </div>
 </div>
 <% end %>
 </div>
 </div>
+
 </div>
 
 
