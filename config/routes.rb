@@ -9,6 +9,7 @@ controller :book do
   get   'awards'				=> :awards
   get   'catalogs'      => :catalogs
   get   'catalogs/:id'  => :catalogs_by_season
+  get   'book/:id/edit' => :edit
   post  'book/:id'      => :update
 end
 

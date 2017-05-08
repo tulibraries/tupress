@@ -11,7 +11,7 @@
   	<div class="container">
   	 <ul class="list-group">
       <% @links.each do |link| %>
-       <li class="list-group-item"><%= link_to link.title, link.link %></li>
+       <li class="list-group-item"><%= link_to link.title, "http://"+link.link %></li>
       <% end %>
       </ul>
     </div>

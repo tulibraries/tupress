@@ -57,36 +57,38 @@
 </div>
 
 
-<!-- Hot off the Press -->
-
 <div class="row" style="margin-top:28px">
 <div class="col">
-<h2 style="text-transform:uppercase;letter-spacing:.45rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">In the News</h2>
+<h2 style="margin-top: 0;"><%= image_tag "news.gif", alt: 'News' %></h2>
 </div>
 </div>
 
 <div class="row">
+
 <% @news_books.each do |book| %>
-  <div class="col col-md-3 text-center new-book">
-    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;box-shadow: 6px 6px 7px #666;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
-    <p class="text-center" style="font-weight:600;"><%= book.title.html_safe %></p>
+  <div class="col col-md-4 text-center new-book">
+    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:210px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+    <p><%= book.news_text.truncate(420).html_safe %></p>
   </div>
 <% end %>
+
 </div>
 
-<div class="row"> <!-- large-well -->
-<div class="col col-md-8">
+
+
+
 <div class="row" style="margin-top: 28px;">
   <div class="col">
-    <h2 style="text-transform:uppercase;letter-spacing:.64rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">Hot off the Press!</h2>
+    <h2><%= image_tag "hotoffthepress.gif", alt: 'Hot off the press' %></h2>
   </div>
 </div>
-<div class="row" style="padding: 14px;padding-bottom: 28px;">
-<div class="col">
+
+<div class="row" style="padding: 14px;border-bottom:solid #eee 1px;padding-bottom: 28px;">
+<div class="col col-md-11">
 <% @hot_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
-    <%= link_to image_tag(book.cover_image, alt: 'Book Cover', border: 0, class: 'd-flex', style: 'height:180px;margin:auto;'), {controller: 'book', action: 'show', :id=>book.book_id}, :style=>'width:100%;' %>
+    <%= link_to image_tag(book.cover_image, alt: 'Book Cover', border: 0, class: 'd-flex mr-3', style: 'height:160px;margin:auto;'), {controller: 'book', action: 'show', :id=>book.book_id}, :style=>'width:100%;' %>
   </div>
   <div class="media-body" style="padding-left: 28px;">
   <h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %>
@@ -100,25 +102,25 @@
 </div>
 <% end %>
 </div>
+
+
 </div>
-</div>
 
 
 
-<div class="col col-md-3 offset-md-1 home-sidebar">
-<div class="row" >
-<div class="col">
+
+<div class="row" id="bottom-row">
+<div class="col col-md-11 offset-md-1">
 <div class="row">
-  <div class="col card">
+  <div class="col col-md-3">
     <h2 style="color:#903;" class="text-center">Spring 2017 Catalog</h2>
     <p class="text-center">
-    <%= link_to image_tag('spring17.gif', alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :id=>'1'} %>
+    <%= link_to image_tag('spring17.gif', alt: 'catalog cover'), {controller: :book, action: :catalogs_by_season, :id=>'1'} %>
     </p>
     <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', 'http://www.temple.edu/tempress/catalogs/archive/spring2017.pdf' %></p>
   </div>
-</div>
-<div class="row">
-  <div class="col card">
+
+  <div class="col col-md-3">
     <h2 class="text-center" style="color:#903;">Books for Course Adoptions</h2>
   
   <div id="carousel2" class="carousel slide" data-ride="carousel">
@@ -150,28 +152,24 @@
     </div> <!-- carousel-inner -->
   </div><!-- carousel2 -->
   </div>
-  </div>
-<div class="row">
-  <div class="col card">
-    <div class="text-center">
+
+  <div class="col col-md-3">
+    <div class="text-center" style="height:100%;">
     <h2>
     <%= link_to 'Books on the Philadelphia Region',{controller: :book, action: :bysubject, :id=>'1071'} %>
     </h2>
     <div style="margin-top: 28px;">
-    <%= link_to image_tag('phila.jpg', alt: 'love sculpture in philadelphia', style: 'padding-bottom:35px;margin:auto;'), {controller: :book, action: :bysubject, :id=>'1071'}, :style=>"vertical-align:middle" %>
+    <%= link_to image_tag('phila.jpg', alt: 'love sculpture in philadelphia'), {controller: :book, action: :bysubject, :id=>'1071'}, :style=>"vertical-align:middle" %>
     </div>
     </div>
   </div>
 </div>
 </div>
 </div>
-</div>
-</div> <!-- container -->
-
-<div class="row" style="margin-top: 56px;border-top:solid #eee 1px;padding-top: 28px;">
+<div class="row" style="margin-top: 56px;">
 <div class="col col-md-6 offset-md-3">
 <div id="scNewsletter">
-      <p  style="color:#951936;">Subscribe to our monthly newsletter for info about new books and website content.</p>
+      <p class="small">Subscribe to our monthly newsletter for info about new books and website content.</p>
         <%= form_tag "http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", :method=>"post", :name=>"NewsletterSubscription", :id=>"NewsletterSubscription", :style=>"margin-top:7px;" do |f| %>
           <%= email_field_tag "email", nil, placeholder: "Enter your email..." %> 
           <%= text_field_tag "subject", "Newsletter Subscription", type: "hidden" %>

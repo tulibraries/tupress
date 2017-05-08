@@ -1,0 +1,19 @@
+
+<%= form_for(book, :url => {:action => "update", :id => @book.book_id}) do |f| %>
+  <p>
+  		<%= f.label :title %>
+      <%= f.text_field :title, disabled: true %> 
+  </p>
+  <p>
+      <%= f.label :author %><br />
+      <%= f.text_field :author, multiple: true, disabled: true %> <br /><br />
+      <%= f.label :hot %><br />
+      <%= f.check_box :hot %> <br /><br />
+      <%= f.label :news %><br />
+      <%= f.check_box :news %> <br /><br />
+  </p>
+  <p>
+      <%= submit_tag "Save changes", class: "btn btn-primary" %>
+  </p>
+<% end %>
+

@@ -9,7 +9,7 @@ class BookController < ApplicationController
   end
 
   def show
-  	@book = Book.find_by book_id: "#{params[:id]}"
+  	@book = Book.find_by book_id: params[:id]
     @subjects = @book.subjects.map do |s|
        Subject.find_by subject_id: s
     end
@@ -49,11 +49,11 @@ class BookController < ApplicationController
 
 
   def edit   
-    @book = Book.find_by id: "#{params[:id]}"
+    @book = Book.find_by book_id: params[:id]
   end
 
   def update
-    @book = Book.find_by id: "#{params[:id]}"
+    @book = Book.find_by book_id: params[:id]
     if @book.update!(book_params) 
       flash[:success] = "Book was successfully updated."
       redirect_to :controller=>'book', :action=>'show', :id=>@book.book_id
@@ -66,7 +66,7 @@ class BookController < ApplicationController
  private
 
   def book_params
-    params[:book].permit({:author=>[]}, :title, {:in_series=>[]}, {:subjects=>[]})
+    params[:book].permit({:author=>[]}, :title, {:in_series=>[]}, {:subjects=>[]}, :hot, :news)
   end
 
 end

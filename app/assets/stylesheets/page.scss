@@ -40,7 +40,7 @@
 		}
 	}
 	img {
-		width: 150px;
+		height: 160px;
 		margin: auto;
 		display: block;
 	}
@@ -71,4 +71,18 @@
 }
 .badge-default {
 	background-color: #a4a4a4!important;
+}
+.home-sidebar {
+	margin-top:42px;
+	.card {
+		margin: 14px 2.5%;
+		padding: 21px;
+		background-color: #f7f7f7;
+		border: solid #ccc 1px;
+		border-radius: 0;
+		border-width: 1px 0;
+		h2 {
+			font-size: 100%;
+		}
+	}
 }

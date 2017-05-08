@@ -125,10 +125,11 @@
 	}
 #scNewsletter, #scBlogContent {
 	padding: 14px;
-	background-color: #f7f7f7;
-	border-radius: 7px;
+	/*background-color: #f7f7f7;*/
+	/*border-radius: 7px;*/
 	margin-bottom: 21px;
-		border: solid #bbb 1px;
+	border-top: solid #bbb 1px;
+	border-bottom: solid #bbb 1px;
 	.blog-icon {
 		display:inline-block;
 		width: 100%;

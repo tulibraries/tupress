@@ -39,14 +39,12 @@
 	<div class="col col-md-3">
 		<div class="format">
 			<% @book.binding.each do |binding| %>
-			<p>
+			<p class="format">
 				<%= binding[:type] %>: <strong><%= number_to_currency(binding[:price]) %></strong>
 				<br />
 				EAN: <%= binding[:ean] %><br />
-				Publication: <%= binding[:pub_date] %> <br /> 
-			</p>
+				Publication: <%= binding[:pub_date] %> <br /> <br />
 			<% end %>
-			<p>
 			<%= @book.format.html_safe %>
 			</p>
 		</div>
