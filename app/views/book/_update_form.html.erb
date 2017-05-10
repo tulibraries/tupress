@@ -1,44 +1,45 @@
 
-  <%= form_for(book, :url => {:action => "create", :id => @book.book_id}) do |f| %>
+  <%= form_for(book, :url => {:action => "update", :id => @book.book_id}) do |f| %>
+
   <p>
       <%= f.label :title %>
-      <%= f.text_field :title %> 
+      <%= f.text_field :title, disabled: true %> 
   </p>
   <p>
       <%= f.label :subtitle %>
-      <%= f.text_field :subtitle %> 
+      <%= f.text_field :subtitle, disabled: true %> 
+  </p>
+  <p>
+      <%= f.label :author %>
+      <%= f.text_field :author, disabled: true %>
   </p>
   <p>
       <%= f.label :book_id_id %>
-      <%= f.text_field :book_id %>       
+      <%= f.text_field :book_id, disabled: true %>       
   </p>
   <p>
       <%= f.label :isbn %>
-      <%= f.text_field :isbn %>       
+      <%= f.text_field :isbn, disabled: true %>       
   </p>
   <p>
       <%= f.label :format %>
-      <%= f.text_field :format %>       
+      <%= f.text_field :format, disabled: true %>       
   </p>
   <p>
       <%= f.label :binding %>
-      <%= f.text_area :binding, cols: 40, rows: 15  %>
+      <%= f.text_area :binding, cols: 40, rows:5, disabled: true %>       
   </p>
   <p>
       <%= f.label :intro %>
       <%= f.text_field :intro %>       
   </p>
   <p>
-      <%= f.label :blurb %>
-      <%= f.text_field :blurb %>       
-  </p>
-  <p>
       <%= f.label :description %>
-      <%= f.text_area :description, cols: 40, rows:15 %>       
+      <%= f.text_area :description, cols: 40, rows:5 %>       
   </p>
   <p>
       <%= f.label :excerpt %>
-      <%= f.text_field :excerpt %>
+      <%= f.text_field :excerpt, disabled: true %>
   </p>
   <p>
       <%= f.label :award %>
@@ -70,33 +71,29 @@
   </p>    
   <p>
       <%= f.label :cover_image %>
-      <%= f.text_field :cover_image %>       
+      <%= f.text_field :cover_image, disabled: true %>       
   </p>       
   <p>
       <%= f.label :reviews %>
-      <%= f.text_area :reviews, cols: 40, rows:15 %>       
+      <%= f.text_area :reviews, cols: 40, rows:5, disabled: true %>       
   </p>   
   <p>
       <%= f.label :in_series %>
-      <%= f.text_area :in_series, cols: 40, rows:15 %>       
+      <%= f.text_area :in_series, cols: 40, rows:5 %>       
   </p>   
   <p>
       <%= f.label :subjects %>
-      <%= f.text_area :subjects, cols: 40, rows:15 %>  
+      <%= f.text_area :subjects, cols: 40, rows:5 %>  
   </p>     
-  <p>
-      <%= f.label :author %>
-      <%= f.text_field :author %> <br /><br />
-
-      <%= f.label :new_release %><br />
-      <%= f.check_box :hot %> <br />
-      <%= f.label :in_the_news %><br />
-      <%= f.check_box :news %> <br />
-      <%= f.text_area :news_text %><br />
+  <p> 
+      <strong><%= f.label :new_release %></strong><br />
+      <%= f.check_box :hot %>  yes<br /><br />
+      <strong><%= f.label :in_the_news %></strong><br />
+      <%= f.check_box :news %> yes<br />
+      <%= f.text_area :news_text, cols: 40, rows:5  %><br />
+      (text for news section)
   </p>
   <p>
       <%= submit_tag "Save changes", class: "btn btn-primary" %>
   </p>
-<% end %>
-
-
+  <% end %>

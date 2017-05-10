@@ -47,7 +47,6 @@ class BookController < ApplicationController
     @books = Book.where('catalog LIKE ?', "#{params[:id]}").order(:title)
   end
 
-
   def edit   
     @book = Book.find_by book_id: params[:id]
   end
@@ -62,11 +61,33 @@ class BookController < ApplicationController
       render action: :edit
     end
   end
+  # GET /links/new
+  def new
+    @book = Book.new
+  end
+
+  # POST /links
+  def create
+    @book = Book.new(book_params)
+
+    respond_to do |format|
+      if @book.save
+        format.html { redirect_to :controller=>'book', :action=>'show', :id=>@book.book_id, notice: 'Book was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
+  end
 
  private
 
   def book_params
-    params[:book].permit({:author=>[]}, :title, {:in_series=>[]}, {:subjects=>[]}, :hot, :news)
+    params[:book].permit(  :title, :subtitle, :book_id,  
+      :hot, :hot_text, :news, :news_text, :intro, :blurb,
+      :excerpt, :is_guide, :cover_image, :format, :isbn,  :description,
+      :contents,  :award, :award_year, :catalog, 
+      :course_adoption, :highlight, :highlight_image,  
+      :subjects=>[],:binding=>[],:reviews=>[],:about_author=>[],:author=>[],:in_series=>[])
   end
 
 end

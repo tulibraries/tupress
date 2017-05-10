@@ -65,11 +65,11 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row" style="margin-top: 28px;">
 <% @hot_books.each do |book| %>
-  <div class="col col-md-3 text-center new-book">
+  <div class="col col-md-3 text-center">
     <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;box-shadow: 6px 6px 7px #666;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
-    <p class="text-center" style="font-weight:600;"><%= book.title.html_safe %></p>
+    <p style="margin-top:14px;font-weight:600;"><%= book.title.html_safe %></p>
   </div>
 <% end %>
 </div>

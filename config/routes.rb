@@ -11,9 +11,15 @@ controller :book do
   get   'catalogs/:id'  => :catalogs_by_season
   get   'book/:id/edit' => :edit
   post  'book/:id'      => :update
+  get   'books/new'     => :new
+  post  'books'         => :create
+
 end
 
 controller :page do
+
+  # pages with id's are stored in the database, not in views folder
+
 	get		'page/index'	          => :index
   get   'press-info'            => :press_info,         :id => 1
   get   'rights'                => :rights,             :id => 2
