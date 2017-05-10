@@ -17,7 +17,7 @@
 	@import "bootstrap";
 
 	body {
-		background-color: #990033;
+		background-color: #f1f1f1;
 	}
 
 	h1 {
@@ -36,7 +36,19 @@
 	blockquote {
 		font-size: 100%!important;
 	}
-
+.bg-faded {
+	background-color: #903;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+	font-size:1.10rem;
+}
+.dropdown-menu {
+	background-color: #903;
+	a.drop-down-item {
+		color: #fff;
+	}
+}
 	.blockquote-footer.blockquote-reverse {
 		font-size: 100%;
 	}
@@ -59,7 +71,7 @@
 	}
 	#content {
 		background-color: #fff;
-		padding-bottom: 42px;
+		padding-bottom: 64px;
 	}
   #skip-link {
   	left: 50%;
@@ -90,10 +102,6 @@
 		 	font-size: 85%;
 		 }
 	}
-	#main-nav {
-		margin: 21px auto;
-	}
-	
 	 #NewsletterSubscription {
 	 		text-align: center;
 		 	#email {
@@ -144,6 +152,7 @@
 	}
 }
 #scBlogContent {
+	margin-top: 14px;
 	margin-bottom: 0;
 	line-height:1.1;
 	p {
@@ -151,7 +160,7 @@
 	}
 }
 #follow-us {
-	margin-top: 14px;
+	margin-top: 21px;
 	text-align: right;
 	padding-right: 14px;
 }
@@ -170,9 +179,9 @@
 }
 #footer {
 	padding-bottom: 28px;
-	color: #bbb;
+	color: #666;
 	a {
-		color: $white
+		color: #903
 	}
 }
 .social-icon {

@@ -1,10 +1,48 @@
-<div id="footer" class="container">
+<div id="footer" class="container" style="background-color:#222222;border-top: solid #303030 1.4rem;padding-bottom:0;width:100%;margin:auto;color:#fff;font-size:.95rem">
   <div class="row">
-    <div class="col text-center">
-      <p>Temple University Press, TASB, 1852 N. 10th Street, Philadelphia, PA 19122<br />
-        <%= link_to "© 2006-2011", {:controller=>'page', :action=>"copyright", :id=> 7}, :style=>"text-decoration:underline;" %> 
-        <%= link_to "Temple University", "http://www.temple.edu", :target=>"new" %> | All Rights Reserved
-      </p>
+    <div class="col" style="padding:0;">
+
+      <div class="postscript" style="margin:21px auto;width:100%;max-width:1140px;">
+    
+				<div class="region region-postscript-first" style="padding-left: 2.5%;width:45%;display:inline-block;background:url('http://web.temple.edu/sites/web.temple.edu/themes/web_communication_theme/images/web-communications-footer-icon-location.png') no-repeat 5px 9px transparent;">        
+					<div class="dept-address">
+				  	<address><span style="font-size:24px;">Temple University Press</span><br /><span style="font-size:21px;">TASB</span><br />1852 N. 10th Street<br />Philadelphia, PA 19122</address>
+				  </div>
+				 </div>
+				    
+				<div class="region region-postscript-second" style="padding-left: 2.5%;width:32%;display:inline-block;">        
+					<nav role="navigation">
+					  <ul class="postscriptSecond" style="list-style-type:none;">
+					  	<li class="first"><a style="color:#fff;" href="https://directory.temple.edu/" title="">Cherry and White Directory</a></li>
+							<li><a style="color:#fff;" href="http://temple.edu/maps-and-directions" title="">Maps and Directions</a></li>
+							<li class="last"><a style="color:#fff;" href="http://temple.edu/contact" title="">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div> <!-- postscript class -->
+
+			<div class="tu-links" style="border-top: solid #303030 2px;background-color:#000; padding: 24px 0 16px 0;clear:both">    
+
+			  <div class="region region-footer" style="margin:0 auto;width:100%;max-width:1140px;">
+					<div>
+						<ul class="menu" style="list-style-type:none;">
+							<li class="tu-global-leaf tu-global-leaf-1 first first" style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"><a style="color:#fff;" href="http://tuportal.temple.edu/" class="tu-global-tuportal-link">TUportal</a></li>
+							<li class="tu-global-leaf tu-global-leaf-2"  style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"><a style="color:#fff;" href="http://tumail.temple.edu/" class="tu-global-tumail-link">TUmail</a></li>
+							<li class="tu-global-leaf tu-global-leaf-3"  style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"><a style="color:#fff;" href="http://temple.edu/sitemap/" class="tu-global-sitemap-link">Sitemap</a></li>
+							<li class="tu-global-leaf tu-global-leaf-4"  style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"><a style="color:#fff;" href="http://temple.edu/about/temple-university-accessibility-statement/" class="tu-global-accessibility-link">Accessibility</a></li>
+							<li class="tu-global-leaf tu-global-leaf-5"  style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"><a style="color:#fff;" href="http://policies.temple.edu/" class="tu-global-policies-link">Policies</a></li>
+							<li class="tu-global-leaf tu-global-leaf-6" style="display:inline;line-height: 1.2;text-decoration: none;text-transform: uppercase;padding-right:28px;"last last"><a style="color:#fff;" href="http://temple.edu/hr/departments/employment/jobs_within.htm" class="tu-global-careers-link">Careers at Temple</a></li>
+						</ul>
+			  	</div>
+					<div>
+				  	<p style="padding-left:42px;">
+				    	<small><%= link_to "© 2006-2011 Temple University", {:controller=>'page', :action=>"copyright", :id=> 7}, :style=>"text-decoration:none;border-bottom:solid #fff 1px;color:#fff;" %> 
+				    	| All Rights Reserved</small>
+				  	</p>
+			  	</div>
+			  </div>
+			</div>
     </div>
   </div>
 </div>

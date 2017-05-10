@@ -33,6 +33,14 @@
   </div>
 </div>
 <div class="col-md-3 no-padding">
+<div id="scBlogContent">
+  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
+  <p><% @entries.take(1).each do |entry| %>
+      <small><%= entry.description.html_safe %><br /><br />
+      <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
+      <% end %>
+  </p>
+</div>
 <div id="follow-us">
  <ul class="list-inline">
     <li class="list-inline-item">
@@ -44,14 +52,6 @@
     <li class="list-inline-item"><%= link_to image_tag('fb-icon.png', class: 'social-icon', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
   </ul>
   </div>
-<div id="scBlogContent">
-  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
-  <p><% @entries.take(1).each do |entry| %>
-      <small><%= entry.description.html_safe %><br /><br />
-      <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
-      <% end %>
-  </p>
-</div>
 
 </div>
 </div>
@@ -59,7 +59,7 @@
 
 <!-- Hot off the Press -->
 
-<div class="row" style="margin-top:28px">
+<div class="row" style="margin-top:10px">
 <div class="col">
 <h2 style="text-transform:uppercase;letter-spacing:.45rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">Hot Off the Press!</h2>
 </div>
