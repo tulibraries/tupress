@@ -18,6 +18,14 @@
 		font-style: italic;
 	}
 }
+#titles, .book-row {
+	h2 {
+		margin-top:auto;
+		background-color: transparent;
+		padding:4px;
+		border-left: 0;
+	}
+}
 .empty-warning {
 	margin-top: 28px;
 }
@@ -35,8 +43,14 @@
 	}
 	h2 {
 		margin-top: 28px!important;
+		background:transparent;
+		border-width: 7px;
+		font-size: 150%;
+		padding:7px 21px;
+		margin-bottom: 21px;
 	}
 	.social-shopping {
+		padding-top:4px;
 		width: 100%;
 		float:right;
 		.buy-it {
@@ -65,19 +79,23 @@
 	}
 	.subjects-group {
 		margin-left: 21px;
+		margin-right:21px;
 		.list-group-item {
-			font-size:110%;
+			font-size:115%;
+			border: 0;
 		}
 	}
 	ul.series li p {
 		padding:10px;
-		border-radius:7px;
+		border-radius:4px;
 		a, a:visited, a:active, a:hover {
 			font-size:115%;
 		}
 	}
 	p.series-title {
 		background-color: #f7f7f7;
+		margin-bottom: 0;
+		margin-top:14px;
 	}
 	p.series-description {
 		margin-left: 14px;

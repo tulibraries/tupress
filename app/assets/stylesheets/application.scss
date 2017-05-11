@@ -21,6 +21,7 @@
 	}
 
 	h1 {
+		margin-top:14px;
 		font-size: 28px;
 		margin-bottom: 21px;
 	}
@@ -29,6 +30,10 @@
 	}
 	h2 {
 		font-size: 21px;
+		margin-top:21px;
+		background-color: #f1f1f1;
+		padding:14px 7px;
+		border-left: solid #903 1px;
 	}
 	h3 {
 		font-size: 16px;
@@ -36,9 +41,6 @@
 	blockquote {
 		font-size: 100%!important;
 	}
-.bg-faded {
-	background-color: #903;
-}
 .navbar-light .navbar-nav .nav-link {
 	color: #fff;
 	font-size:1.10rem;
@@ -114,6 +116,10 @@
 	 	padding:21px;
 	 }
 	ul#alphamenu {
+		width: 100%;
+		padding: 7px 0;
+		border: solid #903 1px;
+		border-width: 1px 0;
  		margin: auto;
  		color: #ccc;
  		li a {
@@ -122,6 +128,9 @@
  		}
  		li::after {
 			content: " | ";
+		}
+		li.last::after {
+			content: "";
 		}
 	}
 .no-padding {

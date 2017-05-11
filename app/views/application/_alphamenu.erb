@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded col-md-12">
+<nav class="navbar navbar-toggleable-md col-md-12">
 	<%= button_tag("", 
 								:class=>"navbar-toggler navbar-toggler-right", 
 								:type=>"button",
@@ -11,7 +11,7 @@
 		    <span class="navbar-toggler-icon"></span>
 		  <% end %>
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-		    <ul id="alphamenu" class="navbar-nav">
+		    <ul id="alphamenu" class="navbar-nav justify-content-center nav-fill">
 		      <li class="nav-item alphalink">
 		        <%= link_to "A", :controller=>"book", :id=>"a" %>
 		      </li>
@@ -87,7 +87,7 @@
 		      <li class="nav-item alphalink">
 		        <%= link_to "Y", :controller=>"book", :id=>"y" %>
 		      </li>
-		      <li class="nav-item alphalink">
+		      <li class="nav-item alphalink last">
 		        <%= link_to "Z", :controller=>"book", :id=>"z" %>
 		      </li>
 		     </ul>

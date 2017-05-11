@@ -26,13 +26,6 @@
 	}
 }
 
-.grey-back {
-	margin-top: 21px;
-	background-color:#f7f7f7;
-	padding: 7px;
-	border-radius:7px;
-}
-
 #carousel2 {
 	.carousel-item {
 		a {
@@ -45,7 +38,7 @@
 		display: block;
 	}
 }
-.navbar-nav {
+#main-nav .navbar-nav {
 	width: 95%;
 }
 #series-list {
@@ -63,10 +56,12 @@
 .series-editors {
 	font-size: 95%;
 }
-#people, #conferences, #copy-policy, #ordering, #payment, #catalogs, #calendar {
+#home {
 	h2 {
-		background-color: #f1f1f1;
-		padding:14px 3px;
+		margin-top:auto;
+		background-color: transparent;
+		padding:initial;
+		border-left: 0;
 	}
 }
 .badge-default {

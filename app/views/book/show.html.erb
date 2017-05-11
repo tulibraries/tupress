@@ -54,9 +54,9 @@
 	</div>
 </div>
 
-	<div class="row">	
+	<div class="row" style="visibility:hidden;">	
 		<div class="col">
-			<h2>Description</h2>
+			<h2 style="padding:0;margin:0;height:4px;">Description</h2>
 		</div>
 	</div>
 	<div class="row">
@@ -108,7 +108,7 @@
 	<% if @series.first %><!-- if series -->
 	<div class="row">
 	<div class="col">
-		<h2>In Series</h2>	
+		<h2>In the Series</h2>	
 		<ul class="list-unstyled list-inline series">
 		<% @series.each do |series| %>
 		 <li class="list-inline-item">

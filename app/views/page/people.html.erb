@@ -42,7 +42,7 @@ Temple University Press has moved! Our offices are now located at the address be
 <% @people_by_dept.sort.each do |dept, people| %>
 <% unless dept.empty? %>
 	<div class="row">
-		<div class="col"><h2 style="margin-top: 21px;"><%= dept %></h2></div>
+		<div class="col"><h2><%= dept %></h2></div>
 	</div>
 <% end %>
 	<% for person in people %>

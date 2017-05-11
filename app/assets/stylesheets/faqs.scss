@@ -1,3 +1,10 @@
 // Place all the styles related to the faqs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#accordion h2 {
+		margin-top:auto;
+		background-color: transparent;
+		padding:4px;
+		border-left: 0;
+}

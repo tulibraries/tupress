@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #calendar {
+	h2 {
+		margin-top:auto;
+		background-color: transparent;
+		padding:14px;
+		border-left: 0;
+	}
 	.dates {
 		float:right;
 	}
