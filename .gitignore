@@ -21,6 +21,7 @@
 /app/assets/pdf
 /app/assets/chapters*
 /app/assets/audio
+/public
 
 # Ignore Byebug command history file.
 .byebug_history
