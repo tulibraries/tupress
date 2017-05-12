@@ -24,6 +24,5 @@ class CreateBooks < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_attachment :books
   end
 end
