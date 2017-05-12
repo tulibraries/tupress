@@ -15,6 +15,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
 	  	t.string :isbn
 	  	t.string :ean
 	  	t.string :pub_date
+	  	t.string :in_series
 	  	t.text :binding
 	  	t.text :description
 	  	t.text :reviews
