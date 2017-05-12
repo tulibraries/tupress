@@ -18,7 +18,7 @@
     <% else %>
       <div class="carousel-item">
     <% end %>
-        <%= link_to image_tag(highlight.highlight_image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), controller: 'book', action: 'bysubject', id: highlight.book_id %>
+        <%= link_to image_tag(highlight.highlight_image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), controller: 'book', action: 'show', id: highlight.book_id %>
       </div>
     <% end %>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
