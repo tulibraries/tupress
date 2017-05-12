@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.validate.additional-methods 
-//= require jquery.validate
+// require jquery.validate.additional-methods 
+// require jquery.validate
 //= require tinymce-jquery
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require form_validation.js
+// require form_validation.js
 //= require SocialShare.js
 //= require events.js
 //= require_tree .
