@@ -34,7 +34,7 @@ class BookController < ApplicationController
   end 
 
   def awards
-    @books = Book.where('award IS NOT NULL').order(:title)
+    @books = Book.where('award != ?', '').order(:title)
     @pagetitle = "Award-Winning Books"
   end
 
