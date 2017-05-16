@@ -23,7 +23,7 @@
 		  	</div>
 
 		    <div class="col-md-8">
-		    <%= form_tag("/search", method: "get", :class=>"form-inline my-2 my-lg-0", :id=>"search-block") do %>
+		    <%= form_tag(root_path+"search", method: "get", :class=>"form-inline my-2 my-lg-0", :id=>"search-block") do %>
 				  <%= label_tag(:q, "Search for:", :class=>"element-invisible") %>
 				  <%= text_field_tag(:q, nil, class: "form-control mr-sm-2", placeholder: "Search", size: "15") %>
 				  <%= submit_tag("Search", id: "search-submit", class: "btn btn-outline-danger my-2 my-sm-0") %>
@@ -64,12 +64,12 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		          <%= link_to "Award Winning Books", "/awards", :class=>"dropdown-item" %>
-		          <%= link_to "Titles Index", "/books", :class=>"dropdown-item" %>
-		          <%= link_to "Subject Index", "/subjects", :class=>"dropdown-item" %>
-		          <%= link_to "Catalog Index", "/catalogs", :class=>"dropdown-item" %>
-		          <%= link_to "Series Listing", "/series", :class=>"dropdown-item" %>
-		          <%= link_to "Study Guides", "/studyguides", :class=>"dropdown-item" %>
+		          <%= link_to "Award Winning Books", root_path+"awards", :class=>"dropdown-item" %>
+		          <%= link_to "Titles Index", root_path+"books", :class=>"dropdown-item" %>
+		          <%= link_to "Subject Index", root_path+"subjects", :class=>"dropdown-item" %>
+		          <%= link_to "Catalog Index", root_path+"catalogs", :class=>"dropdown-item" %>
+		          <%= link_to "Series Listing", root_path+"series", :class=>"dropdown-item" %>
+		          <%= link_to "Study Guides", root_path+"studyguides", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -88,7 +88,7 @@
 		        </div>
 		      </li>
 		      <li class="nav-item">
-		        <%= link_to "Contact Us", "/contact", :class=>"nav-link" %>
+		        <%= link_to "Contact Us", "contact", :class=>"nav-link" %>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <%= link_to "Place an Order", 
@@ -100,10 +100,10 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		          <%= link_to "Ordering Information", "/order", :class=>"dropdown-item" %>
-		          <%= link_to "Payment Terms", "/payment", :class=>"dropdown-item" %>
-		          <%= link_to "Exam & Desk Copy Policy", "/copy-policy", :class=>"dropdown-item" %>
-		          <%= link_to "Sales Representatives", "/sales-reps", :class=>"dropdown-item" %>
+		          <%= link_to "Ordering Information", root_path+"order", :class=>"dropdown-item" %>
+		          <%= link_to "Payment Terms", root_path+"payment", :class=>"dropdown-item" %>
+		          <%= link_to "Exam & Desk Copy Policy", root_path+"copy-policy", :class=>"dropdown-item" %>
+		          <%= link_to "Sales Representatives", root_path+"sales-reps", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -116,10 +116,10 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		        	<%= link_to "Book Reviews", "/book-reviews", :class=>"dropdown-item" %>
-		          <%= link_to "Conferences", "/conferences", :class=>"dropdown-item" %>
-		          <%= link_to "Event Calendar", "/calendar", :class=>"dropdown-item" %>
-		          <%= link_to "Request a Review Copy", "/review-copy", :class=>"dropdown-item" %>
+		        	<%= link_to "Book Reviews", root_path+"book-reviews", :class=>"dropdown-item" %>
+		          <%= link_to "Conferences", root_path+"conferences", :class=>"dropdown-item" %>
+		          <%= link_to "Event Calendar", root_path+"calendar", :class=>"dropdown-item" %>
+		          <%= link_to "Request a Review Copy", root_path+"review-copy", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -132,18 +132,18 @@
 								        :'aria-expanded'=>"false" 
 								        %>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		        	<%= link_to "About the Press", "/press-info", :class=>"dropdown-item" %>
-		          <%= link_to "People at the Press", "/people", :class=>"dropdown-item" %>
-		          <%= link_to "Rights and Permissions", "/rights", :class=>"dropdown-item" %>
-		          <%= link_to "Foreign Rights Agents", "/foreign-rights", :class=>"dropdown-item" %>
-		          <%= link_to "Submissions", "/submissions", :class=>"dropdown-item" %>
-		          <%= link_to "About University Presses", "/university-presses", :class=>"dropdown-item" %>
-		          <%= link_to "Download Documents", "/downloads", :class=>"dropdown-item" %>
-		          <%= link_to "FAQ", "/faq", :class=>"dropdown-item" %>
+		        	<%= link_to "About the Press", root_path+"press-info", :class=>"dropdown-item" %>
+		          <%= link_to "People at the Press", root_path+"people", :class=>"dropdown-item" %>
+		          <%= link_to "Rights and Permissions", root_path+"rights", :class=>"dropdown-item" %>
+		          <%= link_to "Foreign Rights Agents", root_path+"foreign-rights", :class=>"dropdown-item" %>
+		          <%= link_to "Submissions", root_path+"submissions", :class=>"dropdown-item" %>
+		          <%= link_to "About University Presses", root_path+"university-presses", :class=>"dropdown-item" %>
+		          <%= link_to "Download Documents", root_path+"downloads", :class=>"dropdown-item" %>
+		          <%= link_to "FAQ", root_path+"faq", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
 		      <li class="nav-item">
-		          <%= link_to "Links", "/links", :class=>"nav-link" %>
+		          <%= link_to "Links", root_path+"links", :class=>"nav-link" %>
 		      </li>
 		      
 		    </ul>
