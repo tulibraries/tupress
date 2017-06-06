@@ -4,30 +4,40 @@
 			<h1>Book Reviews</h1>
 		</div>
 	</div>
+<% @reviews_date.each do |date, reviews| %>
 
-<% @reviews.each do |review| %>
 	<div class="row">
 		<div class="col">
+			Last updated on <%= date %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col" style="padding-left: 28px;">
+		<% for review in reviews %>
 			<h2>
 				<%= link_to review.title, :controller=>'book', :action=>'show', :id=>review.title_id %> 
 				<small class="text-muted">by <%= review.author %></small>
 			</h2>
-		</div>
-	</div>
-	<div class="row">
-	<div class="col">
-			<blockquote class="blockquote">
-				<p class="mb-0"><%= review.review %></p>
-				<footer class="blockquote-footer blockquote-reverse">
-				<% if review.source_link != '' %>
-					<%= link_to review.source, review.source_link, :class=>"abbr" %> 
-				<% else %>
-					<%= review.source %>
-				<% end %>
-					-- <%= review.source_date %>
-				</footer>
-			</blockquote>
+
+			<div class="row">
+				<div class="col">
+					<blockquote class="blockquote">
+						<p class="mb-0"><%= review.review %></p>
+						<footer class="blockquote-footer blockquote-reverse">
+						<% if review.source_link != '' %>
+							<%= link_to review.source, review.source_link, :class=>"abbr" %> 
+						<% else %>
+							<%= review.source %>
+						<% end %>
+							-- <%= review.source_date %>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+			<% end %>
 		</div>
 	</div>
 <% end %>
+
 

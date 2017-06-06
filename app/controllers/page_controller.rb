@@ -26,7 +26,9 @@ require 'pry'
     @page = Page.find_by(id: params[:id])
   end
   def reviews
-  	@reviews = Review.all
+  	# @reviews = Review.all
+    @reviews = Review.all.sort_by {|review| review.created_at}
+    @reviews_date = @reviews.group_by {|t| t.created_at.strftime("%m/%d/%Y")}
   end
   def conferences
     @conferences = Conference.all.sort_by {|conference| conference.month}

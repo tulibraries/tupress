@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :reviews
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
