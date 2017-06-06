@@ -3,13 +3,23 @@
 	border-top: solid #303030 1.4rem;
 	padding-bottom:0;
 	width:100%;
-	margin:auto;
 	color:#fff!important;
 	font-size:.95rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-left: -15px!important;
+	height: 310px;
+	color: #666;
+	a {
+		color: #903
+	}
+
 	.col {
 		padding: 0;
 	}
 	.postscript {
+		padding-left: 30px;
 		margin:21px auto;
 		width:100%;
 		max-width:1140px;
