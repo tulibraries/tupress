@@ -18,16 +18,17 @@ class RepsController < ApplicationController
   # GET /reps/new
   def new
     @rep = Rep.new
+    @regions = Region.all
   end
 
   # GET /reps/1/edit
   def edit
+    @regions = Region.all
   end
 
   # POST /reps
   def create
     @rep = Rep.new(rep_params)
-
     respond_to do |format|
       if @rep.save
         format.html { redirect_to @rep, notice: 'Rep was successfully created.' }

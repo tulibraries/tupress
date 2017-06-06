@@ -13,60 +13,60 @@
 
   <div class="field">
     <%= f.label :company %>
-    <%= f.text_field :company %>
+    <%= f.text_field :company, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :address2 %>
-    <%= f.text_field :address2 %>
+    <%= f.text_field :address2, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :address3 %>
-    <%= f.text_field :address3 %>
+    <%= f.text_field :address3, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :fax %>
-    <%= f.text_field :fax %>
+    <%= f.text_field :fax, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, :size => '53' %>
   </div>
 
   <div class="field">
     <%= f.label :region %>
-    <%= f.text_field :region %>
+    <%= f.select :region, options_for_select(@regions.collect{ |r| [r.region, r.id] }, rep.region) %>
   </div>
 
     <div class="field">
     <%= f.label :coverage %>
-    <%= f.text_field :coverage %>
+    <%= f.text_field :coverage, :size => '53' %>
   </div>
 
-  <div class="actions">
+  <div class="actions" style="margin:14px">
     <%= f.submit %>
   </div>
 <% end %>
