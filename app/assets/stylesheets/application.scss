@@ -16,10 +16,14 @@
 
 	@import "bootstrap";
 
-	body {
+	html, body {
 		background-color: #f1f1f1;
+		height: 100%;
 	}
-
+	#wrapper {
+		min-height: 100%;
+		position: relative;
+	}
 	h1 {
 		margin-top:14px;
 		font-size: 28px;
@@ -73,7 +77,7 @@
 	}
 	#content {
 		background-color: #fff;
-		padding-bottom: 64px;
+		padding-bottom: 310px;
 	}
   #skip-link {
   	left: 50%;
@@ -187,10 +191,11 @@
 	}
 }
 #footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
-	left: 0;
-	padding-bottom: 28px;
+	width: 100%;
+	clear: both;
+	height: 310px;
 	color: #666;
 	a {
 		color: #903

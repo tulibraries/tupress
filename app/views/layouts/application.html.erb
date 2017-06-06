@@ -14,9 +14,12 @@
     <%= link_to "Skip to main content", "#skiplink_ada", :class => "element-invisible", :tabindex => "1" %>
     <%= link_to "Skip to site search", "#", :class => "element-invisible", :onclick => "document.getElementById('search-block').focus();", :tabindex => "2" %>
   </div>
-<div class="row" style="background-color:#fff;">
+
+<div id="wrapper">
+
+<div id="header" class="row" style="background-color:#fff;">
   <div class="col">
-  	<div id="header" class="container" style="padding-top:14px;">
+  	<div class="container" style="padding-top:14px;">
 	  	<div class="row">
 		  	<div class="col-md-4">
 		  		<img alt="Temple University Press logo" src="<%= asset_path 'banner2_top2.gif' %>" />
@@ -172,5 +175,6 @@
 
     </div>
     <%= render "footer.html.erb" %>
+    </div>
   </body>
 </html>
