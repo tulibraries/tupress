@@ -46,7 +46,11 @@
     <%= f.select :timezone, options_for_select(time_zones, 'EST'), html: {selected: true} %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+  <div class="col">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
+</div>
 <% end %>

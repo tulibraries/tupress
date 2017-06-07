@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :reviews
+  
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -84,5 +84,6 @@ resources :documents
 resources :people
 resources :events
 resources :journals
+resources :reviews
 
 end

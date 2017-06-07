@@ -2,5 +2,6 @@
 
 <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
+<br />
+<%= link_to 'Show', {:controller => 'events', :action => 'calendar'} %> |
 <%= link_to 'Back', events_path %>

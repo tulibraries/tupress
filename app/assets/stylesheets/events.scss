@@ -33,3 +33,11 @@
 		background-color: #f7f7f7;
 	}
 }
+.edit_event, .new_event {
+	label {
+		width: 15%;
+	}
+	.field {
+		padding:4px;
+	}
+}
