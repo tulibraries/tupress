@@ -13,14 +13,15 @@ Trestle.resource(:faqs) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  # form do |faqs|
-  #   text_field :name
-  #
-  #   row do
-  #     col(xs: 6) { datetime_field :updated_at }
-  #     col(xs: 6) { datetime_field :created_at }
-  #   end
-  # end
+  form do |faqs|
+    text_field :q
+    editor :a
+  
+    row do
+      col(xs: 6) { datetime_field :updated_at }
+      col(xs: 6) { datetime_field :created_at }
+    end
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

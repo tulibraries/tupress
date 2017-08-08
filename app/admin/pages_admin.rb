@@ -16,7 +16,7 @@ Trestle.resource(:pages) do
   #  form do |page|
   #    text_field :name
   #     text_area :content
-  #     text_Area :content2
+  #     text_area :content2
   # #
   #    row do
   #      col(xs: 6) { datetime_field :updated_at }
@@ -55,19 +55,7 @@ Trestle.resource(:pages) do
 
       # Define custom form fields for easy re-use
       editor :content
+      editor :content2
     end
-
-    # tab :metadata do
-    #   # Layout fields based on a 12-column grid
-    #   row do
-    #     col(sm: 6) { select :author, User.all }
-    #     col(sm: 6) { tag_select :tags }
-    #   end
-    # end
-
-    # sidebar do
-    #   # Render a custom partial: app/views/admin/posts/_sidebar.html.erb
-    #   render "sidebar"
-    # end
   end
 end
