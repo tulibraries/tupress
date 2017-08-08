@@ -30,6 +30,7 @@ gem 'social-share-button'
 gem 'tinymce-rails'
 gem 'jquery-ui-rails'
 gem 'yaml_db'
+gem 'trestle', '~> 0.8.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
