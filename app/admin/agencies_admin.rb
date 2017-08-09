@@ -8,7 +8,7 @@ Trestle.resource(:agencies) do
   table do
     column :title
     column :contact
-    column :country
+    column :region
     actions
   end
 
@@ -28,20 +28,19 @@ Trestle.resource(:agencies) do
     text_field :website
     select(:region, 
         [
-          ['All other areas and general sales inquiries', '15'],
-          ['All Other Territories', '8'],
-          ['Asia and the Pacific, including Australia and New Zealand', '13'],
-          ['China & Taiwan', '2'],
-          ['Europe, the Middle East, and Africa', '14'],
-          ['Japan', '3'],
-          ['Korea', '4'],
-          ['Midwest', '10'],
-          ['Northeast and Mid-Atlantic', '9'],
-          ['Southeast', '11'],
-          ['Spanish & Portuguese languages, World', '5'],
-          ['Thailand & Vietnam / Indonesia', '6'],
-          ['Turkey', '7'],
-          ['West', '12']
+          ['All Other Territories', 'All Other Territories'],
+          ['Asia and the Pacific, including Australia and New Zealand', 'Asia and the Pacific, including Australia and New Zealand'],
+          ['China & Taiwan', 'China & Taiwan'],
+          ['Europe, the Middle East, and Africa', 'Europe, the Middle East, and Africa'],
+          ['Japan', 'Japan'],
+          ['Korea', 'Korea'],
+          ['Midwest', 'Midwest'],
+          ['Northeast and Mid-Atlantic', 'Northeast and Mid-Atlantic'],
+          ['Southeast', 'Southeast'],
+          ['Spanish & Portuguese languages, World', 'Spanish & Portuguese languages, World'],
+          ['Thailand & Vietnam / Indonesia', 'Thailand & Vietnam / Indonesia'],
+          ['Turkey', 'Turkey'],
+          ['West', 'West']
         ]
       )
     # row do
