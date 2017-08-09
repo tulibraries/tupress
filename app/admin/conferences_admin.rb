@@ -32,6 +32,7 @@ Trestle.resource(:conferences) do
         ["December", "12"]
       ]
     )
+    text_field :year
     text_field :link
     text_field :venue
     text_field :location

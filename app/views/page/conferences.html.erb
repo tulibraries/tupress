@@ -6,36 +6,79 @@
 	</div>
 
 <div class="container" id="conferences"">
-
 <% @conferences_month.each do |month, conferences| %>
 	<div class="row">
-		<div class="col"><h2><%= get_month(month) %></h2></div>
+		<div class="col"><h2><%= get_month(month) %> </h2></div>
 	</div>
 	<div class="row">
 		<div class="col" style="padding-left: 28px;">
-		<% for conference in conferences %>
+			<% for conference in conferences %>
+				<% if conference.year == Time.new.year.to_s %>
 
-			<ul class="list-unstyled">
+					<ul class="list-unstyled">
 
-				<li><%= link_to conference.conference, conference.link %></li>
+						<li><%= link_to conference.conference, conference.link %></li>
 
-				<% if !conference.venue.blank? %>
-					<li><%= conference.venue %></li>
+						<% if !conference.venue.blank? %>
+							<li><%= conference.venue %></li>
+						<% end %>
+
+						<li><%= conference.location %></li>
+
+						<li><%= conference.dates %></li>
+
+						<% if !conference.booth.blank? %>
+							<li><%= conference.booth %></li>
+						<% end %>
+
+					</ul>
 				<% end %>
 
-				<li><%= conference.location %></li>
-
-				<li><%= conference.dates %></li>
-
-				<% if !conference.booth.blank? %>
-					<li><%= conference.booth %></li>
-				<% end %>
-
-			</ul>
 			<% end %>
+
 
 		</div>
 	</div>
 <% end %>
+
+	<div class="row">
+		<div class="col"><h2><%= (Time.new.year+1).to_s %> </h2></div>
+	</div>
+
+<% @conferences_year.each do |month, conferences| %>
+	<div class="row">
+		<div class="col col-offset-md-1"><h2><%= get_month(month) %> </h2></div>
+	</div>
+	<div class="row">
+		<div class="col col-offset-md-1" style="padding-left: 28px;">
+			<% for conference in conferences %>
+				<% if conference.year > Time.new.year.to_s %>
+
+					<ul class="list-unstyled">
+
+						<li><%= link_to conference.conference, conference.link %></li>
+
+						<% if !conference.venue.blank? %>
+							<li><%= conference.venue %></li>
+						<% end %>
+
+						<li><%= conference.location %></li>
+
+						<li><%= conference.dates %></li>
+
+						<% if !conference.booth.blank? %>
+							<li><%= conference.booth %></li>
+						<% end %>
+
+					</ul>
+				<% end %>
+
+			<% end %>
+
+
+		</div>
+	</div>
+<% end %>
+
 
 </div>
