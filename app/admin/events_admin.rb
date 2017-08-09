@@ -5,11 +5,12 @@ Trestle.resource(:events) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do
+    column :startdate
+    column :description
+    column :where
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
@@ -20,12 +21,18 @@ Trestle.resource(:events) do
     datetime_field :enddate
     datetime_field :time
     datetime_field :endtime
-    text_field :timezone
+    select(:timezone, [
+        ['CST', 'CST'],
+        ['EST', 'EST'],
+        ['PST', 'PST'],
+        ['GMT', 'GMT']
+      ]
+    )
   
-    row do
-      col(xs: 6) { datetime_field :updated_at }
-      col(xs: 6) { datetime_field :created_at }
-    end
+    # row do
+    #   col(xs: 6) { datetime_field :updated_at }
+    #   col(xs: 6) { datetime_field :created_at }
+    # end
   end
 
   # By default, all parameters passed to the update and create actions will be

@@ -5,22 +5,21 @@ Trestle.resource(:faqs) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do
+    column :q, header: "Question"
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
   form do |faqs|
-    text_field :q
-    editor :a
+    text_field :q, label: "Question"
+    editor :a, label: "Answer"
   
-    row do
-      col(xs: 6) { datetime_field :updated_at }
-      col(xs: 6) { datetime_field :created_at }
-    end
+    # row do
+    #   col(xs: 6) { datetime_field :updated_at }
+    #   col(xs: 6) { datetime_field :created_at }
+    # end
   end
 
   # By default, all parameters passed to the update and create actions will be
