@@ -7,7 +7,7 @@
 
 
 <% @agencies_final.sort.each do |agencies, region| %>
- <% if !region.rights.empty? %>
+ <% if !region.rights.blank? %>
 	<div class="row">
 		<div class="col">
 			<h2 class="grey-back"><%= region.region %></h2> 
@@ -41,7 +41,7 @@
 						<%= agency.fax %><br />
 					<% end %>
 					<%= mail_to agency.email, agency.email %><br />
-					<% if !agency.website.empty? %>
+					<% if !agency.website.blank? %>
 						<%= link_to agency.website, agency.website %><br />
 					<% end %>
 				</address>

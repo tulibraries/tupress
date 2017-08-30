@@ -26,13 +26,14 @@ require 'pry'
     @page = Page.find_by(id: params[:id])
   end
   def reviews
-  	# @reviews = Review.all
     @reviews = Review.all.sort_by {|review| review.created_at}
     @reviews_date = @reviews.group_by {|t| t.created_at.strftime("%m/%d/%Y")}
   end
   def conferences
-    @conferences = Conference.all.sort_by {|conference| conference.month}
+    @conferences = Conference.where("year = ?", Time.new.year.to_s).sort_by {|conference| conference.month}
     @conferences_month = @conferences.group_by {|t| t.month}
+    @conferences_by_year = Conference.where("year = ?", (Time.new.year+1).to_s).sort_by {|conference| conference.month}
+    @conferences_year = @conferences_by_year.group_by {|t| t.month}
   end
   def downloads
     @documents_by_dept = Document.all.group_by {|t| t.department}
