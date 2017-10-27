@@ -72,11 +72,16 @@
 		         <% end %>
 		        </div>
 		      </li>
+					<li class="nav-item">
+		        <%= link_to(root_path+"open-access", :class=>"nav-link") do %>
+		        	NEH <span class="sr-only">(current)</span>
+		        <% end %>
+		      </li>
 		      <li class="nav-item">
 		        <%= link_to "Contact Us", "contact", :class=>"nav-link" %>
 		      </li>
 		      <li class="nav-item dropdown">
-		        <%= link_to "Place an Order", 
+		        <%= link_to "Orders", 
 								        "#", 
 								        :class=>"nav-link dropdown-toggle", 
 								        :id=>"navbarDropdownMenuLink", 

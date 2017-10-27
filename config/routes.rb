@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   
-  resources :oabooks
+
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -71,7 +71,14 @@ controller :events do
   get 'calendar/:id'       => :calendar
 end
 
+controller :oabooks do
+  get 'open-access'           => :index
+  get 'open-access/:id'       => :show
+end
 
+
+
+resources :oabooks
 resources :links
 resources :feeds
 resources :book
