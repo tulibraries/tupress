@@ -1,0 +1,17 @@
+<%= form_for(oabook) do |f| %>
+  <% if oabook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(oabook.errors.count, "error") %> prohibited this oabook from being saved:</h2>
+
+      <ul>
+      <% oabook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

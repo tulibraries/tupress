@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :oabooks
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show

@@ -1,0 +1,2 @@
+class Oabook < ApplicationRecord
+end
