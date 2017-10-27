@@ -18,10 +18,11 @@
 }
 
 .navbar-toggler-left {
-  left: 1rem;
+	position: relative!important;
+  margin-left: 14px;
 }
 
 .navbar-toggler-right {
 	position: relative!important;
-  right: 1rem;
+  margin-left: 14px;
 }
