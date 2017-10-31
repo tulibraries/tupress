@@ -1,3 +1,38 @@
 // Place all the styles related to the oabooks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.epub-reader {
+	vertical-align:middle;
+	margin-top:42px;
+}
+.epub {
+	width:80%;
+	margin:auto;
+}
+#epub-left-nav {
+	cursor:pointer;
+	font-size:250%;
+	font-weight:900;
+	display:inline-block;
+	width:2%;
+	margin-right:21px;
+	vertical-align:middle;
+}
+#epub-right-nav {
+	cursor:pointer;
+	font-size:250%;
+	font-weight:900;
+	display:inline-block;
+	width:2%;
+	margin-left:21px;
+	vertical-align:middle;
+}
+#area {
+	display:inline-block; 
+	vertical-align:middle;
+	width: 90%;
+	height: 680px;
+	border: solid #ccc 1px;
+	padding:42px;
+}

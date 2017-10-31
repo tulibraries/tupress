@@ -1,4 +1,32 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+	<div class="col col-md-2">
+		<%= image_tag 'cover.jpg', alt: 'generic book cover' %>
+	</div>
+	<div class="col col-md-10">
+		<h2><%= @oabook.title %></h2>
+		<p><%= @oabook.description %></p>
+	</div>
+</div>
+<div class="row">
+	<div class="epub-reader col col-md-12 centered">
+			<%= javascript_include_tag "epub.min.js" %>
+			<%= javascript_include_tag "zip.min.js" %>
+			<script>
+				var Book = ePub("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>");
+		</script>
+		<div class="epub">
+			<div id="epub-left-nav" onclick="Book.prevPage();">‹</div>
+			<div id="area"></div>
+			<div id="epub-right-nav" onclick="Book.nextPage();">›</div>
+			<script>
+				Book.renderTo("area");
+		</script>
+	</div>
+	</div>
+</div>
+
+
 <%= link_to 'Edit', edit_oabook_path(@oabook) %> |
 <%= link_to 'Back', oabooks_path %>
