@@ -23,8 +23,10 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
+  host: <%= ENV["TUPRESS_DB_HOST"] %>
+  port: 3306
   database: <%= ENV["TUPRESS_DB_NAME"] %>
-  pool: 5
   username: <%= ENV["TUPRESS_DB_USER"] %>
   password: <%= ENV["TUPRESS_DB_PASSWORD"] %>
-  socket: /tmp/mysql.sock
+  pool: 5
+  #socket: /tmp/mysql.sock
