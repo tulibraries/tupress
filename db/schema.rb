@@ -170,7 +170,7 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "content2"
+    t.text     "content2"
   end
 
   create_table "people", force: :cascade do |t|
