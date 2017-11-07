@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.string   "title"
     t.string   "subtitle"
     t.string   "author"
+    t.text     "about_author"
     t.string   "intro"
     t.string   "blurb"
     t.string   "excerpt"
@@ -44,14 +45,13 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.string   "isbn"
     t.string   "ean"
     t.string   "pub_date"
+    t.text     "in_series"
     t.text     "binding"
     t.text     "description"
     t.text     "reviews"
-    t.text     "contents"
-    t.text     "about_author"
     t.text     "subjects"
-    t.string   "in_series"
-    t.decimal  "price",           precision: 6, scale: 2
+    t.text     "contents"
+    t.decimal  "price",           precision: 5, scale: 2
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.string   "award"
@@ -113,12 +113,12 @@ ActiveRecord::Schema.define(version: 20171108182441) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.date     "startdate"
+    t.date     "enddate"
     t.string   "description"
     t.string   "where"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.date     "startdate"
-    t.date     "enddate"
     t.time     "time"
     t.string   "timezone"
     t.time     "endtime"
@@ -222,11 +222,11 @@ ActiveRecord::Schema.define(version: 20171108182441) do
   create_table "series", force: :cascade do |t|
     t.string   "series_id"
     t.string   "series"
-    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "editors"
     t.string   "founder"
+    t.text     "description"
   end
 
   create_table "subjects", force: :cascade do |t|
