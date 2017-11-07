@@ -1,4 +1,4 @@
 ---
 
 production:
-  path: "/tupress"
+  path: "/<%= ENV["RAILS_APP_URL_BASE_PATH"]| "/" %>"
