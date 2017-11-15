@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
 
+  devise_for :users
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
