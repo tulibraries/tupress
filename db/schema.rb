@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20171122153258) do
 
-ActiveRecord::Schema.define(version: 20171108182441) do
+  create_table "administrators", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "remember_token"
+    t.datetime "remember_token_expires_at"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "agencies", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +45,7 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.string   "title"
     t.string   "subtitle"
     t.string   "author"
+    t.text     "about_author"
     t.string   "intro"
     t.string   "blurb"
     t.string   "excerpt"
@@ -44,14 +55,13 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.string   "isbn"
     t.string   "ean"
     t.string   "pub_date"
+    t.text     "in_series"
     t.text     "binding"
     t.text     "description"
     t.text     "reviews"
-    t.text     "contents"
-    t.text     "about_author"
     t.text     "subjects"
-    t.string   "in_series"
-    t.decimal  "price",           precision: 6, scale: 2
+    t.text     "contents"
+    t.decimal  "price",           precision: 5, scale: 2
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.string   "award"
@@ -113,12 +123,12 @@ ActiveRecord::Schema.define(version: 20171108182441) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "description"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.text     "description"
     t.string   "where"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.date     "startdate"
-    t.date     "enddate"
     t.time     "time"
     t.string   "timezone"
     t.time     "endtime"
@@ -170,7 +180,7 @@ ActiveRecord::Schema.define(version: 20171108182441) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "content2"
+    t.text     "content2"
   end
 
   create_table "people", force: :cascade do |t|
@@ -222,11 +232,11 @@ ActiveRecord::Schema.define(version: 20171108182441) do
   create_table "series", force: :cascade do |t|
     t.string   "series_id"
     t.string   "series"
-    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "editors"
     t.string   "founder"
+    t.text     "description"
   end
 
   create_table "subjects", force: :cascade do |t|

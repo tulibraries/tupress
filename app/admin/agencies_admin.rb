@@ -1,5 +1,4 @@
 Trestle.resource(:agencies) do
-  before_action :authenticate_user!
   menu do
     item :agencies, icon: "fa fa-star"
   end

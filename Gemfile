@@ -33,6 +33,7 @@ gem 'jquery-ui-rails'
 gem 'yaml_db'
 gem 'trestle', '~> 0.8.3'
 gem 'trestle-tinymce'
+gem 'trestle-auth'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
