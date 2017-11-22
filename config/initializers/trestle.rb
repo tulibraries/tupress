@@ -5,6 +5,13 @@ Trestle.configure do |config|
   #
   config.site_title = "Tupress"
 
+  config.before_action do |controller|
+  authenticate_or_request_with_http_basic(Trestle.config.site_title) do |name, password|
+    ActiveSupport::SecurityUtils.variable_size_secure_compare(name, Rails.application.secrets.trestle_login) &
+      ActiveSupport::SecurityUtils.variable_size_secure_compare(password, Rails.application.secrets.trestle_password)
+    end
+  end
+
   # Specify a custom image to be used in place of the site title for mobile and
   # expanded/desktop navigation. These images should be placed within your
   # asset paths, e.g. app/assets/images.
@@ -104,4 +111,73 @@ Trestle.configure do |config|
   # end
   #
   # config.form_field :custom, CustomFormField
+
+  # == Authentication Options
+  #
+  # Specify the user class to be used by trestle-auth.
+  #
+  config.auth.user_class = -> { Administrator }
+
+  # Specify the scope for valid admin users.
+  # Defaults to config.auth.user_class (unscoped).
+  #
+  # config.auth.user_scope = -> { User.where(admin: true) }
+
+  # Specify the Trestle admin for managing administrator users.
+  #
+  config.auth.user_admin = -> { :"auth/administrators" }
+
+  # Specify the parameter (along with a password) to be used to
+  # authenticate an administrator. Defaults to :email.
+  #
+  # config.auth.authenticate_with = :login
+
+  # Customize the method for authenticating a user given login parameters.
+  # The block should return an instance of the auth user class, or nil.
+  #
+  # config.auth.authenticate = ->(params) {
+  #   User.authenticate(params[:login], params[:password])
+  # }
+
+  # Customize the rendering of user avatars. Can be disabled by setting to false.
+  # Defaults to the Gravatar based on the user's email address.
+  #
+  # config.auth.avatar = ->(user) {
+  #   image_tag(user.avatar_url, alt: user.name)
+  # }
+
+  # Customize the method for determining the user's locale.
+  # Defaults to user.locale (if the method is defined).
+  #
+  # config.auth.locale = ->(user) {
+  #   user.locale if user.respond_to?(:locale)
+  # }
+
+  # Enable or disable remember me functionality. Defaults to true.
+  #
+  # config.auth.remember.enabled = false
+
+  # Specify remember me expiration time. Defaults to 2 weeks.
+  #
+  # config.auth.remember.for = 30.days
+
+  # Customize the method for authenticating a user given a remember token.
+  #
+  # config.auth.remember.authenticate = ->(token) {
+  #   User.authenticate_with_remember_token(token)
+  # }
+
+  # Customize the method for remembering a user.
+  #
+  # config.auth.remember.remember_me, ->(user) { user.remember_me! }
+
+  # Customize the method for forgetting a user.
+  #
+  # config.auth.remember.forget_me, ->(user) { user.forget_me! }
+
+  # Customize the method for generating the remember cookie.
+  #
+  # config.auth.remember.cookie, ->(user) {
+  #   { value: user.remember_token, expires: user.remember_token_expires_at }
+  # }
 end
