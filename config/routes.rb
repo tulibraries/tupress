@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
-  devise_for :users
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -21,7 +18,7 @@ end
 
 controller :page do
 
-  # pages with id's are stored in the database, not in views folder
+  # pages with id's are stored in the database, not in views folder (Tiny - IMCE generated)
 
 	get		'page/index'	          => :index
   get   'press-info'            => :press_info,         :id => 1
