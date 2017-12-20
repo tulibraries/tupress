@@ -12,8 +12,17 @@
 
 	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>");
 	    }
+    
+    // rendition.themes.register("dark", "themes.css");
+    // rendition.themes.register("light", "themes.css");
+    // rendition.themes.register("tan", "themes.css");
 	  };
+
+
+    // rendition.themes.select("tan");
+    // rendition.themes.fontSize("140%");
 </script>
+
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -77,7 +86,17 @@
                   <p>
                     <input type="checkbox" id="sidebarReflow" name="sidebarReflow"> Reflow text when sidebars are open.
                     <br /><br />
-                    <button style="display:inline-block" id="smaller">-</button> Font Size <button id="larger" style="display:inline-block">+</button>
+                    <button id="smaller" style="display:inline-block">-</button> 
+                    Font Size 
+                    <button id="larger" style="display:inline-block">+</button>
+                    <br /><br />
+                    <label for="colorscheme">Change the colors:
+                    <select id="colorscheme" name="colorscheme">
+                    	<option selected="selected" value="bnw">Black on White</option>
+                      <option value="wnb">White on Black</option>
+                      <option value="tan">Sepia</option>
+                    </select>
+                  </label>
                   </p>
               </div>
               <div class="closer icon-cancel-circled"></div>
@@ -110,15 +129,53 @@ a.toc_link {
 </style>
 <script>
 	$("#smaller").click(function() {
-    var fontSize = parseInt($('iframe').contents().find('body').css("font-size"));
-    fontSize = (fontSize - 5) + "px";
-    alert(fontSize);
-    $('iframe').contents().find('body').css('font-size', fontSize);
+    var fontSize;
+    var interval = 3;
+
+    if(!window.viewer.book.settings.styles) return;
+
+    if(!window.viewer.book.settings.styles.fontSize) {
+      window.viewer.book.settings.styles.fontSize = "100%";
+    }
+
+    fontSize = parseInt(window.viewer.book.settings.styles.fontSize.slice(0, -1));
+    window.viewer.book.setStyle("fontSize", (fontSize - interval) + "%");
 });
 	$("#larger").click(function() {
-    var fontSize = parseInt($('iframe').contents().find('body').css("font-size"));
-    fontSize = (fontSize + 5) + "px";
-    $('iframe').contents().find('body').css('font-size', fontSize);
+    var fontSize;
+    var interval = 3;
+
+    if(!window.viewer.book.settings.styles) return;
+
+    if(!window.viewer.book.settings.styles.fontSize) {
+      window.viewer.book.settings.styles.fontSize = "100%";
+    }
+
+    fontSize = parseInt(window.viewer.book.settings.styles.fontSize.slice(0, -1));
+    window.viewer.book.setStyle("fontSize", (fontSize + interval) + "%");
+  });
+	$('#colorscheme').change(function() {
+		if($(this).val() == "bnw"){
+      document.getElementById("main").setAttribute("style","color: #000; background-color: #FFF;font-family: sans-serif;");
+      document.getElementById("titlebar").setAttribute("style","color: #000; background-color: #FFF;font-family: sans-serif;");
+      window.viewer.book.setStyle("background", "#fff");
+      window.viewer.book.setStyle("color", "#000");
+      window.viewer.book.setStyle("font-family", "sans-serif");
+		}
+    if($(this).val() == "wnb") {
+      document.getElementById("main").setAttribute("style","color: #FFF; background-color: #000;font-family: fontello;");
+      document.getElementById("titlebar").setAttribute("style","color: #FFF; background-color: #000;font-family: fontello;");
+      window.viewer.book.setStyle("background", "#000");
+      window.viewer.book.setStyle("color", "#FFF");
+      window.viewer.book.setStyle("font-family", "fontello");
+    }
+    if($(this).val() == "tan") {
+      document.getElementById("main").setAttribute("style","color: #000; background-color: tan;font-family: verdana;");
+      document.getElementById("titlebar").setAttribute("style","color: #000; background-color: tan;font-family: verdana;");
+      window.viewer.book.setStyle("background", "tan");
+      window.viewer.book.setStyle("color", "#000");
+      window.viewer.book.setStyle("font-family", "verdana");
+    }
 });
 </script>
 	</body>
