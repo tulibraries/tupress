@@ -6,7 +6,7 @@
 			<% unless @book.subtitle.empty? %>
 				<br /><small><em><%= @book.subtitle %></em></small>
 			<% end %>
-		</h1>	
+		</h1>
 
 	<div class="row">
 		<div class="col author">
@@ -19,11 +19,11 @@
 			<p class="text-center buy-it">
 				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
-				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %> 
+				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %>
 			</p>
 			<p class="text-right social-icons">
-				<span class='share s_twitter'></span> 
-				<span class='share s_facebook'></span> 
+				<span class='share s_twitter'></span>
+				<span class='share s_facebook'></span>
 				<span class='share s_tumblr'></span>
 				<span class='share s_linkedin'></span>
 				<span class='share s_pinterest'></span>
@@ -39,11 +39,12 @@
 	<div class="col col-md-3">
 		<div class="format">
 			<% @book.binding.each do |binding| %>
+			<%# require 'pry'; binding.pry %>
 			<p class="format">
-				<%= binding[:type] %>: <strong><%= number_to_currency(binding[:price]) %></strong>
+				<%= binding["binding"]["format"] %>: <strong><%= number_to_currency(binding["binding"]["price"]) %></strong>
 				<br />
-				EAN: <%= binding[:ean] %><br />
-				Publication: <%= binding[:pub_date] %> <br /> <br />
+				EAN: <%= binding["binding"]["ean"] %><br />
+				Publication: <%= binding["binding"]["pub_date_for_format"] %> <br /> <br />
 			<% end %>
 			<%= @book.format.html_safe %>
 			</p>
@@ -54,7 +55,7 @@
 	</div>
 </div>
 
-	<div class="row" style="visibility:hidden;">	
+	<div class="row" style="visibility:hidden;">
 		<div class="col">
 			<h2 style="padding:0;margin:0;height:4px;">Description</h2>
 		</div>
@@ -64,7 +65,7 @@
 			<%= @book.description.html_safe %>
 		</div>
 	</div>
-	<div class="row">	
+	<div class="row">
 		<div class="col">
 			<h2>Reviews</h2>
 		</div>
@@ -83,7 +84,7 @@
 	</div>
 	<div class="row">
 		<div class="col">
-		 <div class="about_author">	
+		 <div class="about_author">
 		<% @book.about_author.each do |about| %>
 		 	<%= about.html_safe %><br />
 		<% end %>
@@ -93,7 +94,7 @@
 	<% if @subjects.first %>
 	<div class="row">
 		<div class="col">
-			<h2>Subjects</h2>	
+			<h2>Subjects</h2>
 		</div>
 	</div>
 	<div class="row subjects-group">
@@ -108,7 +109,7 @@
 	<% if @series.first %><!-- if series -->
 	<div class="row">
 	<div class="col">
-		<h2>In the Series</h2>	
+		<h2>In the Series</h2>
 		<ul class="list-unstyled list-inline series">
 		<% @series.each do |series| %>
 		 <li class="list-inline-item">
