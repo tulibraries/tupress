@@ -3,14 +3,22 @@
 <title>Temple University Press</title>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/epub.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/hooks.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/reader.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/jquery.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/screenfull.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/zip.min.js' %>
 <script>
     "use strict";
-      $( document ).on('turbolinks:load', function() {
-	      EPUBJS.filePath = "/assets/epub/";
+    document.onreadystatechange = function () {
+	    if (document.readyState == "complete") {
+	      EPUBJS.filePath = "<%= root_path + 'assets/epub/' %>";
 	      EPUBJS.cssPath = "/assets/epub/css/";
 	      // fileStorage.filePath = EPUBJS.filePath;
 	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});
-	  });
+	    }
+    }
 </script>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
