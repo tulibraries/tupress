@@ -2,19 +2,18 @@
 <head>
 <title>Temple University Press</title>
 
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <script>
     "use strict";
       $( document ).on('turbolinks:load', function() {
 	      EPUBJS.filePath = "/assets/epub/";
 	      EPUBJS.cssPath = "/assets/epub/css/";
 	      // fileStorage.filePath = EPUBJS.filePath;
-	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});    
+	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});
 	  });
-
 </script>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </head>
 <body>
