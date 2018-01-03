@@ -12,17 +12,13 @@
 <script>
     "use strict";
     document.onreadystatechange = function () {
-      // $( document ).on('turbolinks:load', function() {
 	    if (document.readyState == "complete") {
-	      EPUBJS.filePath = "/vendor/assets/javascripts/epub/";
+	      EPUBJS.filePath = "<%= root_path + 'assets/epub/' %>";
 	      EPUBJS.cssPath = "/assets/epub/css/";
 	      // fileStorage.filePath = EPUBJS.filePath;
-
 	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});
 	    }
     }
-	  // });
-
 </script>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
