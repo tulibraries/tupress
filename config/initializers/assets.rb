@@ -10,11 +10,11 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( epub/epub.min.js )
-Rails.application.config.assets.precompile += %w( epub/reader.min.js )
-Rails.application.config.assets.precompile += %w( epub/libs/zip.min.js )
-Rails.application.config.assets.precompile += %w( epub/libs/jquery.min.js )
-Rails.application.config.assets.precompile += %w( epub/libs/screenfull.min.js )
+# Rails.application.config.assets.precompile += %w( epub/epub.min.js )
+# Rails.application.config.assets.precompile += %w( epub/reader.min.js )
+# Rails.application.config.assets.precompile += %w( epub/libs/zip.min.js )
+# Rails.application.config.assets.precompile += %w( epub/libs/jquery.min.js )
+# Rails.application.config.assets.precompile += %w( epub/libs/screenfull.min.js )
 Rails.application.config.assets.precompile += %w( turbolinks.js )
 # Rails.application.config.assets.precompile += %w( font/fontello.woff )
 # Rails.application.config.assets.precompile += %w( font/fontello.ttf )
