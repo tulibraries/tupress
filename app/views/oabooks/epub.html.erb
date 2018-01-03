@@ -3,12 +3,18 @@
 <title>Temple University Press</title>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/epub.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/hooks.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/reader.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/jquery.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/screenfull.min.js' %>
+<%= javascript_include_tag root_path + 'assets/epub/js/libs/zip.min.js' %>
 <script>
     "use strict";
     document.onreadystatechange = function () {
       // $( document ).on('turbolinks:load', function() {
 	    if (document.readyState == "complete") {
-	      EPUBJS.filePath = "/assets/epub/";
+	      EPUBJS.filePath = "/vendor/assets/javascripts/epub/";
 	      EPUBJS.cssPath = "/assets/epub/css/";
 	      // fileStorage.filePath = EPUBJS.filePath;
 
