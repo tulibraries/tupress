@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122153258) do
+ActiveRecord::Schema.define(version: 20180110184310) do
 
-  create_table "administrators", force: :cascade do |t|
+  create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
     t.string   "password_digest"
     t.string   "first_name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.datetime "updated_at",                null: false
   end
 
-  create_table "agencies", force: :cascade do |t|
+  create_table "agencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "contact"
     t.string   "address1"
@@ -40,35 +40,35 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "books", force: :cascade do |t|
+  create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "book_id"
     t.string   "title"
     t.string   "subtitle"
     t.string   "author"
-    t.text     "about_author"
-    t.string   "intro"
-    t.string   "blurb"
-    t.string   "excerpt"
+    t.text     "about_author",    limit: 65535
+    t.text     "intro",           limit: 65535
+    t.text     "blurb",           limit: 65535
+    t.text     "excerpt",         limit: 65535
     t.string   "is_guide"
     t.string   "cover_image"
     t.string   "format"
     t.string   "isbn"
     t.string   "ean"
     t.string   "pub_date"
-    t.text     "in_series"
-    t.text     "binding"
-    t.text     "description"
-    t.text     "reviews"
-    t.text     "subjects"
-    t.text     "contents"
-    t.decimal  "price",           precision: 5, scale: 2
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.text     "in_series",       limit: 65535
+    t.text     "binding",         limit: 65535
+    t.text     "description",     limit: 65535
+    t.text     "reviews",         limit: 65535
+    t.text     "subjects",        limit: 65535
+    t.text     "contents",        limit: 65535
+    t.decimal  "price",                         precision: 5, scale: 2
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
     t.string   "award"
     t.string   "hot"
     t.string   "news"
-    t.text     "hot_text"
-    t.text     "news_text"
+    t.text     "hot_text",        limit: 65535
+    t.text     "news_text",       limit: 65535
     t.string   "catalog"
     t.string   "course_adoption"
     t.string   "highlight"
@@ -76,13 +76,13 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "award_year"
   end
 
-  create_table "catalogs", force: :cascade do |t|
+  create_table "catalogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "conferences", force: :cascade do |t|
+  create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "month"
     t.string   "conference"
     t.string   "link"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "year"
   end
 
-  create_table "documents", force: :cascade do |t|
+  create_table "documents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "filename"
     t.string   "department"
@@ -110,80 +110,80 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "contact_email"
   end
 
-  create_table "entries", force: :cascade do |t|
+  create_table "entries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.datetime "published"
-    t.text     "description"
-    t.text     "content"
+    t.text     "description", limit: 65535
+    t.text     "content",     limit: 65535
     t.string   "url"
     t.string   "author"
     t.integer  "feed_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  create_table "events", force: :cascade do |t|
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date     "startdate"
     t.date     "enddate"
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.string   "where"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.time     "time"
     t.string   "timezone"
     t.time     "endtime"
   end
 
-  create_table "faqs", force: :cascade do |t|
+  create_table "faqs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "q"
-    t.text     "a"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "a",          limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
-  create_table "feeds", force: :cascade do |t|
+  create_table "feeds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "url"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  create_table "journals", force: :cascade do |t|
+  create_table "journals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "links", force: :cascade do |t|
+  create_table "links", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "oabooks", force: :cascade do |t|
+  create_table "oabooks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "description"
+    t.text     "description",              limit: 65535
     t.string   "isbn"
     t.string   "cover_image_file_name"
     t.string   "cover_image_content_type"
     t.integer  "cover_image_file_size"
     t.datetime "cover_image_updated_at"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.text     "content2",   limit: 65535
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text     "content2"
-  end
-
-  create_table "people", force: :cascade do |t|
+  create_table "people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.string   "position"
@@ -194,14 +194,14 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "document_contact"
   end
 
-  create_table "regions", force: :cascade do |t|
+  create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "region"
     t.string   "rights"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "reps", force: :cascade do |t|
+  create_table "reps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "company"
     t.string   "name"
     t.string   "address"
@@ -217,36 +217,36 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "coverage"
   end
 
-  create_table "reviews", force: :cascade do |t|
+  create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "title_id"
     t.string   "author"
-    t.text     "review"
+    t.text     "review",      limit: 65535
     t.string   "source"
     t.string   "source_link"
     t.string   "source_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
-  create_table "series", force: :cascade do |t|
+  create_table "series", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "series_id"
     t.string   "series"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "editors"
     t.string   "founder"
-    t.text     "description"
+    t.text     "description", limit: 65535
   end
 
-  create_table "subjects", force: :cascade do |t|
+  create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "subject_id"
     t.string   "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -259,8 +259,8 @@ ActiveRecord::Schema.define(version: 20171122153258) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
