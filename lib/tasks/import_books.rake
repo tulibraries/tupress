@@ -7,7 +7,7 @@ namespace :db do
         desc 'Import books to database'
         task :import_data => :environment do
 
-            BOOK_DATA = "#{Rails.root}/no_amps.xml.txt"
+            BOOK_DATA = "#{Rails.root}/book_titles.xml"
 
             doc = File.open(BOOK_DATA, 'rb:UTF-16le') { |f| Nokogiri::XML(f) }
 
