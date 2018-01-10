@@ -19,3 +19,4 @@ module Tupress
     end
   end
 end
+

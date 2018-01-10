@@ -72,6 +72,7 @@ end
 controller :oabooks do
   get 'open-access'           => :index
   get 'open-access/:id'       => :show
+  get 'open-access/epub/:id'  => :epub
 end
 
 

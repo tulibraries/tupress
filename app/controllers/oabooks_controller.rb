@@ -1,5 +1,5 @@
 class OabooksController < ApplicationController
-  before_action :set_oabook, only: [:show, :edit, :update, :destroy]
+  before_action :set_oabook, only: [:show, :edit, :update, :destroy, :epub]
 
   # GET /oabooks
   # GET /oabooks.json
@@ -10,6 +10,10 @@ class OabooksController < ApplicationController
   # GET /oabooks/1
   # GET /oabooks/1.json
   def show
+  end
+
+  def epub
+    render layout: false
   end
 
   # GET /oabooks/new
