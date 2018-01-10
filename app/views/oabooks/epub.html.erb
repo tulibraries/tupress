@@ -14,7 +14,7 @@
     document.onreadystatechange = function () {
 	    if (document.readyState == "complete") {
 	      EPUBJS.filePath = "<%= root_path + 'epub/' %>";
-	      EPUBJS.cssPath = "/assets/epub/css/";
+	      EPUBJS.cssPath = "<%= root_path + 'epub/css/' %>";
 	      // fileStorage.filePath = EPUBJS.filePath;
 	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});
 	    }
@@ -22,6 +22,11 @@
 </script>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag root_path + 'epub/css/annotations.css' %>
+<%= stylesheet_link_tag root_path + 'epub/css/main.css' %>
+<%= stylesheet_link_tag root_path + 'epub/css/normalize.css' %>
+<%= stylesheet_link_tag root_path + 'epub/css/popup.css' %>
 
 </head>
 <body>
@@ -74,7 +79,7 @@
         <div id="viewer"></div>
         <div id="next" class="arrow">›</div>
 
-        <div id="loader"><%= image_tag("epub/loader.gif") %></div>
+        <div id="loader"><%= image_tag(root_path + 'epub/img/loader.gif') %></div>
       </div>
       <div class="modal md-effect-1" id="settings-modal">
           <div class="md-content">
