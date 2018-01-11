@@ -41,10 +41,10 @@
 			<% @book.binding.each do |binding| %>
 			<%# require 'pry'; binding.pry %>
 			<p class="format">
-				<%= binding["binding"]["format"] %>: <strong><%= number_to_currency(binding["binding"]["price"]) %></strong>
+				<%= binding.fetch("binding", []).fetch("format", []) %>: <strong><%= number_to_currency(binding.fetch("binding").fetch("price", [])) %></strong>
 				<br />
-				EAN: <%= binding["binding"]["ean"] %><br />
-				Publication: <%= binding["binding"]["pub_date_for_format"] %> <br /> <br />
+				EAN: <%= binding.fetch("binding").fetch("ean", []) %><br />
+				Publication: <%= binding.fetch("binding", []).fetch("pub_date_for_format", []) %> <br /> <br />
 			<% end %>
 			<%= @book.format.html_safe %>
 			</p>
