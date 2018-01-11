@@ -41,7 +41,7 @@
 			<% @book.binding.each do |binding| %>
 			<%# require 'pry'; binding.pry %>
 			<p class="format">
-				<%= binding.fetch("binding", "").fetch("format", "") %>: <strong><%= number_to_currency(binding.fetch("binding").fetch("price", "")) %></strong>
+				<%= binding.fetch("binding", "").fetch("format", "") %>: <strong><%= binding.fetch("binding").fetch("price", "") %></strong>
 				<br />
 				EAN: <%= binding.fetch("binding").fetch("ean", "") %><br />
 				Publication: <%= binding.fetch("binding", "").fetch("pub_date_for_format", "") %> <br /> <br />
