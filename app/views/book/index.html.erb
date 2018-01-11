@@ -18,7 +18,7 @@
 				<%= book.format.html_safe %>
 				<br /><br />
 				<%  book.binding.each do |binding| %>
-					<%= binding["binding"]["format"] %>: <%= binding["binding"]["ean"] %> <strong><%= number_to_currency(binding["binding"]["price"]) %></strong> <%= binding["binding"]["pub_date_for_format"] %> <br />
+					<%= binding[:format] %>: <%= binding[:ean] %> <strong><%= number_to_currency(binding[:price]) %></strong> <%= binding[:pub_date_for_format] %> <br />
 					<% end %>
 				</p>
 		</div>
