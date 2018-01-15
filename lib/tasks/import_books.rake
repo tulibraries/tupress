@@ -27,6 +27,7 @@ namespace :db do
           :excerpt => node.xpath("excerpt").text,
           :is_guide => node.xpath("is_guide").text,
           :cover_image => node.xpath("cover_image").text,
+          :status => node.xpath("status").text,
           :format => node.xpath("format").text,
           :isbn => node.xpath("isbn").text,
           :ean => node.xpath("ean").text,
