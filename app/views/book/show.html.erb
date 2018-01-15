@@ -34,7 +34,11 @@
 
 <div class="row no-gutters book-info">
 	<div class="col col-md-3">
-		<%= image_tag @book.cover_image, alt: "Book Cover" %>
+		<% if @book.cover_image.empty? %>
+		<% if @book.cover_image.include?(".jpg") || @book.cover_image.include?(".jpeg") || @book.cover_image.include?(".png") || @book.cover_image.include?(".gif")%>
+			<%= image_tag @book.cover_image, alt: "Book Cover" %>
+			<% end %>
+		<% end %>
 	</div>
 	<div class="col col-md-3">
 		<div class="format">
@@ -50,9 +54,11 @@
 			</p>
 		</div>
 	</div>
+	<% unless @book.reviews.empty? %>
 	<div class="col col-md-6">
 		<p><%= @book.reviews.first.html_safe %></p>
 	</div>
+	<% end %>
 </div>
 
 	<div class="row" style="visibility:hidden;">
@@ -65,18 +71,23 @@
 			<%= @book.description.html_safe %>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col">
-			<h2>Reviews</h2>
+
+	<% unless @book.reviews.empty? %>
+		<div class="row">
+			<div class="col">
+				<h2>Reviews</h2>
+			</div>
 		</div>
-	</div>
-	<div class="row">
+
 		<% @book.reviews.each do |review| %>
-		 <div class="col review">
-		 	<%= review.html_safe %>
-		 </div>
+			<div class="row">
+				 <div class="col review">
+				 	<%= review.html_safe %>
+				 </div>
+			</div>
 		<% end %>
-	</div>
+	<% end %>
+
 	<div class="row">
 		<div class="col">
 			<h2>About the Author(s)</h2>
