@@ -4,7 +4,7 @@ class BookController < ApplicationController
   	if params[:id].nil?
   		params[:id] = 'a'
   	end
-  	@books = Book.where('title LIKE ?', "#{params[:id]}%").order(:title)
+  	@books = Book.where('title LIKE ?', "#{params[:id]}%").where("status = ?", "IP").order(:title)
     @pagetitle = "Titles Index"
   end
 
