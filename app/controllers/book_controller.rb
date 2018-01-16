@@ -1,5 +1,7 @@
 class BookController < ApplicationController
 
+require 'pry'
+
   def index
   	if params[:id].nil?
   		params[:id] = 'a'
@@ -10,9 +12,10 @@ class BookController < ApplicationController
 
   def show
   	@book = Book.find_by book_id: params[:id]
-    @subjects = @book.subjects.map do |s|
-       Subject.find_by subject_id: s
+    @subjects = @book.subjects.each do |s|
+       s
     end
+    # binding.pry
     @series = @book.in_series.map do |s|
        Series.find_by series_id: s
     end

@@ -20,7 +20,7 @@ namespace :db do
             author.at("author_name").text
           end,
           :about_author => node.xpath("authors/author").map do |author|
-            author.at("author_bio").text.strip
+            author.at("author_bio").text
           end,
           :intro => node.xpath("intro").text,
           :blurb => node.xpath("blurb").text,
@@ -30,7 +30,6 @@ namespace :db do
           :status => node.xpath("status").text,
           :format => node.xpath("format").text,
           :isbn => node.xpath("isbn").text,
-          :ean => node.xpath("ean").text,
           :pub_date => node.xpath("pub_date").text,
           :in_series => node.xpath("series").map do |series|
             series.at("series_id").text
@@ -43,20 +42,20 @@ namespace :db do
             review.at("review_text").text
           end,
           :subjects => node.xpath("subjects/subject").map do |subject|
-            subject.at("subject_title").text
+            # subject.at("subject_id").text
+            Hash.from_xml(subject.to_s)
           end,
           :contents => node.xpath("contents").text,
-          :price => node.xpath("price").text,
           :award => node.xpath("award").text,
+          :award_year => node.xpath("award_year").text,
           :hot => node.xpath("hot").text,
-          :news => node.xpath("news").text,
           :hot_text => node.xpath("hot_text").text,
+          :news => node.xpath("news").text,
           :news_text => node.xpath("news_text").text,
           :catalog => node.xpath("catalog").text,
           :course_adoption => node.xpath("course_adoption").text,
           :highlight => node.xpath("highlight").text,
-          :highlight_image => node.xpath("highlight_image").text,
-          :award_year => node.xpath("award_year").text,
+          :highlight_image => node.xpath("highlight_image").text
       )
       end
     end

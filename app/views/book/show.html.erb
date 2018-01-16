@@ -34,7 +34,7 @@
 
 <div class="row no-gutters book-info">
 	<div class="col col-md-3">
-		<% if @book.cover_image.empty? %>
+		<% unless @book.cover_image.empty? %>
 		<% if @book.cover_image.include?(".jpg") || @book.cover_image.include?(".jpeg") || @book.cover_image.include?(".png") || @book.cover_image.include?(".gif")%>
 			<%= image_tag @book.cover_image, alt: "Book Cover" %>
 			<% end %>
@@ -87,21 +87,22 @@
 			</div>
 		<% end %>
 	<% end %>
-
-	<div class="row">
-		<div class="col">
-			<h2>About the Author(s)</h2>
+	<% unless @book.about_author.present? %>
+		<div class="row">
+			<div class="col">
+				<h2>About the Author(s)</h2>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col">
-		 <div class="about_author">
-		<% @book.about_author.each do |about| %>
-		 	<%= about.html_safe %><br />
-		<% end %>
-		 </div>
-	</div>
-	</div>
+		<div class="row">
+			<div class="col">
+			 <div class="about_author">
+			<% @book.about_author.each do |about| %>
+			 	<%= about.html_safe %><br />
+			<% end %>
+			 </div>
+		</div>
+		</div>
+	<% end %>
 	<% if @subjects.first %>
 	<div class="row">
 		<div class="col">
@@ -109,10 +110,14 @@
 		</div>
 	</div>
 	<div class="row subjects-group">
-		<% @subjects.each do |subject| %>
+		<% @subjects.each do |subjects| %>
+		<% subjects.each do |subject,info| %>
+		
 			<div class="col-md-4 list-group-item">
-				 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %>
+				 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
 			</div>
+		
+		<% end %>	
 		<% end %>
 	</div>
 	<% end %>
