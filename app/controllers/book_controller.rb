@@ -22,22 +22,22 @@ require 'pry'
   end
 
   def bysubject
-    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").order(:title)
+    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where("status = ?", "IP").order(:title)
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
   end
 
   def byseries
-    @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").order(:title)
+    @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").where("status = ?", "IP").order(:title)
     @series = Series.find_by('series_id = ?', "#{params[:id]}")
   end
 
   def studyguides
-    @books = Book.where('is_guide = ?', "1").order(:title)
+    @books = Book.where('is_guide = ?', "1").where("status = ?", "IP").order(:title)
     @pagetitle = "Study Guides"
   end 
 
   def awards
-    @books = Book.where('award != ?', '').order(:title)
+    @books = Book.where('award != ?', '').where("status = ?", "IP").order(:title)
     @pagetitle = "Award-Winning Books"
   end
 
