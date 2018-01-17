@@ -15,33 +15,23 @@ Trestle.resource(:books) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |book|
-    text_field :title
-    text_field :subtitle
-    # book.author.each do |author|
-      text_field  :author, multiple: true
-    # end
-    text_area  :about_author, multiple: true
-    text_area  :intro
 
-    text_area  :blurb
-    text_area  :excerpt
-    text_field  :is_guide
-    text_field  :status
-    text_field  :cover_image
-    text_field  :format
-    text_field  :isbn
-    text_field  :pub_date
-    text_field  :in_series, multiple: true
-    text_area  :binding, multiple: true
-    text_area  :description
-    text_area  :reviews, multiple: true
-    text_area  :subjects, multiple: true
-    text_area  :contents
-  
+    text_field :title, :disabled => true
+    if !:author.nil?
+      text_field :author, :disabled => true
+    end
+    text_field  :is_guide, :disabled => true
+    check_box :hot
+    check_box :news
+    text_area :news_text
+    check_box :highlight
+    text_field :highlight_image
+
     row do
       col(xs: 6) { datetime_field :updated_at }
       col(xs: 6) { datetime_field :created_at }
     end
+
   end
 
   # By default, all parameters passed to the update and create actions will be
