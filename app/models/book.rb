@@ -13,4 +13,5 @@ require 'carrierwave/orm/activerecord'
 	belongs_to :subject, :counter_cache => true, optional: true
 
 	mount_uploader :cover_image, BookCoverUploader
+	mount_uploader :highlight_image, HighlightImageUploader
 end

@@ -190,7 +190,9 @@
 		}
 	}
 }
-
+.carousel-item img {
+	max-height: 360px;
+}
 .social-icon {
 	width:29px;
 	border:0;
