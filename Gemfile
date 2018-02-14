@@ -13,6 +13,7 @@ gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'carrierwave', '~> 1.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
@@ -24,7 +25,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'nokogiri'
-gem 'carrierwave', '~> 1.0'
 gem 'pry'
 gem 'feedjira'
 gem 'social-share-button'

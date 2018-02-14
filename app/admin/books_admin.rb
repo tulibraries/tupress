@@ -20,12 +20,13 @@ Trestle.resource(:books) do
     if !:author.nil?
       text_field :author, :disabled => true
     end
-    text_field  :is_guide, :disabled => true
-    check_box :hot
-    check_box :news
-    text_area :news_text
-    check_box :highlight
-    text_field :highlight_image
+    file_field :cover_image
+    text_field :is_guide, :disabled => true
+    check_box  :hot
+    check_box  :news
+    text_area  :news_text
+    check_box  :highlight
+    # file_field :highlight_image, :html => { :multipart => true }
 
     row do
       col(xs: 6) { datetime_field :updated_at }

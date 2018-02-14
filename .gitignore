@@ -25,7 +25,7 @@ db/data.yml
 /public/files
 #public/assets/
 vendor/bundle/
-
+public/uploads/
 book_titles.xml
 
 # Ignore Byebug command history file.

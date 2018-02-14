@@ -85,7 +85,7 @@ require 'pry'
  private
 
   def book_params
-    params[:book].permit(  :title, :subtitle,  
+    params[:book].permit(  :title, :subtitle, :cover_image, 
       :hot, :hot_text, :news, :news_text, 
       :is_guide, :award, :award_year, :highlight, 
       :highlight_image)
