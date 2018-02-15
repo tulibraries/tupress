@@ -190,7 +190,11 @@
 		}
 	}
 }
-
+.carousel-item, .carousel-item.active {
+/*	width: 780px;
+	height: 650px;
+	overflow-y: hidden;*/
+}
 .social-icon {
 	width:29px;
 	border:0;

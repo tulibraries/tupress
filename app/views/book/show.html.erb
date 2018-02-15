@@ -2,15 +2,17 @@
 <div class="container" id="book_show">
 <div class="row">
 	<div class="col col-md-8">
-		<h1 class="book_title"><%= @book.title %>
+		<h1 class="book_title"><%= @book.title %> 
 			<% unless @book.subtitle.empty? %>
-				<br /><small><em><%= @book.subtitle %></em></small>
+				<br /><small><em><%= @book.subtitle %></em></small> 
 			<% end %>
 		</h1>
 
 	<div class="row">
 		<div class="col author">
 			<%= @book.author.map { |author| author }.join(' and ') %>
+			
+			<%= link_to "<edit>", "/admin/books/"+@book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
 		</div>
 	</div>
 	</div>
@@ -34,9 +36,9 @@
 
 <div class="row no-gutters book-info">
 	<div class="col col-md-3">
-		<% unless @book.cover_image.empty? %>
-		<% if @book.cover_image.include?(".jpg") || @book.cover_image.include?(".jpeg") || @book.cover_image.include?(".png") || @book.cover_image.include?(".gif")%>
-			<%= image_tag @book.cover_image, alt: "Book Cover" %>
+		<% unless @book.cover_image.url.blank? %>
+		<% if @book.cover_image.url.include?(".jpg") || @book.cover_image.url.include?(".jpeg") || @book.cover_image.url.include?(".png") || @book.cover_image.url.include?(".gif")%>
+			<%= image_tag @book.cover_image.url, alt: "Book Cover" %>
 			<% end %>
 		<% end %>
 	</div>
