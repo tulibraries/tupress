@@ -190,8 +190,10 @@
 		}
 	}
 }
-.carousel-item img {
-	max-height: 360px;
+.carousel-item, .carousel-item.active {
+/*	width: 780px;
+	height: 650px;
+	overflow-y: hidden;*/
 }
 .social-icon {
 	width:29px;

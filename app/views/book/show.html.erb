@@ -11,7 +11,8 @@
 	<div class="row">
 		<div class="col author">
 			<%= @book.author.map { |author| author }.join(' and ') %>
-				<%= link_to "<edit>", "/admin/books/"+@book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
+			
+			<%= link_to "<edit>", "/admin/books/"+@book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
 		</div>
 	</div>
 	</div>
