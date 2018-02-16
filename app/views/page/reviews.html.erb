@@ -17,21 +17,13 @@
 		<% for review in reviews %>
 			<h2>
 				<%= link_to review.title, :controller=>'book', :action=>'show', :id=>review.title_id %> 
-				<small class="text-muted">by <%= review.author %></small>
+				<small class="text-muted">by <%= review.author.each %></small>
 			</h2>
 
 			<div class="row">
 				<div class="col">
 					<blockquote class="blockquote">
-						<p class="mb-0"><%= review.review %></p>
-						<footer class="blockquote-footer blockquote-reverse">
-						<% if review.source_link != '' %>
-							<%= link_to review.source, review.source_link, :class=>"abbr" %> 
-						<% else %>
-							<%= review.source %>
-						<% end %>
-							-- <%= review.source_date %>
-						</footer>
+						<p class="mb-0"><%= review.review.html_safe %></p>
 					</blockquote>
 				</div>
 			</div>
