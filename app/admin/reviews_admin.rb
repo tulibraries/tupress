@@ -3,6 +3,10 @@ Trestle.resource(:reviews) do
     item :reviews, icon: "fa fa-star"
   end
 
+  collection do
+    Review.order(title: :asc).order(weight: :desc)
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do
