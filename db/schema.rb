@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180215222953) do
+ActiveRecord::Schema.define(version: 20180216182201) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 20180215222953) do
     t.string   "highlight_image"
     t.string   "award_year"
     t.string   "status"
+    t.integer  "hotweight"
+    t.integer  "newsweight"
   end
 
   create_table "catalogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

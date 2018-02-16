@@ -37,19 +37,20 @@ Trestle.resource(:books) do
           ['...', '...']
         ]
       )
-    file_field :cover_image, accept: 'image/png,image/jpeg,image/gif'
-    # image_submit_tag(:cover_image.to_s, disabled: true)
-    text_field :is_guide, :disabled => true
-    check_box  :hot
-    check_box  :news
-    text_area  :news_text
-    check_box  :highlight
-    file_field :highlight_image
+    file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif'
+    text_field    :is_guide, :disabled => true
+    check_box     :hot
+    number_field  :hotweight, id: "hot-weight", min: 1, max: 4
+    check_box     :news
+    number_field  :newsweight, id: "news-weight", min: 1, max: 5
+    text_area     :news_text
+    check_box     :highlight
+    file_field    :highlight_image
 
-    row do
-      col(xs: 6) { datetime_field :updated_at, disabled: true }
-      col(xs: 6) { datetime_field :created_at, disabled: true }
-    end
+    # row do
+    #   col(xs: 6) { datetime_field :updated_at, disabled: true }
+    #   col(xs: 6) { datetime_field :created_at, disabled: true }
+    # end
 
     if !book.cover_image.nil?
       sidebar do 
