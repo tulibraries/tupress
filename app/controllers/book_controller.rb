@@ -12,7 +12,7 @@ require 'pry'
 
   def show
   	@book = Book.find_by book_id: params[:id]
-    @reviews = Review.where('title_id = ?', "#{params[:id]}").order(:weight)
+    @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
     @subjects = @book.subjects.each do |s|
        s
     end

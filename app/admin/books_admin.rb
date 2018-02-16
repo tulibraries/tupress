@@ -5,6 +5,14 @@ Trestle.resource(:books) do
     item :books, icon: "fa fa-star"
   end
 
+  collection do
+    Book.order(title: :asc)
+  end
+
+  search do |q|
+    collection.where("title LIKE ?", "%#{q}%")
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do
@@ -43,21 +51,24 @@ Trestle.resource(:books) do
       col(xs: 6) { datetime_field :created_at, disabled: true }
     end
 
-    sidebar do 
-      label "cover_image"
-    end
-    sidebar do 
-      if !book.cover_image.nil?
+    if !book.cover_image.nil?
+      sidebar do 
+        label "cover_image"
+      end
+      sidebar do 
         image_tag book.cover_image.url.to_s, id: "cover_image"
       end
     end
-    sidebar do 
-      label "highlight_image"
-    end
-    sidebar do 
-      if !book.highlight_image.nil?
+    if !book.highlight_image.nil?
+      sidebar do 
+        label "highlight_image"
+      end
+      sidebar do 
         image_tag book.highlight_image.url.to_s, id: "highlight_image"
       end
+    end
+    sidebar do 
+        link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book"
     end
   end
 
