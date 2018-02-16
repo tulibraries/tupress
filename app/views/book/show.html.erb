@@ -56,9 +56,9 @@
 			</p>
 		</div>
 	</div>
-	<% unless @book.reviews.empty? %>
+	<% unless @reviews.empty? %>
 	<div class="col col-md-6">
-		<p><%= @book.reviews.first.html_safe %></p>
+		<p><%= @reviews.first.review.html_safe %></p>
 	</div>
 	<% end %>
 </div>
@@ -74,17 +74,17 @@
 		</div>
 	</div>
 
-	<% unless @book.reviews.empty? %>
+	<% unless @reviews.empty? %>
 		<div class="row">
 			<div class="col">
 				<h2>Reviews</h2>
 			</div>
 		</div>
 
-		<% @book.reviews.each do |review| %>
+		<% @reviews[1..-1].each do |review| %>
 			<div class="row">
 				 <div class="col review">
-				 	<%= review.html_safe %>
+				 	<%= review.review.html_safe %>
 				 </div>
 			</div>
 		<% end %>
