@@ -25,7 +25,7 @@ namespace :db do
           :intro => node.xpath("intro").text,
           :blurb => node.xpath("blurb").text,
           :excerpt => node.xpath("excerpt").text,
-          :is_guide => node.xpath("is_guide").text,
+          # :is_guide => node.xpath("is_guide").text,
           # :cover_image => node.xpath("cover_image").text,
           :status => node.xpath("status").text,
           :format => node.xpath("format").text,
@@ -46,16 +46,18 @@ namespace :db do
             Hash.from_xml(subject.to_s)
           end,
           :contents => node.xpath("contents").text,
-          :award => node.xpath("award").text,
-          :award_year => node.xpath("award_year").text,
-          :hot => node.xpath("hot").text,
-          :hot_text => node.xpath("hot_text").text,
-          :news => node.xpath("news").text,
-          :news_text => node.xpath("news_text").text,
-          :catalog => node.xpath("catalog").text,
-          :course_adoption => node.xpath("course_adoption").text,
-          :highlight => node.xpath("highlight").text,
-          :highlight_image => node.xpath("highlight_image").text
+          # :award => node.xpath("award").text,
+          # :award_year => node.xpath("award_year").text,
+          # :hot => node.xpath("hot").text,
+          :hotweight => "1",
+          # :hot_text => node.xpath("hot_text").text,
+          # :news => node.xpath("news").text,
+          # :news_text => node.xpath("news_text").text,
+          :newsweight => "1",
+          # :catalog => node.xpath("catalog").text,
+          # :course_adoption => node.xpath("course_adoption").text,
+          # :highlight => node.xpath("highlight").text,
+          # :highlight_image => node.xpath("highlight_image").text
       )
       end
     end
