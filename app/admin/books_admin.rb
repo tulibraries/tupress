@@ -5,6 +5,14 @@ Trestle.resource(:books) do
     item :books, icon: "fa fa-star"
   end
 
+  collection do
+    Book.order(title: :asc)
+  end
+
+  search do |q|
+    collection.where("title LIKE ?", "%#{q}%")
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do
@@ -29,35 +37,39 @@ Trestle.resource(:books) do
           ['...', '...']
         ]
       )
-    file_field :cover_image, accept: 'image/png,image/jpeg,image/gif'
-    # image_submit_tag(:cover_image.to_s, disabled: true)
-    text_field :is_guide, :disabled => true
-    check_box  :hot
-    check_box  :news
-    text_area  :news_text
-    check_box  :highlight
-    file_field :highlight_image
+    file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif'
+    text_field    :is_guide, :disabled => true
+    check_box     :hot
+    number_field  :hotweight, id: "hot-weight", min: 1, max: 4
+    check_box     :news
+    number_field  :newsweight, id: "news-weight", min: 1, max: 5
+    text_area     :news_text
+    check_box     :highlight
+    file_field    :highlight_image
 
-    row do
-      col(xs: 6) { datetime_field :updated_at, disabled: true }
-      col(xs: 6) { datetime_field :created_at, disabled: true }
-    end
+    # row do
+    #   col(xs: 6) { datetime_field :updated_at, disabled: true }
+    #   col(xs: 6) { datetime_field :created_at, disabled: true }
+    # end
 
-    sidebar do 
-      label "cover_image"
-    end
-    sidebar do 
-      if !book.cover_image.nil?
+    if !book.cover_image.nil?
+      sidebar do 
+        label "cover_image"
+      end
+      sidebar do 
         image_tag book.cover_image.url.to_s, id: "cover_image"
       end
     end
-    sidebar do 
-      label "highlight_image"
-    end
-    sidebar do 
-      if !book.highlight_image.nil?
+    if !book.highlight_image.nil?
+      sidebar do 
+        label "highlight_image"
+      end
+      sidebar do 
         image_tag book.highlight_image.url.to_s, id: "highlight_image"
       end
+    end
+    sidebar do 
+        link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book"
     end
   end
 

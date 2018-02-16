@@ -3,6 +3,14 @@ Trestle.resource(:reviews) do
     item :reviews, icon: "fa fa-star"
   end
 
+  collection do
+    Review.order(title: :asc).order(weight: :desc)
+  end
+
+  search do |q|
+    collection.where("title LIKE ?", "%#{q}%")
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do
@@ -19,7 +27,7 @@ Trestle.resource(:reviews) do
     # text_field    :title_id, disabled: true
     text_field    :author, disabled: true
     editor        :review
-    number_field  :weight, id: "review-weight", min: 0, max: 4
+    number_field  :weight, id: "review-weight", min: 0, max: 99
   
   #   row do
   #     col(xs: 6) { datetime_field :updated_at }
