@@ -22,6 +22,8 @@ Trestle.resource(:books) do
     actions
   end
 
+  #comment just to get this file into git, or else the jenkins job is stuck again
+
   # Customize the form fields shown on the new/edit views.
   #
   form do |book|
