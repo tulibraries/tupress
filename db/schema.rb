@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216182201) do
+ActiveRecord::Schema.define(version: 20180216191318) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -105,10 +105,6 @@ ActiveRecord::Schema.define(version: 20180216182201) do
     t.string   "format"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "file_file_name"
-    t.string   "file_content_type"
-    t.integer  "file_file_size"
-    t.datetime "file_updated_at"
     t.string   "department_contact"
     t.string   "contact_email"
   end
