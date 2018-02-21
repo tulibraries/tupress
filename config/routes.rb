@@ -30,6 +30,7 @@ controller :page do
   get   'copyright'             => :copyright,          :id => 7
   get   'university-presses'    => :university_presses, :id => 8
   get   'order'                 => :order,              :id => 9
+  get   'received_rights'       => :received_rights ,   :id => 10
 	get		'contact'			          => :contact
   get   'book-reviews'          => :reviews
   get   'conferences'           => :conferences
