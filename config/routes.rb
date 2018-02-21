@@ -20,28 +20,29 @@ controller :page do
 
   # pages with id's are stored in the database, not in views folder (Tiny - IMCE generated)
 
-	get		'page/index'	          => :index
-  get   'press-info'            => :press_info,         :id => 1
-  get   'rights'                => :rights,             :id => 2
-  get   'submissions'           => :submissions,        :id => 3
-  get   'review-copy'           => :review_copy,        :id => 4
-  get   'payment'               => :payment,            :id => 5
-  get   'copy-policy'           => :copypolicy,         :id => 6
-  get   'copyright'             => :copyright,          :id => 7
-  get   'university-presses'    => :university_presses, :id => 8
-  get   'order'                 => :order,              :id => 9
-  get   'received_rights'       => :received_rights ,   :id => 10
-	get		'contact'			          => :contact
-  get   'book-reviews'          => :reviews
-  get   'conferences'           => :conferences
-  get   'people'                => :people
-  get   'foreign-rights'        => :foreign_rights
-  get   'faq'                   => :faq
-  get   'downloads'             => :downloads
-  get   'page/new'              => :new
-  post  'pages'                 => :create
-  post  'pages/:id'             => :update
-  get   'page/:id/edit'         => :edit
+	get		'page/index'	               => :index
+  get   'press-info'                 => :press_info,               :id => 1
+  get   'rights'                     => :rights,                   :id => 2
+  get   'submissions'                => :submissions,              :id => 3
+  get   'review-copy'                => :review_copy,              :id => 4
+  get   'payment'                    => :payment,                  :id => 5
+  get   'copy-policy'                => :copypolicy,               :id => 6
+  get   'copyright'                  => :copyright,                :id => 7
+  get   'university-presses'         => :university_presses,       :id => 8
+  get   'order'                      => :order,                    :id => 9
+  get   'received_rights'            => :received_rights ,         :id => 10
+  get   'received_review_copy'       => :received_review_copy,     :id => 11
+	get		'contact'			               => :contact
+  get   'book-reviews'               => :reviews
+  get   'conferences'                => :conferences
+  get   'people'                     => :people
+  get   'foreign-rights'             => :foreign_rights
+  get   'faq'                        => :faq
+  get   'downloads'                  => :downloads
+  get   'page/new'                   => :new
+  post  'pages'                      => :create
+  post  'pages/:id'                  => :update
+  get   'page/:id/edit'              => :edit
   root 	'page#index'
 end 
 
