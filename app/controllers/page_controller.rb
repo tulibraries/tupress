@@ -54,6 +54,9 @@ require 'pry'
   def received_rights 
     @page = Page.find_by(id: params[:id])
   end
+  def received_review_copy 
+    @page = Page.find_by(id: params[:id])
+  end
   def foreign_rights
     @agencies_catchall = Agency.find_by(region: 'All Other Territories')
     @agencies_by_region = Agency.all.group_by {|t| t.region}
