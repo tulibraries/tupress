@@ -13,7 +13,7 @@ Trestle.resource(:documents) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |documents|
+  form do |document|
     text_field    :title
     file_field    :filename
     text_field    :department
@@ -25,7 +25,16 @@ Trestle.resource(:documents) do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
+  if !document.filename.nil?
+    sidebar do 
+      label "File Name"
+    end
+    sidebar do 
+      link_to document.filename_identifier, document.filename.url
+    end
   end
+  end
+
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
