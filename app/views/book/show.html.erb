@@ -18,11 +18,13 @@
 	</div>
 	<div class="col-md-4">
 		<div class="social-shopping">
+			<% if @book.status == "IP" %>
 			<p class="text-center buy-it">
 				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
 				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %>
 			</p>
+			<% end %>
 			<p class="text-right social-icons">
 				<span class='share s_twitter'></span>
 				<span class='share s_facebook'></span>
