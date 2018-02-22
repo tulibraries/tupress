@@ -38,7 +38,7 @@ Trestle.resource(:books) do
         [
           ['In Print', 'IP'],
           ['Not In Print', 'NIP'],
-          ['X', 'X']
+          ['X', 'X'],
           ['...', '...']
         ]
       )
