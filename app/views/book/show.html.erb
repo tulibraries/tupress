@@ -73,6 +73,11 @@
 			<%= @book.description.html_safe %>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col contents">
+			<%= @book.contents.html_safe %>
+		</div>
+	</div>
 
 	<% unless @reviews.empty? %>
 		<div class="row">
