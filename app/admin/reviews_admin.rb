@@ -14,7 +14,9 @@ Trestle.resource(:reviews) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :title
+    column :title do |title|
+      truncate(title.title, omision: "...", length: 400)
+    end
     column :weight
     # column :created_at, align: :center
     actions

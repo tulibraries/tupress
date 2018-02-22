@@ -6,7 +6,10 @@ Trestle.resource(:faqs) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :q, header: "Question"
+    # column :q, header: "Question"
+    column :q, header: "Question" do |title|
+      truncate(title.q, omision: "...", length: 300)
+    end
     actions
   end
 

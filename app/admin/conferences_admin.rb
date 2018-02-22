@@ -6,7 +6,9 @@ Trestle.resource(:conferences) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :conference
+    column :conference do |title|
+      truncate(title.conference, omision: "...", length: 300)
+    end
     column :location
     column :dates
     actions

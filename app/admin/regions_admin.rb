@@ -6,7 +6,9 @@ Trestle.resource(:regions) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :region
+    column :region do |region|
+      truncate(region.region, omision: "...", length: 300)
+    end
     column :rights
     actions
   end

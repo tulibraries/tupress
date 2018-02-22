@@ -6,7 +6,9 @@ Trestle.resource(:documents) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :title
+    column :title do |title|
+      truncate(title.title, omision: "...", length: 300)
+    end
     # column :created_at, align: :center
     actions
   end
