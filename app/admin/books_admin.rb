@@ -17,7 +17,9 @@ Trestle.resource(:books) do
   #
   table do
     column :book_id
-    column :title
+    column :title do |booktitle|
+      truncate(booktitle.title, omision: "...", length: 300)
+    end
     column :author
     actions
   end
@@ -36,6 +38,7 @@ Trestle.resource(:books) do
         [
           ['In Print', 'IP'],
           ['Not In Print', 'NIP'],
+          ['X', 'X']
           ['...', '...']
         ]
       )

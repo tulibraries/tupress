@@ -7,7 +7,9 @@ Trestle.resource(:people) do
   #
   table do
     column :name
-    column :position
+    column :position do |position|
+      truncate(position.position, omision: "...", length: 300)
+    end
     column :department
     actions
   end
