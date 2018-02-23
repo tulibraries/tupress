@@ -18,7 +18,7 @@
 	</div>
 	<div class="col-md-4">
 		<div class="social-shopping">
-			<% if @book.status == "IP" %>
+			<% if @book.status.in?(@show_status)  %>
 			<p class="text-center buy-it">
 				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
@@ -102,7 +102,8 @@
 			</div>
 		<% end %>
 	<% end %>
-	<% unless @book.about_author.present? %>
+	<% if @book.author.present? %>
+	<% unless @book.about_author.all? &:blank? %>
 		<div class="row">
 			<div class="col">
 				<h2>About the Author(s)</h2>
@@ -110,13 +111,16 @@
 		</div>
 		<div class="row">
 			<div class="col">
-			 <div class="about_author">
 			<% @book.about_author.each do |about| %>
-			 	<%= about.html_safe %><br />
-			<% end %>
+			 <div class="about_author">
+			  <% if !about.blank? %>
+				 	<%= about.html_safe %><br />
+				<% end %>
 			 </div>
+			<% end %>
 		</div>
 		</div>
+	<% end %>
 	<% end %>
 	<% if @subjects.first %>
 	<div class="row">
