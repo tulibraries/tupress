@@ -37,8 +37,8 @@ Trestle.resource(:books) do
     select(:status, 
         [
           ['In Print', 'IP'],
-          ['NIP', 'NIP'],
           ['NP', 'NP'],
+          ['OS', 'OS'],
           ['X', 'X'],
           ['...', '...']
         ]
