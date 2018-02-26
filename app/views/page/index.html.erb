@@ -99,6 +99,17 @@
   </div>
 </div>
 <% end %>
+<% @freeforms.each do |ff| %>
+<div class="row" style="margin-top: 28px;">
+  <div class="media text-center" style="width: 160px;text-align:center">
+    <%= image_tag(ff.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
+  </div>
+  <div class="media-body" style="padding-left: 28px;">
+  <h2><%= ff.title %></h2>
+  <p><%= ff.description.html_safe %></p>
+  </div>
+</div>
+<% end %>
 <% @events.each do |event| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
