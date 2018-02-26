@@ -11,6 +11,7 @@ require 'pry'
     @news_books = Book.where(news: 1).take(4).sort_by{ |w| w.newsweight }
     @adoptions = Book.where('course_adoption = ?', 'Y')
     @events = Event.where(news: 1).take(2).sort_by{ |w| w.weight }
+    @freeforms = NewsItem.where(homepage: 1).take(1)
     @feed = Feed.find(1)
     @entries = @feed.entries.order('published desc')
   end

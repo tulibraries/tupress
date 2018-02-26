@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+  resources :news_items
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -78,7 +80,7 @@ controller :oabooks do
 end
 
 
-
+resources :newsitems
 resources :oabooks
 resources :links
 resources :feeds
