@@ -8,8 +8,9 @@ require 'pry'
   def index
     @highlights = Book.where(highlight: 1)
     @hot_books = Book.where(hot: 1).take(4).sort_by{ |w| w.hotweight }
-    @news_books = Book.where(news: 1).take(5).sort_by{ |w| w.newsweight }
+    @news_books = Book.where(news: 1).take(4).sort_by{ |w| w.newsweight }
     @adoptions = Book.where('course_adoption = ?', 'Y')
+    @events = Event.where(news: 1).take(2).sort_by{ |w| w.weight }
     @feed = Feed.find(1)
     @entries = @feed.entries.order('published desc')
   end
