@@ -28,11 +28,24 @@ Trestle.resource(:events) do
         ['GMT', 'GMT']
       ]
     )
+    check_box     :news
+    number_field  :weight, id: "weight", min: 1, max: 5
+    file_field    :image
+    check_box     :remove_image
   
     # row do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
+
+    unless events.image.blank?
+      sidebar do 
+        label "image"
+      end
+      sidebar do 
+        image_tag events.image.url.to_s, id: "Image"
+      end
+    end
   end
 
   # By default, all parameters passed to the update and create actions will be
