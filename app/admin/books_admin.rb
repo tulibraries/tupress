@@ -52,7 +52,7 @@ Trestle.resource(:books) do
     text_area     :news_text
     check_box     :highlight
     file_field    :highlight_image
-    check_box     :remove_image
+    check_box     :remove_cover_image
 
     # row do
     #   col(xs: 6) { datetime_field :updated_at, disabled: true }
