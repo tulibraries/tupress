@@ -44,6 +44,7 @@ Trestle.resource(:books) do
         ]
       )
     file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
+    check_box     :remove_cover_image
     text_field    :is_guide, :disabled => true
     check_box     :hot
     number_field  :hotweight, id: "hot-weight", min: 1, max: 4
@@ -52,7 +53,7 @@ Trestle.resource(:books) do
     text_area     :news_text
     check_box     :highlight
     file_field    :highlight_image
-    check_box     :remove_cover_image
+    check_box     :remove_highlight_image
     text_field    :award_year
     text_field    :award
 
