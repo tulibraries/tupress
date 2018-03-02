@@ -67,8 +67,8 @@
 
 <div class="row" style="margin-top: 28px;">
 <% @hot_books.each do |book| %>
-  <div class="col col-md-3 text-center">
-    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;max-width:200px;box-shadow: 6px 6px 7px #666;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+  <div class="col col-md-3 text-center hotdiv">
+    <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;max-width:200px;box-shadow: 6px 6px 7px #666;',), {controller: 'book', action: 'show', :id=>book.book_id} %>
     <p style="margin-top:14px;font-weight:600;"><%= book.title.html_safe %></p>
   </div>
 <% end %>
@@ -81,8 +81,20 @@
     <h2 style="text-transform:uppercase;letter-spacing:.64rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">In the News</h2>
   </div>
 </div>
+
 <div class="row" style="padding: 14px;padding-bottom: 28px;">
 <div class="col">
+<% @freeforms.each do |ff| %>
+<div class="row" style="margin-top: 28px;">
+  <div class="media text-center" style="width: 160px;text-align:center">
+    <%= image_tag(ff.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
+  </div>
+  <div class="media-body" style="padding-left: 28px;">
+  <h2><%= ff.title %></h2>
+  <p><%= ff.description.html_safe %></p>
+  </div>
+</div>
+<% end %>
 <% @news_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
@@ -99,24 +111,14 @@
   </div>
 </div>
 <% end %>
-<% @freeforms.each do |ff| %>
-<div class="row" style="margin-top: 28px;">
-  <div class="media text-center" style="width: 160px;text-align:center">
-    <%= image_tag(ff.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
-  </div>
-  <div class="media-body" style="padding-left: 28px;">
-  <h2><%= ff.title %></h2>
-  <p><%= ff.description.html_safe %></p>
-  </div>
-</div>
-<% end %>
 <% @events.each do |event| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
     <%= image_tag(event.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
   </div>
   <div class="media-body" style="padding-left: 28px;">
-  <h2><%= event.startdate.strftime("%A, %B %e, %Y") %></h2>
+  <h2>Upcoming Event</h2>
+  <p><%= event.startdate.strftime("%A, %B %e, %Y") %></p>
   <p><%= event.description.html_safe %></p>
   </div>
 </div>
