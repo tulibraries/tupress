@@ -11,7 +11,7 @@
 		<% @catalogs.each do |catalog| %>
 		<ul class="list-inline">
 			<li>
-				<%= link_to catalog.title, {controller: :book, action: :catalogs_by_season, :id => catalog.id} %>	
+				<%= link_to catalog.title, {controller: :book, action: :catalogs_by_season, :code => catalog.code} %>	
 			</li>
 		</ul>
 	<% end %>
