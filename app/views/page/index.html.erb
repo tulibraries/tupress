@@ -95,6 +95,18 @@
   </div>
 </div>
 <% end %>
+<% @events.each do |event| %>
+<div class="row" style="margin-top: 28px;">
+  <div class="media text-center" style="width: 160px;text-align:center">
+    <%= image_tag(event.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
+  </div>
+  <div class="media-body" style="padding-left: 28px;">
+  <h2>Upcoming Event</h2>
+  <p><%= event.startdate.strftime("%A, %B %e, %Y") %></p>
+  <p><%= event.description.html_safe %></p>
+  </div>
+</div>
+<% end %>
 <% @news_books.each do |book| %>
 <div class="row" style="margin-top: 28px;">
   <div class="media text-center" style="width: 160px;text-align:center">
@@ -108,18 +120,6 @@
       </h2>
       <p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
       <p style="line-height:1.2"><small><%= book.news_text.truncate(500).html_safe %></small></p>
-  </div>
-</div>
-<% end %>
-<% @events.each do |event| %>
-<div class="row" style="margin-top: 28px;">
-  <div class="media text-center" style="width: 160px;text-align:center">
-    <%= image_tag(event.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
-  </div>
-  <div class="media-body" style="padding-left: 28px;">
-  <h2>Upcoming Event</h2>
-  <p><%= event.startdate.strftime("%A, %B %e, %Y") %></p>
-  <p><%= event.description.html_safe %></p>
   </div>
 </div>
 <% end %>
