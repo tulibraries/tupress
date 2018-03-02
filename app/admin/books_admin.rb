@@ -53,6 +53,8 @@ Trestle.resource(:books) do
     check_box     :highlight
     file_field    :highlight_image
     check_box     :remove_cover_image
+    text_field    :award_year
+    text_field    :award
 
     # row do
     #   col(xs: 6) { datetime_field :updated_at, disabled: true }

@@ -36,6 +36,21 @@
 	</div>
 </div>
 
+<div class="row">
+	<div class="col text-center" style="color:#a5002f;">
+		<% unless @book.blurb.nil? %>
+			<%= @book.blurb %>
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="col" style="color:#996633;">
+		<% unless @book.award.nil? %>
+			<%= @book.award %>
+		<% end %>
+	</div>
+</div>
+
 <div class="row no-gutters book-info">
 	<div class="col col-md-3">
 		<% unless @book.cover_image.url.blank? %>
