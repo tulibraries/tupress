@@ -52,8 +52,8 @@ require 'pry'
   end
 
   def catalogs_by_season
-    @catalog = Catalog.find_by id: "#{params[:id]}"
-    @books = Book.where('catalog LIKE ?', "#{params[:id]}").order(:title)
+    @catalog = Catalog.find_by code: "#{params[:code]}"
+    @books = Book.where('catalog = ?', "#{params[:code]}").order(:title)
   end
 
   def edit   

@@ -10,7 +10,7 @@ controller :book do
   get   'studyguides' 	=> :studyguides
   get   'awards'				=> :awards
   get   'catalogs'      => :catalogs
-  get   'catalogs/:id'  => :catalogs_by_season
+  get   'catalogs/:code'  => :catalogs_by_season
   get   'book/:id/edit' => :edit
   post  'book/:id'      => :update
   get   'books/new'     => :new
