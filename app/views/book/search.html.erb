@@ -1,0 +1,38 @@
+<div class="container" id="search-results">
+	<div class="row">
+		<div class="col">
+			<h1>Search Results</h1>
+		</div>
+	</div>
+<% if !@books.empty? %>
+
+	<% @books.each do |book| %>
+	<div class="row book-row">
+		<div class="media">
+			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+		</div>
+		<div class="media-body">
+			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+			<% if book.subtitle %>
+				<p class="subtitle"><%= book.subtitle %></p>
+			<% end %>
+			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
+			<p class="format">
+				<%= book.format.html_safe %>
+				<br />
+				<%  book.binding.each do |binding| %>
+					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong><br />
+				<% end %>
+			</p>
+			<p class="award">
+				<%= book.award %>
+			</p>
+		</div>
+	</div>
+	<% end %>
+
+<% else %>
+	<p>No results found</p>
+<% end %>
+
+</div>

@@ -15,4 +15,10 @@ require 'carrierwave/orm/activerecord'
 
 	mount_uploader :cover_image, BookCoverUploader
 	mount_uploader :highlight_image, HighlightImageUploader
+
+	def self.search(q)
+	  if q
+	    Book.where('title LIKE ?', "%#{q}%").order(:title)
+		end
+	end
 end

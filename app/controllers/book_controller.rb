@@ -23,6 +23,10 @@ require 'pry'
     end
   end
 
+  def search
+    @books = Book.search(params[:q])
+  end
+
   def bysubject
     @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:title)
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 

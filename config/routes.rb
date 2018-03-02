@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   
-  resources :news_items
+  
 controller :book do 
 	get   'books'					=> :index
   get   'book/:id' 			=> :show
@@ -15,7 +15,7 @@ controller :book do
   post  'book/:id'      => :update
   get   'books/new'     => :new
   post  'books'         => :create
-
+  get  'search'        => :search
 end
 
 controller :page do
