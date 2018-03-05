@@ -135,11 +135,11 @@
 <div class="col">
 <div class="row">
   <div class="col card">
-    <h2 style="color:#903;" class="text-center">Spring 2017 Catalog</h2>
+    <h2 style="color:#903;" class="text-center"><%= @catalog.title %></h2>
     <p class="text-center">
-    <%= link_to image_tag('spring17.gif', alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :id=>'1'} %>
+    <%= link_to image_tag(@catalog.code+'.gif', alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :code=>@catalog.code} %>
     </p>
-    <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', 'http://www.temple.edu/tempress/catalogs/archive/spring2017.pdf' %></p>
+    <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', @catalog.link %></p>
   </div>
 </div>
 <div class="row">
