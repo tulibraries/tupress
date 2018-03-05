@@ -5,6 +5,12 @@ Trestle.resource(:news_items) do
 
   # Customize the table columns shown on the index view.
   #
+  table do
+    column  :title
+    column  :homepage
+
+    actions
+  end
   # table do
   #   column :name
   #   column :created_at, align: :center
