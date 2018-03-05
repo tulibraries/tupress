@@ -39,12 +39,12 @@
 <div class="row">
 	<div class="col text-center" style="color:#a5002f;">
 		<% unless @book.blurb.nil? %>
-			<%= @book.blurb %>
+			<%= @book.blurb.html_safe %>
 		<% end %>
 	</div>
 </div>
 <div class="row">
-	<div class="col" style="color:#996633;">
+	<div class="col" style="color:#996633;margin-top: 10px;">
 		<% unless @book.award.nil? %>
 			<%= @book.award %>
 		<% end %>
