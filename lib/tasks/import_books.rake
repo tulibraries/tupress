@@ -54,7 +54,7 @@ namespace :db do
           # :news => node.xpath("news").text,
           # :news_text => node.xpath("news_text").text,
           :newsweight => "1",
-          # :catalog => node.xpath("catalog").text,
+          :catalog => node.xpath("catalog").text,
           # :course_adoption => node.xpath("course_adoption").text,
           # :highlight => node.xpath("highlight").text,
           # :highlight_image => node.xpath("highlight_image").text
