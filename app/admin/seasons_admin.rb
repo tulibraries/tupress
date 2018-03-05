@@ -1,8 +1,8 @@
-Trestle.resource(:catalogs) do
+Trestle.resource(:seasons) do
   require 'carrierwave/processing/mini_magick'
   
   menu do
-    item :catalogs, icon: "fa fa-star"
+    item :seasons, icon: "fa fa-star"
   end
 
   # Customize the table columns shown on the index view.
@@ -15,7 +15,7 @@ Trestle.resource(:catalogs) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |catalog|
+  form do |season|
     text_field :title
     text_field :code
     text_field :link
@@ -27,12 +27,12 @@ Trestle.resource(:catalogs) do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
-    if !catalog.image.nil?
+    if !season.image.nil?
       sidebar do 
         label "image"     
       end
       sidebar do 
-        image_tag catalog.image.url.to_s, id: "catalog_image"
+        image_tag season.image.url.to_s, id: "catalog_image"
       end
     end
   end

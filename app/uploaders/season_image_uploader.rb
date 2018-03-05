@@ -1,4 +1,4 @@
-class CatalogImageUploader < CarrierWave::Uploader::Base
+class SeasonImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick

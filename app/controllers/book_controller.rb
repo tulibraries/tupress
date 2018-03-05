@@ -48,11 +48,11 @@ require 'pry'
   end
 
   def catalogs
-    @catalogs = Catalog.all.order(:created_at)
+    @catalogs = Season.all.order(:created_at)
   end
 
   def catalogs_by_season
-    @catalog = Catalog.find_by code: "#{params[:code]}"
+    @catalog = Season.find_by code: "#{params[:code]}"
     @books = Book.where('catalog = ?', "#{params[:code]}").order(:title)
   end
 
