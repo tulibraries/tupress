@@ -11,6 +11,7 @@ require 'carrierwave/orm/activerecord'
 
 	belongs_to :series, :counter_cache => true, optional: true
 	belongs_to :subject, :counter_cache => true, optional: true
+	belongs_to :catalog, :counter_cache => true, optional: true
 	has_many :reviews
 
 	mount_uploader :cover_image, BookCoverUploader
