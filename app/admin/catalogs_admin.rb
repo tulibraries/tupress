@@ -1,4 +1,6 @@
 Trestle.resource(:catalogs) do
+  require 'carrierwave/processing/mini_magick'
+  
   menu do
     item :catalogs, icon: "fa fa-star"
   end
@@ -16,11 +18,23 @@ Trestle.resource(:catalogs) do
   form do |catalog|
     text_field :title
     text_field :code
+    text_field :link
+    file_field :image
+    check_box  :remove_image
+
   
     # row do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
+    if !catalog.image.nil?
+      sidebar do 
+        label "image"     
+      end
+      sidebar do 
+        image_tag catalog.image.url.to_s, id: "catalog_image"
+      end
+    end
   end
 
   # By default, all parameters passed to the update and create actions will be
@@ -33,4 +47,5 @@ Trestle.resource(:catalogs) do
   # params do |params|
   #   params.require(:catalog).permit(:name, ...)
   # end
+
 end
