@@ -6,7 +6,7 @@ require 'pry'
   	if params[:id].nil?
   		params[:id] = 'a'
   	end
-  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).sort(:sort_title)
+  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
 
     @pagetitle = "Titles Index"
   end
@@ -29,22 +29,22 @@ require 'pry'
   end
 
   def bysubject
-    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:title)
+    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
   end
 
   def byseries
-    @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:title)
+    @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @series = Series.find_by('series_id = ?', "#{params[:id]}")
   end
 
   def studyguides
-    @books = Book.where('is_guide = ?', "1").where({ status: ["IP", "NP", "OS"] }).order(:title)
+    @books = Book.where('is_guide = ?', "1").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @pagetitle = "Study Guides"
   end 
 
   def awards
-    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).order(:title)
+    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @pagetitle = "Award-Winning Books"
   end
 
