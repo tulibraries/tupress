@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305154940) do
+ActiveRecord::Schema.define(version: 20180305211120) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20180305154940) do
     t.string   "status"
     t.integer  "hotweight"
     t.integer  "newsweight"
+    t.string   "sort_title"
   end
 
   create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

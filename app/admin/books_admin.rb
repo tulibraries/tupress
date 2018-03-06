@@ -31,6 +31,7 @@ Trestle.resource(:books) do
   form do |book|
 
     text_field :title, :disabled => true
+    text_field :sort_title, :disabled => true
     if !:author.nil?
       text_field :author, :disabled => true
     end

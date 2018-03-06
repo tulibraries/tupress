@@ -2,6 +2,8 @@ class Book < ApplicationRecord
 
 require 'carrierwave/orm/activerecord'
 
+before_save :sort_titles
+
 	serialize :author, Array
 	serialize :about_author, Array
 	serialize :reviews, Array
@@ -22,4 +24,15 @@ require 'carrierwave/orm/activerecord'
 	    Book.where('title LIKE ?', "%#{q}%").order(:title)
 		end
 	end
+
+	def sort_titles
+    excludes = ["A", "An", "The"]
+  	sort_title = self.title
+  	first = self.title.first.titlecase
+    if excludes.include?(first) 
+    	sort_title = sort_title.sub(/^(the|a|an)\s+/i, '')
+    	self.sort_title = sort_title+", "+first
+    end
+  end
+
 end
