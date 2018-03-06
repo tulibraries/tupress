@@ -6,7 +6,8 @@ require 'pry'
   	if params[:id].nil?
   		params[:id] = 'a'
   	end
-  	@books = Book.where('title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:title)
+  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).sort(:sort_title)
+
     @pagetitle = "Titles Index"
   end
 
@@ -91,7 +92,7 @@ require 'pry'
  private
 
   def book_params
-    params[:book].permit(  :title, :subtitle, :cover_image, 
+    params[:book].permit(  :title, :sort_title, :subtitle, :cover_image, 
       :hot, :hot_text, :news, :news_text, 
       :is_guide, :award, :award_year, :highlight, 
       :highlight_image)
