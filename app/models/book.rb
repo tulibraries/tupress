@@ -28,11 +28,12 @@ before_save :sort_titles
 	def sort_titles
     excludes = ["A", "An", "The"]
   	sort_title = self.title
-  	first = self.title.first.titlecase
+  	first = sort_title.first.titlecase
     if excludes.include?(first) 
     	sort_title = sort_title.sub(/^(the|a|an)\s+/i, '')
     	self.sort_title = sort_title+", "+first
-    end
+  		else self.sort_title = self.title
+  	end
   end
 
 end
