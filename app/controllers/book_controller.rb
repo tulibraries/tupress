@@ -6,7 +6,12 @@ require 'pry'
   	if params[:id].nil?
   		params[:id] = 'a'
   	end
+
   	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
+    
+    if params[:id] == '0'
+      @books = Book.where('sort_title regexp ?', '^[0-9]+').order(:sort_title)
+    end
 
     @pagetitle = "Titles Index"
   end
