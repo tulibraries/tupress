@@ -28,7 +28,8 @@ controller :page do
   get   'submissions'                => :submissions,              :id => 3
   get   'review-copy'                => :review_copy,              :id => 4
   get   'payment'                    => :payment,                  :id => 5
-  get   'copy-policy'                => :copypolicy,               :id => 6
+  get   'copy-request'                => :copy_request,               :id => 6
+  get   'received-copy-request'       => :received_copy_request,     :id => 12
   get   'copyright'                  => :copyright,                :id => 7
   get   'university-presses'         => :university_presses,       :id => 8
   get   'order'                      => :order,                    :id => 9
