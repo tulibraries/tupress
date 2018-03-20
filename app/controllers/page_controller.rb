@@ -26,7 +26,10 @@ require 'pry'
   def payment
     @page = Page.find_by(id: params[:id])
   end
-  def copypolicy
+  def copy_request
+    @page = Page.find_by(id: params[:id])
+  end
+  def received_copy_request
     @page = Page.find_by(id: params[:id])
   end
   def reviews
