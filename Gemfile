@@ -36,6 +36,7 @@ gem 'trestle-tinymce'
 gem 'trestle-auth'
 gem 'trestle-search'
 gem "mini_magick"
+gem 'loofah', '2.2.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
