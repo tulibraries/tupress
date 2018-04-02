@@ -6,99 +6,134 @@
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
-<div class="col col-md-9 offset-md-1">
+<div class="col col-md-9">
 <%= @page.content.html_safe %>
 <div id="contactform">
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:name, "Name:") %>
+      <%= label_tag(:name, "Name: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:name, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:email, "Email:") %>
+      <%= label_tag(:email, "Email: ") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:email,'', :class => 'form-control') %>
+      <%= text_field_tag(:email,'', :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:mediatype, "Media Type:") %>
+      <%= label_tag(:requesttype, "Request Type: ") %>
     </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-2">
-      <label><input type="radio" name="mediatype" value="Desk Copy"> Desk Copy</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-2">
+    <div class="radio col">
+      <label><input type="radio" name="mediatype" value="Desk Copy"> Desk Copy</label><br>
       <label><input type="radio" name="mediatype" value="Exam Copy"> Exam Copy</label>
     </div>
-  </div>
-  <div class="form-group row">
+</div>
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:website, "Website:") %>
+      <%= label_tag(:university, "University: ") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:website, "", :class => 'form-control') %>
+      <%= text_field_tag(:university, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:request, "request:") %>
+      <%= label_tag(:department, "Department: ") %>
     </div>
     <div class="col col-md-9">
-      <%= text_area_tag(:request, "", size: "48x6", :class => 'form-control') %>
+      <%= text_field_tag(:department, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:address1, "Address Line 1:") %>
+      <%= label_tag(:address, "Address: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:address, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:city, "City:") %>
+      <%= label_tag(:address2, "Address 2: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:address2, "", :class => 'form-control') %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:city, "City: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:city, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:state, "State:") %>
+      <%= label_tag(:state, "State: ") %>
     </div>
     <div class="col col-md-9">
       <%= select_tag :state, options_for_select(us_states), :class => 'form-control', :required => true %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:zipcode, "Zip/Post Code:") %>
+      <%= label_tag(:zipcode, "Zip/Post Code: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:zipcode, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:country, "Country (if not US):") %>
+      <%= label_tag(:country, "Country (if not US): ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:country,'', :class => 'form-control') %>
     </div>
   </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:coursetitle, "Course Title: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:coursetitle, "", :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:enrollment, "Projected Enrollment: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= number_field_tag(:enrollment, nil, :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:semester, "Semester Taught: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:semester, "", :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:title, "Title/Author: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:title, "", :class => 'form-control', :required => true) %><br>
+      We allow up to three exam copies per semester.
+    </div>
+  </div>
 
-  <div class="row">
+  <div class="row offset-2">
     <div class="col col-md-9 offset-md-2 new-section">
       <%= hidden_field_tag 'subject', 'Desk/Exam Copy Request' %>
       <%= hidden_field_tag 'next-url', request.base_url+root_path+'received_copy_request' %>
@@ -110,10 +145,5 @@
 <% end %>
 </div>
 </div>
-</div>
-<div id="formfooter" style="margin-top: 42px;">
-  <div class="col col-md-9 offset-md-1">
-    <strong>Please note</strong>: all requests are indeed that—-requests. Unfortunately, we can not always honor all of them. If you think we are unfamiliar with your publication, please send a sample/tearsheets with your request. Thank you.
-  </div>
 </div>
 </div>
