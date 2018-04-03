@@ -125,16 +125,47 @@
   </div>
   <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:title, "Title/Author: ") %>
+      <p>Copy 1</p>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:title, "", :class => 'form-control', :required => true) %><br>
-      We allow up to three exam copies per semester.
+      <%= label_tag(:title1, "Title: ") %>
+      <%= text_field_tag(:title1, "", :class => 'form-control', :required => true, :style => "color:#bbb") %>
+    </div>
+    <div class="col col-md-9 offset-2">
+      <%= label_tag(:author1, "Author: ") %>
+      <%= text_field_tag(:author1, "", :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <p>Copy 2</p>
+    </div>
+    <div class="col col-md-9">
+      <%= label_tag(:title2, "Title: ") %>
+      <%= text_field_tag(:title2, "", :class => 'form-control', :style => "color:#bbb") %>
+    </div>
+    <div class="col col-md-9 offset-2">
+      <%= label_tag(:author2, "Author: ") %>
+      <%= text_field_tag(:author2, "", :class => 'form-control') %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <p>Copy 3</p>
+    </div>
+    <div class="col col-md-9">
+      <%= label_tag(:title3, "Title: ") %>
+      <%= text_field_tag(:title3, "", :class => 'form-control', :style => "color:#bbb") %>
+    </div>
+    <div class="col col-md-9 offset-2">
+      <%= label_tag(:author3, "Author: ") %>
+      <%= text_field_tag(:author3, "", :class => 'form-control') %>
     </div>
   </div>
 
   <div class="row offset-2">
     <div class="col col-md-9 offset-md-2 new-section">
+      <p>We allow up to three desk/exam copies per semester.</p>
       <%= hidden_field_tag 'subject', 'Desk/Exam Copy Request' %>
       <%= hidden_field_tag 'next-url', request.base_url+root_path+'received_copy_request' %>
       <%= submit_tag("Submit Request") %>
