@@ -37,14 +37,7 @@
 </div>
 
 <div class="row">
-	<div class="col text-center" style="color:#a5002f;">
-		<% unless @book.blurb.nil? %>
-			<%= @book.blurb.html_safe %>
-		<% end %>
-	</div>
-</div>
-<div class="row">
-	<div class="col" style="color:#996633;margin-top: 10px;">
+	<div class="col" style="color:#a5002f;margin-top: 10px;">
 		<% unless @book.award.nil? %>
 			<%= @book.award %>
 		<% end %>
@@ -75,7 +68,9 @@
 	</div>
 	<% unless @reviews.empty? %>
 	<div class="col col-md-6">
-		<p><%= @reviews.first.review.html_safe %></p>
+		<% unless @book.blurb.nil? %>
+			<%= @book.blurb.html_safe %>
+		<% end %>
 	</div>
 	<% end %>
 </div>
@@ -85,6 +80,10 @@
 			<h2 style="padding:0;margin:0;height:4px;">Description</h2>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col col-md-12 excerpt">
+			<%= @book.excerpt.html_safe %>
+		</div
 	<div class="row">
 		<div class="col description">
 			<%= @book.description.html_safe %>
@@ -109,7 +108,8 @@
 			</div>
 		</div>
 
-		<% @reviews[1..-1].each do |review| %>
+		<% #@reviews[1..-1].each do |review| %>
+		<% @reviews.each do |review| %>
 			<div class="row">
 				 <div class="col review">
 				 	<%= review.review.html_safe %>
