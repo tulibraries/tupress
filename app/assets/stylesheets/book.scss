@@ -133,6 +133,14 @@ span.author {
 	padding-left: 10px;
 }
 
+#awards .badge-pill {
+	display: inline-block;
+	padding: 4px 14px;
+	margin-right: 100px;
+	background-color: #f0f0f0;
+	color: #903;
+}
+
 .s_twitter {display:inline-block;height:42px;width:42px;background-image:asset-data-url('twitter-icon-sm.png');cursor:hand;cursor:pointer;}
 .s_facebook {display:inline-block;height:42px;width:42px;background-image:asset-data-url('fb-icon-sm.png');cursor:hand;cursor:pointer;}
 .s_tumblr {display:inline-block;height:42px;width:42px;background-image:asset-data-url('tumblr-icon-sm.png');cursor:hand;cursor:pointer;}

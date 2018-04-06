@@ -50,7 +50,23 @@ require 'pry'
 
   def awards
     @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
+    @years = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).uniq.pluck(:award_year)
+    # @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.map do |subject|  subject.map { |k,v|  v["subject_title"] } end.flatten.sort
+    @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"]["subject_title"] } 
     @pagetitle = "Award-Winning Books"
+    # binding.pry
+  end
+
+  def awards_by_subject
+    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects LIKE ?', "%#{params[:id]}%").order(:sort_title)
+    @subject = Subject.where("subject_id = ?", "#{params[:id]}")
+    @pagetitle = "Award-Winning Books: "+@subject[0]['subject']
+    # binding.pry
+  end
+
+  def awards_by_year
+    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('award_year LIKE ?', "%#{params[:id]}%").order(:sort_title)
+    @pagetitle = "#{params[:id]} Award-Winning Books"
   end
 
   def catalogs

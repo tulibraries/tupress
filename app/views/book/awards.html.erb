@@ -1,32 +1,47 @@
 <div class="container" id="awards">
+
 	<div class="row">
 		<div class="col">
 			<h1 ><%= @pagetitle %></h1>
 		</div>
 	</div>
 
-	<% @books.each do |book| %>
-	<div class="row book-row">
-		<div class="media">
-			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'show', :id=>book.book_id} %>
-		</div>
-		<div class="media-body">
-			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
-			<% if book.subtitle %>
-				<p class="subtitle"><%= book.subtitle %></p>
-			<% end %>
-			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
-			<p class="format">
-				<%= book.format.html_safe %>
-				<br />
-				<%  book.binding.each do |binding| %>
-					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong><br />
+<div class="container">
+	<div class="row">
+		
+		<div class="col col-md-4">
+			<h2>Awards by Year</h2>
+			<div class="container">
+			<% @years.each do |year| %>
+				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
+					<div class="col-md-10">
+						<%= link_to year, :controller=>'book', :action=>'awards_by_year', :id=>year %> 
+					</div>
+					<div class="col col-md-1">
+						<span class="badge badge-pill"><%= award_year_count(year) %></span>
+					</div>
+				</div>
 				<% end %>
-			</p>
-			<p class="award">
-				<%= book.award %>
-			</p>
+			</div>
 		</div>
+
+		<div class="col col-md-8">
+			<h2>Awards by Discipline</h2>
+			<div class="container">
+			<% @subjects.each do |subject| %>
+				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
+					<div class="col col-md-11">
+						<%= link_to subject['subject']['subject_title'], :controller=>'book', :action=>'awards_by_subject', :id=>subject['subject']['subject_id'] %> 
+					</div>
+					<div class="col col-md-1">
+						<span class="badge badge-pill"><%= award_subject_count(subject['subject']['subject_id']) %></span>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+
 	</div>
-<% end %>
+</div>
+
 </div>
