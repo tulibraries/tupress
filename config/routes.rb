@@ -3,19 +3,21 @@ Rails.application.routes.draw do
   
   
 controller :book do 
-	get   'books'					=> :index
-  get   'book/:id' 			=> :show
-  get   'subjects/:id' 	=> :bysubject
-  get   'series/:id' 		=> :byseries
-  get   'studyguides' 	=> :studyguides
-  get   'awards'				=> :awards
-  get   'catalogs'      => :catalogs
-  get   'catalogs/:code'  => :catalogs_by_season
-  get   'book/:id/edit' => :edit
-  post  'book/:id'      => :update
-  get   'books/new'     => :new
-  post  'books'         => :create
-  get  'search'        => :search
+	get   'books'                 => :index
+  get   'book/:id'              => :show
+  get   'subjects/:id'          => :bysubject
+  get   'series/:id'            => :byseries
+  get   'studyguides'           => :studyguides
+  get   'awards'				        => :awards
+  get   'awards/subject/:id'    => :awards_by_subject
+  get   'awards/year/:id'       => :awards_by_year
+  get   'catalogs'              => :catalogs
+  get   'catalogs/:code'        => :catalogs_by_season
+  get   'book/:id/edit'         => :edit
+  post  'book/:id'              => :update
+  get   'books/new'             => :new
+  post  'books'                 => :create
+  get   'search'                => :search
 end
 
 controller :page do
@@ -28,8 +30,8 @@ controller :page do
   get   'submissions'                => :submissions,              :id => 3
   get   'review-copy'                => :review_copy,              :id => 4
   get   'payment'                    => :payment,                  :id => 5
-  get   'copy-request'                => :copy_request,               :id => 6
-  get   'received-copy-request'       => :received_copy_request,     :id => 12
+  get   'copy-request'               => :copy_request,             :id => 6
+  get   'received-copy-request'      => :received_copy_request,    :id => 12
   get   'copyright'                  => :copyright,                :id => 7
   get   'university-presses'         => :university_presses,       :id => 8
   get   'order'                      => :order,                    :id => 9

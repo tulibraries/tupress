@@ -14,4 +14,10 @@ module BookHelper
   });
 	  "
 	end
+  def award_subject_count(subject_id)
+    @subject_size = @books.where('subjects LIKE ?', "%subject_id: '"+subject_id+"'%").size 
+  end
+  def award_year_count(award_year)
+    @year_size = @books.where('award_year = ?', award_year).size
+  end
 end
