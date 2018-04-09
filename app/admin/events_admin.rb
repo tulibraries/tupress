@@ -15,6 +15,7 @@ Trestle.resource(:events) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |events|
+    text_field :title
     editor :description
     text_field :where
     datetime_field :startdate
