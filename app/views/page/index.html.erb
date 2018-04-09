@@ -101,7 +101,7 @@
     <%= image_tag(event.image, alt: 'Cover', border: 0, class: 'd-flex', style: 'height:180px;max-width:120px;margin:auto;') %>
   </div>
   <div class="media-body" style="padding-left: 28px;">
-  <h2>Upcoming Event</h2>
+  <h2><%= event.title %></h2>
   <p><%= event.startdate.strftime("%A, %B %e, %Y") %></p>
   <p><%= event.description.html_safe %></p>
   </div>
