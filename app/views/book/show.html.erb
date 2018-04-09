@@ -38,8 +38,20 @@
 
 <div class="row">
 	<div class="col" style="color:#a5002f;margin-top: 10px;">
-		<% unless @book.award.nil? %>
+		<% unless @book.award.nil? %>		
 			<%= @book.award %>
+			<% if !@book.award2.nil? %>
+				<br />
+				<%= @book.award2 %>
+			<% end %>
+			<% if !@book.award3.nil? %>
+				<br />
+				<%= @book.award3 %>
+			<% end %>
+			<% if !@book.award4.nil? %>
+				<br />
+				<%= @book.award4 %>
+			<% end %>
 		<% end %>
 	</div>
 </div>

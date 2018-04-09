@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305211120) do
+ActiveRecord::Schema.define(version: 20180409142301) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20180305211120) do
     t.string   "email"
     t.string   "website"
     t.string   "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "awards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "title"
+    t.string   "year"
+    t.string   "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,6 +86,12 @@ ActiveRecord::Schema.define(version: 20180305211120) do
     t.integer  "hotweight"
     t.integer  "newsweight"
     t.string   "sort_title"
+    t.string   "award_year2"
+    t.string   "award2"
+    t.string   "award_year3"
+    t.string   "award3"
+    t.string   "award_year4"
+    t.string   "award4"
   end
 
   create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
