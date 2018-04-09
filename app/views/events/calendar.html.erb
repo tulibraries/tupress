@@ -43,7 +43,7 @@
  
     </div>
     <div class="event-description col col-md-10">
-      <% unless e.title.nil? %><p><%= e.title %></p><% end %>
+      <% unless e.title.nil? %><p class="event-title"><%= e.title %></p><% end %>
       <p><%= e.description.html_safe %></p>
       <p><em>Where</em>: <%= e.where.html_safe %></p>
     </div>
