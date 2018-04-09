@@ -12,7 +12,8 @@
 		<div class="col col-md-4">
 			<h2>Awards by Year</h2>
 			<div class="container">
-			<% @years.each do |year| %>
+			<% @years2.each do |year| %>
+				<% unless year == "" %>
 				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
 					<div class="col-md-10">
 						<%= link_to year, :controller=>'book', :action=>'awards_by_year', :id=>year %> 
@@ -21,6 +22,7 @@
 						<span class="badge badge-pill"><%= award_year_count(year) %></span>
 					</div>
 				</div>
+				<% end %>
 				<% end %>
 			</div>
 		</div>

@@ -50,7 +50,8 @@ require 'pry'
 
   def awards
     @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
-    @years = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).uniq.pluck(:award_year)
+    @years = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).distinct.pluck(:award_year, :award_year2, :award_year3, :award_year4).map{|years| years.join(",")}.join
+    @years2 = @years.split(/,/).uniq!
     # @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.map do |subject|  subject.map { |k,v|  v["subject_title"] } end.flatten.sort
     @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"]["subject_title"] } 
     @pagetitle = "Award-Winning Books"
