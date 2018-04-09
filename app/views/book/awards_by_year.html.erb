@@ -25,6 +25,18 @@
 			</p>
 			<p class="award">
 				<%= book.award %>
+				<% if !book.award2.nil? %>
+				<br />
+				<%= book.award2 %>
+				<% end %>
+				<% if !book.award3.nil? %>
+				<br />
+				<%= book.award3 %>
+				<% end %>
+				<% if !book.award4.nil? %>
+				<br />
+				<%= book.award4 %>
+				<% end %>
 			</p>
 		</div>
 	</div>
