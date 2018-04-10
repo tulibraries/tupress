@@ -66,7 +66,7 @@ require 'pry'
   end
 
   def awards_by_year
-    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('award_year LIKE ?', "%#{params[:id]}%").order(:sort_title)
+    @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('award_year LIKE ?', "%#{params[:id]}%").or(Book.where('award_year2 LIKE ?', "%#{params[:id]}%")).or(Book.where('award_year3 LIKE ?', "%#{params[:id]}%")).or(Book.where('award_year4 LIKE ?', "%#{params[:id]}%")).order(:sort_title)
     @pagetitle = "#{params[:id]} Award-Winning Books"
   end
 

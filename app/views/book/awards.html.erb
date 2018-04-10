@@ -12,7 +12,7 @@
 		<div class="col col-md-4">
 			<h2>Awards by Year</h2>
 			<div class="container">
-			<% @years2.each do |year| %>
+			<% @years2.sort.reverse.each do |year| %>
 				<% unless year == "" %>
 				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
 					<div class="col-md-10">
@@ -24,6 +24,7 @@
 				</div>
 				<% end %>
 				<% end %>
+				
 			</div>
 		</div>
 
