@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
   
+  resources :harvests
 controller :book do 
 	get   'books'                 => :index
   get   'book/:id'              => :show
