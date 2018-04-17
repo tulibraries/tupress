@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Harvests</h1>
+
+<table cellpadding="4">
+  <thead>
+    <tr>
+      <th width="45%">Harvest ID</th>
+      <th width="20%">Success count</th>
+      <th width="20%">Error count</th>
+      <th width="15%"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @harvests.each do |harvest| %>
+      <tr>
+        <td><%=  harvest.created_at.strftime("%m/%d/%Y") + harvest.created_at.strftime(" at %I:%M%p") %></td>
+        <td class="text-center"><%= harvest.created_ids.length + harvest.updated_ids.length%></td>
+        <td class="text-center"><%= harvest.error_ids.length %></td>
+        <td><%= link_to 'Show', :controller=>'harvests', :action=>'show', :id=>harvest.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
