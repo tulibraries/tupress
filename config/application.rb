@@ -15,6 +15,8 @@ module Tupress
     begin
       # Tell rails the applicaiton will be served from a subdirectory.
       config.relative_url_root = config_for(:deploy_to)['path']
+       config.time_zone = 'Eastern Time (US & Canada)'
+       config.active_record.default_timezone = :local
     rescue
     # Do nothing and expect the application to be server in root path.
     end
