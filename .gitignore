@@ -23,6 +23,7 @@ db/data.yml
 /app/assets/chapters*
 /app/assets/audio
 /public/files
+/public/uploads
 #public/assets/
 vendor/bundle/
 
