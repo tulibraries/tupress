@@ -19,11 +19,11 @@ db/data.yml
 !/tmp/.keep
 
 # Ignore all file uploads
-/app/assets/pdf
+/app/assets/pdf/
 /app/assets/chapters*
-/app/assets/audio
-/public/files
-/public/uploads
+/app/assets/audio/
+/public/files/
+/public/uploads/
 #public/assets/
 vendor/bundle/
 
