@@ -17,12 +17,16 @@
 			<% if book.subtitle %>
 				<p class="subtitle"><%= book.subtitle %></p>
 			<% end %>
-			<p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
+			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-				<%= book.format.html_safe %>
+				<%= book.pages_total%> pages<br />
+				<%= book.trim %><br />
+				<%= book.illustrations %><br />
 				<br /><br />
 				<%  book.binding.each do |binding| %>
+				<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
 					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong><br />
+					<% end %>
 				<% end %>
 			</p>
 		</div>

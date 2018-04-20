@@ -20,7 +20,7 @@ Trestle.resource(:books) do
     column :title do |booktitle|
       truncate(booktitle.title, omision: "...", length: 300)
     end
-    column :author
+    column :author_byline
     actions
   end
 
@@ -33,7 +33,7 @@ Trestle.resource(:books) do
     text_field :title, :disabled => true
     text_field :sort_title, :disabled => true
     if !:author.nil?
-      text_field :author, :disabled => true
+      text_field :author_byline, :disabled => true
     end
     select(:status, 
         [
