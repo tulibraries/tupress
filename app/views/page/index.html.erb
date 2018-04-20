@@ -118,7 +118,7 @@
         <br /><small><em><%= book.subtitle %></em></small>
       <% end %>
       </h2>
-      <p class="author"><%= book.author.map { |author| author }.join(' and ') %></p>
+      <p class="author"><%= book.author_byline %></p>
       <p style="line-height:1.2"><small><%= book.news_text.truncate(500).html_safe %></small></p>
   </div>
 </div>
