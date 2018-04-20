@@ -4,8 +4,11 @@ require 'carrierwave/orm/activerecord'
 
 before_save :sort_titles
 
-	serialize :author, Array
-	serialize :about_author, Array
+	serialize :author_id, Array
+	serialize :author_prefix, Array
+	serialize :author_first, Array
+	serialize :author_last, Array
+	serialize :author_suffix, Array
 	serialize :reviews, Array
 	serialize :binding, Array
 	serialize :subjects, Array

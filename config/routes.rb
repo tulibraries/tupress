@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   
-  
-  resources :harvests
 controller :book do 
 	get   'books'                 => :index
   get   'book/:id'              => :show
@@ -100,5 +98,6 @@ resources :people
 resources :events
 resources :journals
 resources :reviews
+resources :harvests
 
 end

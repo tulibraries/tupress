@@ -10,7 +10,7 @@
 
 	<div class="row">
 		<div class="col author">
-			<%= @book.author.map { |author| author }.join(' and ') %>
+			<%= @book.author_byline %>
 			
 			<%= link_to "<edit>", "/admin/books/"+@book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
 		</div>
@@ -67,14 +67,18 @@
 	<div class="col col-md-3">
 		<div class="format">
 			<% @book.binding.each do |binding| %>
-			<%# require 'pry'; binding.pry %>
+			
+			<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
 			<p class="format">
 				<%= binding.fetch("binding", "").fetch("format", "") %>: <strong><%= binding.fetch("binding").fetch("price", "") %></strong>
 				<br />
 				EAN: <%= binding.fetch("binding").fetch("ean", "") %><br />
 				Publication: <%= binding.fetch("binding", "").fetch("pub_date_for_format", "") %> <br /> <br />
 			<% end %>
-			<%= @book.format.html_safe %>
+			<% end %>
+				<%= @book.pages_total %> pages<br />
+				<%= @book.trim %><br />
+				<%= @book.illustrations %><br />
 			</p>
 		</div>
 	</div>
@@ -130,7 +134,6 @@
 		<% end %>
 	<% end %>
 	<% if @book.author.present? %>
-	<% unless @book.about_author.all? &:blank? %>
 		<div class="row">
 			<div class="col">
 				<h2>About the Author(s)</h2>
@@ -138,16 +141,13 @@
 		</div>
 		<div class="row">
 			<div class="col">
-			<% @book.about_author.each do |about| %>
 			 <div class="about_author">
 			  <% if !about.blank? %>
 				 	<%= about.html_safe %><br />
 				<% end %>
 			 </div>
-			<% end %>
 		</div>
 		</div>
-	<% end %>
 	<% end %>
 	<% if @subjects.first %>
 	<div class="row">
