@@ -25,7 +25,6 @@ db/data.yml
 /public/files
 #public/assets/
 vendor/bundle/
-public/uploads/
 
 # Ignore Byebug command history file.
 .byebug_history

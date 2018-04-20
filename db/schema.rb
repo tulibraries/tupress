@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417170542) do
+ActiveRecord::Schema.define(version: 20180420152007) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -92,6 +92,16 @@ ActiveRecord::Schema.define(version: 20180417170542) do
     t.string   "award3"
     t.string   "award_year4"
     t.string   "award4"
+    t.text     "author_prefix",   limit: 65535
+    t.text     "author_first",    limit: 65535
+    t.text     "author_last",     limit: 65535
+    t.text     "author_suffix",   limit: 65535
+    t.text     "author_byline",   limit: 65535
+    t.text     "author_bios",     limit: 65535
+    t.string   "pages_total"
+    t.string   "trim"
+    t.string   "illustrations"
+    t.text     "author_id",       limit: 65535
   end
 
   create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

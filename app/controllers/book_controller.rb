@@ -14,12 +14,14 @@ require 'pry'
     end
 
     @pagetitle = "Titles Index"
+    @show_status = ["IP","NP","OS"]
+    # binding.pry
   end
 
   def show
   	@book = Book.find_by book_id: params[:id]
     @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
-    @show_status = ["IP","NP","OS"];
+    @show_status = ["IP","NP","OS"]
     @subjects = @book.subjects.each do |s|
        s
     end
@@ -36,16 +38,19 @@ require 'pry'
   def bysubject
     @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
+    @show_status = ["IP","NP","OS"]
   end
 
   def byseries
     @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @series = Series.find_by('series_id = ?', "#{params[:id]}")
+    @show_status = ["IP","NP","OS"]
   end
 
   def studyguides
     @books = Book.where('is_guide = ?', "1").where({ status: ["IP", "NP", "OS"] }).order(:sort_title)
     @pagetitle = "Study Guides"
+    @show_status = ["IP","NP","OS"]
   end 
 
   def awards
@@ -55,6 +60,7 @@ require 'pry'
     # @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.map do |subject|  subject.map { |k,v|  v["subject_title"] } end.flatten.sort
     @subjects = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"]["subject_title"] } 
     @pagetitle = "Award-Winning Books"
+    @show_status = ["IP","NP","OS"]
     # binding.pry
   end
 
@@ -62,21 +68,25 @@ require 'pry'
     @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('subjects LIKE ?', "%#{params[:id]}%").order(:sort_title)
     @subject = Subject.where("subject_id = ?", "#{params[:id]}")
     @pagetitle = "Award-Winning Books: "+@subject[0]['subject']
+    @show_status = ["IP","NP","OS"]
     # binding.pry
   end
 
   def awards_by_year
     @books = Book.where('award != ?', '').where({ status: ["IP", "NP", "OS"] }).where('award_year LIKE ?', "%#{params[:id]}%").or(Book.where('award_year2 LIKE ?', "%#{params[:id]}%")).or(Book.where('award_year3 LIKE ?', "%#{params[:id]}%")).or(Book.where('award_year4 LIKE ?', "%#{params[:id]}%")).order(:sort_title)
     @pagetitle = "#{params[:id]} Award-Winning Books"
+    @show_status = ["IP","NP","OS"]
   end
 
   def catalogs
     @catalogs = Season.all.order(:created_at)
+    @show_status = ["IP","NP","OS"]
   end
 
   def catalogs_by_season
     @catalog = Season.find_by code: "#{params[:code]}"
     @books = Book.where('catalog = ?', "#{params[:code]}").order(:title)
+    @show_status = ["IP","NP","OS"]
   end
 
   def edit   
