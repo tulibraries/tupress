@@ -133,7 +133,7 @@
 			</div>
 		<% end %>
 	<% end %>
-	<% if @book.author.present? %>
+	<% if @book.about_author.present? %>
 		<div class="row">
 			<div class="col">
 				<h2>About the Author(s)</h2>
@@ -142,14 +142,14 @@
 		<div class="row">
 			<div class="col">
 			 <div class="about_author">
-			  <% if !about_author.blank? %>
-				 	<%= about_author.html_safe %><br />
+			  <% if !@book.about_author.blank? %>
+				 	<%= @book.about_author.html_safe %><br />
 				<% end %>
 			 </div>
 		</div>
 		</div>
 	<% end %>
-	<% if @subjects.first %>
+	<% if @subjects.nil? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
@@ -157,13 +157,13 @@
 	</div>
 	<div class="row subjects-group">
 		<% @subjects.each do |subjects| %>
-		<% subjects.each do |subject,info| %>
-		
-			<div class="col-md-4 list-group-item">
-				 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
-			</div>
-		
-		<% end %>	
+			<% subjects.each do |subject,info| %>
+			
+				<div class="col-md-4 list-group-item">
+					 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
+				</div>
+
+			<% end %>	
 		<% end %>
 	</div>
 	<% end %>
