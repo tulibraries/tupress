@@ -1,5 +1,4 @@
 Trestle.resource(:seasons) do
-  require 'carrierwave/processing/mini_magick'
   
   menu do
     item :seasons, icon: "fa fa-star"
@@ -9,7 +8,6 @@ Trestle.resource(:seasons) do
   #
   # table do
   #   column :name
-  #   column :created_at, align: :center
   #   actions
   # end
 
@@ -17,6 +15,7 @@ Trestle.resource(:seasons) do
   #
   form do |season|
     text_field :title
+    text_field :created_at
     text_field :code
     text_field :link
     file_field :image
