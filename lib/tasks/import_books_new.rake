@@ -36,9 +36,10 @@ namespace :db do
           b.author_first = node.xpath("authors/author").map do |name|
             name.at("author_first").text
           end
-          b.author_last = node.xpath("authors/author").map do |name|
+          author_last = node.xpath("authors/author").map do |name|
             name.at("author_last").text
           end
+          b.author_last = author_last.first
           b.author_suffix = node.xpath("authors/author").map do |name|
             name.at("author_suffix").text
           end

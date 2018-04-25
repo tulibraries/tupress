@@ -6,16 +6,25 @@ require 'pry'
   	if params[:id].nil?
   		params[:id] = 'a'
   	end
-
-  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "OS"] }).order(:sort_title)
     
     if params[:id] == '0'
       @books = Book.where('sort_title regexp ?', '^[0-9]+').where({ status: ["IP", "OS"] }).order(:sort_title)
     end
 
+  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["IP", "OS"] }).order(:sort_title)
+
     @pagetitle = "Titles Index"
     @show_status = ["IP", "OS"]
     # binding.pry
+  end
+
+  def byauthor
+    if params[:id].nil?
+      params[:id] = 'a'
+    end
+    @books = Book.where('author_last LIKE ?', "#{params[:id]}%").where({ status: ["IP", "OS"] }).order(:author_last)
+    @pagetitle = "Titles By Author Index"
+    @show_status = ["IP","OS"]
   end
 
   def show

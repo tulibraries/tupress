@@ -1,0 +1,35 @@
+<div class="container" id="titles">
+<h1><%= @pagetitle %></h1>
+<div class="row">
+<%= render "author_alphamenu.erb" %>
+</div>
+<% @books.each do |book| %>
+	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
+		<div class="media" style="text-align:center;">
+		<% unless book.cover_image.url.blank? %>
+		<% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif") %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:140px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+		<% end %>
+		<% end %>		
+		</div>
+		<div class="media-body">
+			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+			<% if book.subtitle %>
+				<p><em><%= book.subtitle %></em></p>
+			<% end %>
+			<p class="author"><%= book.author_byline %></p>
+			<p style="font-size: 65%;">
+				<%= book.pages_total%><br />
+				<%= book.trim %><br />
+				<%= book.illustrations %><br />
+				<br /><br />
+				<% book.binding.each do |binding| %>
+					<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
+						<%= binding.fetch("binding", "").fetch("format", "")  %>: <%= binding.fetch("binding").fetch("ean", "")  %> <strong><%= binding.fetch("binding").fetch("price", "") %></strong> <%= binding.fetch("binding").fetch("pub_date_for_format", "") %> <br />
+					<% end %>
+				<% end %>
+				</p>
+		</div>
+	</div>
+<% end %>
+</div>
