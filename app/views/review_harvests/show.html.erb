@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h1>New Reviews: <small> <%= @created_reviews.uniq.count %></small></h1>
+<ol>
+<div class="container">
+	<h2>Created</h2>
+	<div class="container">
+  <% @created_reviews.uniq.each do |book| %>
+    <li><%= link_to book.title, "/book/" + book.book_id %></li>
+  <% end %>
+	</div>
+  <h2>Deleted</h2>
+  <div class="container">
+  <% @deleted_reviews.uniq.each do |book| %>
+    <li><%= link_to book.title, "/book/" + book.book_id %></li>
+  <% end %>
+</div>
+</div>
+</ol>
+
+<%= link_to 'Back', review_harvests_path %>
+
+

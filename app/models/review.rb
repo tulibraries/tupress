@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-	belongs_to :book, :counter_cache => true
+	# belongs_to :book, :counter_cache => true
 end

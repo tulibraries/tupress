@@ -33,6 +33,7 @@ require 'pry'
 
   def search
     @books = Book.search(params[:q])
+    @show_status = ["IP","NP","OS"]
   end
 
   def bysubject

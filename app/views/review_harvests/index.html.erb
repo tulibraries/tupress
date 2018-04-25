@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Review Harvests</h1>
+
+<table cellpadding="4">
+  <thead>
+    <tr>
+      <th width="45%">Harvest ID</th>
+      <th width="20%">Updates</th>
+      <th width="20%">Deletions</th>
+      <th width="15%">Errors</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_harvests.each do |review_harvest| %>
+      <tr>
+        <td><%=  review_harvest.created_at.strftime("%m/%d/%Y") + review_harvest.created_at.strftime(" at %I:%M%p") %></td>
+        <td class="text-center"><%= review_harvest.created_ids.length %></td>
+        <td class="text-center"></td>
+        <td class="text-center"><%= review_harvest.error_ids.length %></td>
+        <td><%= link_to 'Show', :controller=>'review_harvests', :action=>'show', :id=>review_harvest.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

@@ -15,53 +15,78 @@ namespace :db do
       error_ids = []
       created_ids = []
       updated_ids = []
+      deleted_ids = []
+      xml_review_ids = []
+      db_reviews = []
+      db_review_ids = []
       new_review = nil
 
+   
 
       doc.xpath("//record").map do |node|
 
       unless node.xpath("reviews/review/review_text").empty? 
 
       node.xpath("reviews/review").map do |newreview|
-        oldreview = Review.find_by(review_id: node.xpath("review_id").text)
-        if oldreview.nil?
-          review = Review.new(review_id: node.xpath("review_id").text, weight: "0")
+
+        review = Review.find_by(review_id: newreview.xpath("review_id").text)
+        
+        if review.nil?
+          review = Review.new(review_id: newreview.xpath("review_id").text, weight: "0")
           new_review = true
         end
+
         review.tap do |r|
 
           r.title_id = node.xpath("book_id").text
-          r.title = node.xpath("title").text
-          r.author = node.xpath("author_byline").text
-          r.review = newreview.at("review_text").text
+          r.title = node.xpath("title").text.chomp!
+          r.author = node.xpath("author_byline").text.chomp!
+          r.review = newreview.at("review_text").text.chomp!
           r.weight = "0"
     
         end #tap
 
-        # binding.pry
 
-      #   if review.save 
-      #     if !new_review.nil?
-      #       created_ids << review.review_id
-      #     else
-      #       updated_ids << node.xpath("review_id").text
-      #     end
-      #   else
-      #       error_ids << review.review_id
-      #   end     
+        if review.save 
+          if !new_review.nil?
+            created_ids << review.title_id
+          end
+        else
+            error_ids << review.title_id
+        end     
 
-      #   new_review = nil
+        new_review = nil
+
+        end #map
       end #unless
-    end #each
+    end #map
 
-      # puts "count: "+(updated_ids.length+created_ids.length).to_s+"\n"
-      # puts "errors: "+error_ids.length.to_s 
+    db_reviews = Review.all.each do |review|
+      db_review_ids << review.review_id
+    end
 
-      # harvest = ReviewHarvest.new(error_ids: error_ids, updated_ids: updated_ids, created_ids: created_ids)
+    doc.xpath("//record/reviews/review").map do |xml|
+      xml_review_ids << xml.xpath("review_id").text
+    end
 
-      # harvest.save
-    
+    db_review_ids.each do |db_id|
+      if !xml_review_ids.include? db_id
+        toDelete = Review.find_by(review_id: db_id)
+        deleted_ids << toDelete.title_id.to_s
+        toDelete.destroy
+      end
+    end
+
+      puts "deletions: "+deleted_ids.length.to_s
+      puts "created: "+created_ids.length.to_s
+      puts "errors: "+error_ids.length.to_s
+
+      harvest = ReviewHarvest.new(error_ids: error_ids, deleted_ids: deleted_ids, created_ids: created_ids)
+
+      # binding.pry
+
+      harvest.save
+
     end #task
   end #namespace: seed
 end #namespace: db
-end
