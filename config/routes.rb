@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   
-  resources :review_harvests
 controller :book do 
 	get   'books'                 => :index
+  get   'byauthor'        => :byauthor
   get   'book/:id'              => :show
   get   'subjects/:id'          => :bysubject
   get   'series/:id'            => :byseries
@@ -100,5 +100,6 @@ resources :events
 resources :journals
 resources :reviews
 resources :harvests
+resources :review_harvests
 
 end
