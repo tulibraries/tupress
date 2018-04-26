@@ -37,7 +37,7 @@ controller :page do
   get   'order'                      => :order,                    :id => 9
   get   'received_rights'            => :received_rights ,         :id => 10
   get   'received_review_copy'       => :received_review_copy,     :id => 11
-	get		'contact'			               => :contact
+  get   'contact'                    => :contact,                  :id => 13
   get   'book-reviews'               => :reviews
   get   'conferences'                => :conferences
   get   'people'                     => :people
