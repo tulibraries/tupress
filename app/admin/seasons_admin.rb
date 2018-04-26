@@ -26,7 +26,7 @@ Trestle.resource(:seasons) do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
-    if !season.image.nil?
+    if !season.image.blank?
       sidebar do 
         label "image"     
       end

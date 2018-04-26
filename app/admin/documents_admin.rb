@@ -27,7 +27,7 @@ Trestle.resource(:documents) do
     #   col(xs: 6) { datetime_field :updated_at }
     #   col(xs: 6) { datetime_field :created_at }
     # end
-  if !document.filename.nil?
+  if !document.filename.blank?
     sidebar do 
       label "File Name"
     end
