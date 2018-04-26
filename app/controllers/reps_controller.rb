@@ -3,6 +3,7 @@ class RepsController < ApplicationController
 
   def sales_reps
     @reps = Rep.all 
+    @regions = Region.all
   end
 
   # GET /reps
