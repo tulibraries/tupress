@@ -46,8 +46,8 @@ require 'pry'
   end
 
   def bysubject
-    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "OS"] }).order(:sort_title)
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
+    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["IP", "OS"] }).order(:sort_title)
     @show_status = ["IP","OS"]
   end
 
