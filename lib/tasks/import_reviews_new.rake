@@ -39,9 +39,9 @@ namespace :db do
         review.tap do |r|
 
           r.title_id = node.xpath("book_id").text
-          r.title = node.xpath("title").text.chomp!
-          r.author = node.xpath("author_byline").text.chomp!
-          r.review = newreview.at("review_text").text.chomp!
+          r.title = node.xpath("title").text
+          r.author = node.xpath("author_byline").text
+          r.review = newreview.at("review_text").text
           r.weight = "0"
     
         end #tap
