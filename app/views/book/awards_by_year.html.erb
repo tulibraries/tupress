@@ -26,6 +26,7 @@
 				<% end %>
 			</p>
 			<p class="award">
+				<% unless @book.award.nil? %>	
 				<%= book.award.html_safe %>
 				<% if !book.award2.nil? %>
 				<br />

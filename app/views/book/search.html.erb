@@ -29,7 +29,20 @@
 				<% end %>
 			</p>
 			<p class="award">
+				<% unless @book.award.nil? %>	
 				<%= book.award.html_safe %>
+				<% if !book.award2.nil? %>
+				<br />
+				<%= book.award2.html_safe %>
+				<% end %>
+				<% if !book.award3.nil? %>
+				<br />
+				<%= book.award3.html_safe %>
+				<% end %>
+				<% if !book.award4.nil? %>
+				<br />
+				<%= book.award4.html_safe %>
+				<% end %>
 			</p>
 		</div>
 	</div>
