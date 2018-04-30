@@ -137,7 +137,7 @@
   <div class="col card">
     <h2 style="color:#903;" class="text-center"><%= @catalog.title %></h2>
     <p class="text-center">
-    <%= link_to image_tag(@catalog.code+'.gif', alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :code=>@catalog.code} %>
+    <%= link_to image_tag(@catalog.image, alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :code=>@catalog.code} %>
     </p>
     <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', @catalog.link %></p>
   </div>
