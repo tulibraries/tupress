@@ -15,6 +15,7 @@ Trestle.resource(:highlights) do
   form do |highlight|
     text_field  :title
     file_field  :image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
+    check_box   :remove_image
     text_field  :link
     check_box   :homepage
   
