@@ -53,9 +53,6 @@ Trestle.resource(:books) do
     check_box     :news
     number_field  :newsweight, id: "news-weight", min: 1, max: 5
     text_area     :news_text
-    check_box     :highlight
-    file_field    :highlight_image
-    check_box     :remove_highlight_image
     text_field    :award_year
     text_field    :award
     text_field    :award_year2
