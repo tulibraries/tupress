@@ -18,7 +18,7 @@
     <% else %>
       <div class="carousel-item">
     <% end %>
-        <%= link_to image_tag(highlight.highlight_image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), controller: 'book', action: 'show', id: highlight.book_id %>
+        <%= link_to image_tag(highlight.image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), highlight.link %>
       </div>
     <% end %>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -137,7 +137,7 @@
   <div class="col card">
     <h2 style="color:#903;" class="text-center"><%= @catalog.title %></h2>
     <p class="text-center">
-    <%= link_to image_tag(@catalog.code+'.gif', alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :code=>@catalog.code} %>
+    <%= link_to image_tag(@catalog.image, alt: 'catalog cover', style: 'height:160px;margin:auto;'), {controller: :book, action: :catalogs_by_season, :code=>@catalog.code} %>
     </p>
     <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', @catalog.link %></p>
   </div>

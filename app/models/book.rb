@@ -20,7 +20,6 @@ before_save :sort_titles
 	# has_many :reviews
 
 	mount_uploader :cover_image, BookCoverUploader
-	mount_uploader :highlight_image, HighlightImageUploader
 
 	def self.search(q)
 	  if q
