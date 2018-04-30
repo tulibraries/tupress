@@ -1,7 +1,19 @@
 Trestle.resource(:highlights) do
+
+  require 'carrierwave/processing/mini_magick'
+
   menu do
     item :highlights, icon: "fa fa-star"
   end
+
+  collection do
+    Highlight.order(title: :asc)
+  end
+
+  search do |q|
+    collection.where("title LIKE ?", "%#{q}%")
+  end
+
 
   # Customize the table columns shown on the index view.
   #
