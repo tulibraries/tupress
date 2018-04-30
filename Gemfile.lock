@@ -41,11 +41,11 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
-    autoprefixer-rails (8.3.0.1)
+    autoprefixer-rails (8.4.1)
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootstrap (4.0.0)
+    bootstrap (4.1.0)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
@@ -120,7 +120,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    loofah (2.2.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -164,8 +164,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     railties (5.0.7)
       actionpack (= 5.0.7)
       activesupport (= 5.0.7)
@@ -251,7 +251,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.6.1)
+    web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
@@ -270,7 +270,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap (~> 4.0.0.beta2)
+  bootstrap (~> 4.1.0)
   byebug
   capybara
   carrierwave (~> 1.0)
@@ -282,13 +282,14 @@ DEPENDENCIES
   jquery-ui-rails
   jquery-validation-rails (~> 1.13, >= 1.13.1)
   listen (~> 3.0.5)
-  loofah (= 2.2.1)
+  loofah (= 2.2.2)
   mini_magick
   mysql2 (~> 0.4.9)
   nokogiri
   pry
   puma (~> 3.0)
   rails (~> 5.0.2)
+  rails-html-sanitizer (~> 1.0.4)
   rspec-rails
   sass-rails (~> 5.0)
   social-share-button
