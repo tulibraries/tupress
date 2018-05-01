@@ -7,8 +7,10 @@ Trestle.resource(:events) do
   #
   table do
     column :startdate
-    column :description, ->(event) {event.description.html_safe}
-    column :where, ->(event) {event.where.html_safe}
+    # column :description, ->(event) {event.description.html_safe}
+    # column :where, ->(event) {event.where.html_safe}
+    column :description
+    column :where
     actions
   end
 
