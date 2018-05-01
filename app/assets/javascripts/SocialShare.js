@@ -32,7 +32,7 @@
             linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url={url}&title={title}&summary={text}&source={url}',
             myworld: 'https://connect.mail.ru/share?url={url}&title={title}&description={text}&imageurl={image}',
             odnoklassniki: 'http://odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl={url}&st.comments={text}',
-            tumblr: 'https://tumblr.com/share?s=&v=3&t={title}&u={url}',
+            tumblr: 'https://tumblr.com/share/link?url={url}',
             blogger: 'https://blogger.com/blog-this.g?t={text}&n={title}&u={url}',
             delicious: 'https://del.icio.us/save?url={url}&title={title}',
             plus: 'https://plus.google.com/share?url={url}',
