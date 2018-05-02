@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col col-md-8">
 		<h1 class="book_title"><%= @book.title %> 
-			<% unless @book.subtitle.empty? %>
+			<% unless @book.subtitle.nil? %>
 				<br /><small><em><%= @book.subtitle %></em></small> 
 			<% end %>
 		</h1>
@@ -76,21 +76,21 @@
 				Publication: <%= binding.fetch("binding", "").fetch("pub_date_for_format", "") %> <br /> <br />
 			<% end %>
 			<% end %>
-			<% unless @book.pages_total.empty? %>
+			<% unless @book.pages_total.nil? %>
 				<%= @book.pages_total %> pages<br />
 			<% end %>
-			<% unless @book.trim.empty? %>
+			<% unless @book.trim.nil? %>
 				<%= @book.trim %><br />
 			<% end %>
-			<% unless @book.illustrations.empty? %>
+			<% unless @book.illustrations.nil? %>
 				<%= @book.illustrations %><br />
 			<% end %>
 			</p>
 		</div>
 	</div>
-	<% unless @reviews.empty? %>
+	<% unless @reviews.nil? %>
 	<div class="col col-md-6">
-		<% unless @book.blurb.empty? %>
+		<% unless @book.blurb.nil? %>
 			<%= @book.blurb.html_safe %>
 		<% end %>
 	</div>
