@@ -16,7 +16,7 @@
 	      EPUBJS.filePath = "<%= root_path + 'epub/' %>";
 	      EPUBJS.cssPath = "<%= root_path + 'epub/css/' %>";
 	      // fileStorage.filePath = EPUBJS.filePath;
-	      window.viewer = ePubReader("<%= root_path+'files/epubs/'+@oabook.id.to_s+'.epub' %>", {});
+	      window.viewer = ePubReader("<%= root_path+'uploads/oabooks/'+@oabook.epub_identifier %>", {});
 	    }
     }
 </script>

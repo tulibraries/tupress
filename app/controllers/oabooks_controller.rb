@@ -1,14 +1,10 @@
 class OabooksController < ApplicationController
   before_action :set_oabook, only: [:show, :edit, :update, :destroy, :epub]
 
-  # GET /oabooks
-  # GET /oabooks.json
   def index
     @oabooks = Oabook.all
   end
 
-  # GET /oabooks/1
-  # GET /oabooks/1.json
   def show
   end
 
@@ -16,17 +12,13 @@ class OabooksController < ApplicationController
     render layout: false
   end
 
-  # GET /oabooks/new
   def new
     @oabook = Oabook.new
   end
 
-  # GET /oabooks/1/edit
   def edit
   end
 
-  # POST /oabooks
-  # POST /oabooks.json
   def create
     @oabook = Oabook.new(oabook_params)
 
@@ -41,8 +33,6 @@ class OabooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /oabooks/1
-  # PATCH/PUT /oabooks/1.json
   def update
     respond_to do |format|
       if @oabook.update(oabook_params)
@@ -55,8 +45,6 @@ class OabooksController < ApplicationController
     end
   end
 
-  # DELETE /oabooks/1
-  # DELETE /oabooks/1.json
   def destroy
     @oabook.destroy
     respond_to do |format|
