@@ -4,7 +4,7 @@
 			<h1>Search Results</h1>
 		</div>
 	</div>
-<% if !@books.empty? %>
+<% unless @books.nil? %>
 
 	<% @books.each do |book| %>
 	<div class="row book-row">
@@ -18,13 +18,13 @@
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-			<% unless book.pages_total.empty? %>
+			<% unless book.pages_total.nil? %>
 				<%= book.pages_total %> pages<br />
 			<% end %>
-			<% unless book.trim.empty? %>
+			<% unless book.trim.nil? %>
 				<%= book.trim %><br />
 			<% end %>
-			<% unless book.illustrations.empty? %>
+			<% unless book.illustrations.nil? %>
 				<%= book.illustrations %><br />
 			<% end %>
 				<br />
