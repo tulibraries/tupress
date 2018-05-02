@@ -10,7 +10,7 @@ Trestle.resource(:books) do
   end
 
   search do |q|
-    collection.where("title LIKE ?", "%#{q}%")
+    collection.where("title LIKE ?", "%#{q}%").or(collection.where('author_byline LIKE ?', "%#{q}%"))
   end
 
   # Customize the table columns shown on the index view.
