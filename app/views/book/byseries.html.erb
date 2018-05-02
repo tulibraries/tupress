@@ -6,7 +6,7 @@
 
 <div class="row">
 	<div class="col">
-		<% unless @series.description.empty? %>
+		<% unless @series.description.nil? %>
 			<%= @series.description %>
 		<% end %>
 	</div>
@@ -24,13 +24,13 @@
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-			<% unless book.pages_total.empty? %>
+			<% unless book.pages_total.nil? %>
 				<%= book.pages_total %> pages<br />
 			<% end %>
-			<% unless book.trim.empty? %>
+			<% unless book.trim.nil? %>
 				<%= book.trim %><br />
 			<% end %>
-			<% unless book.illustrations.empty? %>
+			<% unless book.illustrations.nil? %>
 				<%= book.illustrations %><br />
 			<% end %>
 				<br /><br />
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 <% end %>
-<% if @books.empty? %>
+<% if @books.nil? %>
 <div class="container empty-warning">
 	<div class="row">
 		<div class="col text-center">
