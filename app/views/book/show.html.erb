@@ -76,9 +76,15 @@
 				Publication: <%= binding.fetch("binding", "").fetch("pub_date_for_format", "") %> <br /> <br />
 			<% end %>
 			<% end %>
+			<% unless @book.pages_total.nil? %>
 				<%= @book.pages_total %> pages<br />
+			<% end %>
+			<% unless @book.trim.nil? %>
 				<%= @book.trim %><br />
+			<% end %>
+			<% unless @book.illustrations.nil? %>
 				<%= @book.illustrations %><br />
+			<% end %>
 			</p>
 		</div>
 	</div>

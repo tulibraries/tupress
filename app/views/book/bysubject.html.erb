@@ -16,9 +16,15 @@
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-				<%= book.pages_total%> pages<br />
+			<% unless book.pages_total.nil? %>
+				<%= book.pages_total %> pages<br />
+			<% end %>
+			<% unless book.trim.nil? %>
 				<%= book.trim %><br />
+			<% end %>
+			<% unless book.illustrations.nil? %>
 				<%= book.illustrations %><br />
+			<% end %>
 				<br /><br />
 				<%  book.binding.each do |binding| %>
 				<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
