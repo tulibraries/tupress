@@ -41,7 +41,7 @@ require 'pry'
   end
 
   def search
-    @books = Book.search(params[:q])
+    @books = Book.search(params[:q]).where({ status: ["NP", "IP", "OS"] }).order(:sort_title)
     @show_status = ["NP", "IP","OS","OP"]
   end
 
