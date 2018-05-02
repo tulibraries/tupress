@@ -16,13 +16,13 @@
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-			<% unless book.pages_total.nil? %>
+			<% unless book.pages_total.empty? %>
 				<%= book.pages_total %> pages<br />
 			<% end %>
-			<% unless book.trim.nil? %>
+			<% unless book.trim.empty? %>
 				<%= book.trim %><br />
 			<% end %>
-			<% unless book.illustrations.nil? %>
+			<% unless book.illustrations.empty? %>
 				<%= book.illustrations %><br />
 			<% end %>
 				<br /><br />
