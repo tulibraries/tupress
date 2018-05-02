@@ -163,6 +163,7 @@
 	</div>
 	<div class="row subjects-group">
 		<% @subjects.each do |subjects| %>
+		<% unless subjects.all? &:blank? %>
 			<% subjects.each do |subject,info| %>
 			
 				<div class="col-md-4 list-group-item">
@@ -170,6 +171,7 @@
 				</div>
 
 			<% end %>	
+		<% end %>
 		<% end %>
 	</div>
 	<% end %>
