@@ -17,13 +17,13 @@
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
-			<% unless book.pages_total.empty? %>
+			<% unless book.pages_total.nil? %>
 				<%= book.pages_total %> pages<br />
 			<% end %>
-			<% unless book.trim.empty? %>
+			<% unless book.trim.nil? %>
 				<%= book.trim %><br />
 			<% end %>
-			<% unless book.illustrations.empty? %>
+			<% unless book.illustrations.nil? %>
 				<%= book.illustrations %><br />
 			<% end %>
 				<br />
@@ -32,17 +32,17 @@
 				<% end %>
 			</p>
 			<p class="award">
-				<% unless book.award.empty? %>	
+				<% unless book.award.nil? %>	
 				<%= book.award.html_safe %>
-				<% if !book.award2.empty? %>
+				<% if !book.award2.emptynil? %>
 				<br />
 				<%= book.award2.html_safe %>
 				<% end %>
-				<% if !book.award3.empty? %>
+				<% if !book.award3.nil? %>
 				<br />
 				<%= book.award3.html_safe %>
 				<% end %>
-				<% if !book.award4.empty? %>
+				<% if !book.award4.nil? %>
 				<br />
 				<%= book.award4.html_safe %>
 				<% end %>
