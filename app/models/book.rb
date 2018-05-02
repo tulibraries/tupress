@@ -23,7 +23,7 @@ before_save :sort_titles
 
 	def self.search(q)
 	  if q
-	    Book.where('title LIKE ?', "%#{q}%").or(Book.where('author_byline LIKE ?', "%#{q}%")).order(:sort_title)
+	    Book.where('title LIKE ?', "%#{q}%").where({ status: ["NP","IP","OS","OP"] }).or(Book.where('author_byline LIKE ?', "%#{q}%")).where({ status: ["NP","IP","OS","OP"] }).order(:sort_title)
 		end
 	end
 

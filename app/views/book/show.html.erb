@@ -76,13 +76,13 @@
 				Publication: <%= binding.fetch("binding", "").fetch("pub_date_for_format", "") %> <br /> <br />
 			<% end %>
 			<% end %>
-			<% unless @book.pages_total.nil? %>
+			<% unless @book.pages_total.empty? %>
 				<%= @book.pages_total %> pages<br />
 			<% end %>
-			<% unless @book.trim.nil? %>
+			<% unless @book.trim.empty? %>
 				<%= @book.trim %><br />
 			<% end %>
-			<% unless @book.illustrations.nil? %>
+			<% unless @book.illustrations.empty? %>
 				<%= @book.illustrations %><br />
 			<% end %>
 			</p>
@@ -90,7 +90,7 @@
 	</div>
 	<% unless @reviews.empty? %>
 	<div class="col col-md-6">
-		<% unless @book.blurb.nil? %>
+		<% unless @book.blurb.empty? %>
 			<%= @book.blurb.html_safe %>
 		<% end %>
 	</div>
@@ -155,7 +155,7 @@
 		</div>
 		</div>
 	<% end %>
-	<% unless @subjects.nil? %>
+	<% unless @subjects.empty? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
