@@ -102,10 +102,15 @@
 			<h2 style="padding:0;margin:0;height:4px;">Description</h2>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col col-md-12 excerpt">
-			<%= @book.excerpt.html_safe %>
-		</div
+	
+	<% unless @book.excerpt.file.nil? %>
+		<div class="row">
+			<div class="col col-md-12 excerpt">
+				<%= link_to "Read an excerpt from the book.", @book.excerpt.url  %>
+			</div>
+		</div>
+	<% end %>
+	
 	<div class="row">
 		<div class="col description">
 			<%= @book.description.html_safe %>
