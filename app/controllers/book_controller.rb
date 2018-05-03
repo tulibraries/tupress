@@ -135,7 +135,7 @@ require 'pry'
 
   def book_params
     params[:book].permit(  :title, :sort_title, :subtitle, :cover_image, 
-      :hot, :hot_text, :news, :news_text, 
+      :hot, :hot_text, :news, :news_text, :excerpt, :excerpt_text, 
       :is_guide, :award, :award_year, :award2, :award_year2, :award3, :award_year3, :award4, :award_year4, :highlight, 
       :highlight_image)
   end

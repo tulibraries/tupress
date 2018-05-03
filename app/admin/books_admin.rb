@@ -46,6 +46,7 @@ Trestle.resource(:books) do
       )
     file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
     check_box     :remove_cover_image
+    text_field    :excerpt_text
     file_field    :excerpt
     check_box     :remove_excerpt
     text_field    :catalog
