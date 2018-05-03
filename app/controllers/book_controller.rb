@@ -27,6 +27,10 @@ require 'pry'
     @show_status = ["NP", "IP","OS","OP"]
   end
 
+  def excerpts
+    @books = Book.where('excerpt_text LIKE ?', '%Read%')
+  end
+
   def show
   	@book = Book.find_by book_id: params[:id]
     @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
