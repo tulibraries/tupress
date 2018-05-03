@@ -28,7 +28,7 @@ Trestle.resource(:oabooks) do
         label "Epub"
       end
       sidebar do 
-        image_tag oabook.epub.file.identifier
+        oabook.epub.file.identifier
       end
     end
     unless oabook.pdf.file.nil?
@@ -36,7 +36,7 @@ Trestle.resource(:oabooks) do
         label "PDF"
       end
       sidebar do 
-        image_tag oabook.pdf.file.identifier
+        oabook.pdf.file.identifier
       end
     end
     unless oabook.mobi.file.nil?
@@ -44,7 +44,7 @@ Trestle.resource(:oabooks) do
         label "MOBI"
       end
       sidebar do 
-        image_tag oabook.mobi.file.identifier
+        oabook.mobi.file.identifier
       end
     end
   
