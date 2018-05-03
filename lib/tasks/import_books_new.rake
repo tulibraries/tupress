@@ -25,53 +25,54 @@ namespace :db do
           new_book = true
         end
         book.tap do |b|
-          b.title = node.xpath("title").text
-          b.subtitle = node.xpath("subtitle").text
-          b.author_id = node.xpath("authors/author").map do |id|
-            id.at("author_id").text
-          end
-          b.author_prefix = node.xpath("authors/author").map do |name|
-            name.at("author_prefix").text
-          end
-          b.author_first = node.xpath("authors/author").map do |name|
-            name.at("author_first").text
-          end
-          author_last = node.xpath("authors/author").map do |name|
-            name.at("author_last").text
-          end
-          b.author_last = author_last.first
-          b.author_suffix = node.xpath("authors/author").map do |name|
-            name.at("author_suffix").text
-          end
-          # binding.pry
-          b.author_byline = node.xpath("author_byline").text
-          b.about_author = node.xpath("author_bios").text
-          b.intro = node.xpath("intro").text
-          b.blurb = node.xpath("blurb").text
+          # b.title = node.xpath("title").text
+          # b.subtitle = node.xpath("subtitle").text
+          # b.author_id = node.xpath("authors/author").map do |id|
+          #   id.at("author_id").text
+          # end
+          # b.author_prefix = node.xpath("authors/author").map do |name|
+          #   name.at("author_prefix").text
+          # end
+          # b.author_first = node.xpath("authors/author").map do |name|
+          #   name.at("author_first").text
+          # end
+          # author_last = node.xpath("authors/author").map do |name|
+          #   name.at("author_last").text
+          # end
+          # b.author_last = author_last.first
+          # b.author_suffix = node.xpath("authors/author").map do |name|
+          #   name.at("author_suffix").text
+          # end
+          # # binding.pry
+          # b.author_byline = node.xpath("author_byline").text
+          # b.about_author = node.xpath("author_bios").text
+          # b.intro = node.xpath("intro").text
+          # b.blurb = node.xpath("blurb").text
           b.excerpt = node.xpath("excerpt").text
-          b.cover_image = node.xpath("cover_image").text
-          b.status = node.xpath("status").text
-          # binding.pry
-          b.pages_total = node.xpath("format/pages_total").text
-          b.trim = node.xpath("format/trim").text
-          b.illustrations = node.xpath("format/illustrations_copy").text
-          # b.format = node.xpath("format").text
-          b.isbn = node.xpath("isbn").text
-          b.pub_date = node.xpath("pub_date").text
-          b.in_series = node.xpath("series").map do |series|
-            series.at("series_id").text
-          end
-          b.binding = node.xpath("bindings/binding").map do |bindings|
-             Hash.from_xml(bindings.to_s)
-          end
-          b.description = node.xpath("description").text
-          b.subjects = node.xpath("subjects/subject").map do |subject|
-            Hash.from_xml(subject.to_s)
-          end
-          b.contents = node.xpath("contents").text
-          b.hotweight = "1"
-          b.newsweight = "1"
-          b.catalog = node.xpath("catalog").text
+          b.excerpt_text = node.xpath("excerpt").text
+          # b.cover_image = node.xpath("cover_image").text
+          # b.status = node.xpath("status").text
+          # # binding.pry
+          # b.pages_total = node.xpath("format/pages_total").text
+          # b.trim = node.xpath("format/trim").text
+          # b.illustrations = node.xpath("format/illustrations_copy").text
+          # # b.format = node.xpath("format").text
+          # b.isbn = node.xpath("isbn").text
+          # b.pub_date = node.xpath("pub_date").text
+          # b.in_series = node.xpath("series").map do |series|
+          #   series.at("series_id").text
+          # end
+          # b.binding = node.xpath("bindings/binding").map do |bindings|
+          #    Hash.from_xml(bindings.to_s)
+          # end
+          # b.description = node.xpath("description").text
+          # b.subjects = node.xpath("subjects/subject").map do |subject|
+          #   Hash.from_xml(subject.to_s)
+          # end
+          # b.contents = node.xpath("contents").text
+          # b.hotweight = "1"
+          # b.newsweight = "1"
+          # b.catalog = node.xpath("catalog").text
         end #tap
 
         # binding.pry

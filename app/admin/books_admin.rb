@@ -15,13 +15,17 @@ Trestle.resource(:books) do
 
   # Customize the table columns shown on the index view.
   #
-  table do
+  table do |book|
+    # if :excerpt_text.size > 1
+    #   binding.pry÷
+    #   column :excerpt_text
     column :book_id
     column :title do |booktitle|
       truncate(booktitle.title, omision: "...", length: 300)
     end
     column :author_byline
     actions
+  # end
   end
 
   #comment just to get this file into git, or else the jenkins job is stuck again

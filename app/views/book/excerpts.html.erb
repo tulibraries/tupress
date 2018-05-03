@@ -1,0 +1,22 @@
+<div class="container" id="titles">
+<h1><%= @pagetitle %></h1>
+<div class="row">
+<%= render "alphamenu.erb" %>
+</div>
+<% @books.each do |book| %>
+	<div class="row" style="padding: 28px;border-bottom:solid #ccc 1px;">
+		<div class="media" style="text-align:center;">
+		<% unless book.cover_image.url.blank? %>
+		<% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif") %>
+			<%= link_to image_tag(book.cover_image, border: 0, class: 'd-flex mr-3', style: 'width:140px;'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+		<% end %>
+		<% end %>		
+		</div>
+		<div class="media-body">
+			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+			<%= book.excerpt_text %><br>
+			<%= link_to "<edit>", "/admin/books/"+book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
+		</div>
+	</div>
+<% end %>
+</div>
