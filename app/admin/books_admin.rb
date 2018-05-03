@@ -46,7 +46,8 @@ Trestle.resource(:books) do
       )
     file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
     check_box     :remove_cover_image
-    text_field    :is_guide, :disabled => true
+    file_field    :excerpt
+    check_box     :remove_excerpt
     text_field    :catalog
     check_box     :hot
     number_field  :hotweight, id: "hot-weight", min: 1, max: 4
@@ -73,6 +74,14 @@ Trestle.resource(:books) do
       end
       sidebar do 
         image_tag book.cover_image.url.to_s, id: "cover_image"
+      end
+    end
+    if !book.excerpt.file.nil?
+      sidebar do 
+        label "excerpt"
+      end
+      sidebar do 
+        link_to book.file.excerpt_identifier, book.excerpt.url.to_s, id: "cover_image"
       end
     end
   

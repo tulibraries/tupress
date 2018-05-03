@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180502144413) do
+ActiveRecord::Schema.define(version: 20180503160326) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20180502144413) do
     t.text     "about_author",    limit: 65535
     t.text     "intro",           limit: 65535
     t.text     "blurb",           limit: 65535
-    t.text     "excerpt",         limit: 65535
+    t.string   "excerpt"
     t.string   "is_guide"
     t.string   "cover_image"
     t.string   "format"
