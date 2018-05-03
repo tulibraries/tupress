@@ -82,7 +82,7 @@ Trestle.resource(:books) do
         label "excerpt"
       end
       sidebar do 
-        link_to book.excerpt.file.identifier, book.excerpt.file.path.to_s
+        link_to book.excerpt.file.identifier, book.excerpt.url
       end
     end
   
