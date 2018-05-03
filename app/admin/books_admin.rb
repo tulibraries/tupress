@@ -81,12 +81,12 @@ Trestle.resource(:books) do
         label "excerpt"
       end
       sidebar do 
-        link_to book.file.excerpt_identifier, book.excerpt.url.to_s, id: "cover_image"
+        link_to book.excerpt.file.identifier, book.excerpt.file.path.to_s
       end
     end
   
     sidebar do 
-        link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book"
+        link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book", :style=>"display:block;"
     end
   end
 
