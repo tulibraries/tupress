@@ -20,9 +20,9 @@
 		<div class="social-shopping">
 			<% if @book.status == "IP"  %>
 			<p class="text-center buy-it">
-				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
+				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart2/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple" %>
 				&nbsp;&nbsp;
-				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %>
+				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart2/ChicagoBook.aspx?ISBN="+@book.isbn+"&&PRESS=temple", :class=>"buy-it-text" %>
 			</p>
 			<% end %>
 			<p class="text-right social-icons">
