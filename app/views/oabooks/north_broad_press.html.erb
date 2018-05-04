@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Oabooks</h1>
+
+    <% @oabooks.each do |oabook| %>
+    <div class="neh-book">
+        <%= link_to image_tag('cover.jpg', alt: oabook.title, style: 'height:80px;'), root_path+"open-access/north-broad-press/"+oabook.id.to_s %>
+        <%= link_to oabook.title, root_path+"open-access/north-broad-press/"+oabook.id.to_s %>
+    </div>
+    <% end %>
+
