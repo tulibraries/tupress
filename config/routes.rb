@@ -18,7 +18,6 @@ controller :book do
   get   'books/new'             => :new
   post  'books'                 => :create
   get   'search'                => :search
-  get   'excerpts'              => :excerpts
 end
 
 controller :page do
