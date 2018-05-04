@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503174142) do
+ActiveRecord::Schema.define(version: 20180504135021) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -221,6 +221,7 @@ ActiveRecord::Schema.define(version: 20180503174142) do
     t.string   "epub"
     t.string   "pdf"
     t.string   "mobi"
+    t.string   "collection"
   end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

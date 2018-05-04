@@ -16,6 +16,13 @@ Trestle.resource(:oabooks) do
     text_field :title
     text_field :description
     text_field :isbn
+    select(:collection, 
+        [
+          ['None', 'None'],
+          ['Labor Studies', 'Labor Studies'],
+          ['North Broad Press', 'North Broad Press']
+        ]
+      )
     file_field :epub
     check_box  :remove_epub
     file_field :pdf

@@ -55,6 +55,8 @@
 		          <%= link_to "Subject Index", root_path+"subjects", :class=>"dropdown-item" %>
 		          <%= link_to "Catalog Index", root_path+"catalogs", :class=>"dropdown-item" %>
 		          <%= link_to "Series Listing", root_path+"series", :class=>"dropdown-item" %>
+		          <span style="padding-left:1.5rem;color:white;">Open Access Books</span>
+		          <%= link_to ("&bull; Labor Studies").html_safe, root_path+"open-access/labor-studies", :class=>"dropdown-item", :style=>"padding-left:1.75rem;" %>
 		          <%= link_to "Study Guides", root_path+"studyguides", :class=>"dropdown-item" %>
 		        </div>
 		      </li>
@@ -72,11 +74,6 @@
 		          <%= link_to j.title, j.url, :class=>"dropdown-item" %>
 		         <% end %>
 		        </div>
-		      </li>
-					<li class="nav-item">
-		        <%= link_to(root_path+"open-access", :class=>"nav-link") do %>
-		        	NEH 
-		        <% end %>
 		      </li>
 		      <li class="nav-item">
 		        <%= link_to "Contact Us", root_path+"contact", :class=>"nav-link" %>
