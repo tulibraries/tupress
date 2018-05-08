@@ -4,13 +4,32 @@ require 'yaml'
 namespace :db do
     namespace :seed do
 
+      desc 'Updates from Deltas'
+      task :run_updates [:file_path] => :environment do
+        filepath = args.fetch(:file_path, nil)
+        if filepath && File.exist?(filepath) do
+          Rake::Task["db:seed:import_books_new"].invoke(filepath)
+          Rake::Task["db:seed:import_reviews_new"].invoke(filepath)
+          File.rm(filepath)
+        end
+
+        Rake::Task["sync:feeds"].invoke
+      end
+
       desc 'Import books to database'
-      task :import_books_new => :environment do
+      task :import_books_new, [:filepath] => :environment do
 
 
-      BOOK_DATA = "#{Rails.root}/book_titles.xml"
+      BOOK_DATA = args.fetch(:filepath, nil)
 
-      doc = File.open(BOOK_DATA, 'rb:UTF-16le') { |f| Nokogiri::XML(f) }
+      # If there is no file, create an empty node
+      # so we don't throw an error when
+      if BOOK_DATA do
+        doc = File.open(BOOK_DATA, 'rb:UTF-16le') { |f| Nokogiri::XML(f) }
+      else
+      doc = Nokogiri::XML("")
+
+      end
 
       error_ids = []
       created_ids = []
@@ -77,7 +96,7 @@ namespace :db do
 
         # binding.pry
 
-        if book.save 
+        if book.save
           if !new_book.nil?
             created_ids << book.book_id
           else
@@ -85,23 +104,18 @@ namespace :db do
           end
         else
             error_ids << book.book_id
-        end     
+        end
 
         new_book = nil
       end #each
 
       puts "count: "+(updated_ids.length+created_ids.length).to_s+"\n"
-      puts "errors: "+error_ids.length.to_s 
+      puts "errors: "+error_ids.length.to_s
 
       harvest = Harvest.new(error_ids: error_ids, updated_ids: updated_ids, created_ids: created_ids)
 
       harvest.save
-    
+
     end #task
   end #namespace: seed
 end #namespace: db
-          
-
-
-
-
