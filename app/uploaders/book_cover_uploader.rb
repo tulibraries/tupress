@@ -22,7 +22,7 @@ class BookCoverUploader < CarrierWave::Uploader::Base
   end
 
   # Process files as they are uploaded:
-  process resize_to_fill: [200, 300]
+  process resize_to_fill: [240, 360]
   #
   # def scale(width, height)
   #   # do something
