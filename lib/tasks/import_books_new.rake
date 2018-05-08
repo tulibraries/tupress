@@ -5,7 +5,7 @@ namespace :db do
     namespace :seed do
 
       desc 'Updates from Deltas'
-      task :run_updates [:file_path] => :environment do
+      task :run_updates, [:file_path] => :environment do
         filepath = args.fetch(:file_path, nil)
         if filepath && File.exist?(filepath) do
           Rake::Task["db:seed:import_books_new"].invoke(filepath)
