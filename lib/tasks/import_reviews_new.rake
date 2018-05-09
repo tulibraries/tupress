@@ -5,12 +5,16 @@ namespace :db do
     namespace :seed do
 
       desc 'Import book reviews to database'
-      task :import_reviews_new => :environment do
+      task :import_reviews_new, [:filepath] => :environment do |t, args|
 
 
-      REVIEW_DATA = "#{Rails.root}/book_titles.xml"
+      REVIEW_DATA = args.fetch(:filepath)
 
-      doc = File.open(REVIEW_DATA, 'rb:UTF-16le') { |f| Nokogiri::XML(f) }
+      if REVIEW_DATA 
+        doc = File.open(REVIEW_DATA, 'rb:UTF-16le') { |f| Nokogiri::XML(f) }
+      else
+        doc = Nokogiri::XML("")
+      end
 
       error_ids = []
       created_ids = []
@@ -21,16 +25,16 @@ namespace :db do
       db_review_ids = []
       new_review = nil
 
-   
+
 
       doc.xpath("//record").map do |node|
 
-      unless node.xpath("reviews/review/review_text").empty? 
+      unless node.xpath("reviews/review/review_text").empty?
 
       node.xpath("reviews/review").map do |newreview|
 
         review = Review.find_by(review_id: newreview.xpath("review_id").text)
-        
+
         if review.nil?
           review = Review.new(review_id: newreview.xpath("review_id").text, weight: "0")
           new_review = true
@@ -43,17 +47,17 @@ namespace :db do
           r.author = node.xpath("author_byline").text
           r.review = newreview.at("review_text").text
           r.weight = "0"
-    
+
         end #tap
 
 
-        if review.save 
+        if review.save
           if !new_review.nil?
             created_ids << review.title_id
           end
         else
             error_ids << review.title_id
-        end     
+        end
 
         new_review = nil
 
