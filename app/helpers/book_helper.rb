@@ -25,7 +25,15 @@ module BookHelper
     @year_size = @year_size1 + @year_size2 + @year_size3 + @year_size4
   end
 
-  def get_isbn(id)
-
+  def get_isbn
+    isbn = nil
+    @formats.each do |format|
+      # binding.pry
+      if ["NP", "IP"].include? format["binding"]["binding_status"]
+        isbn = format["binding"]["ean"].tr("-", "")
+      end
+    end
+    isbn
   end
+
 end
