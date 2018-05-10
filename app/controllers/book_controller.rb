@@ -34,12 +34,10 @@ require 'pry'
     @subjects = @book.subjects.each do |s|
        s
     end
-    # binding.pry
     @series = @book.in_series.map do |s|
        Series.find_by series_id: s
     end
     @formats = @book.binding
-    # binding.pry
   end
 
   def search
