@@ -160,23 +160,27 @@
 		</div>
 		</div>
 	<% end %>
-
-	<% unless @subjects.all? &:blank? %>
-
+	<% unless @subjects.nil? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
 		</div>
 	</div>
-	<div class="row subjects-group">	
-		<% @subjects.each do |subject| %>		
-			<div class="col-md-4 list-group-item">
-				 <%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %>
-			</div>
+	<div class="row subjects-group">
+		<% @subjects.each do |subjects| %>
+			<% unless subjects.all? &:blank? %>
+				<% subjects.each do |subject,info| %>
+				
+					<div class="col-md-4 list-group-item">
+						 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
+					</div>
+
+				<% end %>	
+			<% end %>
 		<% end %>
 	</div>
+	<% end %>
 	
-	<% end %>	
 
 
 	<% if @series.first %><!-- if series -->
