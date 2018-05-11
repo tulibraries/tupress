@@ -1,6 +1,9 @@
 Trestle.resource(:books) do
   require 'carrierwave/processing/mini_magick'
 
+  list_items = []
+  parent_list_items = [[],[],[]]
+  
   menu do
     item :books, icon: "fa fa-star"
   end
@@ -17,7 +20,6 @@ Trestle.resource(:books) do
   #
   table do |book|
     # if :excerpt_text.size > 1
-    #   binding.pry÷
     #   column :excerpt_text
     column :book_id
     column :title do |booktitle|
@@ -41,15 +43,31 @@ Trestle.resource(:books) do
     end
     select(:status, 
         [
-          ['In Print', 'IP'],
-          ['NP', 'NP'],
-          ['OS', 'OS'],
-          ['X', 'X'],
-          ['...', '...']
+          ["In Print", "IP"],
+          ["NP", "NP"],
+          ["OS", "OS"],
+          ["X", "X"],
+          ["...", "..."]
         ]
       )
     file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
     check_box     :remove_cover_image
+
+    book.subjects.each_with_index do |subject,index|
+      parent_list_items[index] << subject['subject']['subject_title']
+      parent_list_items[index] << subject['subject']['subject_id']
+    end
+
+    select(:subject1, 
+      parent_list_items
+      )
+    select(:subject2, 
+      parent_list_items
+      )
+    select(:subject3, 
+      parent_list_items
+      )
+
     text_field    :excerpt_text
     file_field    :excerpt
     check_box     :remove_excerpt

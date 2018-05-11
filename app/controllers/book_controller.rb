@@ -15,7 +15,6 @@ require 'pry'
 
     @pagetitle = "Titles Index"
     @show_status = ["NP", "IP", "OS","OP"]
-    # binding.pry
   end
 
   def byauthor
@@ -31,12 +30,20 @@ require 'pry'
   	@book = Book.find_by book_id: params[:id]
     @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
     @show_status = ["NP", "IP","OS","OP"]
-    @subjects = @book.subjects.each do |s|
-       s
-    end
+    # @subjects = @book.subjects.each do |s|
+    #    s
+    # end
     @series = @book.in_series.map do |s|
        Series.find_by series_id: s
     end
+    @subjects = []
+    @subjects << @book.subject1
+    @subjects << @book.subject2
+    @subjects << @book.subject3
+    @subjects = @subjects.map do |s|
+      Subject.find_by subject_id: s
+    end
+    # binding.pry
     @formats = @book.binding
   end
 
