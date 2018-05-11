@@ -10,7 +10,6 @@ namespace :db do
         if filepath && File.exist?(filepath) 
           Rake::Task["db:seed:import_books_new"].invoke(filepath)
           Rake::Task["db:seed:import_reviews_new"].invoke(filepath)
-          FileUtils.rm(filepath)
         end
       end
 
