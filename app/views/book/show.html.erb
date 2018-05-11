@@ -161,8 +161,8 @@
 		</div>
 	<% end %>
 
-	<% unless @subjects.nil? %>
-	
+	<% unless @subjects.all? &:blank? %>
+
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
