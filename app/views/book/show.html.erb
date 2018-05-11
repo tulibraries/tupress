@@ -160,7 +160,7 @@
 		</div>
 		</div>
 	<% end %>
-	<% unless @subjects.nil? %>
+	<% unless @subjects.first['subject_id'].nil? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
@@ -170,11 +170,9 @@
 		<% @subjects.each do |subjects| %>
 			<% unless subjects.all? &:blank? %>
 				<% subjects.each do |subject,info| %>
-				
 					<div class="col-md-4 list-group-item">
 						 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
 					</div>
-
 				<% end %>	
 			<% end %>
 		<% end %>
