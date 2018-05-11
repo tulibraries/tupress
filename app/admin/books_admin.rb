@@ -53,20 +53,25 @@ Trestle.resource(:books) do
     file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
     check_box     :remove_cover_image
 
-    book.subjects.each_with_index do |subject,index|
-      parent_list_items[index] << subject['subject']['subject_title']
-      parent_list_items[index] << subject['subject']['subject_id']
-    end
+      book.subjects.each_with_index do |subject,index|
+        unless subject['subject']['subject_title'].nil?
+          parent_list_items[index] << subject['subject']['subject_title']
+        end
+        unless subject['subject']['subject_title'].nil?
+          parent_list_items[index] << subject['subject']['subject_id']
+        end
+        # binding.pry
+      end
 
-    select(:subject1, 
-      parent_list_items
-      )
-    select(:subject2, 
-      parent_list_items
-      )
-    select(:subject3, 
-      parent_list_items
-      )
+      select(:subject1, 
+        parent_list_items
+        )
+      select(:subject2, 
+        parent_list_items
+        )
+      select(:subject3, 
+        parent_list_items
+        )
 
     text_field    :excerpt_text
     file_field    :excerpt
