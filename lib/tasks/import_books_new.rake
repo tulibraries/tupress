@@ -16,7 +16,6 @@ namespace :db do
       desc 'Import books to database'
       task :import_books_new, [:filepath] => :environment do |t, args|
 
-
       BOOK_DATA = args.fetch(:filepath, nil)
 
       # If there is no file, create an empty node
