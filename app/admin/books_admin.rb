@@ -2,7 +2,7 @@ Trestle.resource(:books) do
   require 'carrierwave/processing/mini_magick'
 
   list_items = []
-  parent_list_items = [[],[],[]]
+  parent_list_items = Array.new
   
   menu do
     item :books, icon: "fa fa-star"
@@ -54,11 +54,8 @@ Trestle.resource(:books) do
     check_box     :remove_cover_image
 
       book.subjects.each_with_index do |subject,index|
-        unless subject['subject']['subject_title'].nil?
-          parent_list_items[index] << subject['subject']['subject_title']
-        end
-        unless subject['subject']['subject_title'].nil?
-          parent_list_items[index] << subject['subject']['subject_id']
+        unless subject['subject']['subject_id'].nil?
+          parent_list_items.push [subject['subject']['subject_title'],subject['subject']['subject_id']]
         end
         # binding.pry
       end

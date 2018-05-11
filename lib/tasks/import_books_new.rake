@@ -4,21 +4,22 @@ require 'yaml'
 namespace :db do
     namespace :seed do
 
-      desc 'Updates from Deltas'
-      task :run_updates, [:file_path] => :environment do |t, args|
-        filepath = args.fetch(:file_path, nil)
-        if filepath && File.exist?(filepath) 
-          Rake::Task["db:seed:import_books_new"].invoke(filepath)
-          Rake::Task["db:seed:import_reviews_new"].invoke(filepath)
-          FileUtils.rm(filepath)
-        end
-      end
+      # desc 'Updates from Deltas'
+      # task :run_updates, [:file_path] => :environment do |t, args|
+      #   filepath = args.fetch(:file_path, nil)
+      #   if filepath && File.exist?(filepath) 
+      #     Rake::Task["db:seed:import_books_new"].invoke(filepath)
+      #     Rake::Task["db:seed:import_reviews_new"].invoke(filepath)
+      #     FileUtils.rm(filepath)
+      #   end
+      # end
 
       desc 'Import books to database'
       task :import_books_new, [:filepath] => :environment do |t, args|
 
 
-      BOOK_DATA = args.fetch(:filepath, nil)
+      # BOOK_DATA = args.fetch(:filepath, nil)
+      BOOK_DATA = "#{Rails.root}/book_titles.xml"
 
       # If there is no file, create an empty node
       # so we don't throw an error when
