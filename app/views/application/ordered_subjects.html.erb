@@ -1,0 +1,9 @@
+	<% unless @ordered_subjects.all? &:blank? %>
+		<div class="row subjects-group">	
+			<% @ordered_subjects.each do |subject| %>		
+				<div class="col-md-4 list-group-item">
+				<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
