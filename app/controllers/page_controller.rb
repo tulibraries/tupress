@@ -15,7 +15,7 @@ require 'pry'
     @freeforms = NewsItem.where(homepage: 1).take(1)
     @feed = Feed.find(1)
     @entries = @feed.entries.order('published desc')
-    @catalog = Season.first
+    @catalog = Season.all.order(created_at: :desc).first
   end
   def contact
     @page = Page.find_by(id: params[:id])
