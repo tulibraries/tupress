@@ -24,7 +24,7 @@ db/data.yml
 /app/assets/audio/
 /public/files/
 /public/uploads/
-#public/assets/
+public/assets/
 vendor/bundle/
 
 # Ignore Byebug command history file.
