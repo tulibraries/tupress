@@ -96,13 +96,13 @@ require 'pry'
   end
 
   def catalogs
-    @catalogs = Season.all.order(:created_at)
+    @catalogs = Season.all.order(created_at: :desc)
     @show_status = ["NP", "IP","OS","OP"]
   end
 
   def catalogs_by_season
     @catalog = Season.find_by code: "#{params[:code]}"
-    @books = Book.where('catalog = ?', "#{params[:code]}").where({ status: ["NP","IP","OS","OP"] }).order(created_at: :desc)
+    @books = Book.where('catalog = ?', "#{params[:code]}").where({ status: ["NP","IP","OS","OP"] }).order(:sort_title)
     @show_status = ["NP", "IP","OS","OP"]
   end
 
