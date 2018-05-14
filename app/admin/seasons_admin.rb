@@ -17,7 +17,6 @@ Trestle.resource(:seasons) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |season|
-    text_field  :id
     text_field  :title
     text_field  :code
     check_box   :suppress
