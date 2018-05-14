@@ -6,10 +6,16 @@ Trestle.resource(:seasons) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   actions
-  # end
+  table do
+    column :id
+    column :title
+    column :code
+    column :image
+    column :pdf
+    column :created_at
+    column :updated_at
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
@@ -21,10 +27,10 @@ Trestle.resource(:seasons) do
     file_field  :pdf
     check_box   :remove_pdf
   
-    # row do
-    #   col(xs: 6) { datetime_field :updated_at }
-    #   col(xs: 6) { datetime_field :created_at }
-    # end
+    row do
+      col(xs: 6) { datetime_field :updated_at }
+      col(xs: 6) { datetime_field :created_at }
+    end
     if !season.image.blank?
       sidebar do 
         label "image"     
