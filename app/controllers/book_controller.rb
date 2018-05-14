@@ -96,7 +96,7 @@ require 'pry'
   end
 
   def catalogs
-    @catalogs = Season.all.order(created_at: :desc)
+    @catalogs = Season.where("suppress != ?", "").order(created_at: :desc)
     @show_status = ["NP", "IP","OS","OP"]
   end
 

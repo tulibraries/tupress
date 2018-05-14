@@ -23,6 +23,7 @@ Trestle.resource(:seasons) do
     text_field  :id
     text_field  :title
     text_field  :code
+    check_box   :suppress
     file_field  :image
     check_box   :remove_image
     file_field  :pdf
