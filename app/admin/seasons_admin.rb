@@ -15,7 +15,6 @@ Trestle.resource(:seasons) do
   #
   form do |season|
     text_field :title
-    text_field :created_at
     text_field :code
     file_field :image
     check_box  :remove_image
