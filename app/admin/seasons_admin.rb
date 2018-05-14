@@ -17,7 +17,6 @@ Trestle.resource(:seasons) do
     text_field :title
     text_field :created_at
     text_field :code
-    text_field :link
     file_field :image
     check_box  :remove_image
 
