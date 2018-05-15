@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     @february_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '02').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC') 
     @march_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '03').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
     @april_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '04').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
-    @may_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '5').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
+    @may_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '05').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
     @june_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '06').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
     @july_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '07').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
     @august_events = Event.where("DATE_FORMAT(startdate, '%m') = ?", '08').where("DATE_FORMAT(startdate, '%Y') = ?", year).order('startdate ASC')
