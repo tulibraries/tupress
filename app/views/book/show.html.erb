@@ -93,8 +93,14 @@
 		<% unless @book.blurb.nil? %>
 			<%= @book.blurb.html_safe %>
 		<% end %>
+		
+	<% unless @book.excerpt.file.nil? %>
+				<%= link_to @book.excerpt_text, @book.excerpt.url  %>
+	<% end %>
 	</div>
 	<% end %>
+
+
 </div>
 
 	<div class="row" style="visibility:hidden;">
@@ -103,13 +109,6 @@
 		</div>
 	</div>
 	
-	<% unless @book.excerpt.file.nil? %>
-		<div class="row">
-			<div class="col col-md-12 excerpt">
-				<%= link_to @book.excerpt_text, @book.excerpt.url  %>
-			</div>
-		</div>
-	<% end %>
 	
 	<div class="row">
 		<div class="col description">
