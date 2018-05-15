@@ -20,10 +20,10 @@ Trestle.resource(:events) do
     text_field :title
     editor :description
     text_field :where
-    datetime_field :startdate
-    datetime_field :enddate
-    datetime_field :time
-    datetime_field :endtime
+    date_field :startdate
+    date_field :enddate
+    time_field :time
+    time_field :endtime
     select(:timezone, [
         ['CST', 'CST'],
         ['EST', 'EST'],
