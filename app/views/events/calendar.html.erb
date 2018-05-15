@@ -18,18 +18,22 @@
 <% if !@events.blank? %>
   <div class="row">
     <div class="col">
+      <% unless @events.first.startdate.nil? %>
       <h2><%= @events.first.startdate.strftime('%B, %Y') %></h2>
+      <% end %>
     </div>
   </div>
   <% @events.each do |e| %>
   <div class="row">
     <div class="time col col-md-2 text-center">
-
+      <% unless e.startdate.blank? %>
         <strong><%= e.startdate.strftime('%b %d') %></strong>
-        <% unless e.enddate.strftime('%d') == e.startdate.strftime('%d') %>
+        <% unless e.enddate.blank? || e.enddate.strftime('%d') == e.startdate.strftime('%d') %>
           - <strong><%= e.enddate.strftime('%d') %></strong>
         <% end %>
-        <% unless e.time.strftime('%l:%M %p') == '12:00 AM' %>
+      <% end %>
+     
+        <% unless e.time.blank? || e.time.strftime('%l:%M %p') == '12:00 AM' %>
           <p>
             <%= e.time.strftime('%l:%M %p') %>
             <% unless e.endtime.blank? || e.endtime.strftime('%l:%M %p') == '12:00 AM' %>
@@ -43,9 +47,9 @@
  
     </div>
     <div class="event-description col col-md-10">
-      <% unless e.title.nil? %><p class="event-title"><%= e.title %></p><% end %>
-      <p><%= e.description.html_safe %></p>
-      <p><em>Where</em>: <%= e.where.html_safe %></p>
+      <% unless e.title.blank? %><span class="event-title"><%= e.title %></span><% end %>
+      <% unless e.description.blank? %><%= e.description.html_safe %><% end %>
+      <% unless e.where.blank? %><em>Where</em>: <%= e.where.html_safe %><% end %>
     </div>
   </div>
 
