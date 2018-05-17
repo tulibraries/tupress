@@ -2,7 +2,7 @@
 <div class="container" id="book_show">
 <div class="row">
 
-	<div class="row no-gutters book-info">
+	<div class="row no-gutters book-info col-md-12">
 		<div class="col col-md-3">
 			<% unless @book.cover_image.url.blank? %>
 			<% if @book.cover_image.url.include?(".jpg") || @book.cover_image.url.include?(".jpeg") || @book.cover_image.url.include?(".png") || @book.cover_image.url.include?(".gif")%>
