@@ -38,9 +38,11 @@ Trestle.resource(:books) do
 
     text_field :title, :disabled => true
     text_field :sort_title, :disabled => true
+    text_field :edition
     if !:author.nil?
       text_field :author_byline, :disabled => true
     end
+    text_field :supplement
     select(:status, 
         [
           ["In Print", "IP"],

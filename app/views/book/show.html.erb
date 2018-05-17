@@ -6,11 +6,14 @@
 			<% unless @book.subtitle.nil? %>
 				<br /><small><em><%= @book.subtitle %></em></small> 
 			<% end %>
+			<% unless @book.edition.nil? %>
+				<br /><small><em><%= @book.edition %></em></small> 
+			<% end %>
 		</h1>
 
 	<div class="row">
 		<div class="col author">
-			<%= @book.author_byline %>
+			<%= @book.author_byline %><%= @book.supplement %>
 			
 			<%= link_to "<edit>", "/admin/books/"+@book.id.to_s, :style => "display:block;color:#aaa;font-weight:100" %>
 		</div>
