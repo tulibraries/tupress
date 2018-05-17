@@ -25,7 +25,7 @@
 			<% unless @book.is_guide.file.nil? %>
 				<p><%= link_to "Curriculum/Study Guide Available [pdf]", @book.is_guide.url  %>
 					
-				<% unless book.suggested_reading.file.nil? %>
+				<% unless @book.suggested_reading.file.nil? %>
 					<br /><%= link_to "Suggested Reading List [pdf]", @book.suggested_reading.url %>
 				<% end %>
 
