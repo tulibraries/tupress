@@ -65,7 +65,7 @@ require 'pry'
   end
 
   def studyguides
-    @books = Book.where('is_guide = ?', "1").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
+    @books = Book.where('is_guide != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     @pagetitle = "Study Guides"
     @show_status = ["NP", "IP","OS","OP"]
   end 

@@ -81,6 +81,8 @@ Trestle.resource(:books) do
     check_box     :news
     number_field  :newsweight, id: "news-weight", min: 1, max: 5
     text_area     :news_text
+    file_field    :is_guide
+    check_box     :remove_is_guide
     text_field    :award_year
     text_field    :award
     text_field    :award_year2
@@ -109,6 +111,14 @@ Trestle.resource(:books) do
       end
       sidebar do 
         link_to book.excerpt.file.identifier, book.excerpt.url
+      end
+    end
+    if !book.is_guide.file.nil?
+      sidebar do 
+        label "Study Guide"
+      end
+      sidebar do 
+        link_to book.is_guide.file.identifier, book.is_guide.url
       end
     end
   

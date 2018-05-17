@@ -17,22 +17,8 @@
 				<p class="subtitle"><%= book.subtitle %></p>
 			<% end %>
 			<p class="author"><%= book.author_byline%></p>
-			<p class="format">
-			<% unless book.pages_total.nil? %>
-				<%= book.pages_total %> pages<br />
-			<% end %>
-			<% unless book.trim.nil? %>
-				<%= book.trim %><br />
-			<% end %>
-			<% unless book.illustrations.nil? %>
-				<%= book.illustrations %><br />
-			<% end %>
-				<br /><br />
-				<%  book.binding.each do |binding| %>
-				<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
-					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong><br />
-					<% end %>
-				<% end %>
+			<p >
+			<%= link_to "Curriculum/Study Guide [pdf]", book.is_guide.url  %>
 				</p>
 		</div>
 	</div>

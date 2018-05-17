@@ -100,6 +100,9 @@
 	<% unless @book.excerpt.file.nil? %>
 				<%= link_to @book.excerpt_text, @book.excerpt.url  %>
 	<% end %>
+	<% unless @book.is_guide.file.nil? %>
+				<br /><%= link_to "Study Guide Available", @book.is_guide.url  %>
+	<% end %>
 	</div>
 	<% end %>
 
