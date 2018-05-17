@@ -84,6 +84,8 @@ Trestle.resource(:books) do
     file_field    :is_guide
     editor        :is_guide_text
     check_box     :remove_is_guide
+    file_field    :suggested_reading
+    check_box     :remove_suggested_reading
     text_field    :award_year
     text_field    :award
     text_field    :award_year2
@@ -120,6 +122,14 @@ Trestle.resource(:books) do
       end
       sidebar do 
         link_to book.is_guide.file.identifier, book.is_guide.url
+      end
+    end
+    if !book.suggested_reading.file.nil?
+      sidebar do 
+        label "Suggested Reading"
+      end
+      sidebar do 
+        link_to book.suggested_reading.file.identifier, book.suggested_reading.url
       end
     end
   

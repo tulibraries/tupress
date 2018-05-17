@@ -6,12 +6,12 @@
 		<div class="col col-md-3">
 			<% unless @book.cover_image.url.blank? %>
 			<% if @book.cover_image.url.include?(".jpg") || @book.cover_image.url.include?(".jpeg") || @book.cover_image.url.include?(".png") || @book.cover_image.url.include?(".gif")%>
-				<%= image_tag @book.cover_image.url, alt: "Book Cover" %>
+				<%= link_to image_tag(@book.cover_image.url, alt: "Book Cover"), {:controller=>'book', :action=>'show', :id=>@book.book_id} %>
 				<% end %>
 			<% end %>
 		</div>
 		<div class="col col-md-9">
-			<h1 class="book_title"><%= @book.title %> 
+			<h1 class="book_title"><%= @book.title.html_safe %> 
 				<% unless @book.subtitle.nil? %>
 					<br /><small><em><%= @book.subtitle %></em></small> 
 				<% end %>
@@ -23,7 +23,13 @@
 				<%= @book.author_byline %><%= @book.supplement %>
 			</p>
 			<% unless @book.is_guide.file.nil? %>
-				<p><%= link_to "Curriculum/Study Guide Available [pdf]", @book.is_guide.url  %></p>
+				<p><%= link_to "Curriculum/Study Guide Available [pdf]", @book.is_guide.url  %>
+					
+				<% unless book.suggested_reading.file.nil? %>
+					<br /><%= link_to "Suggested Reading List [pdf]", book.suggested_reading.url %>
+				<% end %>
+
+				</p>
 			<% end %>
 		</div>
 	</div>

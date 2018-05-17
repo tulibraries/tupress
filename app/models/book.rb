@@ -22,6 +22,7 @@ before_save :sort_titles
 	mount_uploader :cover_image, BookCoverUploader
 	mount_uploader :excerpt, BookExcerptUploaderUploader
 	mount_uploader :is_guide, DocumentUploader
+	mount_uploader :suggested_reading, DocumentUploader
 
 	def self.search(q)
 	  if q
