@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517175712) do
+ActiveRecord::Schema.define(version: 20180517203437) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 20180517175712) do
     t.string   "book_id"
     t.string   "title"
     t.string   "subtitle"
-    t.text     "author",          limit: 65535
-    t.text     "about_author",    limit: 65535
-    t.text     "intro",           limit: 65535
-    t.text     "blurb",           limit: 65535
+    t.text     "author",            limit: 65535
+    t.text     "about_author",      limit: 65535
+    t.text     "intro",             limit: 65535
+    t.text     "blurb",             limit: 65535
     t.string   "excerpt"
     t.string   "is_guide"
     t.string   "cover_image"
@@ -63,20 +63,20 @@ ActiveRecord::Schema.define(version: 20180517175712) do
     t.string   "isbn"
     t.string   "ean"
     t.string   "pub_date"
-    t.text     "in_series",       limit: 65535
-    t.text     "binding",         limit: 65535
-    t.text     "description",     limit: 65535
-    t.text     "reviews",         limit: 65535
-    t.text     "subjects",        limit: 65535
-    t.text     "contents",        limit: 65535
-    t.decimal  "price",                         precision: 5, scale: 2
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
+    t.text     "in_series",         limit: 65535
+    t.text     "binding",           limit: 65535
+    t.text     "description",       limit: 65535
+    t.text     "reviews",           limit: 65535
+    t.text     "subjects",          limit: 65535
+    t.text     "contents",          limit: 65535
+    t.decimal  "price",                           precision: 5, scale: 2
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
     t.string   "award"
     t.string   "hot"
     t.string   "news"
-    t.text     "hot_text",        limit: 65535
-    t.text     "news_text",       limit: 65535
+    t.text     "hot_text",          limit: 65535
+    t.text     "news_text",         limit: 65535
     t.string   "catalog"
     t.string   "course_adoption"
     t.string   "highlight"
@@ -92,22 +92,24 @@ ActiveRecord::Schema.define(version: 20180517175712) do
     t.string   "award3"
     t.string   "award_year4"
     t.string   "award4"
-    t.text     "author_prefix",   limit: 65535
-    t.text     "author_first",    limit: 65535
-    t.text     "author_last",     limit: 65535
-    t.text     "author_suffix",   limit: 65535
-    t.text     "author_byline",   limit: 65535
-    t.text     "author_bios",     limit: 65535
+    t.text     "author_prefix",     limit: 65535
+    t.text     "author_first",      limit: 65535
+    t.text     "author_last",       limit: 65535
+    t.text     "author_suffix",     limit: 65535
+    t.text     "author_byline",     limit: 65535
+    t.text     "author_bios",       limit: 65535
     t.string   "pages_total"
     t.string   "trim"
     t.string   "illustrations"
-    t.text     "author_id",       limit: 65535
+    t.text     "author_id",         limit: 65535
     t.string   "excerpt_text"
     t.string   "subject1"
     t.string   "subject2"
     t.string   "subject3"
     t.string   "supplement"
     t.string   "edition"
+    t.text     "is_guide_text",     limit: 65535
+    t.string   "suggested_reading"
   end
 
   create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -80,9 +80,12 @@ Trestle.resource(:books) do
     number_field  :hotweight, id: "hot-weight", min: 1, max: 4
     check_box     :news
     number_field  :newsweight, id: "news-weight", min: 1, max: 5
-    text_area     :news_text
+    editor        :news_text
     file_field    :is_guide
+    editor        :is_guide_text
     check_box     :remove_is_guide
+    file_field    :suggested_reading
+    check_box     :remove_suggested_reading
     text_field    :award_year
     text_field    :award
     text_field    :award_year2
@@ -119,6 +122,14 @@ Trestle.resource(:books) do
       end
       sidebar do 
         link_to book.is_guide.file.identifier, book.is_guide.url
+      end
+    end
+    if !book.suggested_reading.file.nil?
+      sidebar do 
+        label "Suggested Reading"
+      end
+      sidebar do 
+        link_to book.suggested_reading.file.identifier, book.suggested_reading.url
       end
     end
   

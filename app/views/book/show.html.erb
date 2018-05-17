@@ -2,7 +2,7 @@
 <div class="container" id="book_show">
 <div class="row">
 	<div class="col col-md-8">
-		<h1 class="book_title"><%= @book.title %> 
+		<h1 class="book_title"><%= @book.title.html_safe %> 
 			<% unless @book.subtitle.nil? %>
 				<br /><small><em><%= @book.subtitle %></em></small> 
 			<% end %>
@@ -91,7 +91,7 @@
 			</p>
 		</div>
 	</div>
-	<% unless @reviews.nil? %>
+
 	<div class="col col-md-6">
 		<% unless @book.blurb.nil? %>
 			<%= @book.blurb.html_safe %>
@@ -101,12 +101,12 @@
 				<%= link_to @book.excerpt_text, @book.excerpt.url  %>
 	<% end %>
 	<% unless @book.is_guide.file.nil? %>
-				<br /><%= link_to "Curriculum/Study Guide Available", @book.is_guide.url  %>
+				<br /><%= link_to "Curriculum/Study Guide Available [pdf]", @book.is_guide.url  %>
 	<% end %>
+			<% unless @book.suggested_reading.file.nil? %>
+				<br /><%= link_to "Suggested Reading List [pdf]", @book.suggested_reading.url %>
+			<% end %>
 	</div>
-	<% end %>
-
-
 </div>
 
 	<div class="row" style="visibility:hidden;">
@@ -149,6 +149,7 @@
 			</div>
 		<% end %>
 	<% end %>
+
 	<% if @book.about_author.present? %>
 		<div class="row">
 			<div class="col">
