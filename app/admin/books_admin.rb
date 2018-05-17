@@ -1,8 +1,5 @@
 Trestle.resource(:books) do
   require 'carrierwave/processing/mini_magick'
-
-  list_items = []
-  parent_list_items = Array.new
   
   menu do
     item :books, icon: "fa fa-star"
@@ -35,6 +32,9 @@ Trestle.resource(:books) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |book|
+
+    list_items = []
+    parent_list_items = Array.new
 
     text_field :title, :disabled => true
     text_field :sort_title, :disabled => true
