@@ -1,0 +1,43 @@
+
+<div class="container" id="book_show">
+<div class="row">
+
+	<div class="row no-gutters book-info">
+		<div class="col col-md-3">
+			<% unless @book.cover_image.url.blank? %>
+			<% if @book.cover_image.url.include?(".jpg") || @book.cover_image.url.include?(".jpeg") || @book.cover_image.url.include?(".png") || @book.cover_image.url.include?(".gif")%>
+				<%= image_tag @book.cover_image.url, alt: "Book Cover" %>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="col col-md-9">
+			<h1 class="book_title"><%= @book.title %> 
+				<% unless @book.subtitle.nil? %>
+					<br /><small><em><%= @book.subtitle %></em></small> 
+				<% end %>
+				<% unless @book.edition.nil? %>
+					<br /><small><em><%= @book.edition %></em></small> 
+				<% end %>
+			</h1>
+			<p>
+				<%= @book.author_byline %><%= @book.supplement %>
+			</p>
+			<% unless @book.is_guide.file.nil? %>
+				<p><%= link_to "Curriculum/Study Guide Available [pdf]", @book.is_guide.url  %></p>
+			<% end %>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<% unless @book.is_guide_text.nil? %> 
+					<%= @book.is_guide_text.html_safe %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+	
+

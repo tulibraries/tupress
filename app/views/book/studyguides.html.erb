@@ -9,10 +9,10 @@
 <% @books.each do |book| %>
 	<div class="row book-row">
 		<div class="media">
-			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'studyguide', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
-			<h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+			<h2><%= link_to book.title, :controller=>'book', :action=>'studyguide', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
 				<p class="subtitle"><%= book.subtitle %></p>
 			<% end %>

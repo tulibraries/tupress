@@ -18,7 +18,7 @@ Trestle.resource(:events) do
   #
   form do |events|
     text_field :title
-    editor :description
+    editor     :description
     text_field :where
     date_field :startdate
     date_field :enddate

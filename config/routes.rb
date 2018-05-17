@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   
 controller :book do 
 	get   'books'                 => :index
-  get   'byauthor'        => :byauthor
+  get   'byauthor'              => :byauthor
   get   'book/:id'              => :show
   get   'subjects/:id'          => :bysubject
   get   'series/:id'            => :byseries
   get   'studyguides'           => :studyguides
+  get   'studyguide/:id'        => :studyguide
   get   'awards'				        => :awards
   get   'awards/subject/:id'    => :awards_by_subject
   get   'awards/year/:id'       => :awards_by_year

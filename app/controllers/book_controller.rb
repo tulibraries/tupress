@@ -70,6 +70,10 @@ require 'pry'
     @show_status = ["NP", "IP","OS","OP"]
   end 
 
+  def studyguide
+    @book = Book.find_by('book_id = ?', "#{params[:id]}")
+  end 
+
   def awards
     @books = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     @years = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).distinct.pluck(:award_year, :award_year2, :award_year3, :award_year4).map{|years| years.join(",")}.join
@@ -144,7 +148,7 @@ require 'pry'
     params[:book].permit(  :title, :sort_title, :subtitle, :cover_image, 
       :hot, :hot_text, :news, :news_text, :excerpt, :excerpt_text, 
       :is_guide, :award, :award_year, :award2, :award_year2, :award3, :award_year3, :award4, :award_year4, :highlight, 
-      :highlight_image, :supplement, :edition)
+      :highlight_image, :supplement, :edition, :is_guide_text)
   end
 
 end

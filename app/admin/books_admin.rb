@@ -80,8 +80,9 @@ Trestle.resource(:books) do
     number_field  :hotweight, id: "hot-weight", min: 1, max: 4
     check_box     :news
     number_field  :newsweight, id: "news-weight", min: 1, max: 5
-    text_area     :news_text
+    editor        :news_text
     file_field    :is_guide
+    editor        :is_guide_text
     check_box     :remove_is_guide
     text_field    :award_year
     text_field    :award
