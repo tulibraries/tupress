@@ -27,13 +27,9 @@ module BookHelper
 
   def get_isbn
     isbn = nil
-    @formats.each do |format|
-      # binding.pry
-      if ["NP", "IP"].include? format["binding"]["binding_status"]
-        isbn = format["binding"]["ean"].tr("-", "")
-      end
+    isbn = @formats.find do |format|
+      break format["binding"]["ean"].tr("-", "") if ["NP", "IP"].include? format["binding"]["binding_status"]
     end
-    isbn
   end
 
 end
