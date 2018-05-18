@@ -72,6 +72,11 @@ require 'pry'
 
   def studyguide
     @book = Book.find_by('book_id = ?', "#{params[:id]}")
+  end
+
+  def course_adoptions
+    @books = Book.where('course_adoptions = ?', 1)
+    @pagetitle = "Books for Course Adoption"
   end 
 
   def awards
