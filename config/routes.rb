@@ -19,7 +19,7 @@ controller :book do
   get   'books/new'             => :new
   post  'books'                 => :create
   get   'search'                => :search
-  get   'course_adoptions'      => :course_adoptions
+  get   'course-adoptions'      => :course_adoptions
 end
 
 controller :page do
