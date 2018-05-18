@@ -77,6 +77,7 @@ require 'pry'
   def course_adoptions
     @books = Book.where('course_adoptions = ?', 1)
     @pagetitle = "Books for Course Adoption"
+    @show_status = ["NP", "IP","OS","OP"]
   end 
 
   def awards
