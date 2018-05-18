@@ -86,6 +86,9 @@ Trestle.resource(:books) do
     check_box     :remove_is_guide
     file_field    :suggested_reading
     check_box     :remove_suggested_reading
+    unless book.cover_image.file.nil?
+      check_box     :course_adoptions
+    end
     text_field    :award_year
     text_field    :award
     text_field    :award_year2

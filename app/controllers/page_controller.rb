@@ -9,7 +9,7 @@ require 'pry'
     @highlights = Highlight.where(homepage: 1)
     @hot_books = Book.where(hot: 1).take(4).sort_by{ |w| w.hotweight }
     @news_books = Book.where(news: 1).take(4).sort_by{ |w| w.newsweight }
-    @adoptions = Book.where('course_adoption = ?', 'Y')
+    @adoptions = Book.where('course_adoptions = ?', 1)
     # @events = Event.where(news: 1).take(2).sort_by{ |w| w.weight }
     @events = Event.where(news: 1).take(1)
     @freeforms = NewsItem.where(homepage: 1).take(1)
