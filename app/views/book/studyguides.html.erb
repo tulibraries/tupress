@@ -13,7 +13,7 @@
 		</div>
 		<div class="media-body">
 			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'studyguide', :id=>book.book_id %></h2>
-			<% if book.subtitle %>
+			<% if book.subtitle.html_safe %>
 				<p class="subtitle"><%= book.subtitle %></p>
 			<% end %>
 			<p class="author"><%= book.author_byline%></p>

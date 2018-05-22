@@ -13,7 +13,7 @@
 		<div class="col col-md-9">
 			<h1 class="book_title"><%= @book.title.html_safe %> 
 				<% unless @book.subtitle.nil? %>
-					<br /><small><em><%= @book.subtitle %></em></small> 
+					<br /><small><em><%= @book.subtitle.html_safe %></em></small> 
 				<% end %>
 				<% unless @book.edition.nil? %>
 					<br /><small><em><%= @book.edition %></em></small> 

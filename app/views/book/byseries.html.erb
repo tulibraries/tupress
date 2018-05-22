@@ -20,7 +20,7 @@
 		<div class="media-body">
 			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
 			<% if book.subtitle %>
-				<p class="subtitle"><%= book.subtitle %></p>
+				<p class="subtitle"><%= book.subtitle.html_safe %></p>
 			<% end %>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
