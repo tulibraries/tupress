@@ -40,7 +40,7 @@ Trestle.resource(:books) do
     text_field :sort_title, :disabled => true
     text_field :edition
     if !:author.nil?
-      text_field :author_byline, :disabled => true
+      text_field :author_byline
     end
     text_field :supplement
     select(:status, 
