@@ -36,3 +36,10 @@
 	border: solid #ccc 1px;
 	padding:42px;
 }
+h1.neh-labor {
+	background-image: asset-data-url('neh_banner.jpg');
+	height: 319px;
+}
+span.invisible {
+	opacity: 0;
+}
