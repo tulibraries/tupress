@@ -13,7 +13,21 @@ button {
 	</div>
 	<div class="col col-md-10">
 		<h2><%= @oabook.title %></h2>
-		<p><%= @oabook.description %></p>
+    <% unless @oabook.subtitle.nil? %>
+      <p><%= @oabook.subtitle %></p>
+    <% end %>
+    <% unless @oabook.edition.nil? %>
+      <p><%= @oabook.edition %></p>
+    <% end %>
+    <% unless @oabook.author.nil? %>
+      <p><%= @oabook.author %></p>
+    <% end %>
+    <% unless @oabook.supplemental.nil? %>
+      <p><%= @oabook.supplemental.html_safe %></p>
+    <% end %>
+    <% unless @oabook.description.nil? %>
+      <p><%= @oabook.description.html_safe %></p>
+    <% end %>
 	</div>
 </div>
 <div class="row" style="margin-top: 21px;margin-bottom: 4px;">

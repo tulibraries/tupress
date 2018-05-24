@@ -69,6 +69,6 @@ class OabooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def oabook_params
-      params.fetch(:oabook, {})
+      params.require(:oabook).permit(:title, :subtitle,:edition,:author,:supplemental,:description,:isbn,:collection,:epub,:pdf,:mobi)
     end
 end
