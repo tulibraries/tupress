@@ -36,8 +36,9 @@ button {
 	
   <div class="col text-right">
     <button> <%= link_to "Read It Online", root_path+"open-access/epub/"+@oabook.id.to_s+"/"+@oabook.epub_identifier %>  </button> 
-    <button> Download the epub </button>   
-    <button> Download the pdf </button>  
-    <button onClick="window.open('https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN=<%= @oabook.isbn %>&&PRESS=temple');"> Print On-Demand </button>
+    <button> Download epub </button>   
+    <button> Download pdf </button>  
+    <button> Download .mobi </button>  
+    <!-- <button onClick="window.open('https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN=<%= @oabook.isbn %>&&PRESS=temple');"> Print On-Demand </button> -->
   </div>
 </div>
