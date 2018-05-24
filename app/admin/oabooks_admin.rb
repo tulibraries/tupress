@@ -14,7 +14,11 @@ Trestle.resource(:oabooks) do
   #
   form do |oabook|
     text_field :title
-    text_field :description
+    text_field :subtitle
+    text_field :edition
+    text_field :author
+    text_field :supplemental
+    editor :description
     text_field :isbn
     select(:collection, 
         [
