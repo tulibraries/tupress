@@ -13,6 +13,8 @@ Trestle.resource(:oabooks) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |oabook|
+    file_field :cover_image
+    check_box  :remove_cover_image
     text_field :title
     text_field :subtitle
     text_field :edition
@@ -34,7 +36,14 @@ Trestle.resource(:oabooks) do
     file_field :mobi
     check_box  :remove_mobi
 
-    unless oabook.epub.file.nil?
+    unless oabook.cover_image.file.nil?
+      sidebar do 
+        label "Cover Image"
+      end
+      sidebar do 
+        image_tag book.cover_image.url.to_s, id: "cover_image"
+      end
+    endunless oabook.epub.file.nil?
       sidebar do 
         label "Epub"
       end
