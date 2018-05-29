@@ -8,10 +8,10 @@ button {
 }
 </style>
 <div class="row">
-	<div class="col col-md-4">
+	<div class="col col-md-3">
 		<%= image_tag @oabook.cover_image.url.to_s, alt: @oabook.title %>
 	</div>
-	<div class="col col-md-8">
+	<div class="col col-md-9">
 		<h2><%= @oabook.title %></h2>
     <% unless @oabook.subtitle.nil? %>
       <p><%= @oabook.subtitle %></p>
