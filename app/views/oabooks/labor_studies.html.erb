@@ -10,7 +10,10 @@
     <% @column_1.each do |oabook| %>
     <div class="neh-book">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
-        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %>
+        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %><br>
+        <em><%= oabook.subtitle %></em><br>
+        <%= oabook.author %><br>
+        <%= oabook.supplemental %><br>
     </div>
     <% end %>
 </div>
