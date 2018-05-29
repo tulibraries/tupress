@@ -13,7 +13,7 @@ class OabooksController < ApplicationController
     else
       @column_1 = @oabooks[0, (@total/2).floor]
     end
-    @column_2 = @oabooks[-1, (@total/2).floor]
+    @column_2 = @oabooks.reverse[0, (@total/2).floor]
   end
   
   def north_broad_press
