@@ -21,7 +21,15 @@ module OabooksHelper
 	# end
 
   def download_epub
-    download = open(root_path+'public/uploads/oabooks/'+@oabook.epub_identifier)
+    download = open('var/www/tupress/public/uploads/oabooks/'+@oabook.epub_identifier)
     IO.copy_stream(download, @oabook.epub_identifier)
+  end
+  def download_mobi
+    # url  = URI.escape(root_path+'public'+@oabook.mobi.url)
+    # data = open(url).read
+
+    # send_data data, filename: @oabook.mobi.identifier
+
+    
   end
 end

@@ -49,10 +49,10 @@ button {
   </div>
 	
   <div class="col text-right">
-    <button> <%= link_to "Read It Online", root_path+"open-access/epub/"+@oabook.id.to_s+"/"+@oabook.epub_identifier, target: "_blank", title: "Opens in New Window" %>  </button> 
-    <button> <%= link_to "Download Epub", @oabook.epub.url(query: {"response-content-disposition" => "attachment"}) %> </button>   
-    <button> <%= link_to "Download PDF", @oabook.pdf.url(query: {"response-content-disposition" => "attachment"}) %> </button>  
-    <button> <%= link_to "Download MOBI", @oabook.mobi.url(query: {"response-content-disposition" => "attachment"}) %> </button>  
+    <button> <%= link_to "Read It Online", root_path+"open-access/epub/"+@oabook.id.to_s+"/"+@oabook.epub_identifier, target: "_blank", title: "Opens in New Window" %>  </button>   
+    <button> <%= link_to "Download EPUB", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/epub" %> </button>   
+    <button> <%= link_to "Download PDF", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/pdf" %> </button>   
+    <button> <%= link_to "Download MOBI", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/mobi" %> </button>  
     <!-- <button onClick="window.open('https://cdcshoppingcart.uchicago.edu/Cart/ChicagoBook.aspx?ISBN=<%= @oabook.isbn %>&&PRESS=temple');"> Print On-Demand </button> -->
   </div>
 </div>

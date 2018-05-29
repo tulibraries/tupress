@@ -79,12 +79,15 @@ controller :events do
 end
 
 controller :oabooks do
-  get 'open-access'                       => :index
-  get 'open-access/labor-studies'         => :labor_studies
-  get 'open-access/north-broad-press'     => :north_broad_press
-  get 'open-access/labor-studies/:id'     => :show
-  get 'open-access/north-broad-press/:id' => :show
-  get 'open-access/epub/:id/:epub'        => :epub
+  get 'open-access'                              => :index
+  get 'open-access/labor-studies'                => :labor_studies
+  get 'open-access/north-broad-press'            => :north_broad_press
+  get 'open-access/labor-studies/:id'            => :show
+  get 'open-access/north-broad-press/:id'        => :show
+  get 'open-access/epub/:id/:epub'               => :epub
+  get 'open-access/labor-studies/:id/epub'       => :download_epub
+  get 'open-access/labor-studies/:id/pdf'        => :download_pdf
+  get 'open-access/labor-studies/:id/mobi'       => :download_mobi
 end
 
 

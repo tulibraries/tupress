@@ -23,6 +23,34 @@ class OabooksController < ApplicationController
   def show
   end
 
+  def download_epub
+    @oabook = Oabook.find_by('id = ?', params[:id])
+    # binding.pry
+    send_file(@oabook.epub.current_path,
+        :filename => @oabook.epub_identifier,
+        :disposition => 'attachment',
+        :url_based_filename => true)
+    # redirect_to @oabook
+  end
+  def download_pdf
+    @oabook = Oabook.find_by('id = ?', params[:id])
+    # binding.pry
+    send_file(@oabook.pdf.current_path,
+        :filename => @oabook.pdf_identifier,
+        :disposition => 'attachment',
+        :url_based_filename => true)
+    # redirect_to @oabook
+  end
+  def download_mobi
+    @oabook = Oabook.find_by('id = ?', params[:id])
+    # binding.pry
+    send_file(@oabook.mobi.current_path,
+        :filename => @oabook.mobi_identifier,
+        :disposition => 'attachment',
+        :url_based_filename => true)
+    # redirect_to @oabook
+  end
+
   def epub
     render layout: false
   end
