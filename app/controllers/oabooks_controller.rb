@@ -7,6 +7,13 @@ class OabooksController < ApplicationController
 
   def labor_studies
     @oabooks = Oabook.where('collection = ?', 'Labor Studies').order(:title)
+    @total = @oabooks.count
+    if @total.odd? || @total == 0
+      @column_1 = @oabooks[0, ((@total / 2).floor + 1)]
+    else
+      @column_1 = @oabooks[0, (@total/2).floor]
+    end
+    @column_2 = @oabooks[-1, (@total/2).floor]
   end
   
   def north_broad_press
