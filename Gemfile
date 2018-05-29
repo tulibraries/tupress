@@ -38,6 +38,7 @@ gem 'trestle-search'
 gem "mini_magick"
 gem 'loofah', '2.2.2'
 gem 'rails-html-sanitizer',' ~> 1.0.4'
+gem 'rubyzip', '~> 0.9.4', :require => ['zip/zip', 'zip/zipfilesystem']
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

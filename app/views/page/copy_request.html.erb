@@ -129,7 +129,7 @@
     </div>
     <div class="col col-md-9">
       <%= label_tag(:title1, "Title: ") %>
-      <%= text_field_tag(:title1, "", :class => 'form-control', :required => true, :style => "color:#bbb") %>
+      <%= text_field_tag(:title1, "", :class => 'form-control', :required => true) %>
     </div>
     <div class="col col-md-9 offset-2">
       <%= label_tag(:author1, "Author: ") %>
@@ -142,7 +142,7 @@
     </div>
     <div class="col col-md-9">
       <%= label_tag(:title2, "Title: ") %>
-      <%= text_field_tag(:title2, "", :class => 'form-control', :style => "color:#bbb") %>
+      <%= text_field_tag(:title2, "", :class => 'form-control') %>
     </div>
     <div class="col col-md-9 offset-2">
       <%= label_tag(:author2, "Author: ") %>
@@ -155,7 +155,7 @@
     </div>
     <div class="col col-md-9">
       <%= label_tag(:title3, "Title: ") %>
-      <%= text_field_tag(:title3, "", :class => 'form-control', :style => "color:#bbb") %>
+      <%= text_field_tag(:title3, "", :class => 'form-control') %>
     </div>
     <div class="col col-md-9 offset-2">
       <%= label_tag(:author3, "Author: ") %>
@@ -167,7 +167,7 @@
     <div class="col col-md-9 offset-md-2 new-section">
       <p>We allow up to three desk/exam copies per semester.</p>
       <%= hidden_field_tag 'subject', 'Desk/Exam Copy Request' %>
-      <%= hidden_field_tag 'next-url', request.base_url+root_path+'received_copy_request' %>
+      <%= hidden_field_tag 'next-url', request.base_url+root_path+'received-copy-request' %>
       <%= submit_tag("Submit Request") %>
       <%= button_tag "Reset", type: :reset %>
     </div>
