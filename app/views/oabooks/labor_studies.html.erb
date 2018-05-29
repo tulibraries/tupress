@@ -13,12 +13,12 @@
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
       </div>
       <div class="col col-md-10">
-        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %><br>
+        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s, class: 'oatitle' %><br>
         <% unless oabook.subtitle.nil? %>
         	<em><%= oabook.subtitle %></em><br>
         <% end %>
         <% unless oabook.author.nil? %>
-        	<span style="color: #bba;"><%= oabook.author %></span><br>
+        	<span style="color: #a0a0a0;"><%= oabook.author %></span><br>
         <% end %>
         <div style="margin-top:10px;">
 	        <%= oabook.supplemental %><br>
@@ -34,12 +34,12 @@
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
       </div>
       <div class="col col-md-10">
-        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %><br>
+        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s, class: 'oatitle' %><br>
         <% unless oabook.subtitle.nil? || oabook.subtitle == ''%>
         	<em><%= oabook.subtitle %></em><br>
         <% end %>
         <% unless oabook.author.nil? %>
-        	<span style="color: #bba;"><%= oabook.author %></span><br>
+        	<span style="color: #a0a0a0;"><%= oabook.author %></span><br>
         <% end %>
         <div style="margin-top:10px;">
 	        <%= oabook.supplemental %><br>
