@@ -8,20 +8,32 @@
 <div class="row">
 <div class="column col-md-6" id="column_1">
     <% @column_1.each do |oabook| %>
-    <div class="neh-book">
+    <div class="neh-book row">
+    	<div class="col col-md-3">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
+      </div>
+      <div class="col col-md-9">
         <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %><br>
         <em><%= oabook.subtitle %></em><br>
         <%= oabook.author %><br>
         <%= oabook.supplemental %><br>
+      </div>
     </div>
     <% end %>
 </div>
 <div class="column col-md-6" id="column_2">
     <% @column_2.each do |oabook| %>
-    <div class="neh-book">
+    <div class="neh-book row">
+    	<div class="col col-md-3">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
-        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %>
+      </div>
+      <div class="col col-md-9">
+        <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s %><br>
+        <em><%= oabook.subtitle %></em><br>
+        <%= oabook.author %><br>
+        <%= oabook.supplemental %><br>
+      </div>
+    </div>= oabook.supplemental %><br>
     </div>
     <% end %>
 </div>
