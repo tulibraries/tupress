@@ -18,9 +18,11 @@
         	<em><%= oabook.subtitle %></em><br>
         <% end %>
         <% unless oabook.author.nil? %>
-        	<span style="color: #bba;"><%= oabook.author %></span><br><br>
+        	<span style="color: #bba;"><%= oabook.author %></span><br>
         <% end %>
-        <%= oabook.supplemental %><br>
+        <div style="margin-top:10px;">
+	        <%= oabook.supplemental %><br>
+	      </div>
       </div>
     </div>
     <% end %>
@@ -37,9 +39,11 @@
         	<em><%= oabook.subtitle %></em><br>
         <% end %>
         <% unless oabook.author.nil? %>
-        	<span style="color: #bba;"><%= oabook.author %></span><br><br>
+        	<span style="color: #bba;"><%= oabook.author %></span><br>
         <% end %>
-        <%= oabook.supplemental %><br>
+        <div style="margin-top:10px;">
+	        <%= oabook.supplemental %><br>
+	      </div>
       </div>
     </div>
     <% end %>
