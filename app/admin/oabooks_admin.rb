@@ -41,7 +41,7 @@ Trestle.resource(:oabooks) do
         label "Cover Image"
       end
       sidebar do 
-        image_tag book.cover_image.url.to_s, id: "cover_image"
+        image_tag oabook.cover_image.url.to_s, id: "cover_image"
       end
     endunless oabook.epub.file.nil?
       sidebar do 
