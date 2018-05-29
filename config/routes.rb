@@ -37,8 +37,8 @@ controller :page do
   get   'copyright'                  => :copyright,                :id => 7
   get   'university-presses'         => :university_presses,       :id => 8
   get   'order'                      => :order,                    :id => 9
-  get   'received_rights'            => :received_rights ,         :id => 10
-  get   'received_review_copy'       => :received_review_copy,     :id => 11
+  get   'received-rights'            => :received_rights ,         :id => 10
+  get   'received-review-copy'       => :received_review_copy,     :id => 11
   get   'contact'                    => :contact,                  :id => 13
   get   'book-reviews'               => :reviews
   get   'conferences'                => :conferences

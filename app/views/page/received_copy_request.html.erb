@@ -7,7 +7,10 @@
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
 <div class="col col-md-9 offset-md-1">
+<%= @page.content.html_safe %>
+<div id="contactform">
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+ 
   <div class="form-group row offset-2">
     <div class="col col-md-2">
       <%= label_tag(:name, "Name: ") %>
@@ -138,7 +141,7 @@
   <div class="row offset-2">
     <div class="col col-md-9 offset-md-2 new-section">
       <%= hidden_field_tag 'subject', 'Desk/Exam Copy Request' %>
-      <%= hidden_field_tag 'next-url', request.base_url+root_path+'received_copy_request' %>
+      <%= hidden_field_tag 'next-url', request.base_url+root_path+'received-copy-request' %>
       <%= submit_tag("Submit Request") %>
       <%= button_tag "Reset", type: :reset %>
     </div>
