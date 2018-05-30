@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "vars.scss", "mixins.css";
 
 #contactform {
 	.col-md-2 {
@@ -65,7 +66,9 @@
 	}
 }
 .badge-default {
-	background-color: #a4a4a4!important;
+	background-color: #efefef!important;
+	 border:solid #a4a4a4 1px;
+	 color: $red;
 }
 .home-sidebar {
 	margin-top:42px;
