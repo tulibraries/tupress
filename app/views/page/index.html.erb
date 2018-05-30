@@ -1,6 +1,6 @@
 <div class="container" id="home">
-  <div class="row">
-  <div class="col-md-9" style="margin-top: 14px;">
+  <div class="row" style="margin-bottom: 14px;">
+  <div class="col-12 col-lg-9" style="margin-top: 14px;">
   <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
     <% @highlights.each_with_index do |highlight, index| %>
@@ -15,46 +15,46 @@
     <% @highlights.each_with_index do |highlight, index| %>
     <% if index == 1 %>
       <div class="carousel-item active">
-    <% else %>
-      <div class="carousel-item">
-    <% end %>
-        <%= link_to image_tag(highlight.image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), highlight.link %>
-      </div>
-    <% end %>
-    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  </div>
-</div>
-<div class="col-md-3 no-padding">
-<div id="scBlogContent">
-  <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
-  <p><% @entries.take(1).each do |entry| %>
-      <small><%= entry.description.html_safe %><br /><br />
-      <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
+      <% else %>
+        <div class="carousel-item">
       <% end %>
-  </p>
-</div>
-<div id="follow-us">
-  <%= link_to image_tag('give_tup.gif', alt: "Donate to the Press"), "https://advancement-sec.temple.edu/s/705/giving/16/interior_1col.aspx?sid=705&gid=1&pgid=3813&cid=5100&bledit=1&dids=69.5" %>
- <ul class="list-inline">
-    <li class="list-inline-item">
-      <h2><small>Follow Us on:</small></h2>
-    </li>
-    <li class="list-inline-item">
-      <%= link_to image_tag('wp.png', class: 'social-icon', alt: 'Wordpress Icon'), 'https://templepress.wordpress.com' %>
-    </li>
-    <li class="list-inline-item">
-      <%= link_to image_tag('twitter-icon.png', class: 'social-icon', alt: 'Twitter Icon'), 'http://twitter.com/TempleUnivPress' %>
-    </li>
-    <li class="list-inline-item"><%= link_to image_tag('fb-icon.png', class: 'social-icon', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
-  </ul>
+          <%= link_to image_tag(highlight.image, class: 'd-block img-fluid', alt: 'cover for '+highlight.title), highlight.link %>
+        </div>
+      <% end %>
+      <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-3 no-padding">
+  <div id="scBlogContent">
+    <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
+    <p><% @entries.take(1).each do |entry| %>
+        <small><%= entry.description.truncate(210).html_safe %><br /><br />
+        <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
+        <% end %>
+    </p>
+  </div>
+  <div id="follow-us">
+    <%= link_to image_tag('give_tup.gif', alt: "Donate to the Press"), "https://advancement-sec.temple.edu/s/705/giving/16/interior_1col.aspx?sid=705&gid=1&pgid=3813&cid=5100&bledit=1&dids=69.5" %>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <h2><small>Follow Us:</small></h2>
+      </li>
+      <li class="list-inline-item">
+        <%= link_to image_tag('wp.png', class: 'social-icon', alt: 'Wordpress Icon'), 'https://templepress.wordpress.com' %>
+      </li>
+      <li class="list-inline-item">
+        <%= link_to image_tag('twitter-icon.png', class: 'social-icon', alt: 'Twitter Icon'), 'http://twitter.com/TempleUnivPress' %>
+      </li>
+      <li class="list-inline-item"><%= link_to image_tag('fb-icon.png', class: 'social-icon', alt: 'Facebook Icon'), 'http://facebook.com/TempleUnivPress' %></li>
+    </ul>
   </div>
 
 </div>
@@ -71,15 +71,15 @@
 
 <div class="row" style="margin-top: 28px;">
 <% @hot_books.each do |book| %>
-  <div class="col col-md-3 text-center hotdiv">
+  <div class="col col-12 col-sm-6 col-lg-3 text-center hotdiv">
     <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;max-width:200px;box-shadow: 6px 6px 7px #666;',), {controller: 'book', action: 'show', :id=>book.book_id} %>
-    <p style="margin-top:14px;font-weight:600;"><%= book.title.html_safe %></p>
+    <p style="margin: 14px auto;font-weight:600;max-width:320px;"><%= book.title.html_safe %></p>
   </div>
 <% end %>
 </div>
 
 <div class="row"> <!-- large-well -->
-<div class="col col-md-8">
+<div class="col col-12 col-lg-8">
 <div class="row" style="margin-top: 28px;">
   <div class="col">
     <h2 style="text-transform:uppercase;letter-spacing:.64rem;display:inline-block;color:#903;font-size:185%;border: solid #903 1px;border-width: 1px 0;padding: 4px 0;text-shadow: 1px 2px #ccc;">In the News</h2>
@@ -134,7 +134,7 @@
 
 
 
-<div class="col col-md-3 offset-md-1 home-sidebar">
+<div class="col col-12 col-lg-3 offset-lg-1 home-sidebar">
 <div class="row" >
 <div class="col">
 <div class="row">
