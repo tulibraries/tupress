@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
-
+<div class="row">
+    <div class="col">
 <h1 style="margin-top:0;padding-top:0;">
-		<%= image_tag 'neh_banner.jpg', alt: 'Labor Studies & Work' %>
+		<%= image_tag 'neh_banner.jpg', alt: 'Labor Studies & Work', style: 'max-width:100%;' %>
 </h1>
 <p>From its start, Temple University Press has been known for publishing significant titles in labor studies. Given this long history, many of these titles have gone out of print. Thanks to a grant from the National Endowment for the Humanities, the Press, in collaboration with Temple University Libraries, has reissued 30 outstanding labor studies books in PDF,  EPUB, and MOBI formats and made them freely available online. Chosen by an advisory board of scholars, labor studies experts, publishers, and librarians, each book contains a new foreword by a prominent scholar, reflecting on the content and placing it in historical context. 
 </p>
+</div>
+</div>
 <div class="row" style="margin-top: 28px;">
-<div class="column col-md-6" id="column_1">
+<div class="column col-6" id="column_1">
     <% @column_1.each do |oabook| %>
     <div class="neh-book row">
-    	<div class="col col-md-2">
+    	<div class="col col-2">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
       </div>
-      <div class="col col-md-10">
+      <div class="col col-10">
         <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s, class: 'oatitle' %><br>
         <% unless oabook.subtitle.nil? %>
         	<em><%= oabook.subtitle %></em><br>
@@ -27,13 +30,13 @@
     </div>
     <% end %>
 </div>
-<div class="column col-md-6" id="column_2">
+<div class="column col-6" id="column_2">
     <% @column_2.reverse.each do |oabook| %>
     <div class="neh-book row">
-    	<div class="col col-md-2">
+    	<div class="col col-2">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/labor-studies/"+oabook.id.to_s %>
       </div>
-      <div class="col col-md-10">
+      <div class="col col-10">
         <%= link_to oabook.title, root_path+"open-access/labor-studies/"+oabook.id.to_s, class: 'oatitle' %><br>
         <% unless oabook.subtitle.nil? || oabook.subtitle == ''%>
         	<em><%= oabook.subtitle %></em><br>
