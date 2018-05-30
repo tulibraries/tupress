@@ -59,7 +59,7 @@
 			border: solid #bbb 1px;
 			border-radius:7px;
 			padding:10px;
-			width: 70%;
+			/*width: 70%;*/
 			margin-bottom: 0;
 			position:relative;
 			top: 7px;
@@ -119,13 +119,15 @@ span.author {
 	font-weight: 600;
 	color: #aaa;
 }
-.description, .review, .about_author, .subjects, .series {
+.description, .review, .about_author, .subjects, .series, .contents {
 	margin: 7px 21px;
 }
 .book-info {
-	margin-top: 21px;
+	margin-top: 28px;
 	img {
-		width:240px;
+		width:214px;
+		display:inline-block;
+		margin-bottom: 14px;
 	}
 }
 .blurb {
