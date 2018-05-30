@@ -13,12 +13,12 @@
 	<% @series.each do |series| %>
 		<li class="series">
 		<div class="row">
-			<div class="col col-md-11">
+			<div class="col col-10 col-lg-11">
 			<%= link_to series.series, 
 									{:controller=>'book', :action=>'byseries', :id=>series.series_id}, 
 									:style=>'font-size: 115%;' %>
 			</div>
-			<div class="col col-md-1">
+			<div class="col col-1">
 			<span class="badge badge-default badge-pill">
 			<% unless series.book.nil? %>
 				<%= series_book_count(series.series_id) %>
