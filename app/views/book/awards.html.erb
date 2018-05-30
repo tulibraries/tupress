@@ -15,10 +15,10 @@
 			<% @years2.sort.reverse.each do |year| %>
 				<% unless year == "" %>
 				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
-					<div class="col-md-10">
+					<div class="col-10 col-md-8 col-lg-10">
 						<%= link_to year, :controller=>'book', :action=>'awards_by_year', :id=>year %> 
 					</div>
-					<div class="col col-md-1">
+					<div class="col col-1">
 						<span class="badge badge-pill"><%= award_year_count(year) %></span>
 					</div>
 				</div>
@@ -33,10 +33,10 @@
 			<div class="container">
 			<% @subjects.each do |subject| %>
 				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
-					<div class="col col-md-11">
+					<div class="col col-10 col-lg-11">
 						<%= link_to subject['subject']['subject_title'], :controller=>'book', :action=>'awards_by_subject', :id=>subject['subject']['subject_id'] %> 
 					</div>
-					<div class="col col-md-1">
+					<div class="col col-1">
 						<span class="badge badge-pill"><%= award_subject_count(subject['subject']['subject_id']) %></span>
 					</div>
 				</div>
