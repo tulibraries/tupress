@@ -104,18 +104,20 @@
 	</div>
 </div>
 
-	<div class="row" style="visibility:hidden;">
+<% unless @book.description.blank? %>
+	<div class="row">
 		<div class="col">
-			<h2 style="padding:0;margin:0;height:4px;">Description</h2>
+			<h2>Description</h2>
 		</div>
 	</div>
-	
 	
 	<div class="row">
 		<div class="col description">
 			<%= @book.description.html_safe %>
 		</div>
 	</div>
+<% end %>
+
 	<% unless @book.contents.blank? %>
 		<div class="row">
 			<div class="col">
