@@ -39,7 +39,7 @@
 
 <% unless @book.award.blank? %>	
 <div class="row">
-	<div class="col" style="color:#a5002f;margin-top: 10px;">					
+	<div class="col award" style="margin-top: 10px;">					
 			<%= (@book.award).html_safe %>
 			<% unless @book.award2.blank? %>
 				<%= ("<br />"+@book.award2).html_safe %>
