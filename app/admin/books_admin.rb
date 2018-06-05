@@ -59,7 +59,6 @@ Trestle.resource(:books) do
         unless subject['subject']['subject_id'].nil?
           parent_list_items.push [subject['subject']['subject_title'],subject['subject']['subject_id']]
         end
-        # binding.pry
       end
 
       select(:subject1, 
