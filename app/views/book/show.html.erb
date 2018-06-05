@@ -192,7 +192,7 @@
 		<% @series.each do |series| %>
 		 <li class="list-inline-item">
 		 	<p class="series-title">
-		 		<%= link_to series.series, {controller: "book", action: "byseries", id: series.series_id} %>
+		 		<%= link_to series.series_name, {controller: "book", action: "byseries", id: series.series_code} %>
 		 		<% if !series.editors.empty? %>
 			 		<span class="editors">edited by <%= series.editors %></span>
 			 	<% end %>

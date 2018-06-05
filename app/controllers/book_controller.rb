@@ -34,7 +34,7 @@ require 'pry'
        s
     end
     @series = @book.in_series.map do |s|
-       Series.find_by series_id: s
+       Series.find_by series_code: s
     end
     @ordered_subjects = []
     @ordered_subjects << @book.subject1
@@ -60,7 +60,7 @@ require 'pry'
 
   def byseries
     @books = Book.where('in_series LIKE ?', "%#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
-    @series = Series.find_by('series_id = ?', "#{params[:id]}")
+    @series = Series.find_by('series_code = ?', "#{params[:id]}")
     @show_status = ["NP", "IP","OS","OP"]
   end
 
