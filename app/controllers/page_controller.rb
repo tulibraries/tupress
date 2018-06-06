@@ -6,7 +6,7 @@ class PageController < ApplicationController
 require 'pry'
 
   def index
-    @highlights = Highlight.where(homepage: 1)
+    @highlights = Highlight.where(homepage: 1).order(created_at: :desc)
     @hot_books = Book.where(hot: 1).take(4).sort_by{ |w| w.hotweight }
     @news_books = Book.where(news: 1).take(4).sort_by{ |w| w.newsweight }
     @adoptions = Book.where('course_adoptions = ?', 1)
