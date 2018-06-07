@@ -197,7 +197,11 @@
 			 		<span class="editors">edited by <%= series.editors %></span>
 			 	<% end %>
 		 	</p>
-		 	<p class="series-description"><%= series.description %></p>
+		 	<% unless series.description.nil? %>
+		 		<p class="series-description">
+		 			<%= series.description.html_safe %>
+		 		</p>
+		 	<% end %>
 		 </li>
 		<% end %>
 		</div>
