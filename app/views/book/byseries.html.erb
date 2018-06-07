@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="col">
 		<% unless @series.description.nil? %>
-			<%= @series.description %>
+			<%= @series.description.html_safe %>
 		<% end %>
 	</div>
 </div>
