@@ -196,7 +196,6 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    rubyzip (0.9.9)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -292,7 +291,6 @@ DEPENDENCIES
   rails (~> 5.0.2)
   rails-html-sanitizer (~> 1.0.4)
   rspec-rails
-  rubyzip (~> 0.9.4)
   sass-rails (~> 5.0)
   social-share-button
   spring
