@@ -6,29 +6,28 @@
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
-<div class="col col-md-9 offset-md-1">
+<div class="col col-md-10">
 <%= @page.content.html_safe %>
 <div id="contactform">
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
- 
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:name, "Name: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:name, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:email, "Email: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:email,'', :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:requesttype, "Request Type: ") %>
     </div>
     <div class="radio col">
@@ -36,105 +35,131 @@
       <label><input type="radio" name="mediatype" value="Exam Copy"> Exam Copy</label>
     </div>
 </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:university, "University: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:university, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:department, "Department: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:department, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:address, "Address: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:address, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:address2, "Address 2: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:address2, "", :class => 'form-control') %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:city, "City: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:city, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:state, "State/Province/Region: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:state, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:zipcode, "Zip/Postal Code: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:zipcode, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:country, "Country (if not US): ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:country,'', :class => 'form-control') %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:coursetitle, "Course Title: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:coursetitle, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:enrollment, "Projected Enrollment: ") %>
     </div>
     <div class="col col-md-9">
       <%= number_field_tag(:enrollment, nil, :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
       <%= label_tag(:semester, "Semester Taught: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:semester, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
-  <div class="form-group row offset-2">
-    <div class="col col-md-2">
-      <%= label_tag(:title, "Title/Author: ") %>
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
+      <p>Copy 1</p>
     </div>
-    <div class="col col-md-4">
-      <%= text_field_tag(:title, "", :class => 'form-control', :required => true) %><br>
-      We allow up to three exam copies per semester.
+    <div class="col col-md-9 col-12">
+      <%= label_tag(:title1, "Title: ") %>
+      <%= text_field_tag(:title1, "", :class => 'form-control', :required => true) %>
     </div>
-    <div class="col col-md-5">
-      <%= text_field_tag(:author, "", :class => 'form-control', :required => true) %><br>
-      We allow up to three exam copies per semester.
+    <div class="col col-md-9 col-12 offset-md-3">
+      <%= label_tag(:author1, "Author: ") %>
+      <%= text_field_tag(:author1, "", :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
+      <p>Copy 2</p>
+    </div>
+    <div class="col col-md-9 col-12">
+      <%= label_tag(:title2, "Title: ") %>
+      <%= text_field_tag(:title2, "", :class => 'form-control') %>
+    </div>
+    <div class="col col-md-9 col-12 offset-md-3">
+      <%= label_tag(:author2, "Author: ") %>
+      <%= text_field_tag(:author2, "", :class => 'form-control') %>
+    </div>
+  </div>
+  <div class="form-group row offset-1">
+    <div class="col col-md-3">
+      <p>Copy 3</p>
+    </div>
+    <div class="col col-md-9 col-12">
+      <%= label_tag(:title3, "Title: ") %>
+      <%= text_field_tag(:title3, "", :class => 'form-control') %>
+    </div>
+    <div class="col col-md-9 col-12 offset-md-3">
+      <%= label_tag(:author3, "Author: ") %>
+      <%= text_field_tag(:author3, "", :class => 'form-control') %>
     </div>
   </div>
 
