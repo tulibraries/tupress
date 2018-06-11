@@ -77,15 +77,15 @@
   </div>
   <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:state, "State: ") %>
+      <%= label_tag(:state, "State/Province/Region: ") %>
     </div>
     <div class="col col-md-9">
-      <%= select_tag :state, options_for_select(us_states), :class => 'form-control', :required => true %>
+      <%= text_field_tag(:state, :class => 'form-control', :required => true) %>
     </div>
   </div>
   <div class="form-group row offset-2">
     <div class="col col-md-2">
-      <%= label_tag(:zipcode, "Zip/Post Code: ") %>
+      <%= label_tag(:zipcode, "Zip/Postal Code: ") %>
     </div>
     <div class="col col-md-9">
       <%= text_field_tag(:zipcode, "", :class => 'form-control', :required => true) %>
@@ -160,6 +160,14 @@
     <div class="col col-md-9 offset-2">
       <%= label_tag(:author3, "Author: ") %>
       <%= text_field_tag(:author3, "", :class => 'form-control') %>
+    </div>
+  </div>
+  <div class="form-group row offset-2">
+    <div class="col col-md-2">
+      <%= label_tag(:bookstore, "Bookstore: ") %>
+    </div>
+    <div class="col col-md-9">
+      <%= text_field_tag(:bookstore, "", :class => 'form-control', :required => true) %>
     </div>
   </div>
 
