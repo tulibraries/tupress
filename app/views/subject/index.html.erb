@@ -18,9 +18,6 @@
 											{:controller=>'book', :action=>'bysubject', :id=>subject.subject_id}, 
 											:style=>'font-size: 115%;' %>
 
-						<% unless subject.seealso.blank? %>
-							-- see also <%= subject.seealso %>
-							<% end %>
 						</div>
 						<div class="col col-md-1">
 							<span class="badge badge-default badge-pill">
