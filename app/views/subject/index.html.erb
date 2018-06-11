@@ -18,7 +18,7 @@
 											{:controller=>'book', :action=>'bysubject', :id=>subject.subject_id}, 
 											:style=>'font-size: 115%;' %>
 
-						<% unless subject.seealso.nil? %>
+						<% unless subject.seealso.blank? %>
 							-- see also <%= subject.seealso %>
 							<% end %>
 						</div>
