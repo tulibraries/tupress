@@ -95,7 +95,7 @@ controller :redirects do
 end
 
 
-get '*path' => redirect('page#index')
+get '*path' => redirect_to controller: :page, action: :index
 
 
 resources :newsitems
