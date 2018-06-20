@@ -91,7 +91,7 @@ controller :oabooks do
 end
 
 controller :redirects do
-    get 'titles/:id' => :titles
+    # get 'titles/:id' => :titles
 end
 
 
