@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  
+root to: "page#index"
+
 controller :book do 
 	get   'books'                 => :index
   get   'byauthor'              => :byauthor
@@ -50,7 +51,6 @@ controller :page do
   post  'pages'                      => :create
   post  'pages/:id'                  => :update
   get   'page/:id/edit'              => :edit
-  root 	'page#index'
 end 
 
 controller :subject do 
@@ -95,7 +95,7 @@ controller :redirects do
 end
 
 
-get '*path' => redirect(:controller => 'page', :action => 'index')
+get '*path' => redirect("/")
 
 
 resources :newsitems
