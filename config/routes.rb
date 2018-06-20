@@ -90,6 +90,13 @@ controller :oabooks do
   get 'open-access/labor-studies/:id/mobi'       => :download_mobi
 end
 
+controller :redirects do
+    get 'titles/:id' => :titles
+end
+
+
+get '*path' => redirect('page#index')
+
 
 resources :newsitems
 resources :oabooks
@@ -109,5 +116,6 @@ resources :journals
 resources :reviews
 resources :harvests
 resources :review_harvests
+
 
 end
