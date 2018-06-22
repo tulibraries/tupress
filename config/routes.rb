@@ -102,14 +102,11 @@ controller :redirects do
     get 'titles/:id' => :titles
 end
 
-
-get '*path' => redirect("/")
-
-
 controller :application do
   get 'search' => :search
 end
 
+get '*path' => redirect("/")
 
 resources :newsitems
 resources :oabooks
