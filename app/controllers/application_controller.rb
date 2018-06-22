@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
 
 	Rails.logger = Logger.new(STDOUT)
 
-  rescue_from Exception do |error|
-  	logger.info "Redirect to homepage due to error: #{error}"
-  	redirect_to root_path
-  end
+  # rescue_from Exception do |error|
+  # 	logger.info "Redirect to homepage due to error: #{error}"
+  # 	redirect_to root_path
+  # end
 
   def search
     @books = Book.search(params[:q])
