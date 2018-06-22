@@ -3,7 +3,7 @@ class Event < ApplicationRecord
 	def self.search(q)
 	  if q
 	    # @events = Event.where('title REGEXP ?', "(^|\\W)#{q}(\\W|$)")
-	    @events = Event.where('title LIKE ?', "%#{q}%")
+	    @events = Event.where("title LIKE ?", "%#{q}%")
 		end
 	end
 end
