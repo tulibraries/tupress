@@ -1,0 +1,45 @@
+
+	<div class="row">
+		<div class="col">
+			<h1>Frequently Asked Questions</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<div class="container">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            If you have a question not answered here, check <%= link_to "all our FAQs", {controller: 'page', action: 'faq'} %>, or feel free to email the <%= mail_to 'tempress@temple.edu', 'webmaster', :class=>'alert-link' %> with your query.
+        </div>
+      </div>
+
+      <div class="panel-group" id="accordion">
+        <div class="faqHeader"></div>
+
+        <div class="panel panel-default list-group-item">
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    <a style="color: #903">
+                    	<%= @faq.q %>
+                    </a>
+                </h2>
+            </div>
+            <div id="collapse1" class="panel-heading">
+                <div class="panel-body">
+                    <%= @faq.a.html_safe %>
+                </div>
+            </div>
+        </div>
+
+      </div>
+	</div>
+</div>
+
+
+
+
+
+
+

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-root to: "page#index"
 
 controller :book do 
 	get   'books'                 => :index
@@ -19,7 +18,6 @@ controller :book do
   post  'book/:id'              => :update
   get   'books/new'             => :new
   post  'books'                 => :create
-  get   'search'                => :search
   get   'course-adoptions'      => :course_adoptions
 end
 
@@ -27,19 +25,18 @@ controller :page do
 
   # pages with id's are stored in the database, not in views folder (Tiny - IMCE generated)
 
-	get		'page/index'	               => :index
   get   'press-info'                 => :press_info,               :id => 1
   get   'rights'                     => :rights,                   :id => 2
   get   'submissions'                => :submissions,              :id => 3
   get   'review-copy'                => :review_copy,              :id => 4
   get   'payment'                    => :payment,                  :id => 5
   get   'copy-request'               => :copy_request,             :id => 6
-  get   'received-copy-request'      => :received_copy_request,    :id => 12
   get   'copyright'                  => :copyright,                :id => 7
   get   'university-presses'         => :university_presses,       :id => 8
   get   'order'                      => :order,                    :id => 9
   get   'received-rights'            => :received_rights ,         :id => 10
   get   'received-review-copy'       => :received_review_copy,     :id => 11
+  get   'received-copy-request'      => :received_copy_request,    :id => 12
   get   'contact'                    => :contact,                  :id => 13
   get   'book-reviews'               => :reviews
   get   'conferences'                => :conferences
@@ -51,6 +48,8 @@ controller :page do
   post  'pages'                      => :create
   post  'pages/:id'                  => :update
   get   'page/:id/edit'              => :edit
+  # get   'search'                     => :search
+  root 	'page#index'
 end 
 
 controller :subject do 
@@ -76,6 +75,15 @@ end
 controller :events do
   get 'calendar'           => :calendar
   get 'calendar/:id'       => :calendar
+  get 'event/:id'          => :show
+end
+
+controller :conferences do
+  get 'conference/:id'     => :show
+end
+
+controller :faqs do
+  get 'faq/:id'     => :show
 end
 
 controller :oabooks do
@@ -91,11 +99,16 @@ controller :oabooks do
 end
 
 controller :redirects do
-    # get 'titles/:id' => :titles
+    get 'titles/:id' => :titles
 end
 
 
 get '*path' => redirect("/")
+
+
+controller :application do
+  get 'search' => :search
+end
 
 
 resources :newsitems

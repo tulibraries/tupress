@@ -9,7 +9,7 @@ class ConferencesController < ApplicationController
 	end
 
 	def show
-    @conferences = Conference.all
+    @conference = Conference.find_by id: params[:id]
   end
 
   # GET /links/new

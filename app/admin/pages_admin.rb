@@ -15,6 +15,7 @@ Trestle.resource(:pages) do
     # Organize fields into tabs and sidebars
     tab :post do
       text_field    :name
+      text_field    :path
       file_field    :file
       check_box     :remove_file
 
