@@ -9,7 +9,6 @@ class RepsController < ApplicationController
   # GET /reps
   # GET /reps.json
   def index
-    @reps = Rep.all
   end
 
   # GET /reps/1

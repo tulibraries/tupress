@@ -1,0 +1,110 @@
+<div class="container" id="search-results">
+	<div class="row">
+		<div class="col">
+			<h1>Search Results</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-7">
+			<h2>Book Results</h2>
+			<% unless @books.blank? %>
+
+			<% @books.each do |book| %>
+
+			<div class="row book-row">
+				<div class="media">
+					<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'show', :id=>book.book_id} %>
+				</div>
+				<div class="media-body">
+					<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
+					<% if book.subtitle %>
+						<p class="subtitle"><%= book.subtitle %></p>
+					<% end %>
+					<p class="author"><%= book.author_byline %></p>					
+				</div>
+			</div>
+			<% end %>
+		<% else %>
+			<p style="padding-left: 35px;">No results found</p>
+		<% end %>
+		</div>
+
+		<div class="col-4 offset-1">
+			<h2>Other Results</h2>
+			<% unless @site.blank? && @events.blank? && @conferences.blank? %>
+			
+			<% unless @site.blank? %>
+			<ul>
+				<% @site.each do |page| %>
+					<li><%= link_to page.name, page.path %></li>
+				<% end %>
+			</ul>
+			<% else %>
+					<p style="padding-left: 35px;">No results found</p>
+			<% end %>
+
+			<% unless @events.blank? %>
+			 <h2>Conferences and Events</h2>
+			 <ul>
+				<% @events.each do |event| %>
+					<li><%= link_to event.title, {controller: 'events', action: 'show', :id=>event.id} %></li>
+				<% end %>
+				<% @conferences.each do |conf| %>
+					<li><%= link_to conf.conference, {controller: 'conferences', action: 'show', :id=>conf.id} %></li>
+				<% end %>
+			</ul>
+			<% end %>
+			<% else %>
+					<p style="padding-left: 35px;">No results found</p>
+			<% end %>
+
+			<% unless @people.blank? %>
+				<h2>People @ the Press</h2>
+				<ul>
+					<% @people.each do |person| %>
+						<li><%= link_to person.name, controller: "people", action: "index" %><br />
+							<small style="font-style:italic;"><%= person.position %></small></li>
+					<% end %>
+				</ul>
+			<% end %>
+
+			<% unless @reps.blank? %>
+			<h2 class="reps-results">Sales Representaives</h2>
+			<ul>
+				<% @reps.each do |rep| %>
+					<li><%= link_to rep.name, controller: "reps", action: "index" %><br />
+						<small style="font-style:italic;">
+							<% if rep.region.to_i >= 10  %>
+								<%= get_region(rep.region) %>
+							<% else %>
+								<%= rep.region %>
+							<% end %>
+						</small>
+					</li>
+				<% end %>
+			</ul>
+			<% end %>
+
+			<% unless @subjects.blank? %>
+			<h2>Subjects Areas</h2>
+			<ul>
+				<% @subjects.each do |subject| %>
+					<li><%= link_to subject.subject, {controller: "book", action: "bysubject", :id=>subject.subject_id} %></li>
+				<% end %>
+			</ul>
+			<% end %>
+
+			<% unless @faqs.blank? %>
+			<h2>FAQs</h2>
+			<ul>
+				<% @faqs.each do |faq| %>
+					<li><%= link_to faq.q, {controller: 'faqs', action: 'show', :id=>faq.id} %></li>
+				<% end %>
+			</ul>
+			<% end %>
+
+		</div>
+
+  </div>
+
+</div>

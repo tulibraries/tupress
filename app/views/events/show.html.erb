@@ -1,0 +1,48 @@
+<div class="container" id="event">
+
+  <% unless @event.nil? %>
+
+    <div class="row">
+      <div class="col">
+        <h1>
+          <% unless @event.title.nil? %>
+            <%= @event.title %>
+          <% else %>
+            Event Details
+          <% end %>
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="time col col-md-2 text-center">
+        <% unless @event.startdate.blank? %>
+          <strong><%= @event.startdate.strftime('%b %d') %></strong>
+          <% unless @event.enddate.blank? || @event.enddate.strftime('%d') == @event.startdate.strftime('%d') %>
+            - <strong><%= @event.enddate.strftime('%d') %></strong>
+          <% end %>
+        <% end %>
+       
+          <% unless @event.time.blank? || @event.time.strftime('%l:%M %p') == '12:00 AM' %>
+            <p>
+              <%= @event.time.strftime('%l:%M %p') %>
+              <% unless @event.endtime.blank? || @event.endtime.strftime('%l:%M %p') == '12:00 AM' %>
+                to <%= @event.endtime.strftime('%l:%M %p') %>
+              <% end %>
+              <% unless @event.timezone == 'EST' %>
+               <br />[<%= @event.timezone %>]
+             <% end %>
+            </p>
+          <% end %>
+   
+      </div>
+      <div class="event-description col col-md-10">
+        <% unless @event.title.blank? %><span class="event-title"><%= @event.title %></span><% end %>
+        <% unless @event.description.blank? %><%= @event.description.html_safe %><% end %>
+        <% unless @event.where.blank? %><em>Where</em>: <%= @event.where.html_safe %><% end %>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>

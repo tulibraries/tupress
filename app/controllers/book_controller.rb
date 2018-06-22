@@ -47,11 +47,6 @@ require 'pry'
     @formats = @book.binding
   end
 
-  def search
-    @books = Book.search(params[:q]).where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
-    @show_status = ["NP", "IP","OS","OP"]
-  end
-
   def bysubject
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
     @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)

@@ -135,7 +135,7 @@ require 'pry'
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :content, :content2, :file)
+      params.require(:page).permit(:name, :content, :content2, :file, :path)
     end
 
 

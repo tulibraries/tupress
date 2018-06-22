@@ -8,6 +8,7 @@ class FaqsController < ApplicationController
 
   # GET /faqs/1
   def show
+    @faq = Faq.find_by id: params[:id]
   end
 
   # GET /faqs/new
