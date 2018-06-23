@@ -43,7 +43,7 @@
 					<p style="padding-left: 35px;">No results found</p>
 			<% end %>
 
-			<% unless @events.blank? %>
+			<% unless @events.blank? && @conferences.blank? %>
 			 <h2>Conferences and Events</h2>
 			 <ul>
 				<% @events.each do |event| %>
