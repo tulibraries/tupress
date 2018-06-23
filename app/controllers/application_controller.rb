@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-	Rails.logger = Logger.new(STDOUT)
+	# Rails.logger = Logger.new(STDOUT)
 
   # rescue_from Exception do |error|
   # 	logger.info "Redirect to homepage due to error: #{error}"
