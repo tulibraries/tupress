@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
     @events = Event.search(params[:q])
     @conferences = Conference.search(params[:q])
     @faqs = Faq.search(params[:q])
-    @tests = Test.search(params[:q])
     if params[:q].blank?
       redirect_to(root_path)
     end

@@ -3,8 +3,8 @@ class Subject < ApplicationRecord
 
 	def self.search(q)
 		if q
-			@subjects = Subject.where("subject REGEXP ?", "(^|\\W)#{q}(\\W|$)")
-			# @subjects = Subject.where("subject LIKE ?", "%#{q}%")
+			# @subjects = Subject.where("subject REGEXP ?", "(^|\\W)#{q}(\\W|$)")
+			@subjects = Subject.where("subject LIKE ?", "%#{q}%")
 		end
 	end
 end
