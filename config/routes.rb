@@ -104,9 +104,10 @@ end
 
 controller :application do
   get 'search' => :search
+  get 'search2' => :search2
 end
 
-get '*path' => redirect("/")
+# get '*path' => redirect("/")
 
 resources :newsitems
 resources :oabooks
