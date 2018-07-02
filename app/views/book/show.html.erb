@@ -118,19 +118,7 @@
 	</div>
 <% end %>
 
-	<% unless @book.contents.blank? %>
-		<div class="row">
-			<div class="col">
-				<h2>Table of Contents</h2>
-			</div>
-		</div>
-	<div class="row">
-		<div class="col contents">
-			<%= @book.contents.html_safe %>
-		</div>
-	</div>
-<% end %>
-	<% if @reviews.count > 1 %>
+<% if @reviews.count > 1 %>
 		<div class="row">
 			<div class="col">
 				<h2>Reviews</h2>
@@ -145,6 +133,19 @@
 				 </div>
 			</div>
 		<% end %>
+	<% end %>
+
+	<% unless @book.contents.blank? %>
+		<div class="row">
+			<div class="col">
+				<h2>Table of Contents</h2>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col contents">
+			<%= @book.contents.html_safe %>
+		</div>
+	</div>
 	<% end %>
 
 	<% if @book.about_author.present? %>
