@@ -27,33 +27,29 @@ require 'pry'
   end
 
   def show
-  	@book = Book.where("book_id = ?", "#{params[:id]}").where({ status: ["NP", "IP", "OS","OP"] }) 
-    unless @book.blank?
-      @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
-      @show_status = ["NP", "IP","OS","OP"]
-      @subjects = @book.subjects.each do |s|
-         s
-      end
-      @series = @book.in_series.map do |s|
-         Series.find_by series_code: s
-      end
-      @ordered_subjects = []
-      @ordered_subjects << @book.subject1
-      @ordered_subjects << @book.subject2
-      @ordered_subjects << @book.subject3
-      @ordered_subjects = @ordered_subjects.map do |s|
-        Subject.find_by subject_id: s
-      end
-      # binding.pry
-      @formats = @book.binding
-    else
-      render_404
+  	@book = Book.find_by book_id: params[:id]
+    @reviews = Review.where('title_id = ?', "#{params[:id]}").order(weight: :desc)
+    @show_status = ["NP", "IP","OS","OP"]
+    @subjects = @book.subjects.each do |s|
+       s
     end
+    @series = @book.in_series.map do |s|
+       Series.find_by series_code: s
+    end
+    @ordered_subjects = []
+    @ordered_subjects << @book.subject1
+    @ordered_subjects << @book.subject2
+    @ordered_subjects << @book.subject3
+    @ordered_subjects = @ordered_subjects.map do |s|
+      Subject.find_by subject_id: s
+    end
+    # binding.pry
+    @formats = @book.binding
   end
 
   def bysubject
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
-    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").order(:sort_title)
+    @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     @show_status = ["NP", "IP","OS","OP"]
   end
 
