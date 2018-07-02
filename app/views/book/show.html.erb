@@ -164,6 +164,8 @@
 		</div>
 		</div>
 	<% end %>
+
+	<% unless @subjects.blank? %>
 	<% unless @subjects.first['subject']['subject_id'].nil? %>
 	<div class="row">
 		<div class="col">
@@ -181,6 +183,7 @@
 			<% end %>
 		<% end %>
 	</div>
+	<% end %>
 	<% end %>
 	
 
