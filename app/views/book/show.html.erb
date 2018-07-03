@@ -3,10 +3,10 @@
 <div class="row">
 	<div class="col col-8">
 		<h1 class="book_title"><%= @book.title.html_safe %> 
-			<% unless @book.subtitle.nil? %>
+			<% unless @book.subtitle.blank? %>
 				<br /><small><em><%= @book.subtitle.html_safe %></em></small> 
 			<% end %>
-			<% unless @book.edition.nil? %>
+			<% unless @book.edition.blank? %>
 				<br /><small><em><%= @book.edition %></em></small> 
 			<% end %>
 		</h1>
