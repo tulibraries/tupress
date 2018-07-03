@@ -23,7 +23,7 @@ Trestle.resource(:books) do
       truncate(booktitle.title, omision: "...", length: 300)
     end
     column :author_byline
-    actions
+    # actions
   # end
   end
 
@@ -32,7 +32,12 @@ Trestle.resource(:books) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |book|
-
+    toolbar(:primary) do
+      ""
+    end
+    toolbar(:secondary) do
+      ""
+    end
     list_items = []
     parent_list_items = Array.new
 
