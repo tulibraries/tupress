@@ -28,7 +28,8 @@ Trestle.resource(:events) do
         ['CT', 'CT'],
         ['ET', 'ET'],
         ['PT', 'PT'],
-        ['MT', 'MT']
+        ['MT', 'MT'],
+        ['GMT', 'GMT']
       ]
     )
     check_box     :news
