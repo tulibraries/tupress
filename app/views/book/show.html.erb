@@ -4,10 +4,12 @@
 	<div class="col col-8">
 		<h1 class="book_title"><%= @book.title.html_safe %> 
 			<% unless @book.subtitle.blank? %>
-				<br /><small><em><%= @book.subtitle.html_safe %></em></small> 
+				<p class="subtitle"><%= @book.subtitle.html_safe %>
 			<% end %>
 			<% unless @book.edition.blank? %>
-				<br /><small><em><%= @book.edition %></em></small> 
+				<br /><%= @book.edition.html_safe %>
+			<% else %>
+				</p>
 			<% end %>
 		</h1>
 

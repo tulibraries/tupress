@@ -11,10 +11,16 @@
 			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'show', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
-			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'show', :id=>book.book_id %></h2>
-			<% if book.subtitle %>
-				<p class="subtitle"><%= book.subtitle.html_safe %></p>
-			<% end %>
+			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'show', :id=>book.book_id %>
+				<% unless book.subtitle.blank? %>
+					<p class="subtitle"><%= book.subtitle.html_safe %>
+				<% end %>
+				<% unless book.edition.blank? %>
+					<br /><%= book.edition.html_safe %>
+				<% else %>
+					</p>
+				<% end %>
+			</h2>
 			<p class="author"><%= book.author_byline %></p>
 			<p class="format">
 			<% unless book.pages_total.nil? %>

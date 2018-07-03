@@ -16,7 +16,16 @@
 	}
 	p.subtitle {
 		font-style: italic;
+		font-size: 85%;
+		margin-top: 7px;
+		margin-bottom: 0;
 	}
+}
+.media-body p.subtitle, .book_title p.subtitle {
+		font-style: italic;
+		font-size: 85%;
+		margin-top: 7px;
+		margin-bottom: 0;
 }
 #titles, .book-row {
 	h2 {
@@ -24,6 +33,7 @@
 		background-color: transparent;
 		padding:4px;
 		border-left: 0;
+		padding-left: 0;
 	}
 }
 .empty-warning {
