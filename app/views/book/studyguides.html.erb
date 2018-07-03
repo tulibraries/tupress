@@ -12,14 +12,20 @@
 			<%= link_to image_tag(book.cover_image, class: 'd-flex mr-3'), {controller: 'book', action: 'studyguide', :id=>book.book_id} %>
 		</div>
 		<div class="media-body">
-			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'studyguide', :id=>book.book_id %></h2>
-			<% if book.subtitle.html_safe %>
-				<p class="subtitle"><%= book.subtitle %></p>
-			<% end %>
+			<h2><%= link_to book.title.html_safe, :controller=>'book', :action=>'studyguide', :id=>book.book_id %>
+				<% unless book.subtitle.blank? %>
+					<p class="subtitle"><%= book.subtitle.html_safe %>
+				<% end %>
+				<% unless book.edition.blank? %>
+					<br /><%= book.edition.html_safe %>
+				<% else %>
+					</p>
+				<% end %>
+			</h2>
 			<p class="author"><%= book.author_byline%></p>
 			<p >
 			<%= link_to "Curriculum/Study Guide [pdf]", book.is_guide.url  %>
-			<% unless book.suggested_reading.file.nil? %>
+			<% unless book.suggested_reading.file.blank? %>
 				<br /><%= link_to "Suggested Reading List [pdf]", book.suggested_reading.url %>
 			<% end %>
 			</p>
