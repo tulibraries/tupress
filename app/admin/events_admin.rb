@@ -25,10 +25,10 @@ Trestle.resource(:events) do
     time_field :time
     time_field :endtime
     select(:timezone, [
-        ['CST', 'CST'],
-        ['EST', 'EST'],
-        ['PST', 'PST'],
-        ['GMT', 'GMT']
+        ['CT', 'CT'],
+        ['ET', 'ET'],
+        ['PT', 'PT'],
+        ['MT', 'MT']
       ]
     )
     check_box     :news
