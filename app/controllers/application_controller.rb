@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   # end
 
   def search
-    @books = Book.search(params[:q])
+    @books = Book.search(params[:q]).where({ status: ["NP","IP","OS","OP"] }).order(:sort_title)
     @subjects = Subject.search(params[:q])
     @people = Person.search(params[:q])
     @site = Page.search(params[:q])
