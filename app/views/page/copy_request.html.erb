@@ -12,7 +12,7 @@
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= label_tag(:name, "Name: ") %>
+      <%= label_tag(:name, "Requested by: ") %>
     </div>
     <div class="col col-md-9 col-12">
       <%= text_field_tag(:name, "", :class => 'form-control', :required => true) %>
@@ -31,8 +31,12 @@
       <%= label_tag(:requesttype, "Request Type: ") %>
     </div>
     <div class="radio col">
-      <label><input type="radio" name="mediatype" value="Desk Copy"> Desk Copy</label><br>
-      <label><input type="radio" name="mediatype" value="Exam Copy"> Exam Copy</label>
+      <ul class="list-unstyled">
+       <li><label><input type="radio" name="mediatype" value="Desk Copy"> Desk Copy</label> 
+        <span style="display:block;margin:0">(requests for titles that have been adopted/bookstore orders placed)</span></li>
+       <li style="margin-top: 10px;"><label><input type="radio" name="mediatype" value="Exam Copy"> Exam Copy</label> 
+        <span style="display:block;margin:0">(requests for course adoption consideration)</span></li>
+     </ul>
     </div>
 </div>
   <div class="form-group row offset-md-1">
@@ -101,6 +105,14 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
+      <%= label_tag(:instructor, "Instructor: ") %>
+    </div>
+    <div class="col col-md-9 col-12">
+      <%= text_field_tag(:instructor, "", :class => 'form-control', :required => true) %>
+    </div>
+  </div>
+  <div class="form-group row offset-md-1">
+    <div class="col col-md-3">
       <%= label_tag(:coursetitle, "Course Title: ") %>
     </div>
     <div class="col col-md-9 col-12">
@@ -125,7 +137,7 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <p>Copy 1</p>
+      <p>Book 1</p>
     </div>
     <div class="col col-md-9 col-12">
       <%= label_tag(:title1, "Title: ") %>
@@ -138,7 +150,7 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <p>Copy 2</p>
+      <p>Book 2</p>
     </div>
     <div class="col col-md-9 col-12">
       <%= label_tag(:title2, "Title: ") %>
@@ -151,7 +163,7 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <p>Copy 3</p>
+      <p>Book 3</p>
     </div>
     <div class="col col-md-9 col-12">
       <%= label_tag(:title3, "Title: ") %>
@@ -165,10 +177,11 @@
 
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= label_tag(:bookstore, "Authorized Bookstore (if any): ") %>
+      <%= label_tag(:bookstore, "Authorized Bookstore: ") %>
     </div>
     <div class="col col-md-9 col-12">
       <%= text_field_tag(:bookstore, "", :class => 'form-control', :required => true) %>
+       <span style="clear:left;">(required for Desk Copy requests)</span>
     </div>
   </div>
   
@@ -183,7 +196,7 @@
   
   <div class="row offset-md-3">
     <div class="col col-12 col-md-9 offset-md-1 new-section">
-      <p>We allow up to three desk/exam copies per semester.</p>
+      <p>We allow up to three titles per course per semester.</p>
       <%= hidden_field_tag 'subject', 'Desk/Exam Copy Request' %>
       <%= hidden_field_tag 'next-url', request.base_url+root_path+'received-copy-request' %>
       <%= submit_tag("Submit Request") %>
