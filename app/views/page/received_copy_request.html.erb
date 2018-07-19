@@ -5,9 +5,13 @@
 </div>
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
-<div class="row" style="margin-bottom: 42px;">
+<div class="row">
+  <div class="col-10 offset-md-1">
+    <%= @page.content.html_safe %>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 42px;margin-top:21px;">
 <div class="col col-md-10">
-<%= @page.content.html_safe %>
 <div id="contactform">
 <%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
   <div class="form-group row offset-md-1">
