@@ -32,6 +32,7 @@
 			<h2>Awards by Discipline</h2>
 			<div class="container">
 			<% @subjects.each do |subject| %>
+			<% unless subject['subject']['subject_id'].nil? %>
 				<div class="row" style="border-bottom: solid #ccc 1px;padding: 7px;">
 					<div class="col col-10 col-lg-11">
 						<%= link_to subject['subject']['subject_title'], controller: 'book', action: 'awards_by_subject', id: subject['subject']['subject_id'] %> 
@@ -40,6 +41,7 @@
 						<span class="badge badge-pill"><%= award_subject_count(subject['subject']['subject_id']) %></span>
 					</div>
 				</div>
+				<% end %>
 				<% end %>
 			</div>
 		</div>
