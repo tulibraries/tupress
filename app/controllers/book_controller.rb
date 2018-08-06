@@ -81,7 +81,7 @@ require 'pry'
     @years2 = @years.split(/,/).uniq!
     # binding.pry
     # @subjects = Book.where('award != ?', '').where({ status: ["NP", "IP", OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.map do |subject|  subject.map { |k,v|  v["subject_title"] } end.flatten.sort
-    @subjects = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).where.not(subjects: nil).pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"]["subject_title"] } 
+    @subjects = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).where.not(subjects: nil).pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"][1] } 
     @pagetitle = "Award-Winning Books"
     @show_status = ["NP", "IP","OS","OP"]
     # binding.pry
