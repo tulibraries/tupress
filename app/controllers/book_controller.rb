@@ -2,16 +2,17 @@ class BookController < ApplicationController
 
 require 'pry'
 
-  def index
-  	if params[:id].nil?
-  		params[:id] = 'a'
-  	end
+  def index 
+
+    if params[:id].nil?
+      params[:id] = 'a'
+    end
+    
+    @books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     
     if params[:id] == '0'
       @books = Book.where('sort_title regexp ?', '^[0-9]+').where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     end
-
-  	@books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
 
     @pagetitle = "Titles Index"
     @show_status = ["NP", "IP", "OS","OP"]
@@ -43,7 +44,6 @@ require 'pry'
     @ordered_subjects = @ordered_subjects.map do |s|
       Subject.find_by subject_id: s
     end
-    # binding.pry
     @formats = @book.binding
   end
 
@@ -79,12 +79,9 @@ require 'pry'
     @books = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     @years = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).distinct.pluck( :award_year, :award_year2, :award_year3, :award_year4).map{|years| years.join(",")}.join(",")
     @years2 = @years.split(/,/).uniq!
-    # binding.pry
-    # @subjects = Book.where('award != ?', '').where({ status: ["NP", "IP", OS"] }).where('subjects != ?', '').pluck(:subjects).flatten.uniq.map do |subject|  subject.map { |k,v|  v["subject_title"] } end.flatten.sort
     @subjects = Book.where('award != ?', '').where({ status: ["NP", "IP", "OS","OP"] }).where.not(subjects: nil).pluck(:subjects).flatten.uniq.sort_by { |h| h["subject"][1] } 
     @pagetitle = "Award-Winning Books"
     @show_status = ["NP", "IP","OS","OP"]
-    # binding.pry
   end
 
   def awards_by_subject
@@ -92,7 +89,6 @@ require 'pry'
     @subject = Subject.where("subject_id = ?", "#{params[:id]}")
     @pagetitle = "Award-Winning Books: "+@subject[0]['subject']
     @show_status = ["NP", "IP","OS","OP"]
-    # binding.pry
   end
 
   def awards_by_year
