@@ -14,7 +14,12 @@
 				<h2 style="margin-top: 21px;">
 					<%= contact.document_contact %>
 					<span class="small" style="float:right">
+						<% unless contact.name.blank? %>
 						Contact: <%= mail_to contact.email, contact.name, subject: contact.document_contact %>
+						<% else %>
+						Contact: <%= mail_to contact.email, contact.email, subject: contact.document_contact %>
+						<% end %>
+
 					</span>
 				</h2>
 			</div>
