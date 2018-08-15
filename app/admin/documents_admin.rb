@@ -18,6 +18,7 @@ Trestle.resource(:documents) do
   form do |document|
     text_field    :title
     file_field    :filename
+    check_box     :remove_filename
     text_field    :department
     text_field    :format
     text_field    :department_contact
