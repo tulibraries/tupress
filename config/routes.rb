@@ -107,8 +107,6 @@ controller :application do
   get 'search2' => :search2
 end
 
-get '*path' => redirect("/")
-
 resources :newsitems
 resources :oabooks
 resources :links
@@ -127,6 +125,8 @@ resources :journals
 resources :reviews
 resources :harvests
 resources :review_harvests
+
+get '*path' => redirect("/")
 
 
 end

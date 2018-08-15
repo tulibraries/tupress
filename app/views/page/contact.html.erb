@@ -106,18 +106,19 @@
       <%= text_field_tag(:removemailer, '', :id=>'removemailertype', :placeholder=>"Please describe the mailing piece you received") %>
     </div>
   </div>
+  <!-- 
   <div class="form-group row" id="newsletters">
     <div class="col col-md-9 offset-md-2">
-      <%= check_box_tag(:addmailer) %>
-      <%= label_tag(:addmailer, "Send me e-newsletters about new books and special offers") %>
+      <%# check_box_tag(:addmailer) %>
+      <%# label_tag(:addmailer, "Send me e-newsletters about new books and special offers") %>
       <div id="mailersubjects" class="col" style="display:block;">
         <p>My preferred subjects of interest are:</p>
-        <%= select_tag :addmailer, options_for_select(mailers), :size=>7, :multiple => true %>
+        <%# select_tag :addmailer, options_for_select(mailers), :size=>7, :multiple => true %>
         <div style="font-size:smaller;">(use the CTRL/CMD key to select multiple subjects)</div>
       </div>
     </div>
   </div>
-
+  -->
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2 new-section">
       <%= hidden_field_tag 'subject', 'Contact' %>
