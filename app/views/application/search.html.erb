@@ -37,7 +37,7 @@
 
 		<div class="col-4 offset-1">
 			<h2>Other Results</h2>
-			<% unless @site.blank? && @events.blank? && @conferences.blank? %>
+			<% unless @site.blank? && @events.blank? && @conferences.blank? && @journals.blank? %>
 			
 			<% unless @site.blank? %>
 			<ul>
@@ -47,6 +47,15 @@
 			</ul>
 			<% else %>
 					<p style="padding-left: 35px;">No results found</p>
+			<% end %>
+
+			<% unless @journals.blank? %>
+			<h2>Journals</h2>
+			<ul>
+				<% @journals.each do |journal| %>
+					<li><%= link_to journal.title, journal.url %></li>
+				<% end %>
+			</ul>
 			<% end %>
 
 			<% unless @events.blank? && @conferences.blank? %>
@@ -75,7 +84,7 @@
 			<% end %>
 
 			<% unless @reps.blank? %>
-			<h2 class="reps-results">Sales Representaives</h2>
+			<h2 class="reps-results">Sales Representatives</h2>
 			<ul>
 				<% @reps.each do |rep| %>
 					<li><%= link_to rep.name, {controller: "reps", action: "sales_reps"} %><br />
