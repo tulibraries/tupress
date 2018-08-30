@@ -65,27 +65,28 @@ namespace :db do
       end #unless
     end #map
 
-    db_reviews = Review.all.each do |review|
-      db_review_ids << review.review_id
-    end
+    # db_reviews = Review.all.each do |review|
+    #   db_review_ids << review.review_id
+    # end
 
-    doc.xpath("//record/reviews/review").map do |xml|
-      xml_review_ids << xml.xpath("review_id").text
-    end
+    # doc.xpath("//record/reviews/review").map do |xml|
+    #   xml_review_ids << xml.xpath("review_id").text
+    # end
 
-    db_review_ids.each do |db_id|
-      if !xml_review_ids.include? db_id
-        toDelete = Review.find_by(review_id: db_id)
-        deleted_ids << toDelete.title_id.to_s
-        toDelete.destroy
-      end
-    end
+    # db_review_ids.each do |db_id|
+    #   if !xml_review_ids.include? db_id
+    #     toDelete = Review.find_by(review_id: db_id)
+    #     deleted_ids << toDelete.title_id.to_s
+    #     toDelete.destroy
+    #   end
+    # end
 
-      puts "deletions: "+deleted_ids.length.to_s
+    #   puts "deletions: "+deleted_ids.length.to_s
       puts "created: "+created_ids.length.to_s
       puts "errors: "+error_ids.length.to_s
 
-      harvest = ReviewHarvest.new(error_ids: error_ids, deleted_ids: deleted_ids, created_ids: created_ids)
+      # harvest = ReviewHarvest.new(error_ids: error_ids, deleted_ids: deleted_ids, created_ids: created_ids)
+      harvest = ReviewHarvest.new(error_ids: error_ids, created_ids: created_ids)
 
       # binding.pry
 
