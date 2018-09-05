@@ -14,6 +14,10 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'carrierwave', '~> 1.0'
+
+# Paperclip traces can still be seen in the migrations
+# We have to keep it in here until we clean up the migrations
+gem 'paperclip'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
