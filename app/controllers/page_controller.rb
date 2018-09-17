@@ -9,13 +9,14 @@ require 'pry'
     @highlights = Highlight.where(homepage: 1).order(created_at: :desc)
     @hot_books = Book.where(hot: 1).take(4).sort_by{ |w| w.hotweight }
     @news_books = Book.where(news: 1).take(4).sort_by{ |w| w.newsweight }
-    @adoptions = Book.where('course_adoptions = ?', 1)
+    @adoptions = Book.where(course_adoptions: 1)
     # @events = Event.where(news: 1).take(2).sort_by{ |w| w.weight }
     @events = Event.where(news: 1).take(1)
     @freeforms = NewsItem.where(homepage: 1).take(1)
     @feed = Feed.find(1)
-    @entries = @feed.entries.order('published desc')
-    @catalog = Season.where('suppress != ?', '1').order(created_at: :desc).first
+    @entries = @feed.entries.order(published: :desc)
+    @catalog = Season.where.not(suppress: 1).order(created_at: :desc).first
+    # @subject = Subject.where(promoted: 1).order(updated_at: :desc).first
   end
   def contact
     @page = Page.find_by(id: params[:id])
@@ -37,9 +38,9 @@ require 'pry'
     @reviews_date = @reviews.group_by {|t| t.created_at.strftime("%m/%d/%Y")}
   end
   def conferences
-    @conferences = Conference.where("year = ?", Time.new.year.to_s).sort_by {|conference| conference.month}
+    @conferences = Conference.where(year: Time.new.year.to_s).sort_by {|conference| conference.month}
     @conferences_month = @conferences.group_by {|t| t.month}
-    @conferences_by_year = Conference.where("year = ?", (Time.new.year+1).to_s).sort_by {|conference| conference.month}
+    @conferences_by_year = Conference.where(year: (Time.new.year+1).to_s).sort_by {|conference| conference.month}
     @conferences_year = @conferences_by_year.group_by {|t| t.month}
   end
   def downloads
