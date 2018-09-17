@@ -4,6 +4,10 @@ Trestle.resource(:seasons) do
     item :seasons, icon: "fa fa-star"
   end
 
+  collection do
+    Season.order(created_at: :desc)
+  end
+
   # Customize the table columns shown on the index view.
   #
   table do
@@ -25,11 +29,7 @@ Trestle.resource(:seasons) do
     file_field  :pdf
     check_box   :remove_pdf
   
-    # row do
-    #   col(xs: 6) { datetime_field :updated_at }
-    #   col(xs: 6) { datetime_field :created_at }
-    # end
-    if !season.image.blank?
+    unless season.image.nil?
       sidebar do 
         label "image"     
       end
@@ -37,7 +37,7 @@ Trestle.resource(:seasons) do
         image_tag season.image.url.to_s, id: "catalog_image"
       end
     end
-    if !season.pdf.blank?
+    unless season.pdf.nil?
       sidebar do 
         label "PDF"     
       end
