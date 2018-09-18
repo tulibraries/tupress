@@ -1,5 +1,6 @@
 class Subject < ApplicationRecord
   has_many :book, :counter_cache => true
+  has_many :brochure
 
 	def self.search(q)
 		if q
