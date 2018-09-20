@@ -14,23 +14,50 @@ Trestle.resource(:brochures) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |brochure|
-
-    @subjects = Subject.all
-    @all_subjects = Array.new
-
-    names = @subjects.collect do |subject| 
-      subject.subject 
-    end
-    ids = @subjects.collect do |subject| 
-      subject.subject_id
-    end
-    @all_subjects = names.zip(ids)
-
     text_field :title
     file_field :pdf
-    select(:subject, @all_subjects)
+
+    unless brochure.pdf.file.nil?
+      tab :pdf do
+        # link_to brochure.pdf.file.identifier, brochure.pdf.url
+      end
+    end
+
+    file_field :image
+
+    unless params[:subject_id].nil?
+      select(:subject_id, Subject.all.collect {|s| [s.subject, s.subject_id]}, {selected: params[:subject_id]}, include_blank: true)
+    else      
+      select(:subject_id, Subject.all.collect {|s| [s.subject, s.subject_id]}, include_blank: true)
+    end
+
+    unless params[:code].nil?
+      select(:catalog_code, Season.all.collect {|s| [s.title, s.code]}, {selected: params[:code]}, include_blank: true)
+    else      
+      select(:catalog_code, Season.all.collect {|s| [s.title, s.code]}, include_blank: true)
+    end
+
+
     check_box :promoted_to_homepage
     check_box :promoted_to_subject
+
+    unless brochure.image.nil?
+      sidebar do 
+        label "image"
+      end
+      sidebar do 
+        image_tag brochure.image.url.to_s, id: "cover_image"
+      end
+    end
+    unless brochure.pdf.file.nil?
+      sidebar do 
+        label "PDF"
+      end
+      sidebar do 
+        link_to brochure.pdf.file.identifier, brochure.pdf.url
+      end
+    end
+
   
   end
 
