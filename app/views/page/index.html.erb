@@ -146,6 +146,17 @@
     <p class="text-center" style="color:#903;"><%= link_to '[PDF Version]', @catalog.pdf.url %></p>
   </div>
 </div>
+<% unless @homepage_subject.nil? %>
+<div class="row">
+  <div class="col card">
+    <h2 style="color:#903;" class="text-center"><%= @homepage_subject.title %></h2>
+    <p class="text-center">
+    <%= link_to image_tag(@homepage_subject.image, alt: 'catalog cover', style: 'height:160px;margin:auto;'), @homepage_subject.pdf.url %>
+    </p>
+    <p class="text-center" style="color:#903;"><%= link_to '[PDF]', @homepage_subject.pdf.url %></p>
+  </div>
+</div>
+<% end %>
 <div class="row">
   <div class="col card">
     <h2 class="text-center" style="color:#903;">Books for Course Adoptions</h2>

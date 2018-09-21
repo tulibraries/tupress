@@ -51,6 +51,7 @@ require 'pry'
     @subjects = Subject.find_by('subject_id = ?', "#{params[:id]}") 
     @books = Book.where('subjects LIKE ?', "%#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     @show_status = ["NP", "IP","OS","OP"]
+    @brochures = Brochure.where(subject_id: params[:id]).where(promoted_to_subject: true)
   end
 
   def byseries
@@ -105,7 +106,8 @@ require 'pry'
   def catalogs_by_season
     @catalog = Season.find_by code: "#{params[:code]}"
     @books = Book.where('catalog = ?', "#{params[:code]}").where({ status: ["NP","IP","OS","OP"] }).order(:sort_title)
-    @show_status = ["NP", "IP","OS","OP"]
+    @show_status = ["NP", "IP","OS","OP"]    
+    @brochures = Brochure.where(catalog_code: params[:code]).where(promoted_to_subject: true)
   end
 
   def edit   

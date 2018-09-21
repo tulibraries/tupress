@@ -1,8 +1,15 @@
 <div class="row">
-	<div class="col">
+	<div class="col col-sm-12 col-md-8">
 		<h1>
 			<%= @catalog.title %>
 		</h1>
+	</div>
+		<div class="col col-sm-12 col-md-4" style="margin-top: 21px;">
+			<% unless @brochures.nil? %>
+				<% @brochures.each do |brochure| %>
+					<%= link_to brochure.title, brochure.pdf.url %><br />
+				<% end %>
+			<% end %>
 	</div>
 </div>
 
