@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180920203041) do
+ActiveRecord::Schema.define(version: 20180921123010) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -105,17 +105,16 @@ ActiveRecord::Schema.define(version: 20180920203041) do
     t.boolean  "course_adoptions"
   end
 
-  create_table "brochures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "brochures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string   "title"
-    t.integer  "subject_id"
+    t.string   "subject_id"
+    t.string   "pdf"
+    t.string   "catalog_code"
+    t.string   "image"
     t.boolean  "promoted_to_subject"
     t.boolean  "promoted_to_homepage"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-    t.string   "pdf"
-    t.string   "catalog_code"
-    t.string   "image"
-    t.index ["subject_id"], name: "index_brochures_on_subject_id", using: :btree
   end
 
   create_table "conferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -334,7 +333,7 @@ ActiveRecord::Schema.define(version: 20180920203041) do
     t.string   "pdf"
   end
 
-  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
