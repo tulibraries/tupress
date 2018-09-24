@@ -19,7 +19,7 @@ Trestle.resource(:brochures) do
     check_box :remove_pdf
 
     file_field :image
-        check_box :remove_image
+    check_box :remove_image
 
     unless params[:subject_id].nil?
       select(:subject_id, Subject.all.collect {|s| [s.subject, s.subject_id]}, {selected: params[:subject_id]}, include_blank: true)
@@ -45,13 +45,14 @@ Trestle.resource(:brochures) do
         image_tag brochure.image.url.to_s, id: "cover_image"
       end
     end
+    
     unless brochure.pdf.file.nil?
       sidebar do 
         label "PDF"
       end
-      end
       sidebar do 
         link_to brochure.pdf.file.identifier, brochure.pdf.url
+      end
     end
 
   
