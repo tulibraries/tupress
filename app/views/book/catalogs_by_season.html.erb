@@ -4,7 +4,7 @@
 			<%= @catalog.title %>
 		</h1>
 	</div>
-		<div class="col col-sm-12 col-md-4" style="margin-top: 21px;">
+		<div class="col col-sm-12 col-md-4 brochures">
 			<% unless @brochures.nil? %>
 				<% @brochures.each do |brochure| %>
 					<%= link_to brochure.title, brochure.pdf.url %><br />
