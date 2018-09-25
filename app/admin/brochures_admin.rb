@@ -15,7 +15,7 @@ Trestle.resource(:brochures) do
   #
   form do |brochure|
     text_field :title
-    file_field :pdf
+    file_field :pdf, accept: 'application/pdf'
     check_box :remove_pdf
 
     file_field :image

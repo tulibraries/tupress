@@ -155,25 +155,28 @@ span.author {
 }
 
 .brochures {
-	/*margin-top: 21px;*/
-	/*text-align: center;*/
-	/*min-height: 42px;*/
+	margin-top: 21px;
+	min-height: 60px;
 	position: relative;
 	.col-md-4 {
 		/*outline: solid red 1px;*/
-	 	position: absolute;
+	 	/*position: absolute;
 	 	right: 0;
 	 	top: 50%;
-	 	margin-top: -14px;
-		height: 42px;
+	 	margin-top: -14px;*/
+	 	text-align:center;
+		height: 60px;
 	}
 	a[href$=".pdf"]{
+	text-align: center;
+	/*outline: solid red 1px;*/
 		background-image:asset-data-url('pdf-icon.png');
 		background-position: center right;
 		background-repeat: no-repeat;
-		padding-right: 42px;
-		height: 42px;
-		padding-top: 10px;
+		padding-right: 60px;
+		height: 49px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 		line-height: 1.25rem;
 		font-size: 120%;
 		font-weight: 600;
