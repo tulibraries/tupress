@@ -1,10 +1,10 @@
-<div class="row">
+<div class="row brochures">
 	<div class="col col-sm-12 col-md-8">
 		<h1>
 			<%= @catalog.title %>
 		</h1>
 	</div>
-		<div class="col col-sm-12 col-md-4 brochures">
+		<div class="col col-sm-12 col-md-4">
 			<% unless @brochures.nil? %>
 				<% @brochures.each do |brochure| %>
 					<%= link_to brochure.title, brochure.pdf.url %><br />
