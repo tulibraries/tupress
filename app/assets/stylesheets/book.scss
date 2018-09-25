@@ -159,17 +159,10 @@ span.author {
 	min-height: 60px;
 	position: relative;
 	.col-md-4 {
-		/*outline: solid red 1px;*/
-	 	/*position: absolute;
-	 	right: 0;
-	 	top: 50%;
-	 	margin-top: -14px;*/
 	 	text-align:center;
 		height: 60px;
 	}
 	a[href$=".pdf"]{
-	text-align: center;
-	/*outline: solid red 1px;*/
 		background-image:asset-data-url('pdf-icon.png');
 		background-position: center right;
 		background-repeat: no-repeat;
@@ -178,7 +171,7 @@ span.author {
 		padding-top: 14px;
 		padding-bottom: 14px;
 		line-height: 1.25rem;
-		font-size: 120%;
+		font-size: 110%;
 		font-weight: 600;
 	}
 }
