@@ -5,11 +5,14 @@ Trestle.resource(:brochures) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do
+    column :title
+    column :subject_id
+    column :catalog_code
+    column :promoted_to_subject
+    column :promoted_to_homepage
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #

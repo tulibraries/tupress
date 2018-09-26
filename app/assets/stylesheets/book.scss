@@ -156,8 +156,8 @@ span.author {
 
 .brochures {
 	margin-top: 21px;
-	min-height: 60px;
-	position: relative;
+	height: auto;
+	display:block;
 	.col-md-4 {
 	 	text-align:center;
 		height: 60px;
@@ -173,6 +173,8 @@ span.author {
 		line-height: 1.25rem;
 		font-size: 110%;
 		font-weight: 600;
+		display: block;
+		text-align: left;
 	}
 }
 
