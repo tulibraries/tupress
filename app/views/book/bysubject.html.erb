@@ -1,11 +1,15 @@
 <div class="row brochures">
-	<div class="col col-sm-12 col-md-8">
-		<h1><%= @subjects.subject %></h1>
+	<div class="col-12 col-md-7">
+		<h1>
+			<%= @subjects.subject %>
+		</h1>
 	</div>
-	<div class="col col-sm-12 col-md-4">
-		<% @brochures.each do |brochure| %>
-			<%= link_to brochure.title, brochure.pdf.url %><br />
-		<% end %>
+		<div class="col-12 col-lg-5">
+			<% unless @brochures.nil? %>
+				<% @brochures.each do |brochure| %>
+					<%= link_to brochure.title, brochure.pdf.url, class: "text-right text-lg-left" %><br />
+				<% end %>
+			<% end %>
 	</div>
 </div>
 
