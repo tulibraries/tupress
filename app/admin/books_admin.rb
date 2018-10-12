@@ -68,15 +68,15 @@ Trestle.resource(:books) do
 
       select(:subject1, 
         parent_list_items,
-        include_blank: true
+        include_blank: "(none)",
         )
       select(:subject2, 
         parent_list_items,
-        include_blank: true
+        include_blank: "(none)",
         )
       select(:subject3, 
         parent_list_items,
-        include_blank: true
+        include_blank: "(none)",
         )
 
     text_field    :excerpt_text
