@@ -167,7 +167,7 @@
 		</div>
 	<% end %>
 
-	<% unless @ordered_subjects.blank? %>
+	<% unless @ordered_subjects.all? &:blank? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
