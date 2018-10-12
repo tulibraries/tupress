@@ -167,25 +167,19 @@
 		</div>
 	<% end %>
 
-	<% unless @subjects.blank? %>
-	<% unless @subjects.first['subject']['subject_id'].nil? %>
+	<% unless @ordered_subjects.blank? %>
 	<div class="row">
 		<div class="col">
 			<h2>Subjects</h2>
 		</div>
 	</div>
 	<div class="row subjects-group">
-		<% @subjects.each do |subjects| %>
-			<% unless subjects.all? &:blank? %>
-				<% subjects.each do |subject,info| %>
-					<div class="col-md-4 list-group-item">
-						 <%= link_to info['subject_title'], {controller: "book", action: "bysubject", id: info['subject_id']} %>
-					</div>
-				<% end %>	
-			<% end %>
-		<% end %>
+			<div class="col-md-12 list-group-item">
+				<% @ordered_subjects.each do |subject| %>
+					<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.id} %>
+				<% end %>
+		</div>
 	</div>
-	<% end %>
 	<% end %>
 	
 
