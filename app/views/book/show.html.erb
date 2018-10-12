@@ -176,7 +176,9 @@
 	<div class="row subjects-group">
 			<div class="col-md-12 list-group-item">
 				<% @ordered_subjects.each do |subject| %>
-					<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.id} %>
+					<% unless subject.nil? %>
+						<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.id} %>
+					<% end %>
 				<% end %>
 		</div>
 	</div>
