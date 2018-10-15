@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     @conferences = Conference.search(params[:q])
     @faqs = Faq.search(params[:q])
     @journals = Journal.search(params[:q])
+    @oabooks = Oabook.search(params[:q])
     if params[:q].blank?
       redirect_to(root_path)
     end
@@ -32,6 +33,7 @@ class ApplicationController < ActionController::Base
     @faqs = Faq.search(params[:q])
     @tests = Test.search(params[:q])
     @journals = Journal.search(params[:q])
+    @oabooks = Oabook.search(params[:q])
     if params[:q].blank?
       redirect_to(root_path)
     end
