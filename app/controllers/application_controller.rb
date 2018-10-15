@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   def search
     @books = Book.search(params[:q]).where({ status: ["NP","IP","OS","OP"] }).order(:sort_title)
     @subjects = Subject.search(params[:q])
+    @series = Series.search(params[:q])
     @people = Person.search(params[:q])
     @site = Page.search(params[:q])
     @reps = Rep.search(params[:q])
@@ -25,6 +26,7 @@ class ApplicationController < ActionController::Base
     def search2
     @books = Book.search(params[:q])
     @subjects = Subject.search(params[:q])
+    @series = Series.search(params[:q])
     @people = Person.search(params[:q])
     @site = Page.search(params[:q])
     @reps = Rep.search(params[:q])
