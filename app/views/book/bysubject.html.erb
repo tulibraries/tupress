@@ -43,7 +43,7 @@
 				<br /><br />
 				<%  book.binding.each do |binding| %>
 				<% if @show_status.include?(binding.fetch("binding").fetch("binding_status")) %>
-					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong><br />
+					<%= binding.fetch("binding", "").fetch("format", "") %>: <%= binding.fetch("binding", "").fetch("ean", "") %> <strong><%= binding.fetch("binding", "").fetch("price", "") %></strong> <%= binding.fetch("binding").fetch("pub_date_for_format", "") %><br />
 					<% end %>
 				<% end %>
 				</p>
