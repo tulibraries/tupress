@@ -94,7 +94,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    i18n (1.1.0)
+    i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -206,7 +206,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     ruby_dep (1.5.0)
-    sass (3.5.7)
+    sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -240,7 +240,7 @@ GEM
     tilt (2.0.8)
     tinymce-rails (4.8.3)
       railties (>= 3.1.1)
-    trestle (0.8.10)
+    trestle (0.8.11)
       activemodel (>= 4.2.0)
       autoprefixer-rails (>= 7.1.2)
       kaminari (~> 1.1.0)
@@ -310,7 +310,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tinymce-rails
-  trestle (~> 0.8.3)
+  trestle (~> 0.8.11)
   trestle-auth
   trestle-search
   trestle-tinymce
