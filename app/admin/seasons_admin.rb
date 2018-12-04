@@ -37,7 +37,7 @@ Trestle.resource(:seasons) do
         image_tag season.image.url.to_s, id: "catalog_image"
       end
     end
-    unless season.pdf.nil?
+    unless season.pdf.file.nil?
       sidebar do 
         label "PDF"     
       end
