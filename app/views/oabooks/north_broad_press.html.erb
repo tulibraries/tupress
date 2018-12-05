@@ -1,11 +1,82 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="col">
+<h1 style="margin-top:0;padding-top:0;">
+		<%= image_tag 'nbp_banner.jpg', alt: 'North Broad Press', style: 'max-width:100%;' %>
+</h1>
+<p>North Broad Press is a joint publishing project between Temple University Press and Temple University Libraries. We publish works of scholarship, both new and reissued, from the Temple University community. Examples include open textbooks written, edited, or compiled by Temple faculty; previously out-of-print books written by Temple faculty or published by the Press; and born digital projects produced by faculty or staff. 
+</p>
+<p>
+All publications from North Broad Press are free to read online, and some are also available through print on demand. We rely on a combination of funding from the Libraries, the department or school/college, outside funders, and the author to cover our costs. Authors who publish with us keep their copyright, but grant North Broad Press a nonexclusive license to distribute the work. We offer a range of publishing services, some of which are done by Libraries/Press staff or contractors and some of which can be done by the author using tools we provide. Authors choose the services they want based on the particulars of their work and their available funds. Note that there may be fees associated with some services.
+</p>
+<div class="row">
+	<div class="col-sm-4 offset-sm-2">
+		<ul class="list-unstyled">
+			<li>Project management</li>
+			<li>Peer review</li>
+			<li>Permissions research</li>
+			<li>Copyediting</li>
+			<li>Layout/typesetting</li>
+			<li>Cover design</li>
+			<li>Index creation</li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<ul class="list-unstyled">
+			<li>Section 508 compliance</li>
+			<li>PDF and EPUB creation</li>
+			<li>Print on demand</li>
+			<li>Metadata creation and distribution</li>
+			<li>DOI and ISBN assignment</li>
+			<li>Inclusion in the Libraries’ catalog and OCLC WorldCat</li>
+			<li>Archiving in the Libraries’ institutional repository</li>
+		</ul>
+	</div>
+</div>
 
-<h1>Oabooks</h1>
-
-    <% @oabooks.each do |oabook| %>
-    <div class="neh-book">
+</div>
+</div>
+<div class="row" style="margin-top: 28px;">
+<div class="column col-6" id="column_1">
+    <% @column_1.each do |oabook| %>
+    <div class="neh-book row">
+    	<div class="col col-4 col-sm-3 col-md-2 col-lg-2">
         <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/north-broad-press/"+oabook.id.to_s %>
-        <%= link_to oabook.title, root_path+"open-access/north-broad-press/"+oabook.id.to_s %>
+      </div>
+      <div class="col col-8 col-sm-9 col-md-10 col-lg-10">
+        <%= link_to oabook.title, root_path+"open-access/north-broad-press/"+oabook.id.to_s, class: 'oatitle' %><br>
+        <% unless oabook.subtitle.nil? %>
+        	<em><%= oabook.subtitle %></em><br>
+        <% end %>
+        <% unless oabook.author.nil? %>
+        	<span style="color: #a0a0a0;"><%= oabook.author %></span><br>
+        <% end %>
+        <div class="oasupplemental">
+	        <%= oabook.supplemental %><br>
+	      </div>
+      </div>
     </div>
     <% end %>
-
+</div>
+<div class="column col-6" id="column_2">
+    <% @column_2.reverse.each do |oabook| %>
+    <div class="neh-book row">
+    	<div class="col col-3 col-lg-2">
+        <%= link_to image_tag(oabook.cover_image.url.to_s, alt: oabook.title, style: 'height:120px;'), root_path+"open-access/north-broad-press/"+oabook.id.to_s %>
+      </div>
+      <div class="col col-9 col-lg-10">
+        <%= link_to oabook.title, root_path+"open-access/north-broad-press/"+oabook.id.to_s, class: 'oatitle' %><br>
+        <% unless oabook.subtitle.nil? || oabook.subtitle == ''%>
+        	<em><%= oabook.subtitle %></em><br>
+        <% end %>
+        <% unless oabook.author.nil? %>
+        	<span style="color: #a0a0a0;"><%= oabook.author %></span><br>
+        <% end %>
+        <div class="oasupplemental">
+	        <%= oabook.supplemental %><br>
+	      </div>
+      </div>
+    </div>
+    <% end %>
+</div>
+</div>
