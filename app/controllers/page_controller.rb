@@ -82,6 +82,9 @@ require 'pry'
   def copyright
     @page = Page.find_by(id: params[:id])
   end
+  def north_broad_press_proposals
+    @page = Page.find_by(id: params[:id])
+  end
 
   def show
     @pages = Page.all

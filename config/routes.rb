@@ -49,6 +49,7 @@ controller :page do
   post  'pages/:id'                  => :update
   get   'page/:id/edit'              => :edit
   # get   'search'                     => :search
+  get   'open-access/north-broad-press/call-for-proposals' => :north_broad_press_proposals, :id => 14
   root 	'page#index'
 end 
 
