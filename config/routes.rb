@@ -126,6 +126,7 @@ resources :journals
 resources :reviews
 resources :harvests
 resources :review_harvests
+resources :forms , only: [:new, :create]
 
 get '*path' => redirect("/")
 

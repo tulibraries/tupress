@@ -1,5 +1,4 @@
-
-  <div class="row">
+<div class="row">
   <div class="col">
     <h1>Contact Us</h1>
   </div>
@@ -13,118 +12,163 @@
 <div class="row" style="margin-top: 28px;">
 <div class="col col-md-8 offset-md-2">
 <div id="contactform">
-<%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+<%= simple_form_for(@form) do |f| %>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:name, "Name:") %>
+      <%= f.label(:name, "Name:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:name, "", :class=>'form-control', :required => true) %>
+      <%= f.input_field :name %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:email, "Email:") %>
+      <%= f.label(:email, "Email:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:email, '', :class=>'form-control') %>
+      <%= f.input_field :email %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:comments, "Comments:") %>
+      <%= f.label(:comments, "Comments:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_area_tag(:comments, "", size: "48x6", :class=>'form-control') %>
+      <%= f.input_field :comments, size: "48x6", as: :text %>
+    </div>
+  </div>
+  
+<div class="form-group row">
+    <div class="col col-md-2">
+      <%= f.label(:address1, "Address Line 1:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input_field :address1 %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:address1, "Address Line 1:") %>
+      <%= f.label(:address2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:address1, "", :class=>'form-control', :required => true) %>
+      <%= f.input_field :address2 %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:address2, "Address Line 2:") %>
+      <%= f.label(:city, "City:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:address2, '', :class=>'form-control') %>
+      <%= f.input_field :city %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:city, "City:") %>
+      <%= f.label(:state, "State:") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:city, "", :class=>'form-control', :required => true) %>
+      <%= f.input_field :state, collection: options_for_select(us_states) %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:state, "State:") %>
+      <%= f.label(:zipcode, "Zip/Post Code:") %>
     </div>
     <div class="col col-md-9">
-      <%= select_tag :state, options_for_select(us_states), :class=>'form-control', :required => true %>
+      <%= f.input_field :zipcode %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= label_tag(:zipcode, "Zip/Post Code:") %>
+      <%= f.label(:country, "Country (if not US):") %>
     </div>
     <div class="col col-md-9">
-      <%= text_field_tag(:zipcode, "", :class=>'form-control', :required => true) %>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col col-md-2">
-      <%= label_tag(:country, "Country (if not US):") %>
-    </div>
-    <div class="col col-md-9">
-      <%= text_field_tag(:country, '', :class=>'form-control') %>
+      <%= f.input :country, as: :string, label: false%>
     </div>
   </div>
 
   <div class="form-group row new-section">
     <div class="col col-md-9 offset-md-2">
-      <%= check_box_tag(:ecatalog) %>
-      <%= label_tag(:ecatalog, "Send me an e-catalog") %>
+      <%= f.input :ecatalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me an e-catalog" %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2">
-      <%= check_box_tag(:printcatalog) %>
-      <%= label_tag(:printcatalog, "Send me a printed catalog and add my name to the mailing list") %>
+      <%= f.input :printcatalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me a printed catalog and add my name to the mailing list" %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2">
-      <%= check_box_tag(:removemailer) %>
-      <%= label_tag(:removemailer, "Remove my name from the mailing list", :id => 'removemailer') %>
-      <%= text_field_tag(:removemailer, '', :id=>'removemailertype', :placeholder=>"Please describe the mailing piece you received") %>
+      <%= f.input :removemailer, as: :boolean, checked_value: true, unchecked_value: false, label: "Remove my name from the mailing list" %>
+      <%= f.input :removemailertype, as: :text, id: 'removemailertype', placeholder: "Please describe the mailing piece you received", label: false %>
     </div>
   </div>
-  <!-- 
+
   <div class="form-group row" id="newsletters">
     <div class="col col-md-9 offset-md-2">
-      <%# check_box_tag(:addmailer) %>
-      <%# label_tag(:addmailer, "Send me e-newsletters about new books and special offers") %>
+      <%= f.input :addmailer, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me e-newsletters about new books and special offers" %>
       <div id="mailersubjects" class="col" style="display:block;">
         <p>My preferred subjects of interest are:</p>
-        <%# select_tag :addmailer, options_for_select(mailers), :size=>7, :multiple => true %>
+        <%= f.input :addmailertype, collection: [
+                                                  ['All Subjects', 'All'],
+                                                  ['African American Studies', 'African American Studies'],
+                                                  ['Aging', 'Aging'],
+                                                  ['American Studies', 'American Studies'],
+                                                  ['Animals and Society', 'Animals and Society'],
+                                                  ['Anthropology', 'Anthropology'],
+                                                  ['Art and Photography', 'Art and Photography'],
+                                                  ['Asian American Studies', 'Asian American Studies'],
+                                                  ['Asian Studies', 'Asian Studies'],
+                                                  ['Biography', 'Biography'],
+                                                  ['Business/Economics', 'Business/Economics'],
+                                                  ['Children\'s Books', 'Children\'s Books'],
+                                                  ['Cinema Studies', 'Cinema Studies'],
+                                                  ['Community Organizing', 'Community Organizing'],
+                                                  ['Cultural Studies', 'Cultural Studies'],
+                                                  ['Death and Dying', 'Death and Dying'],
+                                                  ['Disability Studies', 'Disability Studies'],
+                                                  ['Education', 'Education'],
+                                                  ['Family Policy', 'Family Policy'],
+                                                  ['Gender Studies', 'Gender Studies'],
+                                                  ['General Interest', 'General Interest'],
+                                                  ['Geography', 'Geography'],
+                                                  ['Health and Health Policy', 'Health and Health Policy'],
+                                                  ['History', 'History'],
+                                                  ['Immigration Studies', 'Immigration Studies'],
+                                                  ['Jewish Studies', 'Jewish Studies'],
+                                                  ['Labor Studies and Work', 'Labor Studies and Work'],
+                                                  ['Latin/Caribbean Studies', 'Latin/Caribbean Studies'],
+                                                  ['Latino/a Studies', 'Latino/a Studies'],
+                                                  ['Law and Criminology', 'Law and Criminology'],
+                                                  ['Literature and Drama', 'Literature and Drama'],
+                                                  ['Mass Media and Communications', 'Mass Media and Communications'],
+                                                  ['Music and Dance', 'Music and Dance'],
+                                                  ['Nature and the Environment', 'Nature and the Environment'],
+                                                  ['Philadelphia Region', 'Philadelphia Region'],
+                                                  ['Philosophy and Ethics', 'Philosophy and Ethics'],
+                                                  ['Political Science and Public Policy', 'Political Science and Public Policy'],
+                                                  ['Psychology', 'Psychology'],
+                                                  ['Race and Ethnicity', 'Race and Ethnicity'],
+                                                  ['Religion', 'Religion'],
+                                                  ['Science', 'Science'],
+                                                  ['Sexual Identity', 'Sexual Identity'],
+                                                  ['Sociology', 'Sociology'],
+                                                  ['Sports', 'Sports'],
+                                                  ['Technology', 'Technology'],
+                                                  ['Urban Studies', 'Urban Studies'],
+                                                  ['Women\'s Studies', 'Women\'s Studies'],
+                                                  ['Youth Studies', 'Youth Studies']
+                                                ], input_html: { size: 7, multiple: true }, label: false %>
         <div style="font-size:smaller;">(use the CTRL/CMD key to select multiple subjects)</div>
       </div>
     </div>
   </div>
-  -->
+
+
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2 new-section">
-      <%= hidden_field_tag 'subject', 'Contact' %>
-      <%= hidden_field_tag 'next-url', request.base_url+root_path+'contact' %>
-      <%= submit_tag("Submit") %>
-      <%= button_tag "Reset", type: :button, :id=>"reset" %>
+      <%= f.input 'subject', input_html: { value: 'Contact'}, as: :hidden %>
+      <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>
 

@@ -1,6 +1,5 @@
 class PageController < ApplicationController
-
-
+  
   before_action :set_page, only: [:edit, :update]
 
 require 'pry'
@@ -20,6 +19,8 @@ require 'pry'
   end
   def contact
     @page = Page.find_by(id: params[:id])
+    @form = Form.new(params[:contact])
+    @form.request = request
   end
   def order
     @page = Page.find_by(id: params[:id])
