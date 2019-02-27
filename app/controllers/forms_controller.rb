@@ -7,14 +7,12 @@ class FormsController < ApplicationController
 
   def create
     @form = Form.new(params[:form])
-
-    # binding.pry
-
-    if ApplicationMailer.contact(@form).deliver
-      flash.now[:notice] = "Thank you for your message. We will contact you soon!"
+    @form.request = request
+    # if ApplicationMailer.router(@form).deliver
+    if @form.deliver
+      redirect_to "/#{@form.type.dasherize}", notice: 'Thank you for your message. We will contact you soon!' 
     else
-      flash.now[:error] = "Cannot send message."
-      render "#{params[:form][:type]}"
+      redirect_to "/#{@form.type.dasherize}", notice: 'Message could not be sent'
     end
   end
 end

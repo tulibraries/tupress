@@ -83,7 +83,7 @@
       <%= f.label(:country, "Country (if not US):") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :country, as: :string, label: false%>
+      <%= f.input :country, as: :string, label: false %>
     </div>
   </div>
 
@@ -158,16 +158,20 @@
                                                   ['Urban Studies', 'Urban Studies'],
                                                   ['Women\'s Studies', 'Women\'s Studies'],
                                                   ['Youth Studies', 'Youth Studies']
-                                                ], input_html: { size: 7, multiple: true }, label: false %>
-        <div style="font-size:smaller;">(use the CTRL/CMD key to select multiple subjects)</div>
+                                                ], input_html: { size: 7, multiple: true }, label: false, hint: "(use the CTRL/CMD key to select multiple subjects)" %>
       </div>
     </div>
   </div>
 
 
+    <div class="nickname">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2 new-section">
-      <%= f.input 'subject', input_html: { value: 'Contact'}, as: :hidden %>
+      <%= f.input 'subject', input_html: { value: 'Contact Form'}, as: :hidden %>
+      <%= f.input 'type', input_html: { value: 'contact'}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>

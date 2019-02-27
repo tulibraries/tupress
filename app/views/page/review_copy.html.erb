@@ -9,10 +9,10 @@
 <div class="col col-md-10 offset-md-1">
 <%= @page.content.html_safe %>
 <div id="contactform">
-<%= form_tag("http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", method: "post", :class=>"contact-form") do %>
+<%= simple_form_for(@form) do |f| %>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:name, "Name:") %>
+      <%= label(:name, "Name:") %>
     </div>
     <div class="col col-md-9 col-12">
       <%= text_field_tag(:name, "", :class => 'form-control', :required => true) %>
@@ -20,7 +20,7 @@
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:email, "Email:") %>
+      <%= label(:email, "Email:") %>
     </div>
     <div class="col col-md-9 col-12">
       <%= text_field_tag(:email,'', :class => 'form-control') %>
@@ -28,110 +28,91 @@
   </div>
   <div class="row">
     <div class="col col-md-3">
-      <%= label_tag(:mediatype, "Media Type:") %>
+      <%= label(:mediatype, "Media Type:") %>
     </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Radio/TV"> Radio/TV</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Magazine"> Magazine</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Journal"> Journal</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Newspaper"> Newspaper</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Exam/Desk Copy"> Exam/Desk Copy</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="radio col offset-3">
-      <label><input type="radio" name="mediatype" value="Other"> Other</label>
+    <div class="radio col col-md-9 col-12">
+      <%= f.input :mediatype, as: :radio_buttons, label: false, collection: [["Radio/TV","Radio/TV"],
+                                                                            ["Magazine","Magazine"],
+                                                                            ["Journal","Journal"],
+                                                                            ["Newspaper","Newspaper"],
+                                                                            ["Exam/Desk Copy","Exam/Desk Copy"],
+                                                                            ["Other","Other"]] %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:website, "Website:") %>
+      <%= f.label(:website, "Website:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:website, "", :class => 'form-control') %>
+      <%= f.input :website, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:request, "request:") %>
+      <%= f.label(:request_text, "Request:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_area_tag(:request, "", size: "48x6", :class => 'form-control') %>
+      <%= f.input :request_text, as: :text, label: false, required: true, input_html: { size: "48x6" } %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:address1, "Address Line 1:") %>
+      <%= f.label(:address1, "Address Line 1:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:address, "", :class => 'form-control', :required => true) %>
+      <%= f.input :address1, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:address2, "Address Line 1:") %>
+      <%= f.label(:address2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:address2, "", :class => 'form-control', :required => true) %>
+      <%= f.input :address2, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:city, "City:") %>
+      <%= f.label(:city, "City:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:city, "", :class => 'form-control', :required => true) %>
+      <%= f.input :city, label: false, required: true %>
     </div>
   </div>
    <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:state, "State/Province/Region: ") %>
+      <%= f.label(:state, "State/Province/Region: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:state, "", :class => 'form-control', :required => true) %>
+      <%= f.input :state, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:zipcode, "Zip/Postal Code: ") %>
+      <%= f.label(:zipcode, "Zip/Postal Code: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:zipcode, "", :class => 'form-control', :required => true) %>
+      <%= f.input :zipcode, label: false %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= label_tag(:country, "Country (if not US):") %>
+      <%= f.label(:country, "Country (if not US):") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:country,'', :class => 'form-control') %>
+      <%= f.input :country, as: :string, label: false %>
     </div>
   </div>
 
+    <div class="nickname">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    
   <div class="row">
     <div class="col col-md-9 offset-md-2 new-section">
-      <%= hidden_field_tag 'subject', 'Review Copy Request' %>
-      <%= hidden_field_tag 'next-url', request.base_url+root_path+'received-reviewcopy' %>
-      <%= submit_tag("Submit Request") %>
-      <%= button_tag "Reset", type: :reset %>
+      <%= f.input 'subject', input_html: { value: 'Review Copy Request'}, as: :hidden %>
+      <%= f.input 'type', input_html: { value: 'review_copy'}, as: :hidden %>
+      <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>
 
