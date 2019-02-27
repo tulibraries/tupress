@@ -7,3 +7,17 @@
 		width: 100%;
 	}
 }
+.radio_buttons {
+	legend {
+		display: none;
+	}
+}
+.form_requesttype {
+	div.form-check {
+		display: inline-block;
+		margin-right: 21px;
+	}
+}
+.nickname {
+	display: none;
+}
