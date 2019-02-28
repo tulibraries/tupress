@@ -1,0 +1,23 @@
+// Place all the styles related to the Forms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#contactform {
+	input[type="text"], textarea {
+		width: 100%;
+	}
+}
+.radio_buttons {
+	legend {
+		display: none;
+	}
+}
+.form_requesttype {
+	div.form-check {
+		display: inline-block;
+		margin-right: 21px;
+	}
+}
+.nickname {
+	display: none;
+}

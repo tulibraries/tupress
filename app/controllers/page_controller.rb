@@ -1,6 +1,5 @@
 class PageController < ApplicationController
-
-
+  
   before_action :set_page, only: [:edit, :update]
 
 require 'pry'
@@ -20,6 +19,8 @@ require 'pry'
   end
   def contact
     @page = Page.find_by(id: params[:id])
+    @form = Form.new(params[:form])
+    @form.request = request
   end
   def order
     @page = Page.find_by(id: params[:id])
@@ -29,9 +30,8 @@ require 'pry'
   end
   def copy_request
     @page = Page.find_by(id: params[:id])
-  end
-  def received_copy_request
-    @page = Page.find_by(id: params[:id])
+    @form = Form.new(params[:form])
+    @form.request = request
   end
   def reviews
     @reviews = Review.all.sort_by {|review| review.created_at}
@@ -49,6 +49,8 @@ require 'pry'
   end
   def review_copy
     @page = Page.find_by(id: params[:id])
+    @form = Form.new(params[:form])
+    @form.request = request
   end
   def press_info
     @page = Page.find_by(id: params[:id])
@@ -57,12 +59,6 @@ require 'pry'
     @people_by_dept = Person.all.group_by {|t| t.department}
   end
   def rights
-    @page = Page.find_by(id: params[:id])
-  end
-  def received_rights 
-    @page = Page.find_by(id: params[:id])
-  end
-  def received_review_copy 
     @page = Page.find_by(id: params[:id])
   end
   def foreign_rights

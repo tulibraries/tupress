@@ -42,6 +42,8 @@ gem 'trestle-search'
 gem "mini_magick"
 gem 'loofah', '2.2.2'
 gem 'rails-html-sanitizer',' ~> 1.0.4'
+gem 'mail_form'
+gem 'simple_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
