@@ -47,7 +47,6 @@ class Form < MailForm::Base
     {
       :subject => "#{subject}",
       :to => "cdoyle@temple.edu",
-      # :to => "tempress@temple.edu",
       :from => %("#{name}" <#{email}>)
     }
   end
