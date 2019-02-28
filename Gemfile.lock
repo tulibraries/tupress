@@ -106,7 +106,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
-    jquery-validation-rails (1.16.0)
+    jquery-validation-rails (1.19.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -300,7 +300,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
-  jquery-validation-rails (~> 1.13, >= 1.13.1)
+  jquery-validation-rails (~> 1.19)
   listen (~> 3.1.5)
   loofah (= 2.2.2)
   mail_form
