@@ -28,10 +28,10 @@
   </div>
   <div class="row">
     <div class="col col-md-3">
-      <%= label(:mediatype, "Media Type:") %>
+      <%= label(:media_type, "Media Type:") %>
     </div>
     <div class="radio col col-md-9 col-12">
-      <%= f.input :mediatype, as: :radio_buttons, label: false, collection: [["Radio/TV","Radio/TV"],
+      <%= f.input :media_type, as: :radio_buttons, label: false, collection: [["Radio/TV","Radio/TV"],
                                                                             ["Magazine","Magazine"],
                                                                             ["Journal","Journal"],
                                                                             ["Newspaper","Newspaper"],
@@ -49,26 +49,26 @@
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= f.label(:request_text, "Request:") %>
+      <%= f.label(:request, "Request:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :request_text, as: :text, label: false, required: true, input_html: { size: "48x6" } %>
+      <%= f.input :request, as: :text, label: false, required: true, input_html: { size: "48x6" } %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= f.label(:address1, "Address Line 1:") %>
+      <%= f.label(:address_line_1, "Address Line 1:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address1, label: false, required: true %>
+      <%= f.input :address_line_1, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= f.label(:address2, "Address Line 2:") %>
+      <%= f.label(:address_line_2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address2, label: false, required: true %>
+      <%= f.input :address_line_2, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">

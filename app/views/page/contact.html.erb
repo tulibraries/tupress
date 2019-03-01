@@ -18,8 +18,9 @@
       <%= f.label(:name, "Name:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :name %>
+      <%= f.input_field :name, required: true %>
     </div>
+    <%# binding.pry %>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
@@ -40,18 +41,18 @@
   
 <div class="form-group row">
     <div class="col col-md-2">
-      <%= f.label(:address1, "Address Line 1:") %>
+      <%= f.label(:address_line_1, "Address Line 1:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :address1 %>
+      <%= f.input_field :address_line_1, required: true %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-2">
-      <%= f.label(:address2, "Address Line 2:") %>
+      <%= f.label(:address_line_2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :address2 %>
+      <%= f.input_field :address_line_2 %>
     </div>
   </div>
   <div class="form-group row">
@@ -59,7 +60,7 @@
       <%= f.label(:city, "City:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :city %>
+      <%= f.input_field :city, required: true %>
     </div>
   </div>
   <div class="form-group row">
@@ -67,7 +68,7 @@
       <%= f.label(:state, "State:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :state, collection: options_for_select(us_states) %>
+      <%= f.input_field :state, collection: options_for_select(us_states), required: true %>
     </div>
   </div>
   <div class="form-group row">
@@ -75,7 +76,7 @@
       <%= f.label(:zipcode, "Zip/Post Code:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :zipcode %>
+      <%= f.input_field :zipcode, required: true %>
     </div>
   </div>
   <div class="form-group row">
@@ -89,27 +90,27 @@
 
   <div class="form-group row new-section">
     <div class="col col-md-9 offset-md-2">
-      <%= f.input :ecatalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me an e-catalog" %>
+      <%= f.input :send_ecatalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me an e-catalog" %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2">
-      <%= f.input :printcatalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me a printed catalog and add my name to the mailing list" %>
+      <%= f.input :send_print_catalog, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me a printed catalog and add my name to the mailing list" %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col col-md-9 offset-md-2">
-      <%= f.input :removemailer, as: :boolean, checked_value: true, unchecked_value: false, label: "Remove my name from the mailing list" %>
-      <%= f.input :removemailertype, as: :text, id: 'removemailertype', placeholder: "Please describe the mailing piece you received", label: false %>
+      <%= f.input :remove_from_mailing, as: :boolean, checked_value: true, unchecked_value: false, label: "Remove my name from the mailing list" %>
+      <%= f.input :mailing_type, as: :text, id: 'removemailertype', placeholder: "Please describe the mailing piece you received", label: false %>
     </div>
   </div>
 
   <div class="form-group row" id="newsletters">
     <div class="col col-md-9 offset-md-2">
-      <%= f.input :addmailer, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me e-newsletters about new books and special offers" %>
+      <%= f.input :send_newsletter, as: :boolean, checked_value: true, unchecked_value: false, label: "Send me e-newsletters about new books and special offers" %>
       <div id="mailersubjects" class="col" style="display:block;">
         <p>My preferred subjects of interest are:</p>
-        <%= f.input :addmailertype, collection: [
+        <%= f.input :newsletter_type, collection: [
                                                   ['All Subjects', 'All'],
                                                   ['African American Studies', 'African American Studies'],
                                                   ['Aging', 'Aging'],
@@ -158,7 +159,9 @@
                                                   ['Urban Studies', 'Urban Studies'],
                                                   ['Women\'s Studies', 'Women\'s Studies'],
                                                   ['Youth Studies', 'Youth Studies']
-                                                ], input_html: { size: 7, multiple: true }, label: false, hint: "(use the CTRL/CMD key to select multiple subjects)" %>
+                                                ], input_html: { size: 7, multiple: true }, 
+                                                    label: false, 
+                                                    hint: "(use the CTRL/CMD key to select multiple subjects)" %>
       </div>
     </div>
   </div>

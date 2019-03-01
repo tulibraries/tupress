@@ -8,11 +8,16 @@ class FormsController < ApplicationController
   def create
     @form = Form.new(params[:form])
     @form.request = request
-    # if ApplicationMailer.router(@form).deliver
+
     if @form.deliver
       redirect_to "/#{@form.type.dasherize}", notice: 'Thank you for your message. We will contact you soon!' 
     else
-      redirect_to "/#{@form.type.dasherize}", notice: 'Message could not be sent'
+      @messages = Array.new
+      @form.errors.each do |key,value|
+        @messages << key.to_s.humanize.capitalize+' '+value.to_s
+      end
+      redirect_to "/#{@form.type.dasherize}", notice: @messages.join(', '), @form => @form
+      # binding.pry
     end
   end
 end
