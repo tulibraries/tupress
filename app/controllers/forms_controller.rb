@@ -8,6 +8,7 @@ class FormsController < ApplicationController
   def create
     @form = Form.new(params[:form])
     @form.request = request
+    
     if @form.deliver
       redirect_to "/#{@form.type.dasherize}", notice: 'Thank you for your message. We will contact you soon!' 
     else
