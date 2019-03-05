@@ -28,16 +28,10 @@ controller :page do
   get   'press-info'                 => :press_info,               :id => 1
   get   'rights'                     => :rights,                   :id => 2
   get   'submissions'                => :submissions,              :id => 3
-  get   'review-copy'                => :review_copy,              :id => 4
   get   'payment'                    => :payment,                  :id => 5
-  get   'copy-request'               => :copy_request,             :id => 6
   get   'copyright'                  => :copyright,                :id => 7
   get   'university-presses'         => :university_presses,       :id => 8
   get   'order'                      => :order,                    :id => 9
-  get   'received-rights'            => :received_rights ,         :id => 10
-  get   'received-review-copy'       => :received_review_copy,     :id => 11
-  get   'received-copy-request'      => :received_copy_request,    :id => 12
-  get   'contact'                    => :contact,                  :id => 13
   get   'book-reviews'               => :reviews
   get   'conferences'                => :conferences
   get   'people'                     => :people
@@ -53,8 +47,14 @@ controller :page do
   root 	'page#index'
 end 
 
+# controller :forms do 
+  get 'review-copy',   to: "forms#review_copy"
+  get 'copy-request',  to: "forms#copy_request"
+  get 'contact',       to: "forms#contact"
+# end
+
 controller :subject do 
-	get 'subjects'			    => :index
+  get 'subjects'          => :index
 end
 
 controller :series do 
@@ -126,9 +126,9 @@ resources :journals
 resources :reviews
 resources :harvests
 resources :review_harvests
-resources :forms , only: [:new, :create]
+resources :forms , only: [:new, :create, :show, :contact]
 
-get '*path' => redirect("/")
+# get '*path' => redirect("/")
 
 
 end
