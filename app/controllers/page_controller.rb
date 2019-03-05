@@ -19,6 +19,7 @@ require 'pry'
   end
   def contact
     @page = Page.find_by(id: params[:id])
+    # binding.pry
     @form = Form.new(params[:form])
     @form.request = request
   end

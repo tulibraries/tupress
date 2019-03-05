@@ -1,43 +1,47 @@
 class Form < MailForm::Base
 	# include MailForm::Delivery
+  include ActiveModel::Validations
 
-  attributes :name,      :validate => true
-  attributes :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attributes :comments
+  attributes :name,             :validate => true
+  attributes :email,            :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute  :address_line_1,   :validate => true
+  attribute  :city,             :validate => true
+  attribute  :state,            :validate => true
+  attribute  :zipcode,          :validate => true
+  attribute  :file    
+
   attributes :subject,
-             :address,
-             :address1,
-             :address2,
-             :city,
-             :state,
-             :zipcode,
+             :address_line_2,
              :country,
-             :ecatalog,
-             :printcatalog,
-             :removemailer,
-             :removemailertype,
-             :addmailer,
-             :addmailertype,
+             :send_ecatalog,
+             :send_print_catalog,
+             :remove_from_mailing,
+             :mailing_type,
+             :send_newsletter,
+             :newsletter_type,
              :type,
-             :page
+             :page,
+             :comments
 
-  attributes :requesttype,
+  attributes :request_type,
              :university,
              :department,
              :instructor,
-             :coursetitle,
+             :course_title,
              :enrollment,
              :semester,
              :title1,
-             :title2,
-             :title3,
              :author1,
+             :media_type,          :validate => true
+
+
+  attributes :title2,
+             :title3,
              :author2,
              :author3,
              :bookstore,
-             :mediatype,
              :website,
-             :request_text
+             :request
 
   attributes :nickname,  :captcha  => true
 

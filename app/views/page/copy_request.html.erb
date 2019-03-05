@@ -17,7 +17,7 @@
   <%= simple_form_for(@form) do |f| %>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= f.label(:name, "Requested by: ") %>
+      <%= f.label(:name, "Name: ") %>
     </div>
     <div class="col col-md-9 col-12">
       <%= f.input :name, required: true, label: false %>
@@ -33,10 +33,10 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= f.label(:requesttype, "Request Type: ") %>
+      <%= f.label(:request_type, "Request Type: ") %>
     </div>
     <div class="radio col col-md-9 col-12">
-       <%= f.input :requesttype, as: :radio_buttons, label: false, collection: [['Desk Copy','Desk Copy'],['Exam Copy','Exam Copy']], wrapper_html: { style: 'margin-top: 10px;' } %> 
+       <%= f.input :request_type, as: :radio_buttons, label: false, collection: [['Desk Copy','Desk Copy'],['Exam Copy','Exam Copy']], wrapper_html: { style: 'margin-top: 10px;' } %> 
         <span style="display:block;margin:0">* <strong>Exam Copy</strong> requests are for course adoption consideration</span>
         <span style="display:block;margin:0">* <strong>Desk Copy</strong> requests are for titles that have been adopted/bookstore orders placed</span></li>
     </div>
@@ -59,18 +59,18 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= f.label(:address, "Address: ") %>
+      <%= f.label(:address_line_1, "Address: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address, required: true, label: false %>
+      <%= f.input :address_line_1, required: true, label: false %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= f.label(:address2, "Address Line 2: ") %>
+      <%= f.label(:address_line_2, "Address Line 2: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address2, label: false %>
+      <%= f.input :address_line_2, label: false %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -115,10 +115,10 @@
   </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <%= f.label(:coursetitle, "Course Title: ") %>
+      <%= f.label(:course_title, "Course Title: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :coursetitle, required: true, label: false %>
+      <%= f.input :course_title, required: true, label: false %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
