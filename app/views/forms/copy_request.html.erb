@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <h1><%= @page.name %></h1>
+    <h1><%# @page.name %></h1>
   </div>
 </div>
 
@@ -8,7 +8,7 @@
 
 <div class="row">
   <div class="col-10 offset-md-1">
-    <%= @page.content.html_safe %>
+    <p>We invite you to fill out the form below or to write on departmental letterhead for an examination copy of any paperback title you wish to consider for course adoption or request for desk copies. For examination copies, please state course title, semester, and projected enrollment. For desk copies, please provide course ID, instructor's name, projected enrollment, semester class will be taught, and the name of the bookstore that will be placing the order. All orders can be forwarded to: <%= mail_to "examcopy@temple.edu", "examcopy@temple.edu" %></p>
   </div>
 </div>
 <div class="row" style="margin-bottom: 42px;margin-top:21px;">
@@ -204,6 +204,7 @@
       <p>We allow up to three titles per course per semester.</p>
       <%= f.input 'subject', input_html: { value: 'Desk/Exam Copy Request'}, as: :hidden %>
       <%= f.input 'type', input_html: { value: 'copy_request'}, as: :hidden %>
+      <%= f.input 'page_id', input_html: { value: @form.page_id}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>

@@ -6,7 +6,9 @@
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row">
   <div class="col col-md-10 offset-md-1">
-  <%= @page.content.html_safe %>
+    <p>To order, please call 1-800-621-2736 or fax 1-800-621-8476.</p>
+    <p>If you want to send us a message, fill out the following form. You can also call 215-926-2140 or write to:</p>
+    <address class="col col-md-12 offset-md-1" style="font-weight: 600;">Temple University Press<br>TASB<br>1852 North 10th Street<br>Philadelphia, PA 19122</address>
   </div>
 </div>
 <div class="row" style="margin-top: 28px;">
@@ -18,7 +20,7 @@
       <%= f.label(:name, "Name:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :name, required: true %>
+      <%= f.input :name, label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -26,7 +28,7 @@
       <%= f.label(:email, "Email:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :email %>
+      <%= f.input :email, as: :email, label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -34,7 +36,7 @@
       <%= f.label(:comments, "Comments:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :comments, size: "48x6", as: :text %>
+      <%= f.input :comments, size: "48x6", as: :text, label: false  %>
     </div>
   </div>
   
@@ -43,7 +45,7 @@
       <%= f.label(:address_line_1, "Address Line 1:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :address_line_1, required: true %>
+      <%= f.input :address_line_1, label: false %>
     </div>
   </div>
   <div class="form-group row">
@@ -51,7 +53,7 @@
       <%= f.label(:address_line_2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :address_line_2 %>
+      <%= f.input :address_line_2, label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -59,7 +61,7 @@
       <%= f.label(:city, "City:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :city, required: true %>
+      <%= f.input :city, label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -67,7 +69,7 @@
       <%= f.label(:state, "State:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :state, collection: options_for_select(us_states), required: true %>
+      <%= f.input :state, collection: options_for_select(us_states), label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -75,7 +77,7 @@
       <%= f.label(:zipcode, "Zip/Post Code:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input_field :zipcode, required: true %>
+      <%= f.input :zipcode, label: false  %>
     </div>
   </div>
   <div class="form-group row">
@@ -174,6 +176,7 @@
     <div class="col col-md-9 offset-md-2 new-section">
       <%= f.input 'subject', input_html: { value: 'Contact Form'}, as: :hidden %>
       <%= f.input 'type', input_html: { value: 'contact'}, as: :hidden %>
+      <%= f.input 'page_id', input_html: { value: params[:page_id]}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>
@@ -182,7 +185,7 @@
 </div>
 <div id="formfooter" style="margin-top: 42px;">
   <div class="col">
-    <%= @page.content2.html_safe %>
+    <p><strong>Privacy Policy</strong>: Temple University Press respects your privacy. We carefully control the distribution of our customer information, and although we occasionally buy, sell, and swap mailing lists, we do so only with like-minded organizations. If you wish to be removed from either the postal mailing list or the email distribution list, please <%= mail_to "tempress@temple.edu", "send a note to the webmaster", class: "inline" %>.</p>
   </div>
 </div>
 </div>

@@ -17,22 +17,11 @@ require 'pry'
     @catalog = Season.where.not(suppress: 1).order(created_at: :desc).first
     @homepage_subject = Brochure.where(promoted_to_homepage: 1).order(updated_at: :desc).first
   end
-  def contact
-    @page = Page.find_by(id: params[:id])
-    # binding.pry
-    @form = Form.new(params[:form])
-    @form.request = request
-  end
   def order
     @page = Page.find_by(id: params[:id])
   end
   def payment
     @page = Page.find_by(id: params[:id])
-  end
-  def copy_request
-    @page = Page.find_by(id: params[:id])
-    @form = Form.new(params[:form])
-    @form.request = request
   end
   def reviews
     @reviews = Review.all.sort_by {|review| review.created_at}
@@ -47,11 +36,6 @@ require 'pry'
   def downloads
     @documents_by_dept = Document.all.group_by {|t| t.department}
     @documents_by_contact = @documents_by_dept.map {|dept_name, documents| [documents, Person.find_by(document_contact: dept_name)]}
-  end
-  def review_copy
-    @page = Page.find_by(id: params[:id])
-    @form = Form.new(params[:form])
-    @form.request = request
   end
   def press_info
     @page = Page.find_by(id: params[:id])
