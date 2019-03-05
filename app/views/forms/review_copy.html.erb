@@ -1,13 +1,14 @@
 <div class="row">
   <div class="col">
-    <h1><%= @page.name %></h1>
+    <h1><%# @page.name %></h1>
   </div>
 </div>
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
 <div class="col col-md-10 offset-md-1">
-<%= @page.content.html_safe %>
+<p>To request a copy of a Temple University Press book, please fax your request on company letterhead to: Gary Kramer at 215.926.2141. If you would like to email your request, please include your name and contact information.</p>
+<p><strong>If you are a professor</strong> wishing to request an examination copy or a desk copy of a book that you've ordered for your class, you may email us at: <%= mail_to "examcopy@temple.edu", "examcopy@temple.edu" %> fax your request on letterhead to 215-925-2141, or use our <%= link_to "online form", "/copy-request" %>. Thanks.</p>
 <div id="contactform">
 <%= simple_form_for(@form) do |f| %>
   <div class="form-group row">
@@ -15,7 +16,7 @@
       <%= label(:name, "Name:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:name, "", :class => 'form-control', :required => true) %>
+      <%= f.input :name, label: false %>
     </div>
   </div>
   <div class="form-group row">
@@ -23,7 +24,7 @@
       <%= label(:email, "Email:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= text_field_tag(:email,'', :class => 'form-control') %>
+      <%= f.input :email, as: :email, label: false %>
     </div>
   </div>
   <div class="row">
@@ -49,10 +50,10 @@
   </div>
   <div class="form-group row">
     <div class="col col-md-3">
-      <%= f.label(:request, "Request:") %>
+      <%= f.label(:request_text, "Request:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :request, as: :text, label: false, required: true, input_html: { size: "48x6" } %>
+      <%= f.input :request_text, as: :text, label: false, required: true, input_html: { size: "48x6" } %>
     </div>
   </div>
   <div class="form-group row">

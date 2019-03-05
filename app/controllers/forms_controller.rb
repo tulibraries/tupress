@@ -1,8 +1,17 @@
 # frozen_string_literal: true
 
 class FormsController < ApplicationController
-  def new
-    @form = Form.new
+
+  def contact
+    @form = Form.new(params[:form])
+  end
+
+  def review_copy
+    @form = Form.new(params[:form])
+  end
+
+  def copy_request
+    @form = Form.new(params[:form])
   end
 
   def create
@@ -10,13 +19,11 @@ class FormsController < ApplicationController
     @form.request = request
     
     if @form.deliver
-      redirect_to "/#{@form.type.dasherize}", notice: 'Thank you for your message. We will contact you soon!' 
+      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
+      render action: @form.type
     else
-      @messages = Array.new
-      @form.errors.each do |key,value|
-        @messages << key.to_s.humanize.capitalize+' '+value.to_s
-      end
-      redirect_to "/#{@form.type.dasherize}", notice: @messages.join(', ')
+      flash.now[:error] = 'Cannot send message.'
+      render action: @form.type
     end
   end
 end

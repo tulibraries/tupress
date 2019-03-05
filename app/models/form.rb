@@ -10,7 +10,8 @@ class Form < MailForm::Base
   attribute  :zipcode,          :validate => true
   attribute  :file    
 
-  attributes :subject,
+  attributes :page_id,
+             :subject,
              :address_line_2,
              :country,
              :send_ecatalog,
@@ -41,7 +42,7 @@ class Form < MailForm::Base
              :author3,
              :bookstore,
              :website,
-             :request
+             :request_text
 
   attributes :nickname,  :captcha  => true
 
