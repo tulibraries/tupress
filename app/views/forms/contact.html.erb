@@ -20,7 +20,7 @@
       <%= f.label(:name, "Name:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :name, label: false  %>
+      <%= f.input :name, label: false, required: true  %>
     </div>
   </div>
   <div class="form-group row">
@@ -28,7 +28,7 @@
       <%= f.label(:email, "Email:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :email, as: :email, label: false  %>
+      <%= f.input :email, as: :email, label: false, required: true  %>
     </div>
   </div>
   <div class="form-group row">
@@ -36,7 +36,7 @@
       <%= f.label(:comments, "Comments:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :comments, size: "48x6", as: :text, label: false  %>
+      <%= f.input :comments, size: "48x6", as: :text, label: false, required: true  %>
     </div>
   </div>
   
@@ -45,7 +45,7 @@
       <%= f.label(:address_line_1, "Address Line 1:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :address_line_1, label: false %>
+      <%= f.input :address_line_1, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
@@ -61,7 +61,7 @@
       <%= f.label(:city, "City:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :city, label: false  %>
+      <%= f.input :city, label: false, required: true  %>
     </div>
   </div>
   <div class="form-group row">
@@ -69,7 +69,7 @@
       <%= f.label(:state, "State:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :state, collection: options_for_select(us_states), label: false  %>
+      <%= f.input :state, collection: options_for_select(us_states), label: false, required: true  %>
     </div>
   </div>
   <div class="form-group row">
@@ -77,7 +77,7 @@
       <%= f.label(:zipcode, "Zip/Post Code:") %>
     </div>
     <div class="col col-md-9">
-      <%= f.input :zipcode, label: false  %>
+      <%= f.input :zipcode, label: false, required: true  %>
     </div>
   </div>
   <div class="form-group row">
@@ -176,7 +176,6 @@
     <div class="col col-md-9 offset-md-2 new-section">
       <%= f.input 'subject', input_html: { value: 'Contact Form'}, as: :hidden %>
       <%= f.input 'type', input_html: { value: 'contact'}, as: :hidden %>
-      <%= f.input 'page_id', input_html: { value: params[:page_id]}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>

@@ -14,13 +14,16 @@ class FormsController < ApplicationController
     @form = Form.new(params[:form])
   end
 
+  def rights
+    @form = Form.new(params[:form])
+  end
+
   def create
     @form = Form.new(params[:form])
     @form.request = request
     
     if @form.deliver
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-      render action: @form.type
+      redirect_to root_path, notice: 'Thank you for your message. We will contact you soon!'
     else
       flash.now[:error] = 'Cannot send message.'
       render action: @form.type
