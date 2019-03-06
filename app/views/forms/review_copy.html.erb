@@ -16,7 +16,7 @@
       <%= label(:name, "Name:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :name, label: false %>
+      <%= f.input :name, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
@@ -24,7 +24,7 @@
       <%= label(:email, "Email:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :email, as: :email, label: false %>
+      <%= f.input :email, as: :email, label: false, required: true %>
     </div>
   </div>
   <div class="row">
@@ -32,12 +32,13 @@
       <%= label(:media_type, "Media Type:") %>
     </div>
     <div class="radio col col-md-9 col-12">
-      <%= f.input :media_type, as: :radio_buttons, label: false, collection: [["Radio/TV","Radio/TV"],
-                                                                            ["Magazine","Magazine"],
-                                                                            ["Journal","Journal"],
-                                                                            ["Newspaper","Newspaper"],
-                                                                            ["Exam/Desk Copy","Exam/Desk Copy"],
-                                                                            ["Other","Other"]] %>
+      <%= f.input :media_type, as: :radio_buttons, 
+                    required: true, label: false, collection: [["Radio/TV","Radio/TV"],
+                                                              ["Magazine","Magazine"],
+                                                              ["Journal","Journal"],
+                                                              ["Newspaper","Newspaper"],
+                                                              ["Exam/Desk Copy","Exam/Desk Copy"],
+                                                              ["Other","Other"]] %>
     </div>
   </div>
   <div class="form-group row">
@@ -45,7 +46,7 @@
       <%= f.label(:website, "Website:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :website, label: false, required: true %>
+      <%= f.input :website, label: false %>
     </div>
   </div>
   <div class="form-group row">
@@ -69,7 +70,7 @@
       <%= f.label(:address_line_2, "Address Line 2:") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address_line_2, label: false, required: true %>
+      <%= f.input :address_line_2, label: false %>
     </div>
   </div>
   <div class="form-group row">
@@ -93,7 +94,7 @@
       <%= f.label(:zipcode, "Zip/Postal Code: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :zipcode, label: false %>
+      <%= f.input :zipcode, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row">
