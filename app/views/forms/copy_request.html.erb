@@ -20,7 +20,7 @@
       <%= f.label(:name, "Name: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :name, required: true, label: false %>
+      <%= f.input :name, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -28,7 +28,7 @@
       <%= f.label(:email, "Email: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :email, as: :email, required: true, label: false %>
+      <%= f.input :email, as: :email, label: false %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -36,7 +36,7 @@
       <%= f.label(:request_type, "Request Type: ") %>
     </div>
     <div class="radio col col-md-9 col-12">
-       <%= f.input :request_type, as: :radio_buttons, label: false, collection: [['Desk Copy','Desk Copy'],['Exam Copy','Exam Copy']], wrapper_html: { style: 'margin-top: 10px;' } %> 
+       <%= f.input :request_type, as: :radio_buttons, label: false, required: true, collection: [['Desk Copy','Desk Copy'],['Exam Copy','Exam Copy']], wrapper_html: { style: 'margin-top: 10px;' } %> 
         <span style="display:block;margin:0">* <strong>Exam Copy</strong> requests are for course adoption consideration</span>
         <span style="display:block;margin:0">* <strong>Desk Copy</strong> requests are for titles that have been adopted/bookstore orders placed</span></li>
     </div>
@@ -46,7 +46,7 @@
       <%= f.label(:university, "University: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :university, required: true, label: false %>
+      <%= f.input :university, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -54,7 +54,7 @@
       <%= f.label(:department, "Department: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :department, required: true, label: false %>
+      <%= f.input :department, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -62,7 +62,7 @@
       <%= f.label(:address_line_1, "Address: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :address_line_1, required: true, label: false %>
+      <%= f.input :address_line_1, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -78,7 +78,7 @@
       <%= f.label(:city, "City: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :city, required: true, label: false %>
+      <%= f.input :city, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -86,7 +86,7 @@
       <%= f.label(:state, "State/Province/Region: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :state, required: true, label: false %>
+      <%= f.input :state, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -94,7 +94,7 @@
       <%= f.label(:zipcode, "Zip/Postal Code: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :zipcode, required: true, label: false %>
+      <%= f.input :zipcode, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -110,7 +110,7 @@
       <%= f.label(:instructor, "Instructor: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f. input :instructor, required: true, label: false %>
+      <%= f. input :instructor, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -118,7 +118,7 @@
       <%= f.label(:course_title, "Course Title: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :course_title, required: true, label: false %>
+      <%= f.input :course_title, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -126,7 +126,7 @@
       <%= f.label(:enrollment, "Projected Enrollment: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :enrollment, as: :integer, required: true, label: false %>
+      <%= f.input :enrollment, as: :integer, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -134,7 +134,7 @@
       <%= f.label(:semester, "Semester Taught: ") %>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.input :semester, required: true, label: false %>
+      <%= f.input :semester, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -143,11 +143,11 @@
     </div>
     <div class="col col-md-9 col-12">
       <%= f.label(:title1, "Title: ") %>
-      <%= f.input :title1, required: true, label: false %>
+      <%= f.input :title1, label: false, required: true %>
     </div>
     <div class="col col-md-9 col-12 offset-md-3">
       <%= f.label(:author1, "Author: ") %>
-      <%= f.input :author1, required: true, label: false %>
+      <%= f.input :author1, label: false, required: true %>
     </div>
   </div>
   <div class="form-group row offset-md-1">
@@ -204,7 +204,6 @@
       <p>We allow up to three titles per course per semester.</p>
       <%= f.input 'subject', input_html: { value: 'Desk/Exam Copy Request'}, as: :hidden %>
       <%= f.input 'type', input_html: { value: 'copy_request'}, as: :hidden %>
-      <%= f.input 'page_id', input_html: { value: @form.page_id}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
     </div>
   </div>

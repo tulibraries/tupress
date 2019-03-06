@@ -26,7 +26,6 @@ controller :page do
   # pages with id's are stored in the database, not in views folder (Tiny - IMCE generated)
 
   get   'press-info'                 => :press_info,               :id => 1
-  get   'rights'                     => :rights,                   :id => 2
   get   'submissions'                => :submissions,              :id => 3
   get   'payment'                    => :payment,                  :id => 5
   get   'copyright'                  => :copyright,                :id => 7
@@ -51,6 +50,7 @@ end
   get 'review-copy',   to: "forms#review_copy"
   get 'copy-request',  to: "forms#copy_request"
   get 'contact',       to: "forms#contact"
+  get 'rights',       to: "forms#rights"
 # end
 
 controller :subject do 

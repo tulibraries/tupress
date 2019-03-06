@@ -1,17 +1,15 @@
 class Form < MailForm::Base
-	# include MailForm::Delivery
-  include ActiveModel::Validations
 
-  attributes :name,             :validate => true
-  attributes :email,            :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute  :address_line_1,   :validate => true
-  attribute  :city,             :validate => true
-  attribute  :state,            :validate => true
-  attribute  :zipcode,          :validate => true
+  attribute  :name
+  attribute  :email
+  attribute  :address_line_1
+  attribute  :city
+  attribute  :state
+  attribute  :zipcode
   attribute  :file    
-
-  attributes :page_id,
-             :subject,
+  attribute  :request_type
+             
+  attributes :subject,
              :address_line_2,
              :country,
              :send_ecatalog,
@@ -22,10 +20,23 @@ class Form < MailForm::Base
              :newsletter_type,
              :type,
              :page,
-             :comments
+             :comments,
+             :book_title,
+             :author,
+             :chapter,
+             :chapter_author,
+             :page_numbers,
+             :price_est,
+             :publisher,
+             :reprint_title,
+             :pub_author,
+             :reprint_pages,
+             :copies,
+             :pub_date,
+             :requested_rights
 
-  attributes :request_type,
-             :university,
+
+  attributes :university,
              :department,
              :instructor,
              :course_title,
@@ -33,7 +44,7 @@ class Form < MailForm::Base
              :semester,
              :title1,
              :author1,
-             :media_type,          :validate => true
+             :media_type
 
 
   attributes :title2,
@@ -44,7 +55,7 @@ class Form < MailForm::Base
              :website,
              :request_text
 
-  attributes :nickname,  :captcha  => true
+  attribute :nickname,  :captcha  => true
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.

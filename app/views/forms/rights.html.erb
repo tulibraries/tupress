@@ -1,0 +1,219 @@
+  <div class="row">
+    <div class="col">
+      <h1>Rights &amp; Premissions</h1>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col">
+    <p>For permission to use material from one of our publications, please fill out the following form. The following information/material is required before requests for permission to use material from Temple University Press books will be considered.</p>
+    <p>This form should only be used for requests to reproduce material copyrighted by Temple University Press in forthcoming books for publication. <strong>Please submit all requests for photocopies for academic use and for electronic course reserve via Copyright Clearance Center</strong> at <%= link_to "www.copyright.com", "http://www.copyright.com" %>.</p>
+  </div>
+</div>
+
+<div class="row">
+<div class="col col-md-10 offset-md-1" id="contactform">
+
+<%= simple_form_for(@form) do |f| %>
+
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:name, "Name:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :name, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:email, "Email:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :email, as: :email, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:address_line_1, "Address Line 1:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :address_line_1, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label_tag(:address_line_2, "Address Line 2:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :address_line_2, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:city, "City:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :city, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:state, "State:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :state, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:zipcode, "Zip/Post Code:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :zipcode, label: false, required: true %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:country, "Country (if not US):") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :country, as: :string, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:book_title, "Book Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :book_title, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:author, "Author/Editor:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :author, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:chapter, "Chapter Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :chapter, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:chapter_author, "Chapter Author:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :chapter_author, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:page_numbers, "Page Numbers:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :page_numbers, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:price_est, "Estimated Reprint Price:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :price_est, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:publisher, "Your Publisher:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :publisher, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:reprint_title, "Reprint Title:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :reprint_title, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:pub_author, "Editor/Author of Your Publication:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :pub_author, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:reprint_pages, "Number of Pages in Reprint:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :reprint_pages, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:copies, "Number of Copies:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :copies, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:pub_date, "Publication Date:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :pub_date, label: false %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:requested_rights, "Rights Requested:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :requested_rights, label: false %>
+    </div>
+  </div>
+
+    <div class="form-group row">
+    <div class="col col-md-2">
+      <%= label(:comments, "Comments:") %>
+    </div>
+    <div class="col col-md-9">
+      <%= f.input :comments, label: false, input_html: { size: "48x6" } %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col col-md-9 offset-md-2 new-section">
+      <%= f.input 'subject', input_html: { value: 'Copyright Request' }, as: :hidden %>
+      <%= f.input 'type', input_html: { value: 'rights' }, as: :hidden %>
+      <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
+    </div>
+  </div>
+
+<% end %>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div id="formfooter" style="margin-top: 42px;">
+  <div class="col col-md-10 offset-md-1">
+    <p>If selection is an excerpt, adaptation, or is altered in any way from its copyrighted form, a photocopy of the pages of material to be reprinted, indicating any edits, should be sent to:</p>
+    <p class="address">Nikki Miller <br>Temple University Press <br>TASB<br>1852 North 10th Street<br>Philadelphia, PA 19122</p>
+    <p>Fax: 215.926.2141</p>
+    <p>If this request is for a reuse of material for which permission was previously granted, please supply a copy of the previous permission agreement and any additional information regarding the previous use.</p>
+  </div>
+</div>
+</div>
+</div>
