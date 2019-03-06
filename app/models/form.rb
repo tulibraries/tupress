@@ -7,7 +7,6 @@ class Form < MailForm::Base
   attribute  :state
   attribute  :zipcode
   attribute  :file    
-  attribute  :request_type
              
   attributes :subject,
              :address_line_2,
@@ -18,6 +17,7 @@ class Form < MailForm::Base
              :mailing_type,
              :send_newsletter,
              :newsletter_type,
+             :request_type,
              :type,
              :page,
              :comments,
@@ -35,18 +35,20 @@ class Form < MailForm::Base
              :pub_date,
              :requested_rights,
              :university,
+             :requested_rights,
+             :university,
              :department,
              :instructor,
              :course_title,
              :enrollment,
              :semester,
              :title1,
-             :author1,
-             :media_type,
              :title2,
              :title3,
+             :author1,
              :author2,
              :author3,
+             :media_type,
              :bookstore,
              :website,
              :request_text
