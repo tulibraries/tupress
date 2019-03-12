@@ -6,7 +6,9 @@ Trestle.resource(:subjects) do
   # Customize the table columns shown on the index view.
   #
   table do
+    column :subject_id, label: "Subject_ID"
     column :subject
+    column :pdf
   end
 
   # Customize the form fields shown on the new/edit views.
@@ -15,6 +17,7 @@ Trestle.resource(:subjects) do
   form do |subject|
     tab :subject do
       text_field :subject
+      number_field :subject_id, label: "Subject ID"
     end
 
     brochures = Brochure.where(subject_id: subject.subject_id)
