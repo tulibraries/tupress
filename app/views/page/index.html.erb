@@ -214,11 +214,10 @@
 <div class="col col-md-6 offset-md-3">
 <div id="scNewsletter">
       <p  style="color:#951936;">Subscribe to our monthly newsletter for info about new books and website content.</p>
-        <%= form_tag "http://www.temple.edu/cgi-bin/mail?tempress@temple.edu", :method=>"post", :name=>"NewsletterSubscription", :id=>"NewsletterSubscription", :style=>"margin-top:7px;" do |f| %>
-          <%= email_field_tag "email", nil, placeholder: "Enter your email..." %> 
-          <%= text_field_tag "subject", "Newsletter Subscription", type: "hidden" %>
-          <%= text_field_tag "next-url", "http://www.temple.edu/tempress/received_subscription.html", type: "hidden" %>
-          <%= submit_tag "Subscribe!" %>
+        <%= simple_form_for(@form) do |f| %>
+          <%= f.input "email", label: false, placeholder: "Enter your email..." %> 
+          <%= f.input "subject", input_html: { value: "Newsletter Subscription" }, as: :hidden %>
+          <%= f.button :submit, value: "Subscribe!", class: 'btn-primary' %>
         <% end %>
 </div>
 </div>

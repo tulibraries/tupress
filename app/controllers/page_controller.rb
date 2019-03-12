@@ -16,6 +16,7 @@ require 'pry'
     @entries = @feed.entries.order(published: :desc)
     @catalog = Season.where.not(suppress: 1).order(created_at: :desc).first
     @homepage_subject = Brochure.where(promoted_to_homepage: 1).order(updated_at: :desc).first
+    @form = Form.new(params[:form])
   end
   def order
     @page = Page.find_by(id: params[:id])
