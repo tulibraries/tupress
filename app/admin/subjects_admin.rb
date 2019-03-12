@@ -6,7 +6,9 @@ Trestle.resource(:subjects) do
   # Customize the table columns shown on the index view.
   #
   table do
+    column :subject_id, label: "Subject_ID"
     column :subject
+    column :pdf
   end
 
   # Customize the form fields shown on the new/edit views.
