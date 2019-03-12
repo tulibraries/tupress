@@ -6,15 +6,18 @@ Trestle.resource(:subjects) do
   # Customize the table columns shown on the index view.
   #
   table do
+    column :subject_id, sort: { default: true, default_order: :asc }, header: "Subject ID"
     column :subject
+    actions
   end
 
   # Customize the form fields shown on the new/edit views.
   #
-Trestle.resource(:subjects) do
   form do |subject|
+
     tab :subject do
       text_field :subject
+      number_field :subject_id, label: "Subject ID"
     end
 
     brochures = Brochure.where(subject_id: subject.subject_id)
@@ -27,8 +30,6 @@ Trestle.resource(:subjects) do
       end
 
       concat admin_link_to("New Brochure", admin: :brochures, action: :new, params: { subject_id: subject.subject_id }, class: "btn btn-success top-down")
-
-    end 
   end
 end
 
