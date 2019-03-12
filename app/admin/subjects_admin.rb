@@ -15,6 +15,7 @@ Trestle.resource(:subjects) do
   form do |subject|
     tab :subject do
       text_field :subject
+      number_field :subject_id, label: "Subject ID"
     end
 
     brochures = Brochure.where(subject_id: subject.subject_id)
