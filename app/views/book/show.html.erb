@@ -177,14 +177,13 @@
 			<div class="col-md-12 list-group-item">
 				<% @ordered_subjects.each do |subject| %>
 					<% unless subject.nil? %>
-						<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.id} %>
+						<%= link_to subject.subject, {controller: "book", action: "bysubject", id: subject.subject_id} %>
 					<% end %>
 				<% end %>
 		</div>
 	</div>
 	<% end %>
 	
-
 
 	<% if @series.first %><!-- if series -->
 	<div class="row">

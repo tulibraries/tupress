@@ -9,6 +9,7 @@ Trestle.resource(:subjects) do
     column :subject_id, sort: { default: true, default_order: :asc }, header: "Subject ID"
     column :subject
     column :pdf
+    
     actions
   end
 
