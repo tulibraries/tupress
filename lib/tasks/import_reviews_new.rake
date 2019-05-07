@@ -34,6 +34,14 @@ namespace :db do
       node.xpath("reviews/review").map do |newreview|
 
         review = Review.find_by(review_id: newreview.xpath("review_id").text)
+        # theBook = review.title_id
+        # bookReviews = Review.find_by(review_id: theBook)
+
+        # if bookReviews.exclude?(bookReviews)
+        # end
+        
+        # check all book reviews to see if review exists
+        # if db reviews has more reviews than xml reviews for same book delete extras
 
         if review.nil?
           review = Review.new(review_id: newreview.xpath("review_id").text, weight: "0")
@@ -52,7 +60,7 @@ namespace :db do
 
 
         if review.save
-          if !new_review.nil?
+          unless new_review.nil?
             created_ids << review.title_id
           end
         else
@@ -65,23 +73,25 @@ namespace :db do
       end #unless
     end #map
 
-    # db_reviews = Review.all.each do |review|
-    #   db_review_ids << review.review_id
-    # end
+    # Check for reviews in the db but no longer in the feed
 
-    # doc.xpath("//record/reviews/review").map do |xml|
-    #   xml_review_ids << xml.xpath("review_id").text
-    # end
+    db_reviews = Review.all.each do |review|
+      db_review_ids << review.review_id
+    end
 
-    # db_review_ids.each do |db_id|
-    #   if !xml_review_ids.include? db_id
-    #     toDelete = Review.find_by(review_id: db_id)
-    #     deleted_ids << toDelete.title_id.to_s
-    #     toDelete.destroy
-    #   end
-    # end
+    doc.xpath("//record/reviews/review").map do |xml|
+      xml_review_ids << xml.xpath("review_id").text
+    end
 
-    #   puts "deletions: "+deleted_ids.length.to_s
+    db_review_ids.each do |db_id|
+      if xml_review_ids.exclude? db_id
+        toDelete = Review.find_by(review_id: db_id)
+        deleted_ids << db_id.to_s
+        toDelete.destroy
+      end
+    end
+
+      puts "deletions: "+deleted_ids.length.to_s
       puts "created: "+created_ids.length.to_s
       puts "errors: "+error_ids.length.to_s
 
