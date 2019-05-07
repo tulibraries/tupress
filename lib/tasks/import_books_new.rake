@@ -61,9 +61,6 @@ namespace :db do
           b.about_author = node.xpath("author_bios").text
           b.intro = node.xpath("intro").text
           b.blurb = node.xpath("blurb").text
-          # b.excerpt = node.xpath("excerpt").text
-          # b.excerpt_text = node.xpath("excerpt").text
-          # b.cover_image = node.xpath("cover_image").text
           b.status = node.xpath("status").text
           b.pages_total = node.xpath("format/pages_total").text
           b.trim = node.xpath("format/trim").text
