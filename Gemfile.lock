@@ -211,7 +211,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     ruby_dep (1.5.0)
-    sass (3.7.3)
+    sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -257,7 +257,7 @@ GEM
     tilt (2.0.9)
     tinymce-rails (4.9.4)
       railties (>= 3.1.1)
-    trestle (0.8.11)
+    trestle (0.8.12)
       activemodel (>= 4.2.0)
       autoprefixer-rails (>= 7.1.2)
       kaminari (~> 1.1.0)
@@ -329,7 +329,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tinymce-rails
-  trestle (~> 0.8.3)
+  trestle (~> 0.8.12)
   trestle-auth
   trestle-search
   trestle-tinymce
