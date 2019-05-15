@@ -91,7 +91,7 @@ namespace :db do
       end
     end
 
-    #   puts "deletions: "+deleted_ids.length.to_s
+      puts "deletions: "+deleted_ids.length.to_s
       puts "created: "+created_ids.length.to_s
       puts "errors: "+error_ids.length.to_s
 
