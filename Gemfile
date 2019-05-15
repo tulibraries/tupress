@@ -85,5 +85,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 group :production do
-  gem 'mysql2', '~> 0.4.9'
+  gem 'mysql2', '~> 0.5.2'
 end
