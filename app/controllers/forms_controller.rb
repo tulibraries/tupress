@@ -12,6 +12,7 @@ class FormsController < ApplicationController
 
   def copy_request
     @form = Form.new(params[:form])
+    @page = Page.find_by(name: "Exam & Desk Copy Request Form")
   end
 
   def rights
