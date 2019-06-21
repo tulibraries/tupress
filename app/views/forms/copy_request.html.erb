@@ -6,15 +6,17 @@
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 
+  <%= simple_form_for(@form) do |f| %>
 <div class="row">
   <div class="col-10 offset-md-1">
-    <p>We invite you to fill out the form below or to write on departmental letterhead for an examination copy of any paperback title you wish to consider for course adoption or request for desk copies. For examination copies, please state course title, semester, and projected enrollment. For desk copies, please provide course ID, instructor's name, projected enrollment, semester class will be taught, and the name of the bookstore that will be placing the order. All orders can be forwarded to: <%= mail_to "examcopy@temple.edu", "examcopy@temple.edu" %></p>
+    <% unless @form.content.nil? %>
+      <p><%= @form.content.html_safe %></p>
+    <% end %>
   </div>
 </div>
 <div class="row" style="margin-bottom: 42px;margin-top:21px;">
 <div class="col col-md-10">
 <div id="contactform">
-  <%= simple_form_for(@form) do |f| %>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
       <%= f.label(:name, "Name: ") %>
@@ -201,7 +203,9 @@
     
   <div class="row offset-md-3">
     <div class="col col-12 col-md-9 offset-md-1 new-section">
-      <p>We allow up to three titles per course per semester.</p>
+      <% unless @form.content2.nil? %>
+        <p><%= @form.content2.html_safe %></p>
+      <% end %>
       <%= f.input 'subject', input_html: { value: 'Desk/Exam Copy Request'}, as: :hidden %>
       <%= f.input 'type', input_html: { value: 'copy_request'}, as: :hidden %>
       <%= f.button :submit, value: "Submit", class: 'btn-primary' %>
