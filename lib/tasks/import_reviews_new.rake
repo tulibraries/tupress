@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'yaml'
+require 'pry'
 
 namespace :db do
     namespace :seed do
@@ -21,6 +22,8 @@ namespace :db do
       updated_ids = []
       deleted_ids = []
       xml_review_ids = []
+      # db_reviews = []
+      xml_book_ids = []
       db_reviews = []
       db_review_ids = []
       new_review = nil
@@ -51,6 +54,7 @@ namespace :db do
         review.tap do |r|
 
           r.title_id = node.xpath("book_id").text
+          # use title_id to lookup book's reviews, add them to array
           r.title = node.xpath("title").text
           r.author = node.xpath("author_byline").text
           r.review = newreview.at("review_text").text
@@ -74,6 +78,7 @@ namespace :db do
     end #map
 
     # Check for reviews in the db but no longer in the feed
+    # review must be for a title in the xml
 
     db_reviews = Review.all.each do |review|
       db_review_ids << review.review_id
@@ -83,20 +88,33 @@ namespace :db do
       xml_review_ids << xml.xpath("review_id").text
     end
 
-    db_review_ids.each do |db_id|
-      if xml_review_ids.exclude? db_id
-        toDelete = Review.find_by(review_id: db_id)
-        deleted_ids << db_id.to_s
-        toDelete.destroy
-      end
+    doc.xpath("//record").map do |xml|
+      xml_book_ids << xml.xpath("book_id").text
+    end
+
+
+    xml_book_ids.each do |book_id| #for each book in the delta
+
+      db_reviews = []
+
+      db_reviews = Review.where(title_id: book_id) # collect all its review ids from the db
+
+       db_reviews.each do |dbreview|
+          if xml_review_ids.exclude? dbreview.review_id # if review from db is not in xml
+            toDelete = Review.find_by(review_id: dbreview.review_id) #delete that review
+            deleted_ids << dbreview.review_id.to_s
+            toDelete.destroy
+          end
+        end
+
     end
 
       puts "deletions: "+deleted_ids.length.to_s
       puts "created: "+created_ids.length.to_s
       puts "errors: "+error_ids.length.to_s
 
-      # harvest = ReviewHarvest.new(error_ids: error_ids, deleted_ids: deleted_ids, created_ids: created_ids)
-      harvest = ReviewHarvest.new(error_ids: error_ids, created_ids: created_ids)
+      harvest = ReviewHarvest.new(error_ids: error_ids, deleted_ids: deleted_ids, created_ids: created_ids)
+      # harvest = ReviewHarvest.new(error_ids: error_ids, created_ids: created_ids)
 
       # binding.pry
 
