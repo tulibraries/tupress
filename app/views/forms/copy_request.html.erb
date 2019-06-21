@@ -6,6 +6,7 @@
 
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 
+  <%= simple_form_for(@form) do |f| %>
 <div class="row">
   <div class="col-10 offset-md-1">
     <% unless @page.content.nil? %>
@@ -16,7 +17,6 @@
 <div class="row" style="margin-bottom: 42px;margin-top:21px;">
 <div class="col col-md-10">
 <div id="contactform">
-  <%= simple_form_for(@form) do |f| %>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
       <%= f.label(:name, "Name: ") %>
