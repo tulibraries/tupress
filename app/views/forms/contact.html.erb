@@ -6,9 +6,7 @@
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row">
   <div class="col col-md-10 offset-md-1">
-    <p>To order, please call 1-800-621-2736 or fax 1-800-621-8476.</p>
-    <p>If you want to send us a message, fill out the following form. You can also call 215-926-2140 or write to:</p>
-    <address class="col col-md-12 offset-md-1" style="font-weight: 600;">Temple University Press<br>TASB<br>1852 North 10th Street<br>Philadelphia, PA 19122</address>
+    <%= @page.content.html_safe %>
   </div>
 </div>
 <div class="row" style="margin-top: 28px;">
@@ -184,7 +182,7 @@
 </div>
 <div id="formfooter" style="margin-top: 42px;">
   <div class="col">
-    <p><strong>Privacy Policy</strong>: Temple University Press respects your privacy. We carefully control the distribution of our customer information, and although we occasionally buy, sell, and swap mailing lists, we do so only with like-minded organizations. If you wish to be removed from either the postal mailing list or the email distribution list, please <%= mail_to "tempress@temple.edu", "send a note to the webmaster", class: "inline" %>.</p>
+    <%= @page.content2.html_safe %>
   </div>
 </div>
 </div>
