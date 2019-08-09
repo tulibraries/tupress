@@ -176,7 +176,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.0.7.2)
       actionpack (= 5.0.7.2)
@@ -319,7 +319,7 @@ DEPENDENCIES
   pry
   puma (~> 3.12)
   rails (~> 5.0.7)
-  rails-html-sanitizer (~> 1.0.4)
+  rails-html-sanitizer (~> 1.2.0)
   rspec-rails
   sass-rails (~> 5.0)
   simple_form

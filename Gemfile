@@ -41,7 +41,7 @@ gem 'trestle-auth'
 gem 'trestle-search'
 gem "mini_magick"
 gem 'loofah', '2.2.3'
-gem 'rails-html-sanitizer',' ~> 1.0.4'
+gem 'rails-html-sanitizer','~> 1.2.0'
 gem 'mail_form'
 gem 'simple_form'
 
