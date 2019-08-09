@@ -4,6 +4,7 @@ class FormsController < ApplicationController
 
   def contact
     @form = Form.new(params[:form])
+    @page = Page.find_by_name("Contact")
   end
 
   def review_copy
