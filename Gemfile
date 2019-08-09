@@ -12,7 +12,7 @@ gem 'rails', '~> 5.0.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.1'
 gem 'carrierwave', '~> 1.0'
 
 # Paperclip traces can still be seen in the migrations
