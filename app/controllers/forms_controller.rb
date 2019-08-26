@@ -18,6 +18,7 @@ class FormsController < ApplicationController
 
   def rights
     @form = Form.new(params[:form])
+    @page = Page.find_by_name("Rights & Permissions")
   end
 
   def create
