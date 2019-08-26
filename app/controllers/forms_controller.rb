@@ -9,6 +9,7 @@ class FormsController < ApplicationController
 
   def review_copy
     @form = Form.new(params[:form])
+    @page = Page.find_by(name: "Request a Review Copy")
   end
 
   def copy_request
