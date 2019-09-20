@@ -120,14 +120,13 @@
 	</div>
 <% end %>
 
-<% if @reviews.count > 1 %>
+<% if @reviews.count > 0 %>
 		<div class="row">
 			<div class="col">
 				<h2>Reviews</h2>
 			</div>
 		</div>
 
-		<% #@reviews[1..-1].each do |review| %>
 		<% @reviews.each do |review| %>
 			<div class="row">
 				 <div class="col review">
