@@ -19,7 +19,7 @@ gem 'carrierwave', '~> 1.0'
 # We have to keep it in here until we clean up the migrations
 gem 'paperclip'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
