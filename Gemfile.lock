@@ -132,7 +132,7 @@ GEM
     mini_magick (4.9.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     mysql2 (0.4.10)
     nio4r (2.3.1)
     nokogiri (1.10.4)
@@ -227,7 +227,7 @@ GEM
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    social-share-button (1.2.0)
+    social-share-button (1.2.1)
       coffee-rails
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
