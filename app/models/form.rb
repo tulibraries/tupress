@@ -53,7 +53,7 @@ class Form < MailForm::Base
              :website,
              :request_text
 
-  attribute :nickname,  :captcha  => true
+  attribute :owls4ever,  :captcha  => true
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
