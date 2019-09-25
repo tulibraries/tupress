@@ -244,7 +244,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    tinymce-rails (4.9.4)
+    tinymce-rails (4.9.6)
       railties (>= 3.1.1)
     trestle (0.8.11)
       activemodel (>= 4.2.0)
