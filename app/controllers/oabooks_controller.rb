@@ -14,6 +14,7 @@ class OabooksController < ApplicationController
       @column_1 = @oabooks[0, (@total/2).floor]
     end
     @column_2 = @oabooks.reverse[0, (@total/2).floor]
+    @page = Page.find_by_name("Labor Studies & Work")
   end
   
   def north_broad_press
@@ -25,6 +26,7 @@ class OabooksController < ApplicationController
       @column_1 = @oabooks[0, (@total/2).floor]
     end
     @column_2 = @oabooks.reverse[0, (@total/2).floor]
+    @page = Page.find_by_name("North Broad Press")
   end
 
   def show
