@@ -301,7 +301,7 @@ DEPENDENCIES
   carrierwave (~> 2.0)
   coffee-rails (~> 4.2)
   devise
-  feedjira (~> 2.2.0)
+  feedjira (= 2.2.0)
   jbuilder (~> 2.9)
   jquery-rails
   jquery-ui-rails
