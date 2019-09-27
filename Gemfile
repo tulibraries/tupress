@@ -30,7 +30,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'nokogiri'
 gem 'pry'
-gem 'feedjira', '2.2.0'
+gem 'feedjira', '3.0.0'
 gem 'social-share-button'
 gem 'tinymce-rails'
 gem 'jquery-ui-rails'
