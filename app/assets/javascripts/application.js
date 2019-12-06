@@ -18,5 +18,4 @@
 //= require popper.min.js
 //= require bootstrap-sprockets
 //= require SocialShare.js
-//= require events.js
 //= require_tree .
