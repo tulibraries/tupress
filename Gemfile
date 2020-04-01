@@ -44,6 +44,7 @@ gem 'loofah', '2.3.1'
 gem 'rails-html-sanitizer','~> 1.3.0'
 gem 'mail_form'
 gem 'simple_form'
+gem 'sprockets', '< 4.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
