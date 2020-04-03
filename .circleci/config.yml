@@ -1,0 +1,69 @@
+version: 2
+
+workflows:
+  version: 2
+  run_tests:
+    jobs:
+      - run_tests
+  qa_deploy:
+   jobs:
+     - qa_deploy:
+         filters:
+           branches:
+             only:
+               - master
+  # prod_deploy:
+  #   jobs:
+  #     - prod_deploy:
+  #         filters:
+  #           branches:
+  #             ignore: /.*/
+  #           tags:
+  #             only: /^v[0-9]+(\.[0-9]+)*$/
+
+jobs:
+  run_tests:
+    docker:
+      - image: circleci/ruby:2.6.5-node
+        environment:
+          TZ: "America/New_York"
+
+      - image: circleci/mysql:5.5.56
+        environment:
+          TZ: "America/New_York"
+          BUNDLER_VERSION: "2.1.4"
+    steps:
+      - checkout
+      - run:
+          command: |
+            sudo gem update --system
+            sudo gem install -f bundler --version "$BUNDLER_VERSION"
+            sudo apt-get update
+            sudo bundle install
+  qa_deploy:
+    docker:
+      - image: circleci/python:3.6.6
+        environment:
+          PIPENV_VENV_IN_PROJECT: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "08:05:8e:1f:ff:2e:4d:59:60:3e:a2:d5:e3:e2:b8:68"
+            - "3e:58:05:d9:83:6b:a2:76:dd:12:94:fe:e4:3f:44:cb"
+      - run:
+          command: bash .circleci/deploy-qa.sh
+
+    # prod_deploy:
+    # docker:
+    #   - image: circleci/python:3.6.6
+    #     environment:
+    #       PIPENV_VENV_IN_PROJECT: true
+    # steps:
+    #   - checkout
+    #   - add_ssh_keys:
+    #       fingerprints:
+    #         - "08:05:8e:1f:ff:2e:4d:59:60:3e:a2:d5:e3:e2:b8:68"
+    #         - "3e:58:05:d9:83:6b:a2:76:dd:12:94:fe:e4:3f:44:cb"
+    #   - run:
+    #       command: bash .circleci/deploy-prod.sh
