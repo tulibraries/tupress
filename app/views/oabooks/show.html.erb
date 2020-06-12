@@ -49,10 +49,10 @@ button {
   </div>
 
   <div class="col text-right">
-    <%= link_to "Read It Online", root_path+"open-access/epub/"+@oabook.id.to_s+"/"+@oabook.epub_identifier, target: "_blank", title: "Opens in New Window", class: "ebook-button"  %>
-    <%= link_to "Download EPUB", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/epub", class: "ebook-button" %>
-    <%= link_to "Download PDF", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/pdf", class: "ebook-button" %>
-    <%= link_to "Download MOBI", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/mobi", class: "ebook-button" %>
+    <%= link_to "Read It Online", root_path+"open-access/epub/#{@oabook.id.to_s}/#{@oabook.epub_identifier}", target: "_blank", title: "Opens in New Window", class: "ebook-button" unless @oabook.epub_identifier.nil? %>
+    <%= link_to "Download EPUB", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/epub", class: "ebook-button" unless @oabook.epub_identifier.nil? %>
+    <%= link_to "Download PDF", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/pdf", class: "ebook-button" unless @oabook.pdf_identifier.nil? %>
+    <%= link_to "Download MOBI", root_path+"open-access/labor-studies/"+@oabook.id.to_s+"/mobi", class: "ebook-button"  unless @oabook.mobi_identifier.nil?%>
     <%= link_to "Buy Print copy", "https://cdcshoppingcart.uchicago.edu/Cart2/Chicagobook?PRESS=temple&ISBN=#{@oabook.isbn}", class: "ebook-button" if @oabook.pod %>
   </div>
 </div>
