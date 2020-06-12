@@ -22,7 +22,7 @@ Trestle.resource(:oabooks) do
     text_field :supplemental
     editor :description
     text_field :isbn
-    select(:collection, 
+    select(:collection,
         [
           ['None', 'None'],
           ['Labor Studies', 'Labor Studies'],
@@ -35,41 +35,42 @@ Trestle.resource(:oabooks) do
     check_box  :remove_pdf
     file_field :mobi
     check_box  :remove_mobi
+    check_box  :pod
 
     unless oabook.cover_image.file.nil?
-      sidebar do 
+      sidebar do
         label "Cover Image"
       end
-      sidebar do 
+      sidebar do
         image_tag oabook.cover_image.url.to_s, id: "cover_image"
       end
     end
     unless oabook.epub.file.nil?
-      sidebar do 
+      sidebar do
         label "Epub"
       end
-      sidebar do 
+      sidebar do
         oabook.epub.file.identifier
       end
     end
     unless oabook.pdf.file.nil?
-      sidebar do 
+      sidebar do
         label "PDF"
       end
-      sidebar do 
+      sidebar do
         oabook.pdf.file.identifier
       end
     end
     unless oabook.mobi.file.nil?
-      sidebar do 
+      sidebar do
         label "MOBI"
       end
-      sidebar do 
+      sidebar do
         oabook.mobi.file.identifier
       end
     end
-  
-   
+
+
   end
 
   # By default, all parameters passed to the update and create actions will be
