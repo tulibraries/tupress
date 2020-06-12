@@ -230,7 +230,7 @@ GEM
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    social-share-button (1.2.1)
+    social-share-button (1.2.3)
       coffee-rails
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
