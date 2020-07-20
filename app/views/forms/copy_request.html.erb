@@ -107,6 +107,15 @@
       <%= f.input :country, as: :string, label: false %>
     </div>
   </div>
+    <div class="form-group row offset-md-1">
+    <div class="col col-md-3">
+     <%= f.label(:residential_commercial, "This address is: ") %>
+    </div>
+    <div class="col col-md-9 col-12 offset-md-3">
+      <%= f.input :residential_commercial, as: :radio_buttons, label: false, required: true,
+                  collection: [['Residential','Residential'],['Commercial','Commercial']] %>    
+    </div>
+  </div>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
       <%= f.label(:instructor, "Instructor: ") %>
@@ -139,43 +148,30 @@
       <%= f.input :semester, label: false, required: true %>
     </div>
   </div>
+
+  <% 3.times do |index| %>
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <p>Book 1</p>
+      <p>Book <%= index+1 %></p>
     </div>
     <div class="col col-md-9 col-12">
-      <%= f.label(:title1, "Title: ") %>
-      <%= f.input :title1, label: false, required: true %>
+      <%= f.label("title#{index+1}", "Title: ") %>
+      <%= f.input "title#{index+1}", label: false %>
     </div>
     <div class="col col-md-9 col-12 offset-md-3">
-      <%= f.label(:author1, "Author: ") %>
-      <%= f.input :author1, label: false, required: true %>
+      <%= f.label("author#{index+1}", "Author: ") %>
+      <%= f.input "author#{index+1}", label: false %>
     </div>
   </div>
+  <% end %>
+
   <div class="form-group row offset-md-1">
     <div class="col col-md-3">
-      <p>Book 2</p>
-    </div>
-    <div class="col col-md-9 col-12">
-      <%= f.label(:title2, "Title: ") %>
-      <%= f.input :title2, label: false %>
-    </div>
-    <div class="col col-md-9 col-12 offset-md-3">
-      <%= f.label(:author2, "Author: ") %>
-      <%= f.input :author2, label: false %>
-    </div>
-  </div>
-  <div class="form-group row offset-md-1">
-    <div class="col col-md-3">
-      <p>Book 3</p>
-    </div>
-    <div class="col col-md-9 col-12">
-      <%= f.label(:title3, "Title: ") %>
-      <%= f.input :title3, label: false %>
-    </div>
-    <div class="col col-md-9 col-12 offset-md-3">
-      <%= f.label :author3, "Author: " %>
-      <%= f.input :author3, label: false %>
+      <%= f.label(:requested_format, "Format: ") %> 
+    </div>   
+    <div class="request-format col col-md-9 col-12">
+      <%= f.input :requested_format, as: :radio_buttons, label: false, required: true,
+                  collection: [['eBook','eBook'],['Print','Print']] %> 
     </div>
   </div>
 

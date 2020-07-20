@@ -24,7 +24,7 @@ gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.5.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -40,7 +40,7 @@ gem 'trestle-tinymce'
 gem 'trestle-auth'
 gem 'trestle-search'
 gem "mini_magick"
-gem 'loofah', '2.3.1'
+gem 'loofah', '2.6.0'
 gem 'rails-html-sanitizer','~> 1.3.0'
 gem 'mail_form'
 gem 'simple_form'
