@@ -11,15 +11,15 @@ workflows:
          filters:
            branches:
              only:
-               - master
-  # prod_deploy:
-  #   jobs:
-  #     - prod_deploy:
-  #         filters:
-  #           branches:
-  #             ignore: /.*/
-  #           tags:
-  #             only: /^v[0-9]+(\.[0-9]+)*$/
+               - main
+  prod_deploy:
+    jobs:
+      - prod_deploy:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*$/
 
 jobs:
   run_tests:
@@ -54,16 +54,16 @@ jobs:
       - run:
           command: bash .circleci/deploy-qa.sh
 
-    # prod_deploy:
-    # docker:
-    #   - image: circleci/python:3.6.6
-    #     environment:
-    #       PIPENV_VENV_IN_PROJECT: true
-    # steps:
-    #   - checkout
-    #   - add_ssh_keys:
-    #       fingerprints:
-    #         - "08:05:8e:1f:ff:2e:4d:59:60:3e:a2:d5:e3:e2:b8:68"
-    #         - "3e:58:05:d9:83:6b:a2:76:dd:12:94:fe:e4:3f:44:cb"
-    #   - run:
-    #       command: bash .circleci/deploy-prod.sh
+  prod_deploy:
+    docker:
+      - image: circleci/python:3.7.2
+        environment:
+          PIPENV_VENV_IN_PROJECT: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "08:05:8e:1f:ff:2e:4d:59:60:3e:a2:d5:e3:e2:b8:68"
+            - "3e:58:05:d9:83:6b:a2:76:dd:12:94:fe:e4:3f:44:cb"
+      - run:
+          command: bash .circleci/deploy-prod.sh

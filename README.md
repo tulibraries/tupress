@@ -1,23 +1,19 @@
-# README
+# Temple University Press Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Local Development
+TODO!
 
-Things you may want to cover:
+# Running Tests
+TODO!
 
-* Ruby version
+#CI / CD
 
-* System dependencies
+This repository uses CircleCI to deploy to qa and prod, using [Ansible Playbook](https://github.com/tulibraries/tupress_playbook)
 
-* Configuration
+Merges to master use trigger a deploy to [QA](https://tupress.qa.tul-infra.page/).
 
-* Database creation
 
-* Database initialization
+Creating a release triggers a deploy to [Prod](http://tupress.temple.edu/)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-* HOLA!
