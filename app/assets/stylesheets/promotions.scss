@@ -1,0 +1,64 @@
+// Place all the styles related to the promotions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.promo_intro {
+  border-bottom: solid #951936 4px;
+  h2 {
+    border: 0;
+    background-color: transparent;
+    padding-left: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.promotion-subjects-mobile {
+  border: solid #ccc 1px;
+  background-color: #eee;
+  padding-left: 10px;
+
+  a.accordion-toggle {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  a.accordion-toggle:hover {
+    text-decoration: none!important;
+  }
+}
+
+.pdf {
+  font-size: smaller;
+}
+
+.subjects-list {
+  border-top: solid #ccc 2px;
+  padding: 14px;
+  font-size: 1.05rem;
+  background-color: #eee;
+  border-radius:4px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.book-title {
+  font-weight: 600;
+}
+.book-blurb {
+  font-size: .84rem;
+}
+
+.books-list {
+  img {
+    height: 330px;
+  }
+}
+
+i.fa {
+  float: right;
+  padding-right: 14px;
+  padding-top: 7px;
+  font-size: larger;
+}
