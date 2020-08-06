@@ -38,27 +38,72 @@ Trestle.resource(:books) do
     toolbar(:secondary) do
       ""
     end
-    list_items = []
-    parent_list_items = Array.new
 
-    text_field :title, :disabled => true
-    text_field :sort_title, :disabled => true
-    text_field :edition
-    if !:author.nil?
-      text_field :author_byline
+    tab :book do
+      text_field :title, :disabled => true
+      text_field :sort_title, :disabled => true
+      text_field :edition
+      if !:author.nil?
+        text_field :author_byline
+      end
+      text_field :supplement
+      select(:status, 
+          [
+            ["In Print", "IP"],
+            ["NP", "NP"],
+            ["OS", "OS"],
+            ["X", "X"],
+            ["...", "..."]
+          ]
+        )
+      file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
+      check_box     :remove_cover_image
+
+      text_field    :excerpt_text
+      file_field    :excerpt
+      check_box     :remove_excerpt
+
+      unless book.cover_image.nil?
+        sidebar do 
+          label "cover_image"
+        end
+        sidebar do 
+          image_tag book.cover_image.url.to_s, id: "cover_image"
+        end
+      end
+      unless book.excerpt.file.nil?
+        sidebar do 
+          label "excerpt"
+        end
+        sidebar do 
+          link_to book.excerpt.file.identifier, book.excerpt.url
+        end
+      end
+      unless book.is_guide.file.nil?
+        sidebar do 
+          label "Study Guide"
+        end
+        sidebar do 
+          link_to book.is_guide.file.identifier, book.is_guide.url
+        end
+      end
+      unless book.suggested_reading.file.nil?
+        sidebar do 
+          label "Suggested Reading"
+        end
+        sidebar do 
+          link_to book.suggested_reading.file.identifier, book.suggested_reading.url
+        end
+      end
+    
+      sidebar do 
+          link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book", :style=>"display:block;"
+      end
     end
-    text_field :supplement
-    select(:status, 
-        [
-          ["In Print", "IP"],
-          ["NP", "NP"],
-          ["OS", "OS"],
-          ["X", "X"],
-          ["...", "..."]
-        ]
-      )
-    file_field    :cover_image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
-    check_box     :remove_cover_image
+
+    tab :subjects do
+      list_items = []
+      parent_list_items = Array.new
 
       book.subjects.each_with_index do |subject,index|
         unless subject['subject']['subject_id'].nil?
@@ -78,75 +123,51 @@ Trestle.resource(:books) do
         parent_list_items,
         include_blank: "(none)",
         )
+    end
 
-    text_field    :excerpt_text
-    file_field    :excerpt
-    check_box     :remove_excerpt
-    text_field    :catalog
-    check_box     :hot
-    number_field  :hotweight, id: "hot-weight", min: 1, max: 4
-    check_box     :news
-    number_field  :newsweight, id: "news-weight", min: 1, max: 5
-    editor        :news_text
-    file_field    :is_guide
-    editor        :is_guide_text
-    check_box     :remove_is_guide
-    file_field    :suggested_reading
-    check_box     :remove_suggested_reading
-    unless book.cover_image.file.nil?
-      check_box     :course_adoptions
+    tab :catalogs do
+      text_field    :catalog
     end
-    text_field    :award_year
-    text_field    :award
-    text_field    :award_year2
-    text_field    :award2
-    text_field    :award_year3
-    text_field    :award3
-    text_field    :award_year4
-    text_field    :award4
 
-    # row do
-    #   col(xs: 6) { datetime_field :updated_at, disabled: true }
-    #   col(xs: 6) { datetime_field :created_at, disabled: true }
-    # end
+    tab :awards do
+      text_field    :award_year
+      text_field    :award
+      text_field    :award_year2
+      text_field    :award2
+      text_field    :award_year3
+      text_field    :award3
+      text_field    :award_year4
+      text_field    :award_year4
+    end
 
-    if !book.cover_image.nil?
-      sidebar do 
-        label "cover_image"
-      end
-      sidebar do 
-        image_tag book.cover_image.url.to_s, id: "cover_image"
+    tab :guide do
+      check_box     :remove_is_guide, label: "Remove from guides"
+      file_field    :is_guide, label: "Image"
+      editor        :is_guide_text, label: "Text"
+    end
+
+    tab :homepage do
+      check_box     :hot
+      number_field  :hotweight, id: "hot-weight", min: 1, max: 4
+      check_box     :news
+      number_field  :newsweight, id: "news-weight", min: 1, max: 5
+      editor        :news_text
+      file_field    :suggested_reading
+      check_box     :remove_suggested_reading
+      unless book.cover_image.file.nil?
+        check_box     :course_adoptions
       end
     end
-    if !book.excerpt.file.nil?
-      sidebar do 
-        label "excerpt"
-      end
-      sidebar do 
-        link_to book.excerpt.file.identifier, book.excerpt.url
-      end
-    end
-    if !book.is_guide.file.nil?
-      sidebar do 
-        label "Study Guide"
-      end
-      sidebar do 
-        link_to book.is_guide.file.identifier, book.is_guide.url
-      end
-    end
-    if !book.suggested_reading.file.nil?
-      sidebar do 
-        label "Suggested Reading"
-      end
-      sidebar do 
-        link_to book.suggested_reading.file.identifier, book.suggested_reading.url
-      end
-    end
-  
-    sidebar do 
-        link_to "View Book Page", "/book/"+book.book_id, :class=>"view-book", :style=>"display:block;"
+    
+    tab :promotions do
+      collection_select :promotion_ids, Promotion.all, :id, :title, { label: "Promotion(s)" }, { multiple: true }
     end
   end
+
+  
+
+
+    
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
