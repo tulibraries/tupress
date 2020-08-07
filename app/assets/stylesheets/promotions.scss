@@ -1,0 +1,30 @@
+// Place all the styles related to the promotions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.promo_intro {
+  border-bottom: solid #951936 4px;
+  h2 {
+    border: 0;
+    background-color: transparent;
+    padding-left: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.promotion-subjects-mobile {
+  border: solid #ccc 1px;
+  background-color: #eee;
+  padding-left: 10px;
+
+  a.accordion-toggle {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  a.accordion-toggle:hover {
+    text-decoration: none!important;
+  }
+
+}

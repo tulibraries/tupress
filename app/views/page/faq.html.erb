@@ -1,40 +1,40 @@
 
-	<div class="row">
-		<div class="col">
-			<h1>Frequently Asked Questions</h1>
-		</div>
-	</div>
+<div class="row">
+  <div class="col">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+</div>
 
-	<div class="row">
-		<div class="col">
-			<div class="container">
-        <div class="alert alert-warning alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            If you have a question not answered here, feel free to email the <%= mail_to 'tempress@temple.edu', 'webmaster', :class=>'alert-link' %> with your query.
-        </div>
+<div class="row">
+  <div class="col">
+    <div class="container">
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        If you have a question not answered here, feel free to email the <%= mail_to 'tempress@temple.edu', 'webmaster', :class=>'alert-link' %> with your query.
       </div>
+    </div>
 
-      <div class="panel-group" id="accordion">
-        <div class="faqHeader"></div>
-        <% @faqs.each_with_index do |faq, index| %>
-        <div class="panel panel-default list-group-item">
-            <div class="panel-heading">
-                <h2 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index %>">
-                    	<%= faq.q %>
-                    </a>
-                </h2>
+    <div class="panel-group" id="accordion">
+      <div class="faqHeader"></div>
+      <% @faqs.each_with_index do |faq, index| %>
+      <div class="panel panel-default list-group-item">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index %>">
+                <%= faq.q %>
+              </a>
+            </h2>
+          </div>
+          <div id="collapse<%= index %>" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <%= faq.a.html_safe %>
             </div>
-            <div id="collapse<%= index %>" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <%= faq.a.html_safe %>
-                </div>
-            </div>
+          </div>
         </div>
-        <% end %>
-      </div>
-	</div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
