@@ -64,7 +64,7 @@
           <% unless book.cover_image.url.blank? %>
             <% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif")%>
               <%= link_to book_path(book.book_id) do %>
-                <%= image_tag book.cover_image.url, alt: "", style: "" %>
+                <%= image_tag book.cover_image.url, alt: "" %>
                 <p class="mx-auto pt-2 book-title"><%= book.title unless book.title.nil? %></p>
               <% end %>
             <% end %>

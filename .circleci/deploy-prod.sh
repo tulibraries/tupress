@@ -17,5 +17,6 @@ cp .circleci/.vault ~/.vault
 chmod +x ~/.vault
 
 # deploy to qa using ansible-playbook
-echo "Running: pipenv run ansible-playbook -i inventory/qa playbook.yml --vault-password-file=~/.vault"
-pipenv run ansible-playbook -i inventory/qa playbook.yml --vault-password-file=~/.vault
+echo "Running: pipenv run ansible-playbook -i inventory/prod playbook.yml --vault-password-file=~/.vault --extra-vars 'rails_app_git_branch=$CIRCLE_TAG'"
+pipenv run ansible-playbook -i inventory/prod playbook.yml --vault-password-file=~/.vault --extra-vars "rails_app_git_branch=$CIRCLE_TAG"
+

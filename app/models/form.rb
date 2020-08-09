@@ -48,6 +48,8 @@ class Form < MailForm::Base
              :author1,
              :author2,
              :author3,
+             :requested_format,
+             :residential_commercial,
              :media_type,
              :bookstore,
              :website,
