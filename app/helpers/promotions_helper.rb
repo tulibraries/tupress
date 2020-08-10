@@ -27,10 +27,14 @@ module PromotionsHelper
     ordered_subjects = []
     subjects.each do |subject|
       subject.each do |s|
-        ordered_subjects << [s.values.first["subject_title"], s.values.first["subject_id"]]
+        title = s.values.first["subject_title"]
+        id = s.values.first["subject_id"]
+        unless title.blank? || id.blank?
+          ordered_subjects << [ title, id ]
+        end
       end
     end
-    ordered_subjects.each.uniq{ |s| [ s[0], s[1] ] }.sort
+    ordered_subjects.each.uniq{ |s| [ s ] }.sort
   end
 
 end
