@@ -1,21 +1,18 @@
 <div class="promotion-subjects-mobile mb-4" id="accordion">
   
-
   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#subjects">
-    Subjects <i class="fa fa-angle-down" style="float: right;padding-right: 14px;padding-top:7px;font-size: larger"></i>
+    Subjects <i class="fa fa-angle-down"></i>
   </a>
   
   <div id="subjects" class="panel-collapse collapse in">
 
-    <ul class="list-unstyled mt-0 ml-0 pl-3" style="border-top: solid #ccc 2px;padding: 14px;font-size: 1.05rem;background-color: #eee; border-radius:4px">
+    <ul class="list-unstyled mt-0 ml-0 pl-3 subjects-list">
       <li class="promo-subject mb-2">
-        <%= link_to "All Subjects", promotion_path(@promotion), style: "text-decoration: underline" %>
+        <%= link_to "All Subjects", promotion_path(@promotion) %>
       </li>
       <% order_subjects(@subjects).each do |subject| %>
         <li class="promo-subject mb-2">
-          <%= link_to subject[0], 
-                      promotion_path(@promotion, subject: subject[1]), 
-                      style: "text-decoration: underline" %>
+          <%= link_to subject[0], promotion_path(@promotion, subject: subject[1]) %>
         </li>
       <% end unless @subjects.nil? %>
     </ul>

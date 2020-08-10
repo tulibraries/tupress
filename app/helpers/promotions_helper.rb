@@ -30,7 +30,7 @@ module PromotionsHelper
         ordered_subjects << [s.values.first["subject_title"], s.values.first["subject_id"]]
       end
     end
-    ordered_subjects.each.uniq { |s| [ s[0], s[1] ] }.sort
+    ordered_subjects.each.uniq{ |s| [ s[0], s[1] ] }.sort
   end
 
 end

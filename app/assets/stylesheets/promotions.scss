@@ -26,5 +26,39 @@
   a.accordion-toggle:hover {
     text-decoration: none!important;
   }
+}
 
+.pdf {
+  font-size: smaller;
+}
+
+.subjects-list {
+  border-top: solid #ccc 2px;
+  padding: 14px;
+  font-size: 1.05rem;
+  background-color: #eee;
+  border-radius:4px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.book-title {
+  font-weight: 600;
+}
+.book-blurb {
+  font-size: .84rem;
+}
+
+.books-list {
+  img {
+    height: 330px;
+  }
+}
+
+i.fa {
+  float: right;
+  padding-right: 14px;
+  padding-top: 7px;
+  font-size: larger;
 }

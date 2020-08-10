@@ -5,11 +5,12 @@ Trestle.resource(:promotions) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do
+    column :title
+    column :pdf_display_name, header: "PDF"
+    column :active
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
