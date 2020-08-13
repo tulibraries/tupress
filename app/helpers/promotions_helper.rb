@@ -23,6 +23,14 @@ module PromotionsHelper
     "-- #{s}"
   end
 
+  def subject_name(subject)
+    if subject[0].index("/") 
+      subject[0].gsub!("/", " / ")
+    else
+      subject[0]
+    end
+  end
+
   def order_subjects(subjects)
     ordered_subjects = []
     subjects.each do |subject|
