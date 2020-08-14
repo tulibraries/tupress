@@ -62,9 +62,12 @@
         <div class="col-sm-6 col-xl-4 text-center mb-4 mt-md-4 promotion-book-list">
         
           <% unless book.cover_image.url.blank? %>
+         
             <% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif")%>
               <%= link_to book_path(book.book_id) do %>
+               <div class="image-placeholder align-middle">
                 <%= image_tag book.cover_image.url, alt: "" %>
+                </div>
                 <p class="mx-auto pt-2 book-title"><%= book.title unless book.title.nil? %></p>
               <% end %>
             <% end %>
