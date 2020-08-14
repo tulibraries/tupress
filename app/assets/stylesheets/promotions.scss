@@ -49,11 +49,17 @@
 .book-blurb {
   font-size: .84rem;
 }
-
+.image-placeholder {
+  display: table-cell;
+  min-height: 330px;
+  height: 330px;
+}
 .promotion-book-list {
   img {
-    height: 330px;
+    width: 240px;
+    max-height: 330px;
     max-width: 100%;
+    display: table-cell;
   }
 }
 
