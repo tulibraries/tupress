@@ -2,7 +2,7 @@ class Book < ApplicationRecord
 
 require 'carrierwave/orm/activerecord'
 
-before_save :sort_titles
+	before_save :sort_titles
 
 	serialize :author_id, Array
 	serialize :binding, Array
@@ -12,6 +12,9 @@ before_save :sort_titles
 	belongs_to :series, :counter_cache => true, optional: true
 	belongs_to :subject, :counter_cache => true, optional: true
 	belongs_to :season, :counter_cache => true, optional: true
+	
+	has_many :book_promotions, dependent: :destroy
+	has_many :promotions, through: :book_promotions
 
 	mount_uploader :cover_image, BookCoverUploader
 	mount_uploader :excerpt, BookExcerptUploaderUploader

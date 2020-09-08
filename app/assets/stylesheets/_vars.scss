@@ -18,3 +18,8 @@ $light-grey: #ccc;
 $med-grey: #444;
 $dark-grey: #666;
 $green: #E5FFE5;
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: font-url('fa-solid-900.svg') format('svg');
+  }

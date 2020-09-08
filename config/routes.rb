@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :promotions
 controller :book do 
 	get   'books'                 => :index
   get   'byauthor'              => :byauthor

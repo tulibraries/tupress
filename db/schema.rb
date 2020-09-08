@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200612153550) do
+ActiveRecord::Schema.define(version: 20200806201600) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 20200612153550) do
     t.string   "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "book_promotions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "book_id"
+    t.integer  "promotion_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["book_id"], name: "index_book_promotions_on_book_id", using: :btree
+    t.index ["promotion_id"], name: "index_book_promotions_on_promotion_id", using: :btree
   end
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -103,6 +112,7 @@ ActiveRecord::Schema.define(version: 20200612153550) do
     t.text     "is_guide_text",     limit: 65535
     t.string   "suggested_reading"
     t.boolean  "course_adoptions"
+    t.text     "promotion_ids",     limit: 65535
   end
 
   create_table "brochures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -261,6 +271,17 @@ ActiveRecord::Schema.define(version: 20200612153550) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "document_contact"
+  end
+
+  create_table "promotions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.string   "pdf"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "book_ids",         limit: 65535
+    t.text     "intro_text",       limit: 65535
+    t.boolean  "active"
+    t.string   "pdf_display_name"
   end
 
   create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
