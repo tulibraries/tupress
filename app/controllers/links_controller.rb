@@ -3,7 +3,7 @@ class LinksController < ApplicationController
 
   # GET /links
   def index
-    @links = Link.all
+    @links = Link.all.order(:title)
   end
 
   # GET /links/1
