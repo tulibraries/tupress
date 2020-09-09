@@ -1,5 +1,9 @@
 class Series < ApplicationRecord
-	has_many :book, :counter_cache => true
+  require 'carrierwave/orm/activerecord'
+
+  has_many :book, :counter_cache => true
+  
+  mount_uploader :image, SeriesImageUploader
 
 	def self.search(q)
 		if q

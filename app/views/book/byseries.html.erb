@@ -5,11 +5,21 @@
 </div>
 
 <div class="row">
-	<div class="col">
-		<% unless @series.description.nil? %>
-			<%= @series.description.html_safe %>
-		<% end %>
-	</div>
+		<% if @series.description.present? %>
+      <div class="col-<%= @series.image.url.present? ? 7 : 12 %> ">
+        <%= @series.description.html_safe unless @series.description.nil? %>
+      </div>
+    <% end %>
+    <% if @series.image.url.present? %>
+      <div class="col-5 text-center">
+      <%# binding.pry %>
+        <% if @series.image_link.present? %>
+          <%= link_to image_tag(@series.image.url, style: "max-width:100%;"), "http://#{@series.image_link}" %>
+        <% else %>
+          <%= image_tag @series.image.url, style: "max-width:100%;" %>
+        <% end %>
+      </div>
+    <% end %>
 </div>
 
 <% @books.each do |book| %>
