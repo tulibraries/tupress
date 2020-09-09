@@ -16,11 +16,29 @@ Trestle.resource(:series) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |series|
-    text_field :series_code
-    text_field :series_name
-    text_field :editors
-    text_field :founder
-    editor     :description
+    tab :series do
+      text_field :series_code
+      text_field :series_name
+      text_field :editors
+      text_field :founder
+      editor     :description
+    end
+
+    tab :image do
+      file_field    :image, accept: 'image/png,image/jpeg,image/gif,image/jpg'
+      check_box     :remove_image
+      text_field :image_link
+    end
+    
+    if series.image.url.present?
+      sidebar do 
+        label "image"
+      end
+      sidebar do 
+        image_tag series.image.url.to_s, id: "image"
+      end
+    end
+    
   end
 
   # By default, all parameters passed to the update and create actions will be
