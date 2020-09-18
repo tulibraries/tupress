@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200806201600) do
+ActiveRecord::Schema.define(version: 20200918150914) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -250,6 +250,7 @@ ActiveRecord::Schema.define(version: 20200806201600) do
     t.string   "supplemental"
     t.string   "cover_image"
     t.boolean  "pod"
+    t.string   "print_isbn"
   end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -345,6 +346,8 @@ ActiveRecord::Schema.define(version: 20200806201600) do
     t.string   "editors"
     t.string   "founder"
     t.text     "description", limit: 65535
+    t.string   "image"
+    t.string   "image_link"
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
