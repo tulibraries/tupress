@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200909162023) do
+ActiveRecord::Schema.define(version: 20200918150914) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -250,6 +250,7 @@ ActiveRecord::Schema.define(version: 20200909162023) do
     t.string   "supplemental"
     t.string   "cover_image"
     t.boolean  "pod"
+    t.string   "print_isbn"
   end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
