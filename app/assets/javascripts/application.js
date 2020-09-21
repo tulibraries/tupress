@@ -17,5 +17,5 @@
 //= require turbolinks
 //= require popper.min.js
 //= require bootstrap-sprockets
-//= require SocialShare.js
+//= require social-share-button
 //= require_tree .

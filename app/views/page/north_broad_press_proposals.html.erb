@@ -4,7 +4,7 @@
         <h1 style="margin-top:0;padding-top:0;">
         		<%= image_tag 'nbp_banner.jpg', alt: 'North Broad Press', style: 'max-width:100%;' %>
         </h1>
-        <h1 class="text-center"><%= @page.name %></h1>
+        <h1 class="text-center"><%= title @page.name %></h1>
         <div class="container">
             <%= @page.content.html_safe %>
         </div>

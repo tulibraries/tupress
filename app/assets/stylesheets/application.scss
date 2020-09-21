@@ -14,7 +14,14 @@
  *= require_self
  */
 
-	@import "bootstrap";
+  @import "bootstrap";
+  @import "social-share-button";
+
+  .social-share-button .ssb-icon {
+    height: 36px;
+    width: 36px;
+    background-size: cover;
+  }
 
 	html, body {
 		background-color: #f1f1f1;

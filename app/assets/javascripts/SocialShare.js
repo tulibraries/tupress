@@ -4,14 +4,15 @@
 (function ($) {
 
     function get_class_list(elem){
-        if(elem.classList){
-            return elem.classList;
-        }else{
-            return $(elem).attr('class').match(/\S+/gi);
+        if(elem.classList) {
+          return elem.classList;
+        } else {
+          return $(elem).attr('class').match(/\S+/gi);
         }
     }
 
     $.fn.ShareLink = function(options){
+      console.log("text");
         var defaults = {
             title: '',
             text: '',

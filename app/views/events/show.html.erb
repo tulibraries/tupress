@@ -6,9 +6,9 @@
       <div class="col">
         <h1>
           <% unless @event.title.nil? %>
-            <%= @event.title %>
+            <%= title @event.title %>
           <% else %>
-            Event Details
+            <%= title "Event Details" %>
           <% end %>
         </h1>
       </div>
