@@ -1,4 +1,6 @@
-<%= social %>
+<% set_meta_tags title: @book.title,
+                 description: @book.description %>
+
 <div class="container" id="book_show">
 <div class="row">
 	<div class="col col-8">
@@ -19,8 +21,8 @@
 		</div>
 	</div>
 	</div>
-	<div class="col-4 col-sm-text-left">
-		<div class="social-shopping">
+	<div class="col-4 col-lg-text-right">
+		<div class="social-shopping text-right">
 			<% if ['IP','NP'].include? @book.status %>
 			<p class="text-center buy-it">
 				<%= link_to image_tag('cart.gif', alt: 'shopping cart icon'), "https://cdcshoppingcart.uchicago.edu/Cart2/ChicagoBook.aspx?ISBN="+get_isbn().to_s+"&&PRESS=temple" %>
@@ -28,13 +30,11 @@
 				<%= link_to "Add to Cart", "https://cdcshoppingcart.uchicago.edu/Cart2/ChicagoBook.aspx?ISBN="+get_isbn().to_s+"&&PRESS=temple", :class=>"buy-it-text" %>
 			</p>
 			<% end %>
-			<p class="text-right social-icons">
-				<span class='share s_twitter'></span>
-				<span class='share s_facebook'></span>
-				<span class='share s_tumblr'></span>
-				<span class='share s_linkedin'></span>
-				<span class='share s_pinterest'></span>
+      <div>
+			<p class="social-icons">
+				<%= social_share_button_tag(@book.title) %>
 			</p>
+      </div>
 		</div>
 	</div>
 </div>

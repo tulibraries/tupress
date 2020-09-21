@@ -60,19 +60,13 @@
 		margin-bottom: 21px;
 	}
 	.social-shopping {
-		padding-top:4px;
-		width: 100%;
-		float:right;
+    float:right;
 		.buy-it {
-			float:right;
 			background-color: #e5dccb;
 			border: solid #bbb 1px;
 			border-radius:7px;
-			padding:10px;
-			/*width: 70%;*/
-			margin-bottom: 0;
-			position:relative;
-			top: 7px;
+      padding:10px;
+      margin-top: 7px;
 		}
 		.buy-it-text {
 			font-weight:600;
@@ -181,8 +175,3 @@ span.author {
 .subjects-group a {
 	padding-right: 35px;
 }
-.s_twitter {display:inline-block;height:35px;width:35px;background-image:asset-data-url('twitter-icon-sm.png');cursor:hand;cursor:pointer;}
-.s_facebook {display:inline-block;height:35px;width:35px;background-image:asset-data-url('fb-icon-sm.png');cursor:hand;cursor:pointer;}
-.s_tumblr {display:inline-block;height:35px;width:35px;background-image:asset-data-url('tumblr-icon-sm.png');cursor:hand;cursor:pointer;}
-.s_linkedin {display:inline-block;height:35px;width:35px;background-image:asset-data-url('linkedin-icon-sm.png');cursor:hand;cursor:pointer;}
-.s_pinterest {display:inline-block;height:35px;width:35px;background-image:asset-data-url('pinterest-icon-sm.png');cursor:hand;cursor:pointer;}

@@ -1,7 +1,12 @@
 <div class="row">
-	<div class="col">
-		<h1><%= @series.series_name %></h1>
+	<div class="col-12 col-md-8">
+		<h1><%= title @series.series_name %></h1>
 	</div>
+  <div class="col-12 col-md-4 text-md-right">
+    <p class="text-right social-icons">
+      <%= social_share_button_tag(@series.series_name) %>
+    </p>
+    </div>
 </div>
 
 <div class="row">
@@ -12,7 +17,6 @@
     <% end %>
     <% if @series.image.url.present? %>
       <div class="col-5 text-center">
-      <%# binding.pry %>
         <% if @series.image_link.present? %>
           <%= link_to image_tag(@series.image.url, style: "max-width:100%;"), "http://#{@series.image_link}" %>
         <% else %>

@@ -1,19 +1,5 @@
 module BookHelper
-	  def social
-	  	javascript_tag "$(document).ready(function(){
-      $('.share').ShareLink({
-          title: '"+@book.title+"',
-          text: '"+@book.title+"',
-          image: '"+@book.cover_image.url.to_s+"',
-          url: 'http://tupress.temple.edu/book/"+@book.book_id+"'
-      });
-      $('.counter').ShareCounter({
-          url: 'http://google.com/',
-          increment: true
-      });
-  });
-	  "
-	end
+  
   def award_subject_count(subject_id)
     @subject_size = @books.where('subjects LIKE ?', "%subject_id: '"+subject_id+"'%").size 
   end
