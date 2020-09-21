@@ -4,7 +4,10 @@
 			<%= title @catalog.title %>
 		</h1>
 	</div>
-		<div class="col-12 col-lg-5">
+		<div class="col-12 col-lg-5 social-sharing text-md-right">
+      <p class="social-icons">
+        <%= social_share_button_tag(@catalog.title) %>
+      </p>
 			<% unless @brochures.nil? %>
 				<% @brochures.each do |brochure| %>
 					<%= link_to brochure.title, brochure.pdf.url, class: "text-right text-lg-left" %><br />

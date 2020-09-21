@@ -141,8 +141,8 @@ Trestle.resource(:books) do
     end
 
     tab :guide do
+      file_field    :is_guide, label: "File (required)"
       check_box     :remove_is_guide, label: "Remove from guides"
-      file_field    :is_guide, label: "Image"
       editor        :is_guide_text, label: "Text"
     end
 
