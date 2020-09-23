@@ -1,9 +1,14 @@
 <div class="container" id="study-guides">
 
 <div class="row">
-	<div class="col">
+	<div class="col-12 col-md-9">
 		<h1><%= title @pagetitle %></h1>
 	</div>
+  <div class="col-12 col-md-3 text-md-right social-sharing">
+    <p class="social-icons">
+      <%= social_share_button_tag(@pagetitle) %>
+    </p>
+  </div>
 </div>
 
 <% @books.each do |book| %>

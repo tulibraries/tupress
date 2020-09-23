@@ -8,17 +8,13 @@
       <%= subject_title(params[:subject]) unless params[:subject].nil? %>
       </h1>
     </div>
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-lg-4 col-sm-12 text-md-right">
       <div class="social-shopping">
-        <p class="text-lg-right social-icons">
-          <span class='share s_twitter'></span>
-          <span class='share s_facebook'></span>
-          <span class='share s_tumblr'></span>
-          <span class='share s_linkedin'></span>
-          <span class='share s_pinterest'></span>
-        </p>
+			<p class="social-icons">
+				<%= social_share_button_tag(@promotion.title) %>
+			</p>
         <% unless @promotion.pdf.file.nil? || @promotion.pdf_display_name.nil? %>
-        <p class="text-lg-right">
+        <p>
           <%= link_to @promotion.pdf_display_name, @promotion.pdf.url %> 
           <span class="pdf">[PDF]</span>
         </p>
