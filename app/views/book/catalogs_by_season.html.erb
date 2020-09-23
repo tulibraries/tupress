@@ -6,7 +6,7 @@
 	</div>
 		<div class="col-12 col-lg-5 social-sharing text-md-right">
       <p class="social-icons">
-        <%= social_share_button_tag(@catalog.title) %>
+        <%= social_share_button_tag(@catalog.title, desc: "Seasonal catalog of titles from Temple University Press.") %>
       </p>
 			<% unless @brochures.nil? %>
 				<% @brochures.each do |brochure| %>
