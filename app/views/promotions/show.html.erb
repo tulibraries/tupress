@@ -1,9 +1,11 @@
-<%= promo_social %>
+<% set_meta_tags description: @promotion.intro_text if @promotion.intro_text.present? %>
+<% set_meta_tags description: "" unless @promotion.intro_text.present? %>
+
 <div class="container">
 
   <div class="row">
     <div class="col-lg-8 col-sm-12">
-      <h1>
+      <h1 class="promotions">
       <%= title @promotion.title %> 
       <%= subject_title(params[:subject]) unless params[:subject].nil? %>
       </h1>
@@ -24,58 +26,36 @@
   </div>
 
   <div class="row">
-
-    <div class="col-lg-3 col-md-12">
-      <h2 class="hidden d-none">Subjects</h2>
-
-      <ul class="d-none d-lg-block list-unstyled mt-0 ml-0 pl-3 subjects-list">
-      <li class="promo-subject mb-2">
-        <%= link_to "All Subjects", promotion_path(@promotion) %>
-      </li>
-
-      <% order_subjects(@subjects).each do |subject| %>
-        <li class="promo-subject mb-2">
-          <%= link_to subject_name(subject), promotion_path(@promotion, subject: subject[1]) %>
-        </li>
-      <% end unless @subjects.nil? %>
-      </ul>
-
-      <div class="d-block d-lg-none">
-        <%= render "subjects" %>
-      </div>
-
-    </div>
-
-    <div class="col-12 col-lg-9">
-      <div class="row">
-      <% unless @promotion.intro_text.nil? %>
-      <div class="col-12 mb-4 promo_intro">
+    <% unless @promotion.intro_text.nil? %>
+      <div class="col-12 col-lg-9 mb-4 promo_intro">
         <%= sanitize @promotion.intro_text.html_safe %>
       </div>
+    <% end %>
+  </div>
+
+  <div class="row promotion-book-list">
+
+  <% @books.each do |book| %>
+    <div class="col-sm-6 col-xl-4 text-center mb-4 mt-md-4 promotion-book">
+        
+      <% unless book.cover_image.url.blank? %>
+      
+        <% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif")%>
+          <%= link_to book_path(book.book_id) do %>
+            <div class="image-placeholder align-middle">
+            <%= image_tag book.cover_image.url, alt: "" %>
+            </div>
+            <p class="mx-auto pt-2 promo-book-title"><%= book.title unless book.title.nil? %></p>
+          <% end %>
+        <% end %>
       <% end %>
 
-      <% @books.each do |book| %>
-        <div class="col-sm-6 col-xl-4 text-center mb-4 mt-md-4 promotion-book-list">
-        
-          <% unless book.cover_image.url.blank? %>
-         
-            <% if book.cover_image.url.include?(".jpg") || book.cover_image.url.include?(".jpeg") || book.cover_image.url.include?(".png") || book.cover_image.url.include?(".gif")%>
-              <%= link_to book_path(book.book_id) do %>
-               <div class="image-placeholder align-middle">
-                <%= image_tag book.cover_image.url, alt: "" %>
-                </div>
-                <p class="mx-auto pt-2 book-title"><%= book.title unless book.title.nil? %></p>
-              <% end %>
-            <% end %>
-          <% end %>
-
-          <div class="text-left mx-1">
-            <%= strip_tags(book.blurb) unless book.blurb.nil? %>
-          </div>
-          
-        </div>
-        <% end %>
+      <div class="text-left mx-1 promo-book-blurb">
+        <%= strip_tags(book.blurb) unless book.blurb.nil? %>
       </div>
+      
     </div>
+    <% end %>
   </div>
+  
 </div>

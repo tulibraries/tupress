@@ -1,19 +1,4 @@
 module PromotionsHelper
-    def promo_social
-        javascript_tag "$(document).ready(function(){
-                            $('.share').ShareLink({
-                                title: '"+@promotion.title+"',
-                                text: '"+@promotion.title+"',
-                                url: 'http://tupress.temple.edu/promotions/"+@promotion.id.to_s+"'
-                            });
-                            $('.counter').ShareCounter({
-                                url: 'http://google.com/',
-                                increment: true
-                            });
-                        });
-                            "
-  end
-
   def promotion_book_count(promotion)
     @promotion_size = BookPromotion.where('promotion_id = ?', promotion.id).size
   end

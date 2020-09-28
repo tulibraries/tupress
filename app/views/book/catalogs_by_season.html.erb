@@ -1,3 +1,5 @@
+<% set_meta_tags description: "Seasonal catalog of titles from Temple University Press." %>
+
 <div class="row brochures">
 	<div class="col-12 col-md-7">
 		<h1>
@@ -6,7 +8,7 @@
 	</div>
 		<div class="col-12 col-lg-5 social-sharing text-md-right">
       <p class="social-icons">
-        <%= social_share_button_tag(@catalog.title, desc: "Seasonal catalog of titles from Temple University Press.") %>
+        <%= social_share_button_tag %>
       </p>
 			<% unless @brochures.nil? %>
 				<% @brochures.each do |brochure| %>

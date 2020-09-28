@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+h1.promotions {
+  margin-top: 21px;
+}
+
 .promo_intro {
-  border-bottom: solid #951936 4px;
   h2 {
     border: 0;
     background-color: transparent;
@@ -12,54 +15,30 @@
   }
 }
 
-.promotion-subjects-mobile {
-  border: solid #ccc 1px;
-  background-color: #eee;
-  padding-left: 10px;
-
-  a.accordion-toggle {
-    display: block;
-    font-size: 1.5rem;
-    padding: 10px;
-  }
-
-  a.accordion-toggle:hover {
-    text-decoration: none!important;
-  }
-}
-
 .pdf {
   font-size: smaller;
 }
 
-.subjects-list {
-  border-top: solid #ccc 2px;
-  padding: 14px;
-  font-size: 1.05rem;
-  background-color: #eee;
-  border-radius:4px;
-  a {
-    text-decoration: underline;
-  }
-}
-
-.book-title {
-  font-weight: 600;
-}
-.book-blurb {
-  font-size: .84rem;
-}
 .image-placeholder {
   display: table-cell;
-  min-height: 330px;
-  height: 330px;
+  min-height: 280px;
+  height: 280px;
 }
+
 .promotion-book-list {
+  border-top: solid #951936 4px;
   img {
     width: 240px;
     max-height: 330px;
     max-width: 100%;
     display: table-cell;
+  }
+  .promo-book-title {
+    font-weight: 600;
+  }
+  .promo-book-blurb {
+    font-size: .94rem;
+    color: #000;
   }
 }
 
