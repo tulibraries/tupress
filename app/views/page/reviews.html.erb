@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col">
 					<blockquote class="blockquote">
-						<p class="mb-0"><%= review.review.html_safe %></p>
+						<p class="mb-0"><%= review.review.html_safe if review.review.present? %></p>
 					</blockquote>
 				</div>
 			</div>
