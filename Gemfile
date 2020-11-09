@@ -24,7 +24,7 @@ gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'bootstrap', '~> 4.5.2'
+gem 'bootstrap', '~> 4.5.3'
 gem 'sprockets', '= 3.7.2'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
