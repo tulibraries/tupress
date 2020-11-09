@@ -7,7 +7,7 @@
 <div class="container" style="border:solid #ccc 1px;border-radius: 7px;padding: 21px;">
 <div class="row" style="margin-bottom: 42px;">
 <div class="col col-md-10 offset-md-1">
-<%= sanitize @page.content.html_safe %>
+<%= sanitize @page.content.html_safe if @page.content.present? %>
 <div id="contactform">
 <%= simple_form_for(@form) do |f| %>
   <div class="form-group row">
@@ -123,7 +123,7 @@
 </div>
 <div id="formfooter" style="margin-top: 42px;">
   <div class="col col-md-9 offset-md-1">
-    <%= sanitize @page.content2.html_safe %>
+    <%= sanitize @page.content2.html_safe if @page.content.present? %>
   </div>
 </div>
 </div>

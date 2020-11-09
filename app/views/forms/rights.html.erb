@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col">
-    <%= sanitize @page.content.html_safe %>
+    <%= sanitize @page.content.html_safe if @page.content.present? %>
   </div>
 </div>
 
@@ -213,7 +213,7 @@
 <div class="col">
 <div id="formfooter" style="margin-top: 42px;">
   <div class="col col-md-10 offset-md-1">
-    <%= sanitize @page.content2.html_safe %>
+    <%= sanitize @page.content2.html_safe if @page.content.present? %>
   </div>
 </div>
 </div>

@@ -6,7 +6,7 @@
         </h1>
         <h1 class="text-center"><%= title @page.name %></h1>
         <div class="container">
-            <%= @page.content.html_safe %>
+            <%= @page.content.html_safe if @page.content.present? %>
         </div>
     </div>
 </div>

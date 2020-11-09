@@ -36,7 +36,7 @@
   <div id="scBlogContent">
     <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
     <p><% @entries.take(1).each do |entry| %>
-        <small><%= entry.description.truncate(210).html_safe %><br /><br />
+        <small><%= entry.description.truncate(210).html_safe if entry.description.present? %><br /><br />
         <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
         <% end %>
     </p>
@@ -73,7 +73,7 @@
 <% @hot_books.each do |book| %>
   <div class="col col-12 col-sm-6 col-lg-3 text-center hotdiv">
     <%= link_to image_tag(book.cover_image, border: 0, style: 'height:300px;max-width:200px;box-shadow: 6px 6px 7px #666;',), {controller: 'book', action: 'show', :id=>book.book_id} %>
-    <p style="margin: 14px auto;font-weight:600;max-width:320px;"><%= book.title.html_safe %></p>
+    <p style="margin: 14px auto;font-weight:600;max-width:320px;"><%= book.title.html_safe if book.title.present? %></p>
   </div>
 <% end %>
 </div>
@@ -95,7 +95,7 @@
   </div>
   <div class="media-body" style="padding-left: 28px;">
   <h2><%= ff.title %></h2>
-  <p><%= ff.description.html_safe %></p>
+  <p><%= ff.description.html_safe if ff.description.present? %></p>
   </div>
 </div>
 <% end %>
@@ -107,7 +107,7 @@
   <div class="media-body" style="padding-left: 28px;">
   <h2><%= event.title %></h2>
   <p><%= event.startdate.strftime("%A, %B %e, %Y") %></p>
-  <p><%= event.description.html_safe %></p>
+  <p><%= event.description.html_safe if event.description.present? %></p>
   </div>
 </div>
 <% end %>
@@ -119,11 +119,15 @@
   <div class="media-body" style="padding-left: 28px;">
   <h2><%= link_to book.title, :controller=>'book', :action=>'show', :id=>book.book_id %>
       <% if book.subtitle %>
-        <br /><small><em><%= book.subtitle.html_safe %></em></small>
+        <br /><small><em><%= book.subtitle.html_safe if book.subtitle.present? %></em></small>
       <% end %>
       </h2>
       <p class="author"><%= book.author_byline %></p>
-      <p style="line-height:1.2"><small><%= book.news_text.truncate(500).html_safe %></small></p>
+      <p style="line-height:1.2">
+        <small>
+          <%= book.news_text.truncate(500).html_safe if book.news_text.present? %>
+        </small>
+      </p>
   </div>
 </div>
 <% end %>
@@ -186,7 +190,7 @@
                             action: 'show', 
                             id: adoption.book_id %>
                       
-                            <%= adoption.title.html_safe %>
+                            <%= adoption.title.html_safe if adoption.title.present? %>
         </div>
       <% end %>
     </div> <!-- carousel-inner -->

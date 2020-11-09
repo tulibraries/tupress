@@ -7,7 +7,7 @@
 <div class="container" id="payment">
 	<div class="row">
 		<div class="col">
-			<%= @page.content.html_safe %>
+			<%= @page.content.html_safe if @page.content.present? %>
 		</div>
 	</div>
 </div>

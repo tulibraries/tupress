@@ -28,7 +28,7 @@
             </div>
             <div id="collapse1" class="panel-heading">
                 <div class="panel-body">
-                    <%= @faq.a.html_safe %>
+                    <%= @faq.a.html_safe if @faq.a.present? %>
                 </div>
             </div>
         </div>

@@ -14,10 +14,10 @@ button {
 	<div class="col col-md-9">
 		<h2><%= title @oabook.title %></h2>
     <% unless @oabook.subtitle.nil? %>
-      <p><%= @oabook.subtitle %></p>
+      <p><%= @oabook.subtitle.html_safe %></p>
     <% end %>
     <% unless @oabook.edition.nil? %>
-      <p><%= @oabook.edition %></p>
+      <p><%= @oabook.edition.html_safe %></p>
     <% end %>
     <% unless @oabook.author.nil? %>
       <p><%= @oabook.author %></p>
