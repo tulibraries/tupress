@@ -25,6 +25,9 @@ jobs:
   run_tests:
     docker:
       - image: circleci/ruby:2.6.5-node
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
         environment:
           TZ: "America/New_York"
 
@@ -43,6 +46,9 @@ jobs:
   qa_deploy:
     docker:
       - image: circleci/python:3.7.2
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
         environment:
           PIPENV_VENV_IN_PROJECT: true
     steps:
@@ -57,6 +63,9 @@ jobs:
   prod_deploy:
     docker:
       - image: circleci/python:3.7.2
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
         environment:
           PIPENV_VENV_IN_PROJECT: true
     steps:
