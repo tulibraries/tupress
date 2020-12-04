@@ -28,7 +28,7 @@
   <div class="row">
     <% unless @promotion.intro_text.nil? %>
       <div class="col-12 col-lg-9 mb-4 promo_intro">
-        <%= sanitize @promotion.intro_text.html_safe if @page.intro_text.present? %>%>
+        <%= sanitize @promotion.intro_text.html_safe if @promotion.intro_text.present? %>
       </div>
     <% end %>
   </div>
