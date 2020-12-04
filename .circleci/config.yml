@@ -43,6 +43,8 @@ jobs:
             sudo gem install -f bundler --version "$BUNDLER_VERSION"
             sudo apt-get update
             sudo bundle install
+            # Test that production precompile step will actually work
+            sudo RAILS_ENV=production bundle exec rake assets:precompile
   qa_deploy:
     docker:
       - image: circleci/python:3.7.2
