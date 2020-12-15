@@ -29,14 +29,15 @@ require 'carrierwave/orm/activerecord'
 	end
 
 	def sort_titles
-    excludes = ["A", "An", "The"]
-  	sort_title = self.title
-  	first = sort_title.split.first
-    if !first.nil? && excludes.include?(first.titlecase) 
-    	sort_title = sort_title.sub(/^(the|a|an)\s+/i, '')
-    	self.sort_title = sort_title+", "+first
-  		else self.sort_title = self.title
-  	end
-  end
+		excludes = ["A", "An", "The"]
+		sort_title = self.title
+		first = sort_title.split.first
+		if !first.nil? && excludes.include?(first.titlecase) 
+			sort_title = sort_title.sub(/^(the|a|an)\s+/i, '')
+			self.sort_title = sort_title+", "+first
+		else 
+			self.sort_title = self.title
+		end
+	end
 
 end

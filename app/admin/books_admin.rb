@@ -137,7 +137,7 @@ Trestle.resource(:books) do
       text_field    :award_year3
       text_field    :award3
       text_field    :award_year4
-      text_field    :award_year4
+      text_field    :award4
     end
 
     tab :guide do
