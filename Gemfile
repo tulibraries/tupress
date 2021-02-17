@@ -13,7 +13,7 @@ gem 'rails', '~> 5.0.7'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 5.1'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 # Paperclip traces can still be seen in the migrations
 # We have to keep it in here until we clean up the migrations
