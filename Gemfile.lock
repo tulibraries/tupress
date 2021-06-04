@@ -86,7 +86,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     erubis (2.7.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (1.0.0)
@@ -239,7 +239,7 @@ GEM
     simple_form (5.0.3)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    social-share-button (1.2.3)
+    social-share-button (1.2.4)
       coffee-rails
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
