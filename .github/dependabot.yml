@@ -1,0 +1,48 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: feedjira
+    versions:
+    - ">= 3.a, < 4"
+  - dependency-name: rails
+    versions:
+    - "< 5.3, >= 5.2.a"
+  - dependency-name: rails
+    versions:
+    - ">= 6.a, < 7"
+  - dependency-name: sprockets
+    versions:
+    - ">= 4.a, < 5"
+  - dependency-name: trestle
+    versions:
+    - "> 0.8.11, < 1"
+  - dependency-name: listen
+    versions:
+    - 3.5.0
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.2
+  - dependency-name: rspec-rails
+    versions:
+    - 4.1.0
+    - 4.1.1
+  - dependency-name: carrierwave
+    versions:
+    - 2.2.0
+  - dependency-name: bootstrap
+    versions:
+    - 4.6.0
+  - dependency-name: puma
+    versions:
+    - 5.2.0
+  - dependency-name: capybara
+    versions:
+    - 3.35.1
+  - dependency-name: autoprefixer-rails
+    versions:
+    - 10.2.0.0
