@@ -13,6 +13,8 @@ Gemfile.lock
 /db/*.sqlite3
 /db/*.sqlite3-journal
 db/data.yml
+/*.sql
+/*.xml
 
 # Ignore all logfiles and tempfiles.
 /log/*

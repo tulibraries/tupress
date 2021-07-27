@@ -15,9 +15,6 @@ gem 'sqlite3'
 gem 'puma', '~> 5.3'
 gem 'carrierwave', '~> 2.2'
 
-# Paperclip traces can still be seen in the migrations
-# We have to keep it in here until we clean up the migrations
-gem 'paperclip'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 gem 'autoprefixer-rails'
@@ -46,6 +43,7 @@ gem 'rails-html-sanitizer','~> 1.3.0'
 gem 'mail_form'
 gem 'simple_form'
 gem 'meta-tags'
+gem 'mimemagic', '0.4.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
