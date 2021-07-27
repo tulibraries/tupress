@@ -4,7 +4,6 @@ class CreateOabooks < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.string :isbn
-      t.attachment :cover_image
 
       t.timestamps
     end
