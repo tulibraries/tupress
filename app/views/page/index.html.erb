@@ -35,7 +35,11 @@
   <div class="col-12 col-lg-3 no-padding">
   <div id="scBlogContent">
     <%= link_to image_tag('visit.gif', alt: "North Philly Notes"), "http://templepress.wordpress.com", :class=>"blog-icon" %>
-
+    <p><% @entries.take(1).each do |entry| %>
+        <small><%= entry.description.truncate(210).html_safe if entry.description.present? %><br /><br />
+        <%= link_to entry.title, entry.url, style: "font-weight:600;" %></small>
+        <% end %>
+    </p>
   </div>
   <div id="follow-us">
     <%= link_to image_tag('give_tup.gif', alt: "Donate to the Press"), "https://advancement-sec.temple.edu/s/705/giving/16/interior_1col.aspx?sid=705&gid=1&pgid=3813&cid=5100&bledit=1&dids=69.5" %>
