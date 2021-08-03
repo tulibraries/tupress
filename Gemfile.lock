@@ -151,7 +151,7 @@ GEM
       actionmailer (>= 5.0)
       activemodel (>= 5.0)
     marcel (1.0.1)
-    meta-tags (2.14.0)
+    meta-tags (2.15.0)
       actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
     mimemagic (0.4.3)
