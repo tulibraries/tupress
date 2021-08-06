@@ -10,10 +10,8 @@
       <p class="social-icons">
         <%= social_share_button_tag %>
       </p>
-			<% unless @brochures.nil? %>
-				<% @brochures.each do |brochure| %>
-					<%= link_to brochure.title, brochure.pdf.url, class: "text-right text-lg-left" %><br />
-				<% end %>
+			<% unless @catalog.pdf.file.nil? %>
+				<p><%= link_to(@catalog.pdf.file.identifier, @catalog.pdf.url, class: "text-md-right") if @catalog.pdf_label.present? %></p>
 			<% end %>
 	</div>
 </div>
