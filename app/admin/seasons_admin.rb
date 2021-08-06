@@ -27,6 +27,7 @@ Trestle.resource(:seasons) do
     file_field  :image
     check_box   :remove_image
     file_field  :pdf
+    text_field  :pdf_label
     check_box   :remove_pdf
   
     unless season.image.nil?
@@ -42,7 +43,7 @@ Trestle.resource(:seasons) do
         label "PDF"     
       end
       sidebar do 
-        link_to season.pdf.file.identifier, season.pdf.url
+        link_to season.pdf_label, season.pdf.url
       end
     end
   end
