@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210806161223) do
+ActiveRecord::Schema.define(version: 20211109220534) do
 
   create_table "administrators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3" do |t|
     t.string   "email"
@@ -283,6 +283,7 @@ ActiveRecord::Schema.define(version: 20210806161223) do
     t.text     "intro_text",       limit: 65535
     t.boolean  "active"
     t.string   "pdf_display_name"
+    t.text     "xml_ids",          limit: 65535
   end
 
   create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3" do |t|

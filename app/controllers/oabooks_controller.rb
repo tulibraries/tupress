@@ -3,6 +3,10 @@ class OabooksController < ApplicationController
 
   def index
     @oabooks = Oabook.all
+    respond_to do |format|
+      format.html 
+      format.json { render json: @oabooks }
+     end
   end
 
   def labor_studies

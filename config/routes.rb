@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :book
   resources :promotions
 controller :book do 
 	get   'books'                 => :index
@@ -81,7 +82,8 @@ controller :events do
 end
 
 controller :conferences do
-  get 'conference/:id'     => :show
+  get 'conference/:id'            => :show
+  get 'conferences/conferences'   => :index
 end
 
 controller :faqs do
@@ -114,6 +116,7 @@ resources :oabooks
 resources :links
 resources :feeds
 resources :book
+resources :brochures
 resources :page
 resources :faqs
 resources :agencies
@@ -127,6 +130,8 @@ resources :journals
 resources :reviews
 resources :harvests
 resources :review_harvests
+resources :news_items, only: :index
+resources :highlights, only: :index
 resources :forms , only: [:new, :create, :show, :contact]
 
 # get '*path' => redirect("/")

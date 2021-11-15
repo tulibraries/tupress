@@ -9,6 +9,11 @@ class RepsController < ApplicationController
   # GET /reps
   # GET /reps.json
   def index
+    @reps = Rep.all 
+    respond_to do |format|
+      format.html 
+      format.json { render json: @reps }
+     end
   end
 
   # GET /reps/1

@@ -5,6 +5,11 @@ class PromotionsController < ApplicationController
   # GET /promotions.json
   def index
     @promotions = Promotion.where(active: true)
+    @all_promotions = Promotion.all
+    respond_to do |format|
+      format.html 
+      format.json { render json: @all_promotions }
+     end
   end
 
   # GET /promotions/1

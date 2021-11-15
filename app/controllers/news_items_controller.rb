@@ -5,6 +5,10 @@ class NewsItemsController < ApplicationController
   # GET /news_items.json
   def index
     @news_items = NewsItem.all
+    respond_to do |format|
+      format.html 
+      format.json { render json: @news_items }
+     end
   end
 
   # GET /news_items/1
