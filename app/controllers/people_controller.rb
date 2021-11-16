@@ -1,11 +1,20 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @people = Person.all
+  end
+
   # GET /people
   # GET /people.json
   def list
     @people = Person.all
+    respond_to do |format|
+      format.html 
+      format.json { render json: @people }
+     end
   end
+
 
   # GET /people/1
   # GET /people/1.json

@@ -2,12 +2,16 @@ class EventsController < ApplicationController
 
   # scope :group_by_month,   -> { group("date_trunc('month', startdate) ") }
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  require 'pry'
-
+  
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+            
+    respond_to do |format|
+      format.html 
+      format.json { render json: @events }
+     end
   end
 
   # GET /events/1

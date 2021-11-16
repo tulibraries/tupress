@@ -1,13 +1,12 @@
 class BookController < ApplicationController
 
-require 'pry'
-
   def index 
 
     if params[:id].nil?
       params[:id] = 'a'
     end
     
+    @all_books = Book.where({ status: ["NP", "IP", "OS","OP"] })
     @books = Book.where('sort_title LIKE ?', "#{params[:id]}%").where({ status: ["NP", "IP", "OS","OP"] }).order(:sort_title)
     
     if params[:id] == '0'
@@ -16,6 +15,11 @@ require 'pry'
 
     @pagetitle = "Titles Index"
     @show_status = ["NP", "IP", "OS","OP"]
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @all_books }
+    end
   end
 
   def byauthor

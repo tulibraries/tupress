@@ -1,11 +1,13 @@
 class ConferencesController < ApplicationController
 
-	require 'pry'
-
 	before_action :set_conference, only: [:edit, :update, :destroy]
 
 	def index
-		@conferences = Conference.all 
+		@conferences = Conference.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @conferences }
+    end
 	end
 
 	def show

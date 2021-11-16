@@ -1,10 +1,14 @@
 class DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
-require 'pry'
   # GET /documents
   # GET /documents.json
   def index
     @documents = Document.all
+        
+    respond_to do |format|
+      format.html 
+      format.json { render json: @documents }
+     end
   end
 
   # GET /documents/1
