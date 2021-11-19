@@ -1,11 +1,13 @@
 class AgenciesController < ApplicationController
 
-	require 'pry'
-
 	before_action :set_agency, only: [:edit, :update, :destroy]
 
 	def index
 		@agencies = Agency.all 
+    respond_to do |format|
+      format.html
+      format.json { render json: @agencies }
+    end
 	end
 
 	def show
