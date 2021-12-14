@@ -34,7 +34,7 @@ jobs:
       - image: circleci/mysql:5.5.56
         environment:
           TZ: "America/New_York"
-          BUNDLER_VERSION: "2.1.4"
+          BUNDLER_VERSION: "2.2.33"
     steps:
       - checkout
       - run:
