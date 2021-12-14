@@ -12,7 +12,7 @@ gem 'rails', '~> 5.0.7'
 # Use Puma as the app server
 gem 'puma', '~> 5.4'
 gem 'carrierwave', '~> 2.2'
-gem 'mysql2', '~> 0.4.9'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 gem 'autoprefixer-rails'
@@ -86,4 +86,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 group :production do
+  gem 'mysql2', '~> 0.4.9'
 end
