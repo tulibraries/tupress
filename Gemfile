@@ -42,6 +42,8 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'meta-tags'
 gem 'mimemagic', '0.4.3'
+gem 'devise'
+gem 'mysql2', '~> 0.5.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -82,9 +84,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'devise'
-
-group :production do
-  gem 'mysql2', '~> 0.4.9'
-end

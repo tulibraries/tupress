@@ -162,7 +162,7 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    mysql2 (0.4.10)
+    mysql2 (0.5.3)
     nio4r (2.5.7)
     nokogiri (1.12.0)
       mini_portile2 (~> 2.6.1)
@@ -323,7 +323,7 @@ DEPENDENCIES
   meta-tags
   mimemagic (= 0.4.3)
   mini_magick
-  mysql2 (~> 0.4.9)
+  mysql2 (~> 0.5.3)
   nokogiri
   okcomputer
   pry
