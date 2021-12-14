@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-
-  resources :book
-  resources :promotions
 controller :book do 
 	get   'books'                 => :index
   get   'byauthor'              => :byauthor
@@ -111,30 +108,28 @@ controller :application do
   get 'search2' => :search2
 end
 
-resources :newsitems
-resources :oabooks
-resources :links
-resources :feeds
+resources :agencies
 resources :book
 resources :brochures
-resources :page
-resources :faqs
-resources :agencies
 resources :conferences
+resources :documents
+resources :events
+resources :faqs
+resources :feeds
+resources :forms , only: [:new, :create, :show, :contact]
+resources :harvests 
+resources :highlights, only: :index
+resources :journals
+resources :links
+resources :newsitems
+resources :news_items, only: :index
+resources :oabooks
+resources :page
+resources :people
+resources :promotions
 resources :reps
 resources :regions
-resources :documents
-resources :people
-resources :events
-resources :journals
-resources :reviews
-resources :harvests
+resources :reviews 
 resources :review_harvests
-resources :news_items, only: :index
-resources :highlights, only: :index
-resources :forms , only: [:new, :create, :show, :contact]
-
-# get '*path' => redirect("/")
-
 
 end
