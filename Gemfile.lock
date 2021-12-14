@@ -258,7 +258,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
     thor (1.1.0)
     thread_safe (0.3.6)
@@ -338,7 +337,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets (= 3.7.2)
-  sqlite3
   tinymce-rails
   trestle (= 0.8.11)
   trestle-auth
@@ -351,4 +349,4 @@ DEPENDENCIES
   yaml_db
 
 BUNDLED WITH
-   2.1.4
+   2.2.29
