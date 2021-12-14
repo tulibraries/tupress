@@ -43,7 +43,7 @@ gem 'simple_form'
 gem 'meta-tags'
 gem 'mimemagic', '0.4.3'
 gem 'devise'
-gem 'mysql2', '~> 0.5.3'
+gem 'mysql2', '~> 0.4.10'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
