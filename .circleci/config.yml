@@ -42,7 +42,7 @@ jobs:
             sudo gem update --system
             sudo gem install -f bundler --version "$BUNDLER_VERSION"
             sudo apt-get --allow-releaseinfo-change update
-            apt-get install -y libmysqlclient-dev
+            sudo apt-get install -y libmysqlclient-dev
             sudo bundle install
             # Test that production precompile step will actually work
             sudo RAILS_ENV=production bundle exec rake assets:precompile
