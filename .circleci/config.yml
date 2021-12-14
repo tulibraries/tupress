@@ -40,6 +40,7 @@ jobs:
       - run:
           command: |
             sudo gem update --system
+            sudo apt-get install libmysqlclient-dev
             sudo gem install -f bundler --version "$BUNDLER_VERSION"
             sudo apt-get --allow-releaseinfo-change update
             sudo bundle install
