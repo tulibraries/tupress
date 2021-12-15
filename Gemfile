@@ -44,6 +44,7 @@ gem 'meta-tags'
 gem 'mimemagic', '0.4.3'
 
 gem 'devise'
+gem 'tzinfo-data'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
