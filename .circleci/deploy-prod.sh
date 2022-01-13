@@ -6,6 +6,7 @@ cd ..
 git clone --single-branch --branch main git@github.com:tulibraries/tupress_playbook.git
 cd tupress_playbook
 # install playbook requirements
+sudo python -m ensurepip
 sudo pip install pipenv
 # install playbook requirements
 pipenv install
