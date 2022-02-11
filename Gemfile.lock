@@ -169,6 +169,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.12.5-x86_64-linux)
+      racc (~> 1.4)
     okcomputer (1.18.4)
     orm_adapter (0.5.0)
     popper_js (1.16.0)
@@ -176,7 +178,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.6)
-    puma (5.5.2)
+    puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -308,6 +310,7 @@ GEM
 PLATFORMS
   x86_64-darwin-19
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
@@ -332,7 +335,7 @@ DEPENDENCIES
   nokogiri
   okcomputer
   pry
-  puma (~> 5.4)
+  puma (~> 5.6)
   rails (~> 5.0.7)
   rails-html-sanitizer (~> 1.3.0)
   rspec-rails
