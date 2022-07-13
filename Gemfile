@@ -38,7 +38,7 @@ gem 'trestle-auth'
 gem 'trestle-search'
 gem "mini_magick"
 gem 'loofah', '2.11.0'
-gem 'rails-html-sanitizer','~> 1.3.0'
+gem 'rails-html-sanitizer','~> 1.4.3'
 gem 'mail_form'
 gem 'simple_form'
 gem 'meta-tags'
