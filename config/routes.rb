@@ -21,6 +21,7 @@ controller :book do
   get   'books/new'             => :new
   post  'books'                 => :create
   get   'course-adoptions'      => :course_adoptions
+  get   'suppressed'            => :suppressed
 end
 
 controller :page do
