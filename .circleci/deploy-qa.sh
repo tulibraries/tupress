@@ -13,7 +13,7 @@ pipenv install
 # install playbook role requirements
 pipenv run ansible-galaxy install -r requirements.yml
 # setup vault password retrieval from travis envvar
-cp .circleci/.vault ~/.vault
+$ANSIBLE_VAULT_PASSWORD > ~/.vault
 # setup vault password retrieval from travis envvar
 chmod +x ~/.vault
 
