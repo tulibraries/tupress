@@ -22,6 +22,13 @@ class BookController < ApplicationController
     end
   end
 
+  def suppressed
+    @books = Book.where(status: "X")
+    respond_to do |format|
+      format.json { render json: @books }
+    end
+  end
+
   def byauthor
     if params[:id].nil?
       params[:id] = 'a'

@@ -1,56 +1,24 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  # adapter: sqlite3
-  # pool: 5
-  # timeout: 5000
   adapter: mysql2
   encoding: utf8
+  collation: utf8_general_ci
   host: localhost
-  database: tupress
+  database: press
   username: tupress
   password: turn1ngJ4p4n3s3
   pool: 5
   timeout: 5000
 
 development:
-#  <<: *default
-#  database: db/development.sqlite3
-  adapter: mysql2
-  encoding: utf8
-  host: localhost
-  database: tupress
-  username: tupress
-  password: turn1ngJ4p4n3s3
-  pool: 5
-  timeout: 5000
+ <<: *default
 
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
-  # <<: *default
-  # database: db/test.sqlite3
-  adapter: mysql2
-  encoding: utf8
-  host: localhost
-  database: tupress
-  username: tupress
-  password: turn1ngJ4p4n3s3
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: press-test
 
 production:
-  adapter: mysql2
-  encoding: utf8
+  <<: *default
   host: <%= ENV["TUPRESS_DB_HOST"] %>
   database: <%= ENV["TUPRESS_DB_NAME"] %>
   username: <%= ENV["TUPRESS_DB_USER"] %>
   password: <%= ENV["TUPRESS_DB_PASSWORD"] %>
-  pool: 5
-  timeout: 5000
