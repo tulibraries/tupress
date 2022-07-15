@@ -75,7 +75,6 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "08:05:8e:1f:ff:2e:4d:59:60:3e:a2:d5:e3:e2:b8:68"
-            - "3e:58:05:d9:83:6b:a2:76:dd:12:94:fe:e4:3f:44:cb"
+            - "fd:1e:09:db:3e:d1:19:a7:76:1c:d9:f8:39:b7:22:04"
       - run:
           command: bash .circleci/deploy-prod.sh
