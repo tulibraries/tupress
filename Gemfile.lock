@@ -76,7 +76,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     devise (4.8.0)
       bcrypt (~> 3.0)
@@ -114,9 +114,9 @@ GEM
       loofah (>= 2.0)
       sax-machine (>= 1.0)
     ffi (1.15.5)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
-    i18n (1.8.11)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
@@ -163,7 +163,7 @@ GEM
       rake
     mini_magick (4.11.0)
     mini_mime (1.1.2)
-    minitest (5.15.0)
+    minitest (5.17.0)
     multipart-post (2.1.1)
     mysql2 (0.4.10)
     nio4r (2.5.8)
@@ -285,7 +285,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     tzinfo-data (1.2021.5)
       tzinfo (>= 1.0.0)
